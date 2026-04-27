@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="light">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>បង្កើតគណនី | EduBridge Cambodia</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Hanuman:wght@400;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/chhay.css">
+</head>
+<body class="login-page-body">
+	<main class="login-page-wrapper">
+		<div class="login-page-bg-pattern"></div>
+		<div class="container py-4 py-lg-5">
+			<div class="row g-4 align-items-stretch">
+				<div class="col-lg-6 d-flex">
+					<section class="brand-panel w-100 d-flex flex-column justify-content-between p-4 p-lg-5">
+						<div>
+							<a href="../index.html" class="d-inline-flex align-items-center text-decoration-none mb-4 mb-lg-5 brand-link">
+								<span class="brand-icon me-2"><i class="bi bi-mortarboard-fill"></i></span>
+								<span>
+									<span class="d-block brand-title">EduBridge Cambodia</span>
+									<span class="d-block brand-subtitle">Education Opportunities Platform</span>
+								</span>
+							</a>
+
+							<span class="badge rounded-pill px-3 py-2 login-chip mb-3">
+								<i class="bi bi-person-plus me-1"></i>ចូលរួមលើសមាជិក
+							</span>
+
+							<h1 class="display-6 fw-bold text-white lh-sm mb-3">
+								តោះ! ចុះឈ្មោះ<br>
+								ដើម្បីឱ្យទទួល<span class="text-gradient">ឱកាសផ្សេងៗ</span>
+							</h1>
+							<p class="lead login-intro mb-0">
+								ចុះឈ្មោះឥឡូវនេះ ដើម្បីទទួលបានលទ្ធផលទាក់ទងនឹងអាហារូបករណ៍
+								វគ្គសិក្សា និងឱកាសស្ម័គ្រចិត្ត។
+							</p>
+						</div>
+
+						<div class="row g-3 mt-4">
+							<div class="col-sm-6">
+								<article class="stat-card p-3 h-100">
+									<h3 class="h4 fw-bold mb-1 text-white">25000+</h3>
+									<p class="mb-0 small">អ្នកប្រើប្រាស់សកម្ម</p>
+								</article>
+							</div>
+							<div class="col-sm-6">
+								<article class="stat-card p-3 h-100">
+									<h3 class="h4 fw-bold mb-1 text-white">100%</h3>
+									<p class="mb-0 small">ឥតគិតថ្លៃក្នុងការចូលរួម</p>
+								</article>
+							</div>
+						</div>
+					</section>
+				</div>
+
+				<div class="col-lg-6 d-flex">
+					<section class="login-panel w-100 p-4 p-md-5">
+						<div class="d-flex justify-content-between align-items-start gap-2 mb-4">
+							<div>
+								<p class="text-uppercase small fw-semibold mb-1 panel-label">Create Account</p>
+								<h2 class="h3 fw-bold mb-1 panel-title">បង្កើតគណនីថ្មី</h2>
+								<p class="mb-0 panel-subtitle">បង្កើតគណនីលើសមាជិក្ក (ឥតគិតថ្លៃ)</p>
+							</div>
+							<a href="../index.html" class="btn btn-sm btn-outline-primary rounded-pill px-3">
+								<i class="bi bi-house-door me-1"></i>ទំព័រដើម
+							</a>
+						</div>
+
+						<form class="needs-validation" novalidate>
+							<div class="mb-2">
+								<label for="fullName" class="form-label fw-semibold">ឈ្មោះពេញលេញ</label>
+								<div class="input-group login-input-group">
+									<span class="input-group-text"><i class="bi bi-person"></i></span>
+									<input type="text" class="form-control" id="fullName" placeholder="សឿន រ៉ាម៉ា" required>
+									<div class="invalid-feedback">សូមបញ្ចូលឈ្មោះរបស់អ្នក។</div>
+								</div>
+							</div>
+
+							<div class="mb-2">
+								<label for="regEmail" class="form-label fw-semibold">អ៊ីមែល</label>
+								<div class="input-group login-input-group">
+									<span class="input-group-text"><i class="bi bi-envelope"></i></span>
+									<input type="email" class="form-control" id="regEmail" placeholder="example@email.com" required>
+									<div class="invalid-feedback">សូមបញ្ចូលអ៊ីមែលត្រឹមត្រូវ។</div>
+								</div>
+							</div>
+
+							<div class="mb-2">
+								<label for="regPassword" class="form-label fw-semibold">ពាក្យសម្ងាត់</label>
+								<div class="input-group login-input-group">
+									<span class="input-group-text"><i class="bi bi-lock"></i></span>
+									<input type="password" class="form-control" id="regPassword" placeholder="••••••••" required>
+									<button class="btn btn-outline-secondary" type="button" id="toggleRegPassword" aria-label="Toggle password">
+										<i class="bi bi-eye"></i>
+									</button>
+									<div class="invalid-feedback">សូមបញ្ចូលពាក្យសម្ងាត់។</div>
+								</div>
+							</div>
+
+							<div class="mb-3">
+								<label for="confirmPassword" class="form-label fw-semibold">បញ្ជាក់ពាក្យសម្ងាត់</label>
+								<div class="input-group login-input-group">
+									<span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+									<input type="password" class="form-control" id="confirmPassword" placeholder="••••••••" required>
+									<button class="btn btn-outline-secondary" type="button" id="toggleConfirmPassword" aria-label="Toggle password">
+										<i class="bi bi-eye"></i>
+									</button>
+									<div class="invalid-feedback">សូមបញ្ជាក់ពាក្យសម្ងាត់របស់អ្នក។</div>
+								</div>
+							</div>
+
+							<div class="form-check mb-4">
+								<input class="form-check-input" type="checkbox" id="agreeTerms" required>
+								<label class="form-check-label small" for="agreeTerms">
+									ខ្ញុំយល់ព្រម <a href="#" class="link-register">លក្ខខណ្ឌ</a> និង <a href="#" class="link-register">គោលនយោបាយ</a>
+								</label>
+								<div class="invalid-feedback">សូមយល់ព្រមលក្ខខណ្ឌខាងលើ។</div>
+							</div>
+
+							<div class="d-grid mb-3">
+								<button type="submit" class="btn btn-primary btn-lg fw-semibold login-submit-btn">
+									<i class="bi bi-person-plus me-2"></i>បង្កើតគណនី
+								</button>
+							</div>
+
+							<p class="text-center mb-0 small">
+								មានគណនីរួចហើយ? <a href="login.html" class="fw-semibold link-register">ចូលគណនី</a>
+							</p>
+						</form>
+					</section>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script>
+		(function () {
+			'use strict';
+			const forms = document.querySelectorAll('.needs-validation');
+			Array.from(forms).forEach(function (form) {
+				form.addEventListener('submit', function (event) {
+					if (!form.checkValidity()) {
+						event.preventDefault();
+						event.stopPropagation();
+					}
+					form.classList.add('was-validated');
+				}, false);
+			});
+
+			// Toggle password visibility
+			const setupPasswordToggle = (inputId, buttonId) => {
+				const input = document.getElementById(inputId);
+				const button = document.getElementById(buttonId);
+				const icon = button ? button.querySelector('i') : null;
+
+				if (button && input && icon) {
+					button.addEventListener('click', function () {
+						const isPassword = input.getAttribute('type') === 'password';
+						input.setAttribute('type', isPassword ? 'text' : 'password');
+						icon.className = isPassword ? 'bi bi-eye-slash' : 'bi bi-eye';
+					});
+				}
+			};
+
+			setupPasswordToggle('regPassword', 'toggleRegPassword');
+			setupPasswordToggle('confirmPassword', 'toggleConfirmPassword');
+
+			// Password match validation
+			const regPassword = document.getElementById('regPassword');
+			const confirmPassword = document.getElementById('confirmPassword');
+
+			if (confirmPassword) {
+				confirmPassword.addEventListener('change', function () {
+					if (this.value !== regPassword.value) {
+						this.setCustomValidity('ពាក្យសម្ងាត់មិនត្រូវគ្នា');
+					} else {
+						this.setCustomValidity('');
+					}
+				});
+			}
+		})();
+	</script>
+</body>
+</html>
