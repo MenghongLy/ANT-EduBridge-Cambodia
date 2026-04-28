@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ទំនាក់ទំនង — EduKhmer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Hanuman:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/navbar.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+<!-- ====================================================
+     HEADER
+===================================================== -->
+<header class="fixed-top shadow-sm">
+
+  <!-- TOP BAR -->
+  <div class="top-header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <ul class="list-unstyled d-flex m-0">
+        <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
+        <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
+        <li><a href="opportunities.html" class="nav-link d-none d-md-block">ឱកាសសិក្សា</a></li>
+      </ul>
+      <div class="nav-action">
+        <div class="dropdown">
+          <button class="btn-lang dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-globe2"></i> ភាសាខ្មែរ
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-check-lg text-primary me-1"></i> ភាសាខ្មែរ</a></li>
+            <li><a class="dropdown-item" href="#">English</a></li>
+          </ul>
+        </div>
+        <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
+          <i class="bi bi-moon-fill" id="theme-icon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
+        <div>
+          <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ</div>
+          EduKhmer
+        </div>
+      </a>
+
+      <!-- Mobile toggles -->
+      <div class="d-flex d-lg-none align-items-center gap-2">
+        <div class="dropdown">
+          <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
+            <i class="bi bi-person-circle fs-5" style="color:var(--text-black)"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right me-2"></i>ចូលគណនី</a></li>
+            <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus me-2"></i>បង្កើតគណនី</a></li>
+          </ul>
+        </div>
+        <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+          <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
+        </button>
+      </div>
+
+      <!-- Desktop nav -->
+      <ul class="navbar-nav mx-auto d-none d-lg-flex">
+        <li class="nav-item"><a class="nav-link" href="../index.html">ទំព័រដើម</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="scholarships.html">
+            <i class="bi bi-award me-1"></i>អាហារូបករណ៍
+          </a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="courses.html"><i class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
+        <li class="nav-item"><a class="nav-link" href="exchange.html"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
+        <li class="nav-item"><a class="nav-link" href="internships.html"><i class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
+        <li class="nav-item"><a class="nav-link" href="volunteer.html"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- Mobile Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title d-flex align-items-center gap-2" style="color:var(--primary-color)">
+      <i class="bi bi-mortarboard-fill"></i> EduKhmer
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li><a class="nav-link py-3 border-bottom" href="index.html"><i class="bi bi-house me-2"></i>ទំព័រដើម</a></li>
+      <li><a class="nav-link py-3 border-bottom" href="scholarships.html"><i class="bi bi-award me-2"></i>អាហារូបករណ៍</a></li>
+      <li><a class="nav-link py-3 border-bottom" href="courses.html"><i class="bi bi-book me-2"></i>វគ្គសិក្សា</a></li>
+      <li><a class="nav-link py-3 border-bottom" href="exchange.html"><i class="bi bi-globe me-2"></i>ផ្លាស់ប្តូរ</a></li>
+      <li><a class="nav-link py-3 border-bottom" href="internships.html"><i class="bi bi-briefcase me-2"></i>ហាត់ការ</a></li>
+      <li><a class="nav-link py-3 border-bottom" href="contact.html"><i class="bi bi-chat-dots me-2"></i>ទំនាក់ទំនង</a></li>
+    </ul>
+    <div class="d-grid gap-2 mt-4">
+      <a href="login.html" class="btn btn-outline-primary">ចូលគណនី</a>
+      <a href="register.html" class="btn btn-primary">ចុះឈ្មោះ</a>
+    </div>
+  </div>
+</div>
+
+<!-- ====================================================
+     PAGE HERO
+===================================================== -->
+<div class="page-hero animate__animated animate__fadeIn animate__slow">
+  <div class="page-hero-grid"></div>
+  <div class="container position-relative" style="z-index:2">
+    <nav aria-label="breadcrumb">
+    </nav>
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7" data-aos="fade-right">
+        <h1 class="page-hero-title">
+          <span>ទំនាក់ទំនង</span>មកកាន់យើង<br>យើងរីករាយស្ដាប់អ្នក!
+        </h1>
+        <p class="page-hero-desc">
+          មានសំណួរ? ចង់ស្នើ Partnership? ឬ ចង់ Join ក្រុមការងារ EduKhmer?
+          ទំនាក់ទំនងមកយើងតាមរយៈប្រព័ន្ធណាមួយ —
+          យើងព្យាយាមឆ្លើយក្នុង <strong style="color:var(--secondary-color)">២៤ ម៉ោង</strong> ។
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ====================================================
+     FORM + SIDEBAR
+===================================================== -->
+<section class="form-section">
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- LEFT: FORM -->
+      <div class="col-lg-7" data-aos="fade-right">
+        <div class="form-card">
+          <!-- Form header -->
+          <div class="mb-4">
+            <div class="section-label"><i class="bi bi-send me-1"></i>ទំរង់ទំនាក់ទំនង</div>
+            <h2 class="section-title-text" style="font-size:1.6rem">ផ្ញើសំណួររបស់អ្នក</h2>
+            <p class="section-desc" style="font-size:.9rem">
+              បំពេញព័ត៌មានខាងក្រោម — យើងនឹងឆ្លើយ និងជួយអ្នកឱ្យបានឆាប់ ។
+            </p>
+          </div>
+
+          <!-- Actual form -->
+          <div id="contact-form">
+            <!-- Name + Email -->
+            <div class="row g-3 mb-3">
+              <div class="col-sm-6">
+                <label class="form-label-custom">ឈ្មោះ <span class="req">*</span></label>
+                <input type="text" class="form-control-custom" id="f-name" placeholder="ឈ្មោះរបស់អ្នក">
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label-custom">Email <span class="req">*</span></label>
+                <input type="email" class="form-control-custom" id="f-email" placeholder="example@email.com">
+              </div>
+            </div>
+
+            <!-- Phone + Subject -->
+            <div class="row g-3 mb-3">
+              <div class="col-sm-6">
+                <label class="form-label-custom">លេខទូរស័ព្ទ</label>
+                <input type="tel" class="form-control-custom" id="f-phone" placeholder="0XX XXX XXX">
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label-custom">ប្រធានបទ <span class="req">*</span></label>
+                <select class="form-control-custom" id="f-subject">
+                  <option value="" disabled selected>ជ្រើសរើសប្រធានបទ</option>
+                  <option>អាហារូបករណ៍</option>
+                  <option>វគ្គសិក្សា</option>
+                  <option>កម្មវិធីផ្លាស់ប្តូរ</option>
+                  <option>ហាត់ការ</option>
+                  <option>ស្ម័គ្រចិត្ត</option>
+                  <option>ចូលរួមក្រុមការងារ</option>
+                  <option>ដៃគូ / Partnership</option>
+                  <option>ផ្សេងៗ</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Topic chips -->
+            <div class="mb-3">
+              <label class="form-label-custom">ប្រភេទសំណួររបស់អ្នក</label>
+              <div class="topic-chips">
+                <label class="topic-chip selected" onclick="selectChip(this)">
+                  <input type="radio" name="topic" value="general"> <i class="bi bi-chat-dots"></i> ទូទៅ
+                </label>
+                <label class="topic-chip" onclick="selectChip(this)">
+                  <input type="radio" name="topic" value="scholarship"> <i class="bi bi-award"></i> អាហារូបករណ៍
+                </label>
+                <label class="topic-chip" onclick="selectChip(this)">
+                  <input type="radio" name="topic" value="course"> <i class="bi bi-book"></i> វគ្គសិក្សា
+                </label>
+                <label class="topic-chip" onclick="selectChip(this)">
+                  <input type="radio" name="topic" value="cv"> <i class="bi bi-file-earmark-person"></i> CV / Motivation Letter
+                </label>
+                <label class="topic-chip" onclick="selectChip(this)">
+                  <input type="radio" name="topic" value="partner"> <i class="bi bi-handshake"></i> Partnership
+                </label>
+                <label class="topic-chip" onclick="selectChip(this)">
+                  <input type="radio" name="topic" value="join"> <i class="bi bi-person-plus"></i> ចូលរួមក្រុម
+                </label>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="mb-4">
+              <label class="form-label-custom">សារ <span class="req">*</span></label>
+              <textarea class="form-control-custom" id="f-message" placeholder="សរសេរសារ ឬ សំណួររបស់អ្នក នៅទីនេះ..."></textarea>
+            </div>
+
+            <!-- Submit -->
+            <button class="btn-submit" onclick="submitForm()">
+              <i class="bi bi-send-fill"></i> ផ្ញើសារ
+            </button>
+            <p style="text-align:center;font-size:.8rem;color:var(--text-muted);margin-top:12px">
+              <i class="bi bi-shield-check me-1" style="color:var(--accent-green)"></i>
+              ព័ត៌មានរបស់អ្នកត្រូវបានការពារ — យើងនឹងមិនចែករំលែក ។
+            </p>
+          </div>
+
+          <!-- Success message -->
+          <div class="form-success" id="form-success">
+            <div class="fs-icon"><i class="bi bi-check-lg"></i></div>
+            <h3>សារបានផ្ញើដោយជោគជ័យ! 🎉</h3>
+            <p>
+              សូមអរគុណ! ក្រុមការងារ EduKhmer នឹងឆ្លើយ<br>
+              ក្នុងរយៈពេល <strong>២៤ ម៉ោង</strong> ។<br>
+              ពិនិត្យ Email ឬ ទំព័រ Telegram របស់អ្នក ។
+            </p>
+            <button class="btn-hero-primary mt-3" onclick="resetForm()" style="margin:0 auto">
+              <i class="bi bi-arrow-clockwise"></i> ផ្ញើម្ដងទៀត
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: SIDEBAR -->
+      <div class="col-lg-5" data-aos="fade-left" data-aos-delay="150">
+
+        <!-- Quick contact -->
+        <div class="quick-contact-box">
+          <div class="qc-title">📞 ទំនាក់ទំនងបន្ទាន់</div>
+          <div class="qc-desc">ត្រូវការជំនួយឆាប់ ? ទំនាក់ទំនងតាម Channel ណាមួយ</div>
+          <div class="qc-item">
+            <div class="qc-icon" style="background:rgba(77,184,255,.15)"><i class="bi bi-envelope-at-fill" style="color:var(--secondary-color)"></i></div>
+            <div>
+              <div class="qc-label">Email</div>
+              <div class="qc-val">info@edukhmer.com</div>
+            </div>
+          </div>
+          <div class="qc-item">
+            <div class="qc-icon" style="background:rgba(0,194,178,.15)"><i class="bi bi-telegram" style="color:var(--accent-green)"></i></div>
+            <div>
+              <div class="qc-label">Telegram</div>
+              <div class="qc-val">@EduKhmerSupport</div>
+            </div>
+          </div>
+          <div class="qc-item">
+            <div class="qc-icon" style="background:rgba(245,166,35,.15)"><i class="bi bi-facebook" style="color:var(--accent-gold)"></i></div>
+            <div>
+              <div class="qc-label">Facebook Messenger</div>
+              <div class="qc-val">m.me/EduKhmer</div>
+            </div>
+          </div>
+          <div class="qc-item">
+            <div class="qc-icon" style="background:rgba(130,80,255,.15)"><i class="bi bi-youtube" style="color:#8250FF"></i></div>
+            <div>
+              <div class="qc-label">YouTube</div>
+              <div class="qc-val">EduKhmer Official</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social links -->
+        <div class="social-box">
+          <div class="social-box-title"><i class="bi bi-share me-2" style="color:var(--primary-color)"></i>Follow & ចូលក្រុម</div>
+          <a href="#" class="social-btn">
+            <div class="sb-icon" style="background:#e8f0fe;color:#1877F2"><i class="bi bi-facebook"></i></div>
+            <div>
+              <div class="sb-name">Facebook Page</div>
+              <div class="sb-handle">@EduKhmer · 25K Followers</div>
+            </div>
+            <i class="bi bi-arrow-right sb-arrow"></i>
+          </a>
+          <a href="#" class="social-btn">
+            <div class="sb-icon" style="background:#e8f8ff;color:#0088cc"><i class="bi bi-telegram"></i></div>
+            <div>
+              <div class="sb-name">Telegram Channel</div>
+              <div class="sb-handle">@EduKhmer · 18K Members</div>
+            </div>
+            <i class="bi bi-arrow-right sb-arrow"></i>
+          </a>
+          <a href="#" class="social-btn">
+            <div class="sb-icon" style="background:#fff0f0;color:#ff0000"><i class="bi bi-youtube"></i></div>
+            <div>
+              <div class="sb-name">YouTube Channel</div>
+              <div class="sb-handle">EduKhmer · ១២K Subscribers</div>
+            </div>
+            <i class="bi bi-arrow-right sb-arrow"></i>
+          </a>
+          <a href="#" class="social-btn">
+            <div class="sb-icon" style="background:#fce4ec;color:#e1306c"><i class="bi bi-instagram"></i></div>
+            <div>
+              <div class="sb-name">Instagram</div>
+              <div class="sb-handle">@edukhmer.kh · ៨K Followers</div>
+            </div>
+            <i class="bi bi-arrow-right sb-arrow"></i>
+          </a>
+        </div>
+
+        <!-- Office hours -->
+        <div class="hours-box">
+          <div class="online-badge"><span class="dot"></span>Online ជានិច្ច</div>
+          <div class="hours-box-title"><i class="bi bi-clock me-2" style="color:var(--primary-color)"></i>ម៉ោងប្រតិបត្តិការ</div>
+          <div class="hours-row"><span class="hr-day">ច័ន្ទ — សុក្រ</span><span class="hr-time">08:00 — 18:00</span></div>
+          <div class="hours-row"><span class="hr-day">សៅរ៍</span><span class="hr-time">08:00 — 12:00</span></div>
+          <div class="hours-row"><span class="hr-day">អាទិត្យ</span><span class="hr-closed">បិទ</span></div>
+          <p style="font-size:.8rem;color:var(--text-muted);margin-top:12px;line-height:1.7">
+            <i class="bi bi-info-circle me-1" style="color:var(--primary-color)"></i>
+            ក្នុងករណីបន្ទាន់ — ទំនាក់ទំនង Telegram ។ យើងឆ្លើយក្នុង ២ ម៉ោង ។
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     MAP
+===================================================== -->
+<section style="padding: 0 0 80px; background: var(--bg-page);">
+  <div class="container">
+    <div class="text-center mb-4" data-aos="zoom-in-down">
+      <div class="section-label"><i class="bi bi-geo-alt me-1"></i>ទីតាំង</div>
+      <h2 class="section-title-text">ស្វែងរកយើង</h2>
+    </div>
+    <div class="map-wrap" data-aos="fade-up">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62604.09870578097!2d104.8544831!3d11.5563738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109513dc76a6be3%3A0x9c010ee85ab525bb!2sPhnom%20Penh!5e0!3m2!1sen!2skh!4v1700000000000!5m2!1sen!2skh"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <div class="map-overlay-card">
+        <div class="moc-title"><i class="bi bi-mortarboard-fill" style="color:var(--primary-color)"></i> EduKhmer HQ</div>
+        <div class="moc-addr">ភ្នំពេញ, ព្រះរាជាណាចក្រកម្ពុជា<br>Online Platform — មូលដ្ឋានដំណើរការ</div>
+        <a href="https://maps.google.com" target="_blank" class="moc-btn">
+          <i class="bi bi-map"></i> បើក Google Maps
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     FAQ
+===================================================== -->
+<section class="faq-section">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="zoom-in-down">
+      <div class="section-label"><i class="bi bi-question-circle me-1"></i>FAQ</div>
+      <h2 class="section-title-text">សំណួរជាទូទៅ</h2>
+      <p class="section-desc mx-auto" style="max-width:500px;text-align:center">
+        ប្រសិនបើអ្នកមិនឃើញចម្លើយ — សូមផ្ញើ Email ឬ ទំនាក់ទំនង Telegram ភ្លាម!
+      </p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="accordion" id="faqAcc">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">
+                <i class="bi bi-clock me-2" style="color:var(--primary-color)"></i>
+                ត្រូវចាំការឆ្លើយ តើដូចម្ដេច?
+              </button>
+            </h2>
+            <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                ក្រុមការងារ EduKhmer ព្យាយាមឆ្លើយគ្រប់ Email ក្នុងរយៈពេល <strong>២៤ ម៉ោង</strong>
+                ចំពោះ Telegram — ភាគច្រើនឆ្លើយក្នុង <strong>២-៤ ម៉ោង</strong> ។
+                ចំណាំ: ថ្ងៃអាទិត្យ ការឆ្លើយអាចយូរជាងធម្មតា ។
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">
+                <i class="bi bi-file-earmark-person me-2" style="color:var(--accent-gold)"></i>
+                ខ្ញុំចង់ Review CV — ត្រូវទំនាក់ទំនងដោយរបៀបណា?
+              </button>
+            </h2>
+            <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                ផ្ញើ Email ឬ Telegram ជាមួយ CV របស់អ្នក (PDF) ។
+                ក្រុមការងារ EduKhmer នឹង Review ហើយ ផ្ញើ Feedback ក្នុងរយៈពេល <strong>៣-៥ ថ្ងៃ</strong> ។
+                សេវានេះ ឥតគិតថ្លៃ សម្រាប់ Community Members ។
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">
+                <i class="bi bi-handshake me-2" style="color:var(--accent-green)"></i>
+                ខ្ញុំជាអង្គការ — ចង់ Partner ជាមួយ EduKhmer?
+              </button>
+            </h2>
+            <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                EduKhmer ស្វាគមន៍ Partnership! ផ្ញើ Email ជាមួយ Profile ស្ថាប័ន
+                គោលបំណង Partnership ហើយ ក្រុមការងារ Business Development នឹងឆ្លើយ
+                ក្នុង <strong>៣-៧ ថ្ងៃ</strong> ។
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f4">
+                <i class="bi bi-person-plus me-2" style="color:#8250FF)"></i>
+                ខ្ញុំចង់ Join ក្រុមការងារ EduKhmer — ត្រូវធ្វើដូចម្ដេច?
+              </button>
+            </h2>
+            <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                យើងស្ម័គ្រចិត្ត ស្វែងរក Researcher, Developer, Designer, Translator, Social Media Manager ។
+                ផ្ញើ CV + Cover Letter ខ្លីៗ (ខ្មែរ / English) ជូន Email:
+                <strong>join@edukhmer.com</strong> ។
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f5">
+                <i class="bi bi-megaphone me-2" style="color:var(--primary-color)"></i>
+                តើ EduKhmer ទទួលបោះផ្សាយ Event ឬ ឱកាសផ្ទាល់ខ្លួន?
+              </button>
+            </h2>
+            <div id="f5" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                បាទ/ចាស! ប្រសិនបើ Event ឬ ឱកាសសិក្សារបស់អ្នក ឥតគិតថ្លៃ ហើយ
+                ផ្ដោតលើយុវជនខ្មែរ — ផ្ញើព័ត៌មានពេញលេញជូន Email ។
+                យើងនឹងពិចារណា ហើយ ចែករំលែកដោយឥតគិតថ្លៃ ។
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     FOOTER
+===================================================== -->
+<footer>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand-name">
+          <div class="footer-brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
+          EduKhmer
+        </div>
+        <p class="footer-desc">
+          វេទិកាអប់រំលេខ ១ ក្នុងកម្ពុជា — ភ្ជាប់យុវជនខ្មែរ
+          ជាមួយឱកាសសិក្សា និងការងារ ទូទាំងពិភពលោក ។
+          ចូលរួមជាមួយគ្រួសារ EduKhmer ថ្ងៃនេះ — ឥតគិតថ្លៃ!
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5 class="footer-heading">ឱកាសសិក្សា</h5>
+        <ul class="footer-links">
+          <li><a href="scholarships.html"><i class="bi bi-chevron-right"></i>អាហារូបករណ៍</a></li>
+          <li><a href="courses.html"><i class="bi bi-chevron-right"></i>វគ្គសិក្សា</a></li>
+          <li><a href="exchange.html"><i class="bi bi-chevron-right"></i>ផ្លាស់ប្តូរ</a></li>
+          <li><a href="internships.html"><i class="bi bi-chevron-right"></i>ហាត់ការ</a></li>
+          <li><a href="volunteer.html"><i class="bi bi-chevron-right"></i>ស្ម័គ្រចិត្ត</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5 class="footer-heading">ជំនួយ</h5>
+        <ul class="footer-links">
+          <li><a href="cv-guide.html"><i class="bi bi-chevron-right"></i>ណែនាំ CV</a></li>
+          <li><a href="motivation-letter.html"><i class="bi bi-chevron-right"></i>Motivation Letter</a></li>
+          <li><a href="interview-tips.html"><i class="bi bi-chevron-right"></i>Interview Tips</a></li>
+          <li><a href="about.html"><i class="bi bi-chevron-right"></i>អំពីយើង</a></li>
+          <li><a href="contact.html"><i class="bi bi-chevron-right"></i>ទំនាក់ទំនង</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5 class="footer-heading">ទំនាក់ទំនង</h5>
+        <ul class="footer-links">
+          <li>
+            <a href="mailto:info@edukhmer.com">
+              <i class="bi bi-envelope-at"></i> info@edukhmer.com
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/edukhmer">
+              <i class="bi bi-telegram"></i> @EduKhmer
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-geo-alt"></i> ភ្នំពេញ, កម្ពុជា
+            </a>
+          </li>
+        </ul>
+        <div class="mt-4 p-3 rounded-3" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">
+          <p style="color:rgba(255,255,255,.6);font-size:.83rem;margin-bottom:10px">
+            <i class="bi bi-bell me-1" style="color:var(--secondary-color)"></i>
+            ជាវដើម្បីទទួលឱកាសសិក្សាថ្មីៗ
+          </p>
+          <div class="d-flex gap-2">
+            <input type="email" class="form-control form-control-sm" placeholder="Email របស់អ្នក"
+              style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff">
+            <button class="btn btn-primary btn-sm px-3" style="white-space:nowrap">ជាវ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <span>© ២០២៥ EduKhmer. រក្សាសិទ្ធិគ្រប់យ៉ាង.</span>
+      <div class="d-flex gap-3">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ====================================================
+     SCRIPTS
+===================================================== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ offset: 80, duration: 600, easing: 'ease-in-out', once: true });
+
+  // Dark mode
+  const themeToggle = document.querySelector('[data-theme-toggle]');
+  const themeIcon   = document.getElementById('theme-icon');
+  themeToggle?.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    themeIcon.className = isDark ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
+  });
+
+  // Navbar shrink
+  window.addEventListener('scroll', () => {
+    document.querySelector('.navbar').style.padding = window.scrollY > 50 ? '6px 0' : '12px 0';
+  });
+
+  // Topic chips
+  function selectChip(el) {
+    document.querySelectorAll('.topic-chip').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+  }
+
+  // Form submit
+  function submitForm() {
+    const name    = document.getElementById('f-name').value.trim();
+    const email   = document.getElementById('f-email').value.trim();
+    const subject = document.getElementById('f-subject').value;
+    const message = document.getElementById('f-message').value.trim();
+    if (!name || !email || !subject || !message) {
+      // Simple shake animation feedback
+      const form = document.getElementById('contact-form');
+      form.style.animation = 'shake .4s';
+      setTimeout(() => form.style.animation = '', 400);
+      alert('សូមបំពេញព័ត៌មានទាំងអស់ (*) ។');
+      return;
+    }
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('form-success').style.display  = 'block';
+  }
+
+  function resetForm() {
+    document.getElementById('contact-form').style.display = 'block';
+    document.getElementById('form-success').style.display  = 'none';
+    document.getElementById('f-name').value    = '';
+    document.getElementById('f-email').value   = '';
+    document.getElementById('f-phone').value   = '';
+    document.getElementById('f-subject').value = '';
+    document.getElementById('f-message').value = '';
+    document.querySelectorAll('.topic-chip').forEach((c,i) => { c.classList.toggle('selected', i===0); });
+  }
+</script>
+
+<style>
+  @keyframes shake {
+    0%,100% { transform: translateX(0); }
+    20%,60%  { transform: translateX(-6px); }
+    40%,80%  { transform: translateX(6px); }
+  }
+</style>
+</body>
+</html>
