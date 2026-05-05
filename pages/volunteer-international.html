@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="km" data-theme="light">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Volunteer International | EduBridge Cambodia</title>
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Hanuman:wght@400;700&display=swap" rel="stylesheet">
-
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-	<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../assets/css/style.css">
-	<link rel="stylesheet" href="../assets/css/navbar.css">
-	<link rel="stylesheet" href="../assets/css/chhay.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ស្ម័គ្រចិត្ត | EduKhmer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Hanuman:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/chhay.css">
 </head>
-<body class="user-root-page">
-	<header class="fixed-top shadow-sm">
 
-  <!-- TOP BAR -->
+<body class="user-root-page">
+
+<!-- ====================================================  HEADER  ==================================================== -->
+<header class="fixed-top shadow-sm">
   <div class="top-header">
     <div class="container d-flex justify-content-between align-items-center">
       <ul class="list-unstyled d-flex m-0">
         <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
         <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
-        <li><a href="opportunities.html" class="nav-link d-none d-md-block">ឱកាលសិក្សា</a></li>
+        <li><a href="volunteer.html" class="nav-link d-none d-md-block">ស្ម័គ្រចិត្ត</a></li>
       </ul>
       <div class="nav-action">
         <div class="dropdown">
@@ -43,19 +43,15 @@
       </div>
     </div>
   </div>
-
-  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <div class="brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
         <div>
-          <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ</div>
+          <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1">វេទិកាអប់រំ</div>
           EduKhmer
         </div>
       </a>
-
-      <!-- Mobile toggles -->
       <div class="d-flex d-lg-none align-items-center gap-2">
         <div class="dropdown">
           <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
@@ -70,19 +66,13 @@
           <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
         </button>
       </div>
-
-      <!-- Desktop nav -->
       <ul class="navbar-nav mx-auto d-none d-lg-flex">
-        <li class="nav-item"><a class="nav-link active" href="index.html">ទំព័រដើម</a></li>
-        <li class="nav-item">
-          <a class="nav-link" href="scholarships.html">
-            <i class="bi bi-award me-1"></i>អាហារូបករណ៍
-          </a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="index.html">ទំព័រដើម</a></li>
+        <li class="nav-item"><a class="nav-link" href="scholarships.html"><i class="bi bi-award me-1"></i>អាហារូបករណ៍</a></li>
         <li class="nav-item"><a class="nav-link" href="courses.html"><i class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
         <li class="nav-item"><a class="nav-link" href="exchange.html"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
         <li class="nav-item"><a class="nav-link" href="internships.html"><i class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
-        <li class="nav-item"><a class="nav-link" href="volunteer.html"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
+        <li class="nav-item"><a class="nav-link active" href="volunteer.html"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
       </ul>
       <div class="nav-auth d-none d-lg-flex">
         <button class="btn-login" onclick="location.href='login.html'">ចូលគណនី</button>
@@ -92,6 +82,7 @@
   </nav>
 </header>
 
+<!-- Mobile Offcanvas -->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
   <div class="offcanvas-header border-bottom">
     <h5 class="offcanvas-title d-flex align-items-center gap-2" style="color:var(--primary-color)">
@@ -101,10 +92,10 @@
   </div>
   <div class="offcanvas-body">
     <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link py-3 border-bottom" href="../index.html"><i class="bi bi-house me-2"></i>ទំព័រដើម</a></li>
+      <li class="nav-item"><a class="nav-link py-3 border-bottom" href="index.html"><i class="bi bi-house me-2"></i>ទំព័រដើម</a></li>
       <li class="nav-item"><a class="nav-link py-3 border-bottom" href="scholarships.html"><i class="bi bi-award me-2"></i>អាហារូបករណ៍</a></li>
-      <li class="nav-item"><a class="nav-link py-3 border-bottom" href="short-course.html"><i class="bi bi-book me-2"></i>វគ្គសិក្សា</a></li>
-      <li class="nav-item"><a class="nav-link py-3 border-bottom" href="exchange.html"><i class="bi bi-globe me-2"></i>កម្មវិធីផ្លាស់ប្តូរ</a></li>
+      <li class="nav-item"><a class="nav-link py-3 border-bottom" href="courses.html"><i class="bi bi-book me-2"></i>វគ្គសិក្សា</a></li>
+      <li class="nav-item"><a class="nav-link py-3 border-bottom" href="exchange.html"><i class="bi bi-globe me-2"></i>ផ្លាស់ប្តូរ</a></li>
       <li class="nav-item"><a class="nav-link py-3 border-bottom" href="internships.html"><i class="bi bi-briefcase me-2"></i>ហាត់ការ</a></li>
       <li class="nav-item"><a class="nav-link py-3 border-bottom" href="volunteer.html"><i class="bi bi-heart me-2"></i>ស្ម័គ្រចិត្ត</a></li>
     </ul>
@@ -115,73 +106,750 @@
   </div>
 </div>
 
-	<main class="container ur-container">
-		<section class="ur-hero mb-3">
-			<span class="ur-chip mb-2"><i class="bi bi-globe-central-south-asia"></i>International Program</span>
-			<h1 class="ur-hero-title">Global <span class="ur-highlight">Volunteer Exchange</span> Programs</h1>
-			<p class="ur-hero-desc">ចូលរួមក្នុងកម្មវិធី Volunteer អន្តរជាតិដែលចម្រើននៅក្នុងលោក។ មាននូវឱកាលដើម្បីបង្កើត និងរៀនសូត្របច្ចេកទេស មិនទាក់ទងខ្លួនអ្នក។</p>
-		</section>
+<!-- Mobile Filter Offcanvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="filterDrawer">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title" style="color:var(--primary-color)"><i class="bi bi-funnel me-2"></i>ត្រង</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body" id="filter-drawer-body"></div>
+</div>
 
-		<div class="row g-3 mb-3">
-			<div class="col-lg-4">
-				<article class="ur-soft-card h-100">
-					<h2>Thailand Youth Camp</h2>
-					<p>12 days exchange on leadership and community innovation.</p>
-					<span class="ur-tag open mb-2">Open</span>
-					<a class="ur-btn-outline" href="volunteer-register.html">Apply</a>
-				</article>
-			</div>
-			<div class="col-lg-4">
-				<article class="ur-soft-card h-100">
-					<h2>Vietnam Green Action</h2>
-					<p>Environmental volunteering with coastal clean-up and eco training.</p>
-					<span class="ur-tag new mb-2">New</span>
-					<a class="ur-btn-outline" href="volunteer-register.html">Apply</a>
-				</article>
-			</div>
-			<div class="col-lg-4">
-				<article class="ur-soft-card h-100">
-					<h2>Malaysia Education Mission</h2>
-					<p>Support digital literacy workshops for secondary students.</p>
-					<span class="ur-tag hot mb-2">Hot</span>
-					<a class="ur-btn-outline" href="volunteer-register.html">Apply</a>
-				</article>
-			</div>
-		</div>
+<!-- ====================================================  PAGE HERO  ==================================================== -->
+<div class="page-hero animate__animated animate__fadeIn animate__slow">
+  <div class="page-hero-grid"></div>
+  <div class="container position-relative" style="z-index:2">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house me-1"></i>ទំព័រដើម</a></li>
+        <li class="breadcrumb-item active">ស្ម័គ្រចិត្តអន្តរជាតិ</li>
+      </ol>
+    </nav>
+    <div class="row align-items-center">
+      <div class="col-lg-7" data-aos="fade-right">
+        <h1 class="page-hero-title">ស្ម័គ្រចិត្ត<br><span>ក្នុងស្រុក និងអន្តរជាតិ</span></h1>
+        <p class="page-hero-desc">
+          ស្វែងរកឱកាសស្ម័គ្រចិត្តដែលសមស្របសម្រាប់អ្នក ដោយបញ្ចូលទាំងគម្រោងក្នុងស្រុក និងគម្រោងអន្តរជាតិ។
+          ជ្រើសរើសតាមកម្រិតពេលវេលា ប្រភេទគម្រោង និងទីតាំង ដែលមានបច្ចុប្បន្នភាពជារៀងរាល់ថ្ងៃ។
+        </p>
+      </div>
+      <div class="col-lg-5 d-none d-lg-flex justify-content-end gap-3 align-items-center" data-aos="fade-left">
+        <div class="text-center p-3 rounded-3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);min-width:90px">
+          <div style="font-size:1.8rem;font-weight:700;color:#fff">500+</div>
+          <div style="font-size:.78rem;color:rgba(255,255,255,.6)">គម្រោងសកម្ម</div>
+        </div>
+        <div class="text-center p-3 rounded-3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);min-width:90px">
+          <div style="font-size:1.8rem;font-weight:700;color:#fff">45+</div>
+          <div style="font-size:.78rem;color:rgba(255,255,255,.6)">ប្រទេស/តំបន់</div>
+        </div>
+        <div class="text-center p-3 rounded-3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);min-width:90px">
+          <div style="font-size:1.8rem;font-weight:700;color:var(--accent-gold)">ថ្មី</div>
+          <div style="font-size:.78rem;color:rgba(255,255,255,.6)">រៀងរាល់ថ្ងៃ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-		<section class="ur-empty">
-			<i class="bi bi-passport me-1"></i>
-			តម្រូវការ៖ Passport មានសុពលភាព, basic English communication, និងអាយុ 18 ឆ្នាំឡើងលើ។
-		</section>
-	</main>
+<!-- ====================================================  SEARCH BAR  ==================================================== -->
+<div class="search-bar-wrap">
+  <div class="container">
+    <div class="row g-3 align-items-center">
+      <div class="col-lg-5 col-md-12">
+        <div class="input-group input-group-lg">
+          <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+          <input type="text" class="form-control" id="searchInput" placeholder="ស្វែងរក គម្រោង ស្ថាប័ន ឬ ទីតាំង..." oninput="filterCards()">
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <select class="form-select form-select-lg" id="countryFilter" onchange="filterCards()">
+          <option value="">🌍 គ្រប់ប្រទេស</option>
+          <option value="cambodia">🇰🇭 កម្ពុជា</option>
+          <option value="japan">🇯🇵 ជប៉ុន</option>
+          <option value="korea">🇰🇷 កូរ៉េ</option>
+          <option value="usa">🇺🇸 អាមេរិក</option>
+          <option value="australia">🇦🇺 អូស្ត្រាលី</option>
+          <option value="thailand">🇹🇭 ថៃ</option>
+          <option value="online">🌐 Online</option>
+        </select>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <select class="form-select form-select-lg" id="levelFilter" onchange="filterCards()">
+          <option value="">🎓 គ្រប់កម្រិត</option>
+          <option value="volunteer">ស្ម័គ្រចិត្ត</option>
+          <option value="community">សហគមន៍</option>
+          <option value="education">អប់រំ</option>
+          <option value="environment">បរិស្ថាន</option>
+          <option value="health">សុខភាព</option>
+        </select>
+      </div>
+      <div class="col-lg-1 col-6 d-grid">
+        <button class="btn btn-primary btn-lg" onclick="filterCards()">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+      <div class="col-lg-1 col-6 d-grid d-lg-none">
+        <button class="btn btn-outline-primary btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterDrawer">
+          <i class="bi bi-funnel"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====================================================  TYPE TABS  ==================================================== -->
+<div class="type-tabs">
+  <div class="container">
+    <div class="nav nav-pills flex-nowrap overflow-auto py-2 gap-2" role="tablist">
+      <button class="btn btn-sm btn-outline-primary tab-btn active" data-type="all" onclick="setTab(this,'all')">
+        <i class="bi bi-grid-3x3-gap"></i> ទាំងអស់ <span class="tab-count">24+</span>
+      </button>
+      <button class="btn btn-sm btn-outline-primary tab-btn" data-type="local" onclick="setTab(this,'local')">
+        <i class="bi bi-geo-alt"></i> ក្នុងស្រុក <span class="tab-count">12</span>
+      </button>
+      <button class="btn btn-sm btn-outline-primary tab-btn" data-type="international" onclick="setTab(this,'international')">
+        <i class="bi bi-globe"></i> អន្តរជាតិ <span class="tab-count">12</span>
+      </button>
+      <button class="btn btn-sm btn-outline-primary tab-btn" data-type="education" onclick="setTab(this,'education')">
+        <i class="bi bi-book"></i> អប់រំ <span class="tab-count">8</span>
+      </button>
+      <button class="btn btn-sm btn-outline-primary tab-btn" data-type="environment" onclick="setTab(this,'environment')">
+        <i class="bi bi-tree"></i> បរិស្ថាន <span class="tab-count">5</span>
+      </button>
+      <button class="btn btn-sm btn-outline-primary tab-btn" data-type="health" onclick="setTab(this,'health')">
+        <i class="bi bi-heart-pulse"></i> សុខភាព <span class="tab-count">4</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ====================================================  MAIN LAYOUT  ==================================================== -->
+<div class="main-layout">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- SIDEBAR -->
+      <div class="col-lg-3 sidebar-col" id="sidebar-main">
+        <div class="sidebar-filters" id="sidebar-filters-content">
+          <div style="font-size:1rem;font-weight:700;color:var(--text-black);margin-bottom:18px;display:flex;align-items:center;gap:8px">
+            <i class="bi bi-funnel-fill" style="color:var(--primary-color)"></i> ត្រង គម្រោង
+          </div>
+
+          <!-- Type -->
+          <div class="filter-group">
+            <div class="filter-group-title"><i class="bi bi-grid"></i> ប្រភេទ</div>
+            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">ក្នុងស្រុក</span><span class="check-count">12</span></label>
+            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">អន្តរជាតិ</span><span class="check-count">12</span></label>
+            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">អប់រំ</span><span class="check-count">8</span></label>
+            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">បរិស្ថាន</span><span class="check-count">5</span></label>
+            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">សុខភាព</span><span class="check-count">4</span></label>
+          </div>
+          <hr class="filter-divider">
+
+          <!-- Country -->
+          <div class="filter-group">
+            <div class="filter-group-title"><i class="bi bi-globe"></i> ទីតាំង</div>
+            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">🇰🇭 កម្ពុជា</span><span class="check-count">65</span></label>
+            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">🇯🇵 ជប៉ុន</span><span class="check-count">48</span></label>
+            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">🇰🇷 កូរ៉េ</span><span class="check-count">52</span></label>
+            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">🇺🇸 អាមេរិក</span><span class="check-count">30</span></label>
+            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">🇹🇭 ថៃ</span><span class="check-count">28</span></label>
+            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">🌐 Online</span><span class="check-count">120</span></label>
+          </div>
+          <hr class="filter-divider">
+
+          <!-- Level -->
+          <div class="filter-group">
+            <div class="filter-group-title"><i class="bi bi-mortarboard"></i> វិស័យ</div>
+            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">អប់រំ</span><span class="check-count">8</span></label>
+            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">បរិស្ថាន</span><span class="check-count">5</span></label>
+            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">សុខភាព</span><span class="check-count">4</span></label>
+            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">សហគមន៍</span><span class="check-count">7</span></label>
+            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">Online</span><span class="check-count">6</span></label>
+          </div>
+          <hr class="filter-divider">
+
+          <!-- Deadline -->
+          <div class="filter-group">
+            <div class="filter-group-title"><i class="bi bi-clock"></i> ថ្ងៃចាប់ផ្តើម</div>
+            <label class="filter-check"><input type="radio" name="deadline" value="all" checked><span class="check-box" style="border-radius:50%"></span><span class="check-label">គ្រប់ (រួមទាំងផុតកំណត់)</span></label>
+            <label class="filter-check"><input type="radio" name="deadline" value="open"><span class="check-box" style="border-radius:50%"></span><span class="check-label">មានការចុះឈ្មោះ</span></label>
+            <label class="filter-check"><input type="radio" name="deadline" value="soon"><span class="check-box" style="border-radius:50%"></span><span class="check-label">ផុតក្នុង ១ ខែ</span></label>
+            <label class="filter-check"><input type="radio" name="deadline" value="new"><span class="check-box" style="border-radius:50%"></span><span class="check-label">ថ្មី (ក្នុង ១ សប្ដាហ៍)</span></label>
+          </div>
+          <hr class="filter-divider">
+
+          <!-- Benefits -->
+          <div class="filter-group">
+            <div class="filter-group-title"><i class="bi bi-gift"></i> ការគាំទ្រ</div>
+            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">អាហារ</span></label>
+            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">ដំណើរ</span></label>
+            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">លំនៅដ្ឋាន</span></label>
+            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">Certificate</span></label>
+            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">Stipend</span></label>
+          </div>
+
+          <button class="btn-clear-filter" onclick="clearFilters()">
+            <i class="bi bi-x-circle me-1"></i> លុបការត្រង
+          </button>
+        </div>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="col-lg-9">
+
+        <!-- Results header -->
+        <div class="results-header">
+          <div class="results-count">
+            បង្ហាញ <strong id="result-count">12</strong> ក្នុងចំណោម <strong>24+</strong> គម្រោង
+          </div>
+          <div class="d-flex align-items-center gap-3 flex-wrap">
+            <button class="mobile-filter-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterDrawer">
+              <i class="bi bi-funnel"></i> ត្រង
+            </button>
+            <div class="sort-wrap">
+              <span class="sort-label">តម្រៀប:</span>
+              <select class="filter-select" style="min-width:0;padding:8px 12px;font-size:.85rem" onchange="filterCards()">
+                <option>ថ្មី → ចាស់</option>
+                <option>ផុតកំណត់ ៖ ឆាប់ → យូរ</option>
+                <option>ពេញនិយម</option>
+                <option>លាយក្នុងស្រុក/អន្តរជាតិ</option>
+              </select>
+            </div>
+            <div class="view-toggle">
+              <button class="view-btn active" id="grid-btn" onclick="setView('grid')" title="Grid View"><i class="bi bi-grid-3x3-gap"></i></button>
+              <button class="view-btn" id="list-btn" onclick="setView('list')" title="List View"><i class="bi bi-list-ul"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FEATURED BANNER -->
+        <div class="featured-banner" data-aos="fade-up">
+          <div class="fb-badge"><i class="bi bi-star-fill me-1"></i> ពិសេស · Mixed</div>
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <div class="fb-title">ស្ម័គ្រចិត្តក្នុងស្រុក និងអន្តរជាតិ — ជ្រើសរើសតាមគោលដៅរបស់អ្នក</div>
+              <div class="fb-desc">គម្រោងបង្រៀន សម្អាតបរិស្ថាន ការងារសុខភាព និងបទពិសោធន៍អន្តរជាតិ ទាំងអស់នៅកន្លែងតែមួយ។</div>
+              <div class="fb-meta">
+                <span><i class="bi bi-geo-alt"></i> Cambodia / Global</span>
+                <span><i class="bi bi-clock"></i> ចាប់ផ្ដើមភ្លាម</span>
+                <span><i class="bi bi-people"></i> ២៤+ កន្លែង</span>
+                <span><i class="bi bi-mortarboard"></i> Volunteer</span>
+              </div>
+              <button class="btn-fb" onclick="location.href='scholarship-detail.html'">
+                <i class="bi bi-arrow-right-circle me-1"></i> មើលគម្រោង
+              </button>
+            </div>
+            <div class="col-md-4 d-none d-md-flex justify-content-end">
+              <div style="text-align:right">
+                <div style="font-size:2.5rem;margin-bottom:8px">🎓</div>
+                <div style="background:rgba(77,184,255,.15);border:1px solid rgba(77,184,255,.25);border-radius:10px;padding:10px 16px;display:inline-block">
+                  <div style="font-size:1.4rem;font-weight:700;color:#fff">Full<br>Funded</div>
+                  <div style="font-size:.75rem;color:rgba(255,255,255,.6)">ផ្ដល់ ១០០%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GRID VIEW -->
+        <div id="grid-view">
+          <div class="row g-4" id="cards-grid">
+
+            <!-- Card 1 -->
+            <div class="col-md-6 col-xl-4 opp-item" data-type="scholarship" data-aos="fade-up" data-aos-delay="0">
+              <div class="opp-card">
+                <div class="card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=500&q=80" alt="">
+                  <div class="card-tag tag-volunteer"><i class="bi bi-geo-alt me-1"></i>ក្នុងស្រុក</div>
+                  <div class="card-deadline"><i class="bi bi-clock"></i> បើកចុះឈ្មោះ</div>
+                  <button class="card-saved" onclick="toggleSave(this)"><i class="bi bi-bookmark"></i></button>
+                </div>
+                <div class="card-body-custom">
+                  <div class="card-org">
+                    <div class="card-org-logo" style="background:linear-gradient(135deg,#e55000,#ff6600)">KH</div>
+                    <span class="card-org-name">World Vision · 🇰🇭 Cambodia</span>
+                  </div>
+                  <div class="card-title-text">ស្ម័គ្រចិត្តផ្នែកអប់រំ — ជួយបង្រៀនកុមារជនបទ</div>
+                  <div class="card-meta">
+                    <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Kampong Cham, Cambodia</div>
+                    <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ចាប់ផ្ដើមភ្លាម</div>
+                    <div class="card-meta-item"><i class="bi bi-mortarboard"></i> ២-៤ សប្ដាហ៍ · ១០ កន្លែង</div>
+                  </div>
+                  <div class="card-benefits">
+                    <div class="benefit-chip"><i class="bi bi-bus-front"></i> ដឹកជញ្ជូន</div>
+                    <div class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</div>
+                    <div class="benefit-chip"><i class="bi bi-fork-knife"></i> អាហារ</div>
+                  </div>
+                  <button class="btn-card-detail" onclick="location.href='volunteer-register.html'"><i class="bi bi-info-circle me-1"></i>ព័ត៌មានលម្អិត</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 col-xl-4 opp-item" data-type="exchange" data-aos="fade-up" data-aos-delay="60">
+              <div class="opp-card">
+                <div class="card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=500&q=80" alt="">
+                  <div class="card-tag tag-volunteer"><i class="bi bi-globe me-1"></i>អន្តរជាតិ</div>
+                  <div class="card-deadline"><i class="bi bi-clock"></i> ២ ខែ</div>
+                  <button class="card-saved" onclick="toggleSave(this)"><i class="bi bi-bookmark"></i></button>
+                </div>
+                <div class="card-body-custom">
+                  <div class="card-org">
+                    <div class="card-org-logo" style="background:linear-gradient(135deg,#BC002D,#e60033)">JP</div>
+                    <span class="card-org-name">JICA · 🇯🇵 Japan</span>
+                  </div>
+                  <div class="card-title-text">គម្រោងស្ម័គ្រចិត្តអប់រំ — បង្រៀនភាសាអង់គ្លេសនៅជប៉ុន</div>
+                  <div class="card-meta">
+                    <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Tokyo, Japan</div>
+                    <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ១៥ ឧសភា ២០២៥</div>
+                    <div class="card-meta-item"><i class="bi bi-clock-history"></i> ៣ ខែ · ២០ កន្លែង</div>
+                  </div>
+                  <div class="card-benefits">
+                    <div class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</div>
+                    <div class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</div>
+                    <div class="benefit-chip"><i class="bi bi-fork-knife"></i> អាហារ</div>
+                  </div>
+                  <button class="btn-card-detail" onclick="location.href='volunteer-register.html'"><i class="bi bi-info-circle me-1"></i>ព័ត៌មានលម្អិត</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 col-xl-4 opp-item" data-type="course" data-aos="fade-up" data-aos-delay="120">
+              <div class="opp-card">
+                <div class="card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&q=80" alt="">
+                  <div class="card-tag tag-volunteer"><i class="bi bi-tree me-1"></i>បរិស្ថាន</div>
+                  <div class="card-deadline"><i class="bi bi-infinity"></i> ចាប់ផ្តើមខែនេះ</div>
+                  <button class="card-saved" onclick="toggleSave(this)"><i class="bi bi-bookmark"></i></button>
+                </div>
+                <div class="card-body-custom">
+                  <div class="card-org">
+                    <div class="card-org-logo" style="background:linear-gradient(135deg,#0b7a75,#15b7a8)">EC</div>
+                    <span class="card-org-name">Eco Network · 🌐 Online</span>
+                  </div>
+                  <div class="card-title-text">យុទ្ធនាការសម្អាតបរិស្ថាន និងដាំដើមឈើ</div>
+                  <div class="card-meta">
+                    <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Online / Cambodia</div>
+                    <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ចាប់ផ្ដើមភ្លាម</div>
+                    <div class="card-meta-item"><i class="bi bi-clock-history"></i> ១ ខែ · 30 កន្លែង</div>
+                  </div>
+                  <div class="card-benefits">
+                    <div class="benefit-chip"><i class="bi bi-patch-check"></i> Certificate</div>
+                    <div class="benefit-chip"><i class="bi bi-people"></i> Team</div>
+                    <div class="benefit-chip"><i class="bi bi-phone"></i> Mobile</div>
+                  </div>
+                  <button class="btn-card-detail" onclick="location.href='volunteer-register.html'"><i class="bi bi-info-circle me-1"></i>ព័ត៌មានលម្អិត</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6 col-xl-4 opp-item" data-type="internship" data-aos="fade-up" data-aos-delay="0">
+              <div class="opp-card">
+                <div class="card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&q=80" alt="">
+                  <div class="card-tag tag-volunteer"><i class="bi bi-heart me-1"></i>សុខភាព</div>
+                  <div class="card-deadline" style="background:rgba(229,62,62,.75)"><i class="bi bi-clock"></i> ១៥ ថ្ងៃ!</div>
+                  <button class="card-saved" onclick="toggleSave(this)"><i class="bi bi-bookmark"></i></button>
+                </div>
+                <div class="card-body-custom">
+                  <div class="card-org">
+                    <div class="card-org-logo" style="background:linear-gradient(135deg,#009edb,#00b0f0)">UN</div>
+                    <span class="card-org-name">UNDP · 🇰🇭 Cambodia</span>
+                  </div>
+                  <div class="card-title-text">ស្ម័គ្រចិត្តផ្នែកសុខភាពសហគមន៍ — ភ្នំពេញ ២០២៥</div>
+                  <div class="card-meta">
+                    <div class="card-meta-item"><i class="bi bi-geo-alt"></i> ភ្នំពេញ, Cambodia</div>
+                    <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ចាប់ផ្ដើមភ្លាម</div>
+                    <div class="card-meta-item"><i class="bi bi-clock-history"></i> ២-៣ ខែ · ៥ កន្លែង</div>
+                  </div>
+                  <div class="card-benefits">
+                    <div class="benefit-chip"><i class="bi bi-cash"></i> Stipend</div>
+                    <div class="benefit-chip"><i class="bi bi-patch-check"></i> Certificate</div>
+                    <div class="benefit-chip"><i class="bi bi-graph-up"></i> បទពិសោធ</div>
+                  </div>
+                  <button class="btn-card-detail" onclick="location.href='volunteer-register.html'"><i class="bi bi-info-circle me-1"></i>ព័ត៌មានលម្អិត</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-6 col-xl-4 opp-item" data-type="scholarship" data-aos="fade-up" data-aos-delay="60">
+              <div class="opp-card">
+                <div class="card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80" alt="">
+                  <div class="card-tag tag-volunteer"><i class="bi bi-globe me-1"></i>អន្តរជាតិ</div>
+                  <div class="card-deadline"><i class="bi bi-clock"></i> ៣ ខែ</div>
+                  <button class="card-saved" onclick="toggleSave(this)"><i class="bi bi-bookmark"></i></button>
+                </div>
+                <div class="card-body-custom">
+                  <div class="card-org">
+                    <div class="card-org-logo" style="background:linear-gradient(135deg,#d4000f,#f50018)">AU</div>
+                    <span class="card-org-name">AAS · 🇦🇺 Australia</span>
+                  </div>
+                  <div class="card-title-text">Volunteer in Australia — Community Support Program</div>
+                  <div class="card-meta">
+                    <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Australia</div>
+                    <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ១ សីហា ២០២៥</div>
+                    <div class="card-meta-item"><i class="bi bi-mortarboard"></i> ៦ សប្ដាហ៍ · ១៥ កន្លែង</div>
+                  </div>
+                  <div class="card-benefits">
+                    <div class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</div>
+                    <div class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</div>
+                    <div class="benefit-chip"><i class="bi bi-patch-check"></i> Certificate</div>
+                  </div>
+                  <button class="btn-card-detail" onclick="location.href='volunteer-register.html'"><i class="bi bi-info-circle me-1"></i>ព័ត៌មានលម្អិត</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-6 col-xl-4 opp-item" data-type="volunteer" data-aos="fade-up" data-aos-delay="120">
+              <div class="opp-card">
+                <div class="card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=500&q=80" alt="">
+                  <div class="card-tag tag-volunteer"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</div>
+                  <div class="card-deadline" style="background:rgba(0,194,178,.75)"><i class="bi bi-check"></i> ចាប់ភ្លាម</div>
+                  <button class="card-saved" onclick="toggleSave(this)"><i class="bi bi-bookmark"></i></button>
+                </div>
+                <div class="card-body-custom">
+                  <div class="card-org">
+                    <div class="card-org-logo" style="background:linear-gradient(135deg,#0b7a75,#15b7a8)">EC</div>
+                    <span class="card-org-name">Eco Network · 🌐 Online</span>
+                  </div>
+                  <div class="card-title-text">Virtual Volunteer — Environmental Awareness Campaign</div>
+                  <div class="card-meta">
+                    <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Online</div>
+                    <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ចាប់ផ្ដើមភ្លាម</div>
+                    <div class="card-meta-item"><i class="bi bi-clock-history"></i> ២-៤ សប្ដាហ៍ · ១០ កន្លែង</div>
+                  </div>
+                  <div class="card-benefits">
+                    <div class="benefit-chip"><i class="bi bi-patch-check"></i> Certificate</div>
+                    <div class="benefit-chip"><i class="bi bi-phone"></i> Remote</div>
+                    <div class="benefit-chip"><i class="bi bi-people"></i> Team</div>
+                  </div>
+                  <button class="btn-card-detail" onclick="location.href='volunteer-register.html'"><i class="bi bi-info-circle me-1"></i>ព័ត៌មានលម្អិត</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col-md-6 col-xl-4 opp-item" data-type="scholarship" data-aos="fade-up" data-aos-delay="0">
+              <div class="opp-card">
+                <div class="card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=500&q=80" alt="">
+                  <div class="card-tag tag-volunteer"><i class="bi bi-geo-alt me-1"></i>ក្នុងស្រុក</div>
+                  <div class="card-deadline"><i class="bi bi-clock"></i> ៤ ខែ</div>
+                  <button class="card-saved" onclick="toggleSave(this)"><i class="bi bi-bookmark"></i></button>
+                </div>
+                <div class="card-body-custom">
+                  <div class="card-org">
+                    <div class="card-org-logo" style="background:linear-gradient(135deg,#0047ab,#0066cc)">UN</div>
+                    <span class="card-org-name">UNDP · 🇰🇭 Cambodia</span>
+                  </div>
+                  <div class="card-title-text">Community Health Outreach Volunteer</div>
+                  <div class="card-meta">
+                    <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Phnom Penh, Cambodia</div>
+                    <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ចាប់ផ្ដើមភ្លាម</div>
+                    <div class="card-meta-item"><i class="bi bi-mortarboard"></i> ៣ ខែ · ៨ កន្លែង</div>
+                  </div>
+                  <div class="card-benefits">
+                    <div class="benefit-chip"><i class="bi bi-shield-check"></i> Safety</div>
+                    <div class="benefit-chip"><i class="bi bi-patch-check"></i> Certificate</div>
+                    <div class="benefit-chip"><i class="bi bi-people"></i> Team</div>
+                  </div>
+                  <button class="btn-card-detail" onclick="location.href='volunteer-register.html'"><i class="bi bi-info-circle me-1"></i>ព័ត៌មានលម្អិត</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col-md-6 col-xl-4 opp-item" data-type="course" data-aos="fade-up" data-aos-delay="60">
+              <div class="opp-card">
+                <div class="card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=500&q=80" alt="">
+                  <div class="card-tag tag-volunteer"><i class="bi bi-globe me-1"></i>អន្តរជាតិ</div>
+                  <div class="card-deadline"><i class="bi bi-infinity"></i> កំណត់តិច</div>
+                  <button class="card-saved" onclick="toggleSave(this)"><i class="bi bi-bookmark"></i></button>
+                </div>
+                <div class="card-body-custom">
+                  <div class="card-org">
+                    <div class="card-org-logo" style="background:linear-gradient(135deg,#e60033,#bc002d)">JP</div>
+                    <span class="card-org-name">JICA · 🇯🇵 Japan</span>
+                  </div>
+                  <div class="card-title-text">Volunteer Teaching Assistant — Tokyo Youth Center</div>
+                  <div class="card-meta">
+                    <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Tokyo, Japan</div>
+                    <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ១ ខែ</div>
+                    <div class="card-meta-item"><i class="bi bi-clock-history"></i> ២ ខែ · ១២ កន្លែង</div>
+                  </div>
+                  <div class="card-benefits">
+                    <div class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</div>
+                    <div class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</div>
+                    <div class="benefit-chip"><i class="bi bi-patch-check"></i> Certificate</div>
+                  </div>
+                  <button class="btn-card-detail" onclick="location.href='volunteer-register.html'"><i class="bi bi-info-circle me-1"></i>ព័ត៌មានលម្អិត</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="col-md-6 col-xl-4 opp-item" data-type="exchange" data-aos="fade-up" data-aos-delay="120">
+              <div class="opp-card">
+                <div class="card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&q=80" alt="">
+                  <div class="card-tag tag-volunteer"><i class="bi bi-tree me-1"></i>បរិស្ថាន</div>
+                  <div class="card-deadline"><i class="bi bi-clock"></i> ២ ខែ</div>
+                  <button class="card-saved" onclick="toggleSave(this)"><i class="bi bi-bookmark"></i></button>
+                </div>
+                <div class="card-body-custom">
+                  <div class="card-org">
+                    <div class="card-org-logo" style="background:linear-gradient(135deg,#0b7a75,#15b7a8)">TH</div>
+                    <span class="card-org-name">Green Volunteers · 🇹🇭 Thailand</span>
+                  </div>
+                  <div class="card-title-text">Cross-border Tree Planting and River Clean-up</div>
+                  <div class="card-meta">
+                    <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Chiang Mai, Thailand</div>
+                    <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ១ កក្កដា ២០២៥</div>
+                    <div class="card-meta-item"><i class="bi bi-clock-history"></i> ១ ខែ · ១០ កន្លែង</div>
+                  </div>
+                  <div class="card-benefits">
+                    <div class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</div>
+                    <div class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</div>
+                    <div class="benefit-chip"><i class="bi bi-patch-check"></i> Certificate</div>
+                  </div>
+                  <button class="btn-card-detail" onclick="location.href='volunteer-register.html'"><i class="bi bi-info-circle me-1"></i>ព័ត៌មានលម្អិត</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="col-md-6 col-xl-4 opp-item" data-type="internship" data-aos="fade-up" data-aos-delay="0">
+              <div class="opp-card">
+                <div class="card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=500&q=80" alt="">
+                  <div class="card-tag tag-volunteer"><i class="bi bi-geo-alt me-1"></i>ក្នុងស្រុក</div>
+                  <div class="card-deadline"><i class="bi bi-clock"></i> ១ ខែ</div>
+                  <button class="card-saved" onclick="toggleSave(this)"><i class="bi bi-bookmark"></i></button>
+                </div>
+                <div class="card-body-custom">
+                  <div class="card-org">
+                    <div class="card-org-logo" style="background:linear-gradient(135deg,#0047ab,#0066cc)">UN</div>
+                    <span class="card-org-name">UNDP · 🇰🇭 Cambodia</span>
+                  </div>
+                  <div class="card-title-text">School Library Support Volunteer</div>
+                  <div class="card-meta">
+                    <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Siem Reap, Cambodia</div>
+                    <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ចាប់ផ្ដើមភ្លាម</div>
+                    <div class="card-meta-item"><i class="bi bi-clock-history"></i> ១ ខែ · ៨ កន្លែង</div>
+                  </div>
+                  <div class="card-benefits">
+                    <div class="benefit-chip"><i class="bi bi-bus-front"></i> ដឹកជញ្ជូន</div>
+                    <div class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</div>
+                    <div class="benefit-chip"><i class="bi bi-patch-check"></i> Certificate</div>
+                  </div>
+                  <button class="btn-card-detail" onclick="location.href='volunteer-register.html'"><i class="bi bi-info-circle me-1"></i>ព័ត៌មានលម្អិត</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="col-md-6 col-xl-4 opp-item" data-type="scholarship" data-aos="fade-up" data-aos-delay="60">
+              <div class="opp-card">
+                <div class="card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=500&q=80" alt="">
+                  <div class="card-tag tag-volunteer"><i class="bi bi-globe me-1"></i>អន្តរជាតិ</div>
+                  <div class="card-deadline"><i class="bi bi-clock"></i> ៦ ខែ</div>
+                  <button class="card-saved" onclick="toggleSave(this)"><i class="bi bi-bookmark"></i></button>
+                </div>
+                <div class="card-body-custom">
+                  <div class="card-org">
+                    <div class="card-org-logo" style="background:linear-gradient(135deg,#003087,#0056d2)">EU</div>
+                    <span class="card-org-name">Erasmus+ · 🇪🇺 Europe</span>
+                  </div>
+                  <div class="card-title-text">Youth Community Mentor Program — Europe</div>
+                  <div class="card-meta">
+                    <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Multiple Countries</div>
+                    <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ១ វិចិ្ឆកា ២០២៥</div>
+                    <div class="card-meta-item"><i class="bi bi-mortarboard"></i> ៣ ខែ · ១៥ កន្លែង</div>
+                  </div>
+                  <div class="card-benefits">
+                    <div class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</div>
+                    <div class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</div>
+                    <div class="benefit-chip"><i class="bi bi-patch-check"></i> Certificate</div>
+                  </div>
+                  <button class="btn-card-detail" onclick="location.href='volunteer-register.html'"><i class="bi bi-info-circle me-1"></i>ព័ត៌មានលម្អិត</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="col-md-6 col-xl-4 opp-item" data-type="volunteer" data-aos="fade-up" data-aos-delay="120">
+              <div class="opp-card">
+                <div class="card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=500&q=80" alt="">
+                  <div class="card-tag tag-volunteer"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</div>
+                  <div class="card-deadline" style="background:rgba(0,194,178,.75)"><i class="bi bi-check"></i> ចាប់ភ្លាម</div>
+                  <button class="card-saved" onclick="toggleSave(this)"><i class="bi bi-bookmark"></i></button>
+                </div>
+                <div class="card-body-custom">
+                  <div class="card-org">
+                    <div class="card-org-logo" style="background:linear-gradient(135deg,#0047ab,#0066cc)">UN</div>
+                    <span class="card-org-name">UN Volunteer · 🌍 International</span>
+                  </div>
+                  <div class="card-title-text">UN Online Volunteer Program — Youth & Technology</div>
+                  <div class="card-meta">
+                    <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Online</div>
+                    <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ចាប់ផ្ដើមភ្លាម</div>
+                    <div class="card-meta-item"><i class="bi bi-clock-history"></i> ១-៦ ខែ</div>
+                  </div>
+                  <div class="card-benefits">
+                    <div class="benefit-chip"><i class="bi bi-patch-check"></i> Certificate</div>
+                    <div class="benefit-chip"><i class="bi bi-globe"></i> UN Badge</div>
+                    <div class="benefit-chip"><i class="bi bi-graph-up"></i> Experience</div>
+                  </div>
+                  <button class="btn-card-detail" onclick="location.href='volunteer-register.html'"><i class="bi bi-info-circle me-1"></i>ព័ត៌មានលម្អិត</button>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /cards-grid -->
+
+          <!-- Empty State (hidden by default) -->
+          <div class="empty-state d-none" id="empty-state">
+            <div class="empty-icon">🔍</div>
+            <div class="empty-title">រកមិនឃើញ !</div>
+            <p class="empty-desc">សូមផ្លាស់ប្ដូរ keyword ឬ លុបការត្រង ហើយព្យាយាមម្ដងទៀត ។</p>
+            <button class="btn-card-detail" style="display:inline-block;width:auto;padding:10px 24px" onclick="clearFilters()">
+              <i class="bi bi-x-circle me-1"></i> លុបការត្រង
+            </button>
+          </div>
+
+        </div><!-- /grid-view -->
+
+        <!-- LIST VIEW (hidden by default) -->
+        <div id="list-view" class="d-none">
+
+          <div class="opp-card-list">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=200&q=80" class="list-img" alt="">
+            <div class="list-body">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="card-tag tag-scholarship" style="position:static;font-size:.7rem;padding:2px 9px"><i class="bi bi-award me-1"></i>អាហារូបករណ៍</span>
+                <span style="font-size:.75rem;color:#e53e3e;font-weight:600"><i class="bi bi-clock me-1"></i>ផុត: ៣០ មិថុនា</span>
+              </div>
+              <div class="list-title">School Library Support Volunteer</div>
+              <div class="list-meta">
+                <span><i class="bi bi-geo-alt"></i> Siem Reap, Cambodia</span>
+                <span><i class="bi bi-mortarboard"></i> Volunteer</span>
+                <span><i class="bi bi-people"></i> ៨ កន្លែង</span>
+                <span><i class="bi bi-building"></i> UNDP</span>
+              </div>
+              <div class="list-chips">
+                <div class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</div>
+                <div class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</div>
+                <div class="benefit-chip"><i class="bi bi-cash"></i> ប្រាក់ខែ</div>
+              </div>
+            </div>
+            <div class="list-actions">
+              <button class="btn-list-detail" onclick="location.href='scholarship-detail.html'">មើលលម្អិត</button>
+              <button class="btn-list-save" onclick="toggleSaveList(this)"><i class="bi bi-bookmark"></i></button>
+            </div>
+          </div>
+
+          <div class="opp-card-list">
+            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=200&q=80" class="list-img" alt="">
+            <div class="list-body">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="card-tag tag-exchange" style="position:static;font-size:.7rem;padding:2px 9px"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</span>
+                <span style="font-size:.75rem;color:var(--accent-gold);font-weight:600"><i class="bi bi-clock me-1"></i>ផុត: ១៥ ឧសភា</span>
+              </div>
+              <div class="list-title">Volunteer Teaching Assistant — Tokyo Youth Center</div>
+              <div class="list-meta">
+                <span><i class="bi bi-geo-alt"></i> Tokyo, Japan</span>
+                <span><i class="bi bi-clock-history"></i> ២ ខែ</span>
+                <span><i class="bi bi-people"></i> ១២ កន្លែង</span>
+                <span><i class="bi bi-building"></i> JICA</span>
+              </div>
+              <div class="list-chips">
+                <div class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</div>
+                <div class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</div>
+                <div class="benefit-chip"><i class="bi bi-fork-knife"></i> អាហារ</div>
+              </div>
+            </div>
+            <div class="list-actions">
+              <button class="btn-list-detail" onclick="location.href='exchange-detail.html'">មើលលម្អិត</button>
+              <button class="btn-list-save" onclick="toggleSaveList(this)"><i class="bi bi-bookmark"></i></button>
+            </div>
+          </div>
+
+          <div class="opp-card-list">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=200&q=80" class="list-img" alt="">
+            <div class="list-body">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="card-tag tag-course" style="position:static;font-size:.7rem;padding:2px 9px"><i class="bi bi-laptop me-1"></i>វគ្គសិក្សា</span>
+                <span style="font-size:.75rem;color:var(--accent-green);font-weight:600"><i class="bi bi-infinity me-1"></i>ឥតគិតថ្លៃ</span>
+              </div>
+              <div class="list-title">Virtual Volunteer — Environmental Awareness Campaign</div>
+              <div class="list-meta">
+                <span><i class="bi bi-geo-alt"></i> Online</span>
+                <span><i class="bi bi-clock-history"></i> ២-៤ សប្ដាហ៍</span>
+                <span><i class="bi bi-people"></i> ១០ កន្លែង</span>
+                <span><i class="bi bi-building"></i> Eco Network</span>
+              </div>
+              <div class="list-chips">
+                <div class="benefit-chip"><i class="bi bi-patch-check"></i> Certificate</div>
+                <div class="benefit-chip"><i class="bi bi-phone"></i> Mobile</div>
+              </div>
+            </div>
+            <div class="list-actions">
+              <button class="btn-list-detail" onclick="location.href='course-detail.html'">មើលលម្អិត</button>
+              <button class="btn-list-save" onclick="toggleSaveList(this)"><i class="bi bi-bookmark"></i></button>
+            </div>
+          </div>
+
+        </div><!-- /list-view -->
+
+        <!-- PAGINATION -->
+        <div class="pagination-wrap" id="pagination">
+          <button class="page-btn" disabled><i class="bi bi-chevron-left"></i></button>
+          <button class="page-btn active">១</button>
+          <button class="page-btn" onclick="goPage(this)">២</button>
+          <button class="page-btn" onclick="goPage(this)">៣</button>
+          <button class="page-btn" onclick="goPage(this)">...</button>
+          <button class="page-btn" onclick="goPage(this)">១២</button>
+          <button class="page-btn" onclick="goPage(this)"><i class="bi bi-chevron-right"></i></button>
+        </div>
+
+      </div><!-- /col results -->
+    </div><!-- /row -->
+  </div>
+</div>
+
+<!-- ====================================================  FOOTER  ==================================================== -->
 <footer>
   <div class="container">
     <div class="row g-5">
       <div class="col-lg-4">
-        <div class="footer-brand-name">
-          <div class="footer-brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
-          EduKhmer
-        </div>
-        <p class="footer-desc">
-          វេទិកាអប់រំលេខ ១ ក្នុងកម្ពុជា — ភ្ជាប់យុវជនខ្មែរ
-          ជាមួយឱកាលសិក្សា និងការងារ ទូទាំងពិភពលោក ។
-          ចូលរួមជាមួយគ្រួសារ EduKhmer ថ្ងៃនេះ — ឥតគិតថ្លៃ!
-        </p>
+        <div class="footer-brand-name"><div class="footer-brand-icon"><i class="bi bi-mortarboard-fill"></i></div>EduKhmer</div>
+        <p class="footer-desc">វេទិកាអប់រំលេខ ១ ក្នុងកម្ពុជា — ភ្ជាប់យុវជនខ្មែរ ជាមួយឱកាសសិក្សា និងការងារ ទូទាំងពិភពលោក ។</p>
         <div class="footer-social">
-          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
-          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-telegram"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
         </div>
       </div>
       <div class="col-6 col-lg-2">
-        <h5 class="footer-heading">ឱកាលសិក្សា</h5>
+        <h5 class="footer-heading">ឱកាសសិក្សា</h5>
         <ul class="footer-links">
           <li><a href="scholarships.html"><i class="bi bi-chevron-right"></i>អាហារូបករណ៍</a></li>
           <li><a href="courses.html"><i class="bi bi-chevron-right"></i>វគ្គសិក្សា</a></li>
           <li><a href="exchange.html"><i class="bi bi-chevron-right"></i>ផ្លាស់ប្តូរ</a></li>
           <li><a href="internships.html"><i class="bi bi-chevron-right"></i>ហាត់ការ</a></li>
-          <li><a href="volunteer.html"><i class="bi bi-chevron-right"></i>ស្ម័គ្រចិត្ត</a></li>
+          <li><a href="volunteer-local.html"><i class="bi bi-chevron-right"></i>ស្ម័គ្រចិត្ត</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2">
@@ -197,30 +865,14 @@
       <div class="col-lg-4">
         <h5 class="footer-heading">ទំនាក់ទំនង</h5>
         <ul class="footer-links">
-          <li>
-            <a href="mailto:info@edukhmer.com">
-              <i class="bi bi-envelope-at"></i> info@edukhmer.com
-            </a>
-          </li>
-          <li>
-            <a href="https://t.me/edukhmer">
-              <i class="bi bi-telegram"></i> @EduKhmer
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="bi bi-geo-alt"></i> ភ្នំពេញ, កម្ពុជា
-            </a>
-          </li>
+          <li><a href="mailto:info@edukhmer.com"><i class="bi bi-envelope-at"></i>info@edukhmer.com</a></li>
+          <li><a href="#"><i class="bi bi-telegram"></i>@EduKhmer</a></li>
+          <li><a href="#"><i class="bi bi-geo-alt"></i>ភ្នំពេញ, កម្ពុជា</a></li>
         </ul>
         <div class="mt-4 p-3 rounded-3" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">
-          <p style="color:rgba(255,255,255,.6);font-size:.83rem;margin-bottom:10px">
-            <i class="bi bi-bell me-1" style="color:var(--secondary-color)"></i>
-            ជាវដើម្បីទទួលឱកាលសិក្សាថ្មីៗ
-          </p>
+          <p style="color:rgba(255,255,255,.6);font-size:.83rem;margin-bottom:10px"><i class="bi bi-bell me-1" style="color:var(--secondary-color)"></i>ជាវដើម្បីទទួលឱកាសសិក្សាថ្មីៗ</p>
           <div class="d-flex gap-2">
-            <input type="email" class="form-control form-control-sm" placeholder="Email របស់អ្នក"
-              style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff">
+            <input type="email" class="form-control form-control-sm" placeholder="Email" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff">
             <button class="btn btn-primary btn-sm px-3" style="white-space:nowrap">ជាវ</button>
           </div>
         </div>
@@ -229,25 +881,113 @@
     <hr class="footer-divider">
     <div class="footer-bottom">
       <span>© ២០២៥ EduKhmer. រក្សាសិទ្ធិគ្រប់យ៉ាង.</span>
-      <div class="d-flex gap-3">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-      </div>
+      <div class="d-flex gap-3"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
     </div>
   </div>
 </footer>
 
+<!-- ====================================================  SCRIPTS  ==================================================== -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  const themeToggle = document.querySelector("[data-theme-toggle]");
-  const themeIcon = document.getElementById("theme-icon");
-  const html = document.documentElement;
+  AOS.init({ offset: 60, duration: 550, easing: 'ease-in-out', once: true });
 
-  themeToggle?.addEventListener("click", () => {
-    const isDark = html.getAttribute("data-theme") === "dark";
-    html.setAttribute("data-theme", isDark ? "light" : "dark");
-    if (themeIcon) {
-      themeIcon.className = isDark ? "bi bi-moon-fill" : "bi bi-sun-fill";
+  // Dark mode
+  document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    document.getElementById('theme-icon').className = isDark ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
+  });
+
+  // Navbar shrink
+  window.addEventListener('scroll', () => {
+    document.querySelector('.navbar').style.padding = window.scrollY > 50 ? '6px 0' : '12px 0';
+  });
+
+  // Tab filter
+  let activeType = 'all';
+  function setTab(btn, type) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeType = type;
+    filterCards();
+  }
+
+  // Main filter function
+  function filterCards() {
+    const keyword = document.getElementById('searchInput').value.toLowerCase();
+    const items   = document.querySelectorAll('.opp-item');
+    let shown = 0;
+
+    items.forEach(item => {
+      const type  = item.dataset.type;
+      const text  = item.innerText.toLowerCase();
+      const typeOk    = activeType === 'all' || type === activeType;
+      const keywordOk = !keyword || text.includes(keyword);
+      const visible   = typeOk && keywordOk;
+      item.style.display = visible ? '' : 'none';
+      if (visible) shown++;
+    });
+
+    document.getElementById('result-count').textContent = shown;
+    const empty = document.getElementById('empty-state');
+    if (shown === 0) empty.classList.remove('d-none');
+    else empty.classList.add('d-none');
+  }
+
+  // Clear filters
+  function clearFilters() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('countryFilter').value = '';
+    document.getElementById('levelFilter').value = '';
+    activeType = 'all';
+    document.querySelectorAll('.tab-btn').forEach((b,i) => b.classList.toggle('active', i===0));
+    filterCards();
+  }
+
+  // View toggle
+  function setView(v) {
+    const grid = document.getElementById('grid-view');
+    const list = document.getElementById('list-view');
+    const gb   = document.getElementById('grid-btn');
+    const lb   = document.getElementById('list-btn');
+    if (v === 'grid') {
+      grid.classList.remove('d-none'); list.classList.add('d-none');
+      gb.classList.add('active'); lb.classList.remove('active');
+    } else {
+      list.classList.remove('d-none'); grid.classList.add('d-none');
+      lb.classList.add('active'); gb.classList.remove('active');
+    }
+  }
+
+  // Save toggle
+  function toggleSave(btn) {
+    btn.classList.toggle('saved');
+    const icon = btn.querySelector('i');
+    icon.className = btn.classList.contains('saved') ? 'bi bi-bookmark-fill' : 'bi bi-bookmark';
+  }
+  function toggleSaveList(btn) {
+    btn.classList.toggle('saved');
+    btn.innerHTML = btn.classList.contains('saved') ? '<i class="bi bi-bookmark-fill"></i>' : '<i class="bi bi-bookmark"></i>';
+    btn.style.color = btn.classList.contains('saved') ? 'var(--primary-color)' : '';
+    btn.style.borderColor = btn.classList.contains('saved') ? 'var(--primary-color)' : '';
+  }
+
+  // Pagination
+  function goPage(btn) {
+    document.querySelectorAll('.page-btn').forEach(b => b.classList.remove('active'));
+    if (!btn.querySelector('i')) btn.classList.add('active');
+    window.scrollTo({ top: 400, behavior: 'smooth' });
+  }
+
+  filterCards();
+
+  // Copy filter sidebar into mobile drawer
+  window.addEventListener('DOMContentLoaded', () => {
+    const drawerBody = document.getElementById('filter-drawer-body');
+    if (drawerBody) {
+      const sidebarContent = document.getElementById('sidebar-filters-content');
+      if (sidebarContent) drawerBody.innerHTML = sidebarContent.innerHTML;
     }
   });
 </script>
