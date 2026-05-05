@@ -21,18 +21,22 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <!-- Css link -->
-    <link rel="stylesheet" href="../assets/css/navbar.css">
-
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/navbar.css">
+  <link rel="stylesheet" href="../assets/css/heng.css">
 </head>
+
+<body>
+
+<!-- ===================== HEADER ===================== -->
 <header class="fixed-top shadow-sm">
 
   <!-- TOP BAR -->
   <div class="top-header">
     <div class="container d-flex justify-content-between align-items-center">
       <ul class="list-unstyled d-flex m-0">
-        <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
+        <li><a href="pages/about.html" class="nav-link">អំពីយើង</a></li>
         <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
-        <li><a href="opportunities.html" class="nav-link d-none d-md-block">ឱកាសសិក្សា</a></li>
       </ul>
       <div class="nav-action">
         <div class="dropdown">
@@ -55,7 +59,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <div class="brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
+        <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
         <div>
           <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ</div>
           EduKhmer
@@ -92,15 +96,640 @@
         <li class="nav-item"><a class="nav-link" href="volunteer.html"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
       </ul>
       <div class="nav-auth d-none d-lg-flex">
-        <button class="btn-login" onclick="location.href='login.html'">ចូលគណនី</button>
-        <button class="btn-register" onclick="location.href='register.html'">ចុះឈ្មោះឥឡូវ</button>
+        <button class="btn-login" onclick="location.href='pages/login.html'">ចូលគណនី</button>
+        <button class="btn-register" onclick="location.href='pages/register.html'">ចុះឈ្មោះឥឡូវ</button>
       </div>
     </div>
   </nav>
 </header>
-<body>
-    
-</body>
+<!-- Mobile Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title d-flex align-items-center gap-2" style="color:var(--primary-color)">
+      <i class="bi bi-mortarboard-fill"></i> EduKhmer
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link py-3 border-bottom" href="../index.html"><i class="bi bi-house me-2"></i>ទំព័រដើម</a></li>
+      <li class="nav-item"><a class="nav-link active py-3 border-bottom" href="scholarships.html"><i class="bi bi-award me-2"></i>អាហារូបករណ៍</a></li>
+      <li class="nav-item"><a class="nav-link py-3 border-bottom" href="courses.html"><i class="bi bi-book me-2"></i>វគ្គសិក្សា</a></li>
+      <li class="nav-item"><a class="nav-link py-3 border-bottom" href="exchange.html"><i class="bi bi-globe me-2"></i>កម្មវិធីផ្លាស់ប្តូរ</a></li>
+      <li class="nav-item"><a class="nav-link py-3 border-bottom" href="internships.html"><i class="bi bi-briefcase me-2"></i>ហាត់ការ</a></li>
+      <li class="nav-item"><a class="nav-link py-3 border-bottom" href="volunteer.html"><i class="bi bi-heart me-2"></i>ស្ម័គ្រចិត្ត</a></li>
+    </ul>
+    <div class="d-grid gap-2 mt-4">
+      <a href="login.html" class="btn btn-outline-primary">ចូលគណនី</a>
+      <a href="register.html" class="btn btn-primary">ចុះឈ្មោះ</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FILTER & SEARCH SECTION ===================== -->
+<section class="scholarships-filter" style="padding: 50px 0; background: var(--bg-color);">
+  <div class="container">
+    <div class="text-center mb-4" data-aos="fade-up">
+      <h2 class="section-title-text" style="font-size: 1.75rem; margin-bottom: 0;">ស្វែងរក</h2>
+    </div>
+
+    <!-- Filter Cards Row -->
+    <div class="row g-2 mb-4" data-aos="fade-up">
+      <!-- Filter 1: Country -->
+      <div class="col-6 col-md-3">
+        <div style="background: white; padding: 14px; border-radius: 8px; border: 1px solid var(--border-color);">
+          <div class="input-group" style="border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 8px;">
+            <i class="bi bi-geo-alt" style="color: var(--primary-color); margin-right: 6px; font-size: 0.95rem;"></i>
+            <input type="text" class="form-control border-0" placeholder="ប្រទេស..." style="background: transparent; color: var(--text-black); font-size: 0.85rem; padding: 0;">
+          </div>
+          <input type="text" class="form-control border-0" placeholder="ស្វែងរក..." style="background: transparent; color: var(--text-muted); font-size: 0.75rem; padding: 0;">
+        </div>
+      </div>
+
+      <!-- Filter 2: Field -->
+      <div class="col-6 col-md-3">
+        <div style="background: white; padding: 14px; border-radius: 8px; border: 1px solid var(--border-color);">
+          <div style="display: flex; align-items: center; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--border-color);">
+            <i class="bi bi-book" style="color: var(--secondary-color); margin-right: 6px; font-size: 0.95rem;"></i>
+            <small style="color: var(--text-muted); font-weight: 500;">ផ្នែកសិក្សា</small>
+          </div>
+          <select class="form-select border-0" style="background: transparent; color: var(--text-black); font-size: 0.85rem; padding: 0; height: auto;">
+            <option>ទាំងអស់</option>
+            <option>វិទ្យាសាស្ត្រ</option>
+            <option>មនុស្សធម៌</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Filter 3: Type -->
+      <div class="col-6 col-md-3">
+        <div style="background: white; padding: 14px; border-radius: 8px; border: 1px solid var(--border-color);">
+          <div style="display: flex; align-items: center; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--border-color);">
+            <i class="bi bi-award" style="color: var(--accent-gold); margin-right: 6px; font-size: 0.95rem;"></i>
+            <small style="color: var(--text-muted); font-weight: 500;">ប្រភេទ</small>
+          </div>
+          <select class="form-select border-0" style="background: transparent; color: var(--text-black); font-size: 0.85rem; padding: 0; height: auto;">
+            <option>ទាំងអស់</option>
+            <option>ពេញលេញ</option>
+            <option>ចំណែក</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Filter 4: Level -->
+      <div class="col-6 col-md-3">
+        <div style="background: white; padding: 14px; border-radius: 8px; border: 1px solid var(--border-color);">
+          <div style="display: flex; align-items: center; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--border-color);">
+            <i class="bi bi-mortarboard" style="color: var(--accent-green); margin-right: 6px; font-size: 0.95rem;"></i>
+            <small style="color: var(--text-muted); font-weight: 500;">កម្រិត</small>
+          </div>
+          <select class="form-select border-0" style="background: transparent; color: var(--text-black); font-size: 0.85rem; padding: 0; height: auto;">
+            <option>ទាំងអស់</option>
+            <option>បរិញ្ញាបត្រ</option>
+            <option>លិប្ប័ន</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="row">
+      <div class="col-12 d-flex gap-2 justify-content-end" data-aos="fade-up">
+        <button class="btn btn-sm" style="background: transparent; color: var(--primary-color); border: 1px solid var(--primary-color); border-radius: 6px; padding: 8px 18px; font-weight: 600; font-size: 0.85rem;">
+          <i class="bi bi-arrow-clockwise me-1"></i> កំណត់
+        </button>
+        <button class="btn btn-sm" style="background: var(--primary-color); color: white; border: none; border-radius: 6px; padding: 8px 22px; font-weight: 600; font-size: 0.85rem;">
+          <i class="bi bi-search me-1"></i> ស្វែងរក
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURED SCHOLARSHIPS ===================== -->
+<section style="background: var(--bg-page);">
+  <div class="container">
+    <div class="row align-items-end mb-5">
+      <div class="col-lg-8" data-aos="fade-right">
+        <div class="section-label"><i class="bi bi-star me-1"></i>ពិសេស</div>
+        <h2 class="section-title-text">អាហារូបករណ៍ដែលបានលើកឡើង</h2>
+        <p class="section-desc">ឱកាសលម្អិតក្នុងរយៈពេលកំណត់ដែលមានថវិកាច្រើន</p>
+      </div>
+      <div class="col-lg-4 text-lg-end mt-3 mt-lg-0" data-aos="fade-left">
+        <a href="#" class="btn-view-all">
+          មើលទាំងអស់ <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Scholarship Card 1 -->
+      <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://www.koicascholarship.com/wp-content/uploads/2025/05/apply-now-koica-scholarship-2025-koica-scholarship-2026.png" alt="KOICA Scholarship" class="w-100" style="object-fit: cover;">
+            <div class="card-tag scholarship"><i class="bi bi-award me-1"></i>អាហារូបករណ៍</div>
+
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background: linear-gradient(135deg, #003580, #0053a0);">KR</div>
+              <span class="card-org-name">KOICA · កូរ៉េ</span>
+            </div>
+            <div class="card-title-text">អាហារូបករណ៍ KOICA ២០២៦</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> សេអូល, កូរ៉េ</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-event"></i> ៣-១២ ខែ</div>
+              <div class="card-meta-item"><i class="bi bi-cash-coin"></i> ឧបត្ថម្ធពេញលេញ</div>
+              <div class="card-meta-item" style="color: rgba(34, 197, 94, 0.9); font-weight: 600;"><i class="bi bi-calendar2-check"></i> ៣០ មិថុនា ២០២៦</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ឥតថ្លៃ</span>
+              <span class="benefit-chip"><i class="bi bi-check2"></i> លំនៅដ្ឋាន</span>
+            </div>
+            <button class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scholarship Card 2 -->
+      <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&q=80" alt="ADB Scholarship" class="w-100" style="object-fit: cover;">
+            <div class="card-tag" style="background: rgba(0,122,204,.9); color: #fff;"><i class="bi bi-award me-1"></i>អាហារូបករណ៍</div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background: linear-gradient(135deg, #1E40AF, #3B82F6);">ADB</div>
+              <span class="card-org-name">ADB · ធនាគារលោក</span>
+            </div>
+            <div class="card-title-text">អាហារូបករណ៍ ADB ឆ្នាំ ២០២៦</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> ផីលីពីន</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-event"></i> ២ ឆ្នាំ</div>
+              <div class="card-meta-item"><i class="bi bi-cash-coin"></i> $១៥,០००/ឆ្នាំ</div>
+              <div class="card-meta-item" style="color: rgba(239, 68, 68, 0.9); font-weight: 600;"><i class="bi bi-exclamation-circle-fill"></i> ៣១ មេសា ២០២៦</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ឥតថ្លៃ</span>
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ព្យាបាលសុខភាព</span>
+            </div>
+            <button class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scholarship Card 3 -->
+      <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80" alt="Chevening Scholarship" class="w-100" style="object-fit: cover;">
+            <div class="card-tag exchange" style="background: rgba(0, 194, 178,.9); color: #fff;"><i class="bi bi-award me-1"></i>អាហារូបករណ៍</div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background: linear-gradient(135deg, #1e293b, #334155);">UK</div>
+              <span class="card-org-name">Chevening · ចក្រភូមិអង់គ្លេស</span>
+            </div>
+            <div class="card-title-text">អាហារូបករណ៍ Chevening ឆ្នាំ ២០២៦</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> ឡុងដ័រ, ចក្រ</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-event"></i> ១ ឆ្នាំ</div>
+              <div class="card-meta-item"><i class="bi bi-cash-coin"></i> £១៨,០००/ឆ្នាំ</div>
+              <div class="card-meta-item" style="color: rgba(249, 115, 22, 0.9); font-weight: 600;"><i class="bi bi-clock-history"></i> ៣០ ឧសភា ២០២៦</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ឥតថ្លៃ</span>
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ប្រាក់រស់នៅ</span>
+            </div>
+            <button class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scholarship Card 4 -->
+      <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80" alt="Japanese Government Scholarship" class="w-100" style="object-fit: cover;">
+            <div class="card-tag scholarship"><i class="bi bi-award me-1"></i>អាហារូបករណ៍</div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background: linear-gradient(135deg, #BC002D, #e60033);">JP</div>
+              <span class="card-org-name">MEXT · ជប៉ុន</span>
+            </div>
+            <div class="card-title-text">អាហារូបករណ៍ MEXT ២០២៦</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> តូក្យូ, ជប៉ុន</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-event"></i> ២ ឆ្នាំ</div>
+              <div class="card-meta-item"><i class="bi bi-cash-coin"></i> ឧបត្ថម្ធពេញលេញ</div>
+              <div class="card-meta-item" style="color: rgba(239, 68, 68, 0.9); font-weight: 600;"><i class="bi bi-exclamation-circle-fill"></i> ២៧ មេសា ២០២៦</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ឥតថ្លៃ</span>
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ប្រាក់រស់នៅ</span>
+            </div>
+            <button class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scholarship Card 5 -->
+      <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&q=80" alt="Singapore Government Scholarship" class="w-100" style="object-fit: cover;">
+            <div class="card-tag scholarship"><i class="bi bi-award me-1"></i>អាហារូបករណ៍</div>
+
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background: linear-gradient(135deg, #EF3B39, #FF5733);">SG</div>
+              <span class="card-org-name">Singapore Government · សិង្ហបុរី</span>
+            </div>
+            <div class="card-title-text">អាហារូបករណ៍រដ្ឋាភិបាលសិង្ហបុរី</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> សិង្ហបុរី</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-event"></i> ៣-៤ឆ្នាំ</div>
+              <div class="card-meta-item"><i class="bi bi-cash-coin"></i> ឧបត្ថម្ធពេញលេញ</div>
+              <div class="card-meta-item" style="color: rgba(239, 68, 68, 0.9); font-weight: 600;"><i class="bi bi-exclamation-circle-fill"></i> ១៣ មេសា ២០២៦</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ឥតថ្លៃ</span>
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ហិរញ្ញប្បទាន</span>
+            </div>
+            <button class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scholarship Card 6 -->
+      <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://www.scholarhunter.com/wp-content/uploads/2025/05/International-Scholarships-Apply-Now-15-222.jpg" alt="ASEAN Scholarship" class="w-100" style="object-fit: cover;">
+            <div class="card-tag scholarship"><i class="bi bi-award me-1"></i>អាហារូបករណ៍</div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background: linear-gradient(135deg, #0047AB, #4169E1);">ASEAN</div>
+              <span class="card-org-name">ASEAN Foundation · សមាគម</span>
+            </div>
+            <div class="card-title-text">អាហារូបករណ៍ ASEAN ២០២៦</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> ប្រទេស ASEAN ផ្សេងៗ</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-event"></i> ១-២ឆ្នាំ</div>
+              <div class="card-meta-item"><i class="bi bi-cash-coin"></i> ចំណែកហិរញ្ញប្បទាន</div>
+              <div class="card-meta-item" style="color: rgba(34, 197, 94, 0.9); font-weight: 600;"><i class="bi bi-calendar2-check"></i> ២៧ មេសា ២០២៦</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ឥតថ្លៃ</span>
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ហិរញ្ញប្បទាន</span>
+            </div>
+            <button class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scholarship Card 7 -->
+      <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80" alt="Canadian Government Scholarship" class="w-100" style="object-fit: cover;">
+            <div class="card-tag scholarship"><i class="bi bi-award me-1"></i>អាហារូបករណ៍</div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background: linear-gradient(135deg, #E74C3C, #C41E3A);">CA</div>
+              <span class="card-org-name">Canadian Bureau · កាណាដា</span>
+            </div>
+            <div class="card-title-text">អាហារូបករណ៍ Vanier ២០២៦</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> ប្រទេសកាណាដា</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-event"></i> ២-៣ ឆ្នាំ</div>
+              <div class="card-meta-item"><i class="bi bi-cash-coin"></i> CAD $50,000</div>
+              <div class="card-meta-item" style="color: rgba(34, 197, 94, 0.9); font-weight: 600;"><i class="bi bi-calendar2-check"></i> ១៥ មិថុនា ២០២៦</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ឧបត្ថម្ធ</span>
+              <span class="benefit-chip"><i class="bi bi-check2"></i> លិខិត</span>
+            </div>
+            <button class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scholarship Card 8 -->
+      <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=600&q=80" alt="Australian Government Scholarship" class="w-100" style="object-fit: cover;">
+            <div class="card-tag scholarship"><i class="bi bi-award me-1"></i>អាហារូបករណ៍</div>
+
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background: linear-gradient(135deg, #1E90FF, #00BFFF);">AU</div>
+              <span class="card-org-name">ADS Australia · អូស្ត្រាលីយ៉ា</span>
+            </div>
+            <div class="card-title-text">អាហារូបករណ៍ Endeavour ២០២៦</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> ស៊ីដនី, អូស្ត្រាលី</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-event"></i> ១-២ ឆ្នាំ</div>
+              <div class="card-meta-item"><i class="bi bi-cash-coin"></i> AUD $25,000</div>
+              <div class="card-meta-item" style="color: rgba(34, 197, 94, 0.9); font-weight: 600;"><i class="bi bi-calendar2-check"></i> ៩ មិថុនា ២០២៦</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ឥតថ្លៃ</span>
+              <span class="benefit-chip"><i class="bi bi-check2"></i> លិខិត</span>
+            </div>
+            <button class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scholarship Card 9 -->
+      <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxZiWggxhIzLieEgm_GpPgIEwpElMknMVyAQ&s" alt="German Government Scholarship" class="w-100" style="object-fit: cover;">
+            <div class="card-tag scholarship"><i class="bi bi-award me-1"></i>អាហារូបករណ៍</div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background: linear-gradient(135deg, #1C1C1C, #FFD700);">DE</div>
+              <span class="card-org-name">DAAD · ប្រទេសអាឡឺម៉ង់</span>
+            </div>
+            <div class="card-title-text">អាហារូបករណ៍ DAAD ២០២៦</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> ប៉ាឡាំង, ប្រទេសអាឡឺម៉ង់</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-event"></i> ១-២ ឆ្នាំ</div>
+              <div class="card-meta-item"><i class="bi bi-cash-coin"></i> €1,025/ខែ</div>
+              <div class="card-meta-item" style="color: rgba(249, 115, 22, 0.9); font-weight: 600;"><i class="bi bi-clock-history"></i> ៥ មេសា ២០២៦</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ឧបត្ថម្ធ</span>
+              <span class="benefit-chip"><i class="bi bi-check2"></i> លំនៅដ្ឋាន</span>
+            </div>
+            <button class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scholarship Card 10 -->
+      <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=600&q=80" alt="Vietnam Government Scholarship" class="w-100" style="object-fit: cover;">
+            <div class="card-tag scholarship"><i class="bi bi-award me-1"></i>អាហារូបករណ៍</div>
+
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background: linear-gradient(135deg, #CE1126, #FFC500);">VN</div>
+              <span class="card-org-name">Vietnamese Government · វៀតណាម</span>
+            </div>
+            <div class="card-title-text">អាហារូបករណ៍រដ្ឋាភិបាលវៀតណាម ២០២៦</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> ហាណូយ, វៀតណាម</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-event"></i> ២-៣ ឆ្នាំ</div>
+              <div class="card-meta-item"><i class="bi bi-cash-coin"></i> ឧបត្ថម្ធផ្នែកលេខ</div>
+              <div class="card-meta-item" style="color: rgba(34, 197, 94, 0.9); font-weight: 600;"><i class="bi bi-calendar2-check"></i> ៣០ មេសា ២០២៦</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ឥតថ្លៃ</span>
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ឧបត្ថម្ធលម្អិត</span>
+            </div>
+            <button class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scholarship Card 11 -->
+      <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&q=80" alt="Malaysian Government Scholarship" class="w-100" style="object-fit: cover;">
+            <div class="card-tag scholarship"><i class="bi bi-award me-1"></i>អាហារូបករណ៍</div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background: linear-gradient(135deg, #003580, #FFD700);">MY</div>
+              <span class="card-org-name">MARA · ម៉ាឡេស៊ី</span>
+            </div>
+            <div class="card-title-text">អាហារូបករណ៍ MARA ២០២៦</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> កូឡាលាំពួール, ម៉ាឡេស៊ី</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-event"></i> ៣-៤ ឆ្នាំ</div>
+              <div class="card-meta-item"><i class="bi bi-cash-coin"></i> RM 10,000/ឆ្នាំ</div>
+              <div class="card-meta-item" style="color: rgba(34, 197, 94, 0.9); font-weight: 600;"><i class="bi bi-calendar2-check"></i> ១ កក្កដា ២០២៦</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ឧបត្ថម្ធ</span>
+              <span class="benefit-chip"><i class="bi bi-check2"></i> លិខិត</span>
+            </div>
+            <button class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scholarship Card 12 -->
+      <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=600&q=80" alt="Brunei Government Scholarship" class="w-100" style="object-fit: cover;">
+            <div class="card-tag scholarship"><i class="bi bi-award me-1"></i>អាហារូបករណ៍</div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background: linear-gradient(135deg, #003580, #FFFFFF);">BN</div>
+              <span class="card-org-name">Brunei Ministry · ប្រុយណេ</span>
+            </div>
+            <div class="card-title-text">អាហារូបករណ៍គ្រាប់ត្រូវប្រុយណេ ២០២៦</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> ផាលាម, ប្រុយណេ</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-event"></i> ២ ឆ្នាំ</div>
+              <div class="card-meta-item"><i class="bi bi-cash-coin"></i> BND 25,000/ឆ្នាំ</div>
+              <div class="card-meta-item" style="color: rgba(59, 130, 246, 0.9); font-weight: 600;"><i class="bi bi-info-circle"></i> ១ ធ្នូរ ២០២៦</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-check2"></i> ឧបត្ថម្ធ</span>
+              <span class="benefit-chip"><i class="bi bi-check2"></i> លិខិត</span>
+            </div>
+            <button class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </button>
+          </div>
+        </div>
+      </div>
+    <div class="text-center mt-5" data-aos="fade-up">
+      <button class="btn btn-lg" style="background: var(--bg-subtle); color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 10px; padding: 12px 48px; font-weight: 600;">
+        <i class="bi bi-download me-2"></i> ផ្ទុកលក្ខណៈបន្ថែម
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="how-section" style="padding: 80px 0; background: var(--bg-color);">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-label"><i class="bi bi-compass me-1"></i>របៀបប្រើ</div>
+      <h2 class="section-title-text">វិធីដាក់ពាក្យសុំលទ្ធិ</h2>
+      <p class="section-desc mx-auto">បន្ទាប់មកពីបួនដំណាក់កាលងាយស្រួល</p>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="0">
+        <div class="step-card text-center w-100">
+          <div class="step-num" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white;">១</div>
+          <h4 class="mt-3 mb-2" style="color: var(--text-black); font-weight: 600;">ស្វែងរក & ស្ទង់ល្អិត</h4>
+          <p class="text-muted" style="font-size: 0.95rem;">ស្វែងរកអាហារូបករណ៍ដែលសាកសមនឹងជំនាញរបស់អ្នក</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="step-card text-center w-100">
+          <div class="step-num" style="background: linear-gradient(135deg, var(--secondary-color), var(--accent-gold)); color: white;">២</div>
+          <h4 class="mt-3 mb-2" style="color: var(--text-black); font-weight: 600;">ត្រៀមឯកសារ</h4>
+          <p class="text-muted" style="font-size: 0.95rem;">រៀបចំឯកសារលម្អិត CV និង Motivation Letter</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="200">
+        <div class="step-card text-center w-100">
+          <div class="step-num" style="background: linear-gradient(135deg, var(--accent-gold), var(--accent-green)); color: white;">៣</div>
+          <h4 class="mt-3 mb-2" style="color: var(--text-black); font-weight: 600;">ដាក់ពាក្យ</h4>
+          <p class="text-muted" style="font-size: 0.95rem;">ដាក់ពាក្យគ្រប់បែបបទតាមលក្ខខណ្ឌ</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="300">
+        <div class="step-card text-center w-100">
+          <div class="step-num" style="background: linear-gradient(135deg, var(--accent-green), #00D4D4); color: white;">៤</div>
+          <h4 class="mt-3 mb-2" style="color: var(--text-black); font-weight: 600;">ទទួលលទ្ធផល</h4>
+          <p class="text-muted" style="font-size: 0.95rem;">ទទួលលទ្ធផលពីក្រសួង ឬស្ថាប័ន</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ SECTION ===================== -->
+<section class="faq-section" style="padding: 80px 0; background: var(--bg-page);">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-right">
+        <div class="section-label"><i class="bi bi-question-circle me-1"></i>FAQ</div>
+        <h2 class="section-title-text mb-4">សំណួរដែលគេសួរញឹកញាប់</h2>
+        <p class="section-desc mb-4">ស្វែងរកចម្លើយលម្អិតចំពោះសំណួរដែលគេសួរ</p>
+        <div class="faq-contact-box" style="background: var(--bg-subtle); padding: 24px; border-radius: 12px; border-left: 4px solid var(--primary-color);">
+          <h5 class="mb-2" style="color: var(--text-black);">មិនឃើញចម្លើយ?</h5>
+          <p class="text-muted mb-3" style="font-size: 0.9rem;">ទាក់ទងក្រុមការងាររបស់យើង ២៤/៧</p>
+          <button class="btn btn-sm" style="background: var(--primary-color); color: white;">
+            <i class="bi bi-chat-dots"></i> ទាក់ទងយើង
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-8" data-aos="fade-left">
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item border-0 mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" style="background: var(--bg-color); font-weight: 600; color: var(--text-black);">
+                តើលក្ខខណ្ឌដាក់ពាក្យអាហារូបករណ៍ដូចម្តេច?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body" style="background: var(--bg-subtle); color: var(--text-descript);">
+                លក្ខខណ្ឌដាក់ពាក្យថេរ ភាគច្រើនទាមទារ CGPA ២.៥ ឡើងលើ វិញ្ញាបនបត្រសិក្សា និងលិខិតអនុសាសន៍ ។ សូមពិនិត្យមើលលម្អិតលក្ខខណ្ឌនីមួយៗដោយប្រុងប្រយ័ត្ន ។
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" style="background: var(--bg-color); font-weight: 600; color: var(--text-black);">
+                តើ EduKhmer ជួយក្នុងការរៀបចំឯកសារដែលទេ?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body" style="background: var(--bg-subtle); color: var(--text-descript);">
+                បាទ! ក្រុមការងាររបស់យើងផ្តល់ការបង្រៀនលម្អិត និងជំនួយក្នុងការរៀបចំឯកសារ រូបភាព CV និង Motivation Letter ។
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" style="background: var(--bg-color); font-weight: 600; color: var(--text-black);">
+                តើមានអាហារូបករណ៍សម្រាប់និស្សិតបរិញ្ញាលិប្ប័នដែរឬទេ?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body" style="background: var(--bg-subtle); color: var(--text-descript);">
+                បាទ! យើងមានអាហារូបករណ៍ផ្សេងៗ សម្រាប់និស្សិតបរិញ្ញាលិប្ប័ន ដែលមានលក្ខខណ្ឌផ្សេងៗគ្នា ។
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" style="background: var(--bg-color); font-weight: 600; color: var(--text-black);">
+                តើការដាក់ពាក្យតាម EduKhmer ឥតគិតថ្លៃទេ?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body" style="background: var(--bg-subtle); color: var(--text-descript);">
+                ឥតសង្ស័យ! ការប្រើប្រាស់ EduKhmer ឥតគិតថ្លៃ ១០០% ដោយរាប់បញ្ចូលទាំងការស្វែងរក ការដាក់ពាក្យ និងលទ្ធផល ។
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA SECTION ===================== -->
+<section class="cta-section" style="padding: 80px 0; background: linear-gradient(135deg, var(--primary-color), #0054B3); position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(245,166,35,.08) 0%, transparent 40%); pointer-events: none;"></div>
+  <div class="container position-relative">
+    <div class="row align-items-center">
+      <div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-right">
+        <h2 class="section-title-text mb-3" style="color: white;">ចូលក្រុមគ្រួសារ EduKhmer?</h2>
+        <p style="color: rgba(255,255,255,.85); font-size: 1.05rem; line-height: 1.8;">ចូលរួមក្នុងគ្រួសារក្រុមសិក្សាដ៏វឌ្ឍនៃ ឥតគិតថ្លៃ ងាយស្រួល និងស្វាគមន៍</p>
+      </div>
+      <div class="col-lg-5 text-lg-end" data-aos="fade-left">
+        <button class="btn btn-lg" style="background: var(--accent-gold); color: white; border: none; border-radius: 10px; padding: 14px 48px; font-weight: 600; font-size: 1rem;" onclick="location.href='register.html'">
+          <i class="bi bi-pencil-square me-2"></i> ចុះឈ្មោះឥឡូវ
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
 <footer>
   <div class="container">
     <div class="row g-5">
@@ -111,7 +740,7 @@
         </div>
         <p class="footer-desc">
           វេទិកាអប់រំលេខ ១ ក្នុងកម្ពុជា — ភ្ជាប់យុវជនខ្មែរ
-          ជាមួយឱកាសសិក្សា និងការងារ ទូទាំងពិភពលោក ។
+          ជាមួយឱកាសព័ត៌មាន និងការងារ ទូទាំងពិភពលោក ។
           ចូលរួមជាមួយគ្រួសារ EduKhmer ថ្ងៃនេះ — ឥតគិតថ្លៃ!
         </p>
         <div class="footer-social">
@@ -122,7 +751,7 @@
         </div>
       </div>
       <div class="col-6 col-lg-2">
-        <h5 class="footer-heading">ឱកាសសិក្សា</h5>
+        <h5 class="footer-heading">ឱកាស</h5>
         <ul class="footer-links">
           <li><a href="scholarships.html"><i class="bi bi-chevron-right"></i>អាហារូបករណ៍</a></li>
           <li><a href="courses.html"><i class="bi bi-chevron-right"></i>វគ្គសិក្សា</a></li>
@@ -163,7 +792,7 @@
         <div class="mt-4 p-3 rounded-3" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">
           <p style="color:rgba(255,255,255,.6);font-size:.83rem;margin-bottom:10px">
             <i class="bi bi-bell me-1" style="color:var(--secondary-color)"></i>
-            ជាវដើម្បីទទួលឱកាសសិក្សាថ្មីៗ
+            ជាវដើម្បីទទួលឱកាសស្កាយថ្មីៗ
           </p>
           <div class="d-flex gap-2">
             <input type="email" class="form-control form-control-sm" placeholder="Email របស់អ្នក"
@@ -175,7 +804,7 @@
     </div>
     <hr class="footer-divider">
     <div class="footer-bottom">
-      <span>© ២០២៥ EduKhmer. រក្សាសិទ្ធិគ្រប់យ៉ាង.</span>
+      <span>© ២០២៦ EduKhmer. រក្សាសិទ្ធិគ្រប់យ៉ាង.</span>
       <div class="d-flex gap-3">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Use</a>
@@ -183,4 +812,37 @@
     </div>
   </div>
 </footer>
+
+<!-- ===================== SCRIPTS ===================== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  // AOS init
+  AOS.init({ offset: 80, duration: 600, easing: 'ease-in-out', once: true });
+
+  // Dark/light toggle
+  const themeToggle = document.querySelector('[data-theme-toggle]');
+  const themeIcon   = document.getElementById('theme-icon');
+  const html = document.documentElement;
+  themeToggle?.addEventListener('click', () => {
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    themeIcon.className = isDark ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
+  });
+
+  // Smooth scroll behavior
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href !== '#' && document.querySelector(href)) {
+        e.preventDefault();
+        document.querySelector(href).scrollIntoView({behavior: 'smooth'});
+      }
+    });
+  });
+</script>
+
+</body>
 </html>
