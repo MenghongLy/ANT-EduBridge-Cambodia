@@ -126,101 +126,110 @@
   </div>
 </div>
 
-<!-- ===================== FILTER & SEARCH SECTION ===================== -->
-<section class="scholarships-filter" style="padding: 50px 0; background: var(--bg-color);">
+<!-- ===================== PAGE HERO ===================== -->
+<div class="page-hero animate__animated animate__fadeIn animate__slow">
+  <div class="page-hero-grid"></div>
+  <div class="container position-relative" style="z-index:2">
+    <div class="row align-items-center">
+      <div class="col-lg-7" data-aos="fade-right">
+        <h1 class="page-hero-title">អាហារូបករណ៍<br><span>ក្នុងស្រុក និងអន្តរជាតិ</span></h1>
+        <p class="page-hero-desc">
+          ស្វែងរកឱកាសអាហារូបករណ៍ដែលសមស្របសម្រាប់អ្នក ដោយបញ្ចូលទាំងអាហារូបករណ៍ក្នុងស្រុក និងអាហារូបករណ៍អន្តរជាតិ។
+          ជ្រើសរើសតាមផ្នែកសិក្សា ប្រភេទហិរញ្ញប្បទាន និងទីតាំង ដែលមានបច្ចុប្បន្នភាពជារៀងរាល់ថ្ងៃ។
+        </p>
+      </div>
+      <div class="col-lg-5 d-none d-lg-flex justify-content-end gap-3 align-items-center" data-aos="fade-left">
+        <div class="text-center p-3 rounded-3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);min-width:90px">
+          <div style="font-size:1.8rem;font-weight:700;color:#fff">100+</div>
+          <div style="font-size:.78rem;color:rgba(255,255,255,.6)">អាហារូបករណ៍សកម្ម</div>
+        </div>
+        <div class="text-center p-3 rounded-3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);min-width:90px">
+          <div style="font-size:1.8rem;font-weight:700;color:#fff">50+</div>
+          <div style="font-size:.78rem;color:rgba(255,255,255,.6)">ប្រទេស/តំបន់</div>
+        </div>
+        <div class="text-center p-3 rounded-3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);min-width:90px">
+          <div style="font-size:1.8rem;font-weight:700;color:var(--accent-gold)">ថ្មី</div>
+          <div style="font-size:.78rem;color:rgba(255,255,255,.6)">រៀងរាល់ថ្ងៃ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SEARCH BAR ===================== -->
+<div class="search-bar-wrap">
   <div class="container">
-    <div class="text-center mb-4" data-aos="fade-up">
-      <h2 class="section-title-text" style="font-size: 1.75rem; margin-bottom: 0;">ស្វែងរក</h2>
-    </div>
-
-    <!-- Filter Cards Row -->
-    <div class="row g-2 mb-4" data-aos="fade-up">
-      <!-- Filter 1: Country -->
-      <div class="col-6 col-md-3">
-        <div style="background: white; padding: 14px; border-radius: 8px; border: 1px solid var(--border-color);">
-          <div class="input-group" style="border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 8px;">
-            <i class="bi bi-geo-alt" style="color: var(--primary-color); margin-right: 6px; font-size: 0.95rem;"></i>
-            <input type="text" class="form-control border-0" placeholder="ប្រទេស..." style="background: transparent; color: var(--text-black); font-size: 0.85rem; padding: 0;">
-          </div>
-          <input type="text" class="form-control border-0" placeholder="ស្វែងរក..." style="background: transparent; color: var(--text-muted); font-size: 0.75rem; padding: 0;">
+    <div class="row g-3 align-items-center">
+      <div class="col-lg-5 col-md-12">
+        <div class="input-group input-group-lg">
+          <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+          <input type="text" class="form-control" id="searchInput" placeholder="ស្វែងរក អាហារូបករណ៍ ស្ថាប័ន ឬ ប្រទេស..." oninput="filterCards()">
         </div>
       </div>
-
-      <!-- Filter 2: Field -->
-      <div class="col-6 col-md-3">
-        <div style="background: white; padding: 14px; border-radius: 8px; border: 1px solid var(--border-color);">
-          <div style="display: flex; align-items: center; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--border-color);">
-            <i class="bi bi-book" style="color: var(--secondary-color); margin-right: 6px; font-size: 0.95rem;"></i>
-            <small style="color: var(--text-muted); font-weight: 500;">ផ្នែកសិក្សា</small>
-          </div>
-          <select class="form-select border-0" style="background: transparent; color: var(--text-black); font-size: 0.85rem; padding: 0; height: auto;">
-            <option>ទាំងអស់</option>
-            <option>វិទ្យាសាស្ត្រ</option>
-            <option>មនុស្សធម៌</option>
-          </select>
-        </div>
+      <div class="col-lg-3 col-md-6">
+        <select class="form-select form-select-lg" id="countryFilter" onchange="filterCards()">
+          <option value="">គ្រប់ប្រទេស</option>
+          <option value="cambodia">🇰🇭 កម្ពុជា</option>
+          <option value="japan">🇯🇵 ជប៉ុន</option>
+          <option value="korea">🇰🇷 កូរ៉េ</option>
+          <option value="usa">🇺🇸 អាមេរិក</option>
+          <option value="australia">🇦🇺 អូស្ត្រាលី</option>
+          <option value="online"> Online</option>
+        </select>
       </div>
-
-      <!-- Filter 3: Type -->
-      <div class="col-6 col-md-3">
-        <div style="background: white; padding: 14px; border-radius: 8px; border: 1px solid var(--border-color);">
-          <div style="display: flex; align-items: center; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--border-color);">
-            <i class="bi bi-award" style="color: var(--accent-gold); margin-right: 6px; font-size: 0.95rem;"></i>
-            <small style="color: var(--text-muted); font-weight: 500;">ប្រភេទ</small>
-          </div>
-          <select class="form-select border-0" style="background: transparent; color: var(--text-black); font-size: 0.85rem; padding: 0; height: auto;">
-            <option>ទាំងអស់</option>
-            <option>ពេញលេញ</option>
-            <option>ចំណែក</option>
-          </select>
-        </div>
+      <div class="col-lg-2 col-md-6">
+        <select class="form-select form-select-lg" id="levelFilter" onchange="filterCards()">
+          <option value="">គ្រប់ផ្នែក</option>
+          <option value="science">វិទ្យាសាស្ត្រ</option>
+          <option value="humanities">មនុស្សធម៌</option>
+          <option value="technology">បច្ចេកវិទ្យា</option>
+          <option value="business">ពាណិជ្ជកម្ម</option>
+          <option value="arts">សិល្បៈ</option>
+        </select>
       </div>
-
-      <!-- Filter 4: Level -->
-      <div class="col-6 col-md-3">
-        <div style="background: white; padding: 14px; border-radius: 8px; border: 1px solid var(--border-color);">
-          <div style="display: flex; align-items: center; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--border-color);">
-            <i class="bi bi-mortarboard" style="color: var(--accent-green); margin-right: 6px; font-size: 0.95rem;"></i>
-            <small style="color: var(--text-muted); font-weight: 500;">កម្រិត</small>
-          </div>
-          <select class="form-select border-0" style="background: transparent; color: var(--text-black); font-size: 0.85rem; padding: 0; height: auto;">
-            <option>ទាំងអស់</option>
-            <option>បរិញ្ញាបត្រ</option>
-            <option>លិប្ប័ន</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <!-- Action Buttons -->
-    <div class="row">
-      <div class="col-12 d-flex gap-2 justify-content-end" data-aos="fade-up">
-        <button class="btn btn-sm" style="background: transparent; color: var(--primary-color); border: 1px solid var(--primary-color); border-radius: 6px; padding: 8px 18px; font-weight: 600; font-size: 0.85rem;">
-          <i class="bi bi-arrow-clockwise me-1"></i> កំណត់
+      <div class="col-lg-1 col-6 d-grid">
+        <button class="btn btn-primary btn-lg" onclick="filterCards()">
+          <i class="bi bi-search"></i>
         </button>
-        <button class="btn btn-sm" style="background: var(--primary-color); color: white; border: none; border-radius: 6px; padding: 8px 22px; font-weight: 600; font-size: 0.85rem;">
-          <i class="bi bi-search me-1"></i> ស្វែងរក
+      </div>
+      <div class="col-lg-1 col-6 d-grid d-lg-none">
+        <button class="btn btn-outline-primary btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterDrawer">
+          <i class="bi bi-funnel"></i>
         </button>
       </div>
     </div>
   </div>
-</section>
+</div>
+
+<!-- ===================== TYPE TABS ===================== -->
+<div class="type-tabs">
+  <div class="container">
+    <div class="nav nav-pills flex-nowrap overflow-auto py-2 gap-2" role="tablist">
+      <button class="btn btn-sm btn-outline-primary tab-btn active" data-type="all" onclick="setTab(this,'all')">
+        <i class="bi bi-grid-3x3-gap"></i> ទាំងអស់ <span class="tab-count">50+</span>
+      </button>
+      <button class="btn btn-sm btn-outline-primary tab-btn" data-type="local" onclick="setTab(this,'local')">
+        <i class="bi bi-geo-alt"></i> ក្នុងស្រុក <span class="tab-count">15</span>
+      </button>
+      <button class="btn btn-sm btn-outline-primary tab-btn" data-type="international" onclick="setTab(this,'international')">
+        <i class="bi bi-globe"></i> អន្តរជាតិ <span class="tab-count">35</span>
+      </button>
+      <button class="btn btn-sm btn-outline-primary tab-btn" data-type="fullyfunded" onclick="setTab(this,'fullyfunded')">
+        <i class="bi bi-cash-coin"></i> ឧបត្ថម្ធពេញលេញ <span class="tab-count">28</span>
+      </button>
+      <button class="btn btn-sm btn-outline-primary tab-btn" data-type="partial" onclick="setTab(this,'partial')">
+        <i class="bi bi-percent"></i> ឧបត្ថម្ធផ្នែក <span class="tab-count">12</span>
+      </button>
+      <button class="btn btn-sm btn-outline-primary tab-btn" data-type="featured" onclick="setTab(this,'featured')">
+        <i class="bi bi-star"></i> ពិសេស <span class="tab-count">5</span>
+      </button>
+    </div>
+  </div>
+</div>
 
 <!-- ===================== FEATURED SCHOLARSHIPS ===================== -->
 <section style="background: var(--bg-page);">
   <div class="container">
-    <div class="row align-items-end mb-5">
-      <div class="col-lg-8" data-aos="fade-right">
-        <div class="section-label"><i class="bi bi-star me-1"></i>ពិសេស</div>
-        <h2 class="section-title-text">អាហារូបករណ៍ដែលបានលើកឡើង</h2>
-        <p class="section-desc">ឱកាសលម្អិតក្នុងរយៈពេលកំណត់ដែលមានថវិកាច្រើន</p>
-      </div>
-      <div class="col-lg-4 text-lg-end mt-3 mt-lg-0" data-aos="fade-left">
-        <a href="#" class="btn-view-all">
-          មើលទាំងអស់ <i class="bi bi-arrow-right"></i>
-        </a>
-      </div>
-    </div>
 
     <div class="row g-4">
       <!-- Scholarship Card 1 -->
@@ -587,9 +596,16 @@
         </div>
       </div>
     <div class="text-center mt-5" data-aos="fade-up">
-      <button class="btn btn-lg" style="background: var(--bg-subtle); color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 10px; padding: 12px 48px; font-weight: 600;">
-        <i class="bi bi-download me-2"></i> ផ្ទុកលក្ខណៈបន្ថែម
-      </button>
+      <!-- PAGINATION -->
+      <div class="pagination-wrap" id="pagination">
+        <button class="page-btn" disabled><i class="bi bi-chevron-left"></i></button>
+        <button class="page-btn active">១</button>
+        <button class="page-btn" onclick="goPage(this)">២</button>
+        <button class="page-btn" onclick="goPage(this)">៣</button>
+        <button class="page-btn" onclick="goPage(this)">...</button>
+        <button class="page-btn" onclick="goPage(this)">១២</button>
+        <button class="page-btn" onclick="goPage(this)"><i class="bi bi-chevron-right"></i></button>
+      </div>
     </div>
   </div>
 </section>
@@ -842,6 +858,52 @@
       }
     });
   });
+
+  // Filter scholarships
+  function filterCards() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const countryFilter = document.getElementById('countryFilter').value;
+    const levelFilter = document.getElementById('levelFilter').value;
+    const cards = document.querySelectorAll('.opportunity-card');
+    
+    cards.forEach(card => {
+      const title = card.querySelector('.card-title-text').textContent.toLowerCase();
+      const org = card.querySelector('.card-org-name').textContent.toLowerCase();
+      const meta = card.querySelector('.card-meta').textContent.toLowerCase();
+      
+      // Check if card matches search term
+      const matchesSearch = !searchTerm || title.includes(searchTerm) || org.includes(searchTerm) || meta.includes(searchTerm);
+      
+      // Check if card matches country filter
+      const matchesCountry = !countryFilter || meta.includes(countryFilter.toLowerCase());
+      
+      // Check if card matches level filter
+      const matchesLevel = !levelFilter || meta.includes(levelFilter.toLowerCase());
+      
+      // Show/hide card based on all filters
+      card.closest('[class*="col"]').style.display = (matchesSearch && matchesCountry && matchesLevel) ? 'block' : 'none';
+    });
+  }
+
+  // Set active tab
+  function setTab(btn, type) {
+    // Remove active class from all tabs
+    document.querySelectorAll('.tab-btn').forEach(tab => tab.classList.remove('active'));
+    // Add active class to clicked tab
+    btn.classList.add('active');
+    
+    // Filter cards by type
+    const cards = document.querySelectorAll('.opportunity-card');
+    cards.forEach(card => {
+      if (type === 'all') {
+        card.closest('[class*="col"]').style.display = 'block';
+      } else {
+        // Show/hide based on card type
+        const cardType = card.getAttribute('data-type') || 'all';
+        card.closest('[class*="col"]').style.display = (cardType === type || type === 'all') ? 'block' : 'none';
+      }
+    });
+  }
 </script>
 
 </body>
