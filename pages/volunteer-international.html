@@ -232,76 +232,8 @@
 <div class="main-layout">
   <div class="container">
     <div class="row g-4">
-
-      <!-- SIDEBAR -->
-      <div class="col-lg-3 sidebar-col" id="sidebar-main">
-        <div class="sidebar-filters" id="sidebar-filters-content">
-          <div style="font-size:1rem;font-weight:700;color:var(--text-black);margin-bottom:18px;display:flex;align-items:center;gap:8px">
-            <i class="bi bi-funnel-fill" style="color:var(--primary-color)"></i> ត្រង គម្រោង
-          </div>
-
-          <!-- Type -->
-          <div class="filter-group">
-            <div class="filter-group-title"><i class="bi bi-grid"></i> ប្រភេទ</div>
-            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">ក្នុងស្រុក</span><span class="check-count">12</span></label>
-            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">អន្តរជាតិ</span><span class="check-count">12</span></label>
-            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">អប់រំ</span><span class="check-count">8</span></label>
-            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">បរិស្ថាន</span><span class="check-count">5</span></label>
-            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">សុខភាព</span><span class="check-count">4</span></label>
-          </div>
-          <hr class="filter-divider">
-
-          <!-- Country -->
-          <div class="filter-group">
-            <div class="filter-group-title"><i class="bi bi-globe"></i> ទីតាំង</div>
-            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">🇰🇭 កម្ពុជា</span><span class="check-count">65</span></label>
-            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">🇯🇵 ជប៉ុន</span><span class="check-count">48</span></label>
-            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">🇰🇷 កូរ៉េ</span><span class="check-count">52</span></label>
-            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">🇺🇸 អាមេរិក</span><span class="check-count">30</span></label>
-            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">🇹🇭 ថៃ</span><span class="check-count">28</span></label>
-            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">🌐 Online</span><span class="check-count">120</span></label>
-          </div>
-          <hr class="filter-divider">
-
-          <!-- Level -->
-          <div class="filter-group">
-            <div class="filter-group-title"><i class="bi bi-mortarboard"></i> វិស័យ</div>
-            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">អប់រំ</span><span class="check-count">8</span></label>
-            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">បរិស្ថាន</span><span class="check-count">5</span></label>
-            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">សុខភាព</span><span class="check-count">4</span></label>
-            <label class="filter-check"><input type="checkbox" checked onchange="filterCards()"><span class="check-box"></span><span class="check-label">សហគមន៍</span><span class="check-count">7</span></label>
-            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">Online</span><span class="check-count">6</span></label>
-          </div>
-          <hr class="filter-divider">
-
-          <!-- Deadline -->
-          <div class="filter-group">
-            <div class="filter-group-title"><i class="bi bi-clock"></i> ថ្ងៃចាប់ផ្តើម</div>
-            <label class="filter-check"><input type="radio" name="deadline" value="all" checked><span class="check-box" style="border-radius:50%"></span><span class="check-label">គ្រប់ (រួមទាំងផុតកំណត់)</span></label>
-            <label class="filter-check"><input type="radio" name="deadline" value="open"><span class="check-box" style="border-radius:50%"></span><span class="check-label">មានការចុះឈ្មោះ</span></label>
-            <label class="filter-check"><input type="radio" name="deadline" value="soon"><span class="check-box" style="border-radius:50%"></span><span class="check-label">ផុតក្នុង ១ ខែ</span></label>
-            <label class="filter-check"><input type="radio" name="deadline" value="new"><span class="check-box" style="border-radius:50%"></span><span class="check-label">ថ្មី (ក្នុង ១ សប្ដាហ៍)</span></label>
-          </div>
-          <hr class="filter-divider">
-
-          <!-- Benefits -->
-          <div class="filter-group">
-            <div class="filter-group-title"><i class="bi bi-gift"></i> ការគាំទ្រ</div>
-            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">អាហារ</span></label>
-            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">ដំណើរ</span></label>
-            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">លំនៅដ្ឋាន</span></label>
-            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">Certificate</span></label>
-            <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">Stipend</span></label>
-          </div>
-
-          <button class="btn-clear-filter" onclick="clearFilters()">
-            <i class="bi bi-x-circle me-1"></i> លុបការត្រង
-          </button>
-        </div>
-      </div>
-
-      <!-- RESULTS -->
-      <div class="col-lg-9">
+   <!-- RESULTS -->
+      <div class="col-lg-12">
 
         <!-- Results header -->
         <div class="results-header">
@@ -312,48 +244,6 @@
             <button class="mobile-filter-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterDrawer">
               <i class="bi bi-funnel"></i> ត្រង
             </button>
-            <div class="sort-wrap">
-              <span class="sort-label">តម្រៀប:</span>
-              <select class="filter-select" style="min-width:0;padding:8px 12px;font-size:.85rem" onchange="filterCards()">
-                <option>ថ្មី → ចាស់</option>
-                <option>ផុតកំណត់ ៖ ឆាប់ → យូរ</option>
-                <option>ពេញនិយម</option>
-                <option>លាយក្នុងស្រុក/អន្តរជាតិ</option>
-              </select>
-            </div>
-            <div class="view-toggle">
-              <button class="view-btn active" id="grid-btn" onclick="setView('grid')" title="Grid View"><i class="bi bi-grid-3x3-gap"></i></button>
-              <button class="view-btn" id="list-btn" onclick="setView('list')" title="List View"><i class="bi bi-list-ul"></i></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- FEATURED BANNER -->
-        <div class="featured-banner" data-aos="fade-up">
-          <div class="fb-badge"><i class="bi bi-star-fill me-1"></i> ពិសេស · Mixed</div>
-          <div class="row align-items-center">
-            <div class="col-md-8">
-              <div class="fb-title">ស្ម័គ្រចិត្តក្នុងស្រុក និងអន្តរជាតិ — ជ្រើសរើសតាមគោលដៅរបស់អ្នក</div>
-              <div class="fb-desc">គម្រោងបង្រៀន សម្អាតបរិស្ថាន ការងារសុខភាព និងបទពិសោធន៍អន្តរជាតិ ទាំងអស់នៅកន្លែងតែមួយ។</div>
-              <div class="fb-meta">
-                <span><i class="bi bi-geo-alt"></i> Cambodia / Global</span>
-                <span><i class="bi bi-clock"></i> ចាប់ផ្ដើមភ្លាម</span>
-                <span><i class="bi bi-people"></i> ២៤+ កន្លែង</span>
-                <span><i class="bi bi-mortarboard"></i> Volunteer</span>
-              </div>
-              <button class="btn-fb" onclick="location.href='scholarship-detail.html'">
-                <i class="bi bi-arrow-right-circle me-1"></i> មើលគម្រោង
-              </button>
-            </div>
-            <div class="col-md-4 d-none d-md-flex justify-content-end">
-              <div style="text-align:right">
-                <div style="font-size:2.5rem;margin-bottom:8px">🎓</div>
-                <div style="background:rgba(77,184,255,.15);border:1px solid rgba(77,184,255,.25);border-radius:10px;padding:10px 16px;display:inline-block">
-                  <div style="font-size:1.4rem;font-weight:700;color:#fff">Full<br>Funded</div>
-                  <div style="font-size:.75rem;color:rgba(255,255,255,.6)">ផ្ដល់ ១០០%</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -832,19 +722,27 @@
     </div><!-- /row -->
   </div>
 </div>
-
-<!-- ====================================================  FOOTER  ==================================================== -->
+<!-- ====================================================
+     FOOTER
+===================================================== -->
 <footer>
   <div class="container">
     <div class="row g-5">
       <div class="col-lg-4">
-        <div class="footer-brand-name"><div class="footer-brand-icon"><i class="bi bi-mortarboard-fill"></i></div>EduKhmer</div>
-        <p class="footer-desc">វេទិកាអប់រំលេខ ១ ក្នុងកម្ពុជា — ភ្ជាប់យុវជនខ្មែរ ជាមួយឱកាសសិក្សា និងការងារ ទូទាំងពិភពលោក ។</p>
+        <div class="footer-brand-name">
+          <div class="footer-brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
+          EduKhmer
+        </div>
+        <p class="footer-desc">
+          វេទិកាអប់រំលេខ ១ ក្នុងកម្ពុជា  ភ្ជាប់យុវជនខ្មែរ
+          ជាមួយឱកាសសិក្សា និងការងារ ទូទាំងពិភពលោក ។
+          ចូលរួមជាមួយគ្រួសារ EduKhmer ថ្ងៃនេះ ឥតគិតថ្លៃ!
+        </p>
         <div class="footer-social">
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-telegram"></i></a>
-          <a href="#"><i class="bi bi-youtube"></i></a>
-          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
         </div>
       </div>
       <div class="col-6 col-lg-2">
@@ -854,15 +752,12 @@
           <li><a href="courses.html"><i class="bi bi-chevron-right"></i>វគ្គសិក្សា</a></li>
           <li><a href="exchange.html"><i class="bi bi-chevron-right"></i>ផ្លាស់ប្តូរ</a></li>
           <li><a href="internships.html"><i class="bi bi-chevron-right"></i>ហាត់ការ</a></li>
-          <li><a href="volunteer-local.html"><i class="bi bi-chevron-right"></i>ស្ម័គ្រចិត្ត</a></li>
+          <li><a href="volunteer.html"><i class="bi bi-chevron-right"></i>ស្ម័គ្រចិត្ត</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2">
         <h5 class="footer-heading">ជំនួយ</h5>
         <ul class="footer-links">
-          <li><a href="cv-guide.html"><i class="bi bi-chevron-right"></i>ណែនាំ CV</a></li>
-          <li><a href="motivation-letter.html"><i class="bi bi-chevron-right"></i>Motivation Letter</a></li>
-          <li><a href="interview-tips.html"><i class="bi bi-chevron-right"></i>Interview Tips</a></li>
           <li><a href="about.html"><i class="bi bi-chevron-right"></i>អំពីយើង</a></li>
           <li><a href="contact.html"><i class="bi bi-chevron-right"></i>ទំនាក់ទំនង</a></li>
         </ul>
@@ -870,14 +765,30 @@
       <div class="col-lg-4">
         <h5 class="footer-heading">ទំនាក់ទំនង</h5>
         <ul class="footer-links">
-          <li><a href="mailto:info@edukhmer.com"><i class="bi bi-envelope-at"></i>info@edukhmer.com</a></li>
-          <li><a href="#"><i class="bi bi-telegram"></i>@EduKhmer</a></li>
-          <li><a href="#"><i class="bi bi-geo-alt"></i>ភ្នំពេញ, កម្ពុជា</a></li>
+          <li>
+            <a href="mailto:info@edukhmer.com">
+              <i class="bi bi-envelope-at"></i> info@edukhmer.com
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/edukhmer">
+              <i class="bi bi-telegram"></i> @EduKhmer
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-geo-alt"></i> ភ្នំពេញ, កម្ពុជា
+            </a>
+          </li>
         </ul>
         <div class="mt-4 p-3 rounded-3" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">
-          <p style="color:rgba(255,255,255,.6);font-size:.83rem;margin-bottom:10px"><i class="bi bi-bell me-1" style="color:var(--secondary-color)"></i>ជាវដើម្បីទទួលឱកាសសិក្សាថ្មីៗ</p>
+          <p style="color:rgba(255,255,255,.6);font-size:.83rem;margin-bottom:10px">
+            <i class="bi bi-bell me-1" style="color:var(--secondary-color)"></i>
+            ជាវដើម្បីទទួលឱកាសសិក្សាថ្មីៗ
+          </p>
           <div class="d-flex gap-2">
-            <input type="email" class="form-control form-control-sm" placeholder="Email" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff">
+            <input type="email" class="form-control form-control-sm" placeholder="Email របស់អ្នក"
+              style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff">
             <button class="btn btn-primary btn-sm px-3" style="white-space:nowrap">ជាវ</button>
           </div>
         </div>
@@ -885,8 +796,11 @@
     </div>
     <hr class="footer-divider">
     <div class="footer-bottom">
-      <span>© ២០២៥ EduKhmer. រក្សាសិទ្ធិគ្រប់យ៉ាង.</span>
-      <div class="d-flex gap-3"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+      <span>© ២០២៦ EduKhmer. រក្សាសិទ្ធិគ្រប់យ៉ាង.</span>
+      <div class="d-flex gap-3">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
     </div>
   </div>
 </footer>
