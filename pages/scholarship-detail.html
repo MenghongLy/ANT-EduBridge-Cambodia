@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ព័ត៌មានលម្អិតអាហារូបករណ៍ | EduKhmer</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Google Fonts: Khmer + Latin -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Hanuman:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Css link -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/heng.css">
+</head>
+
+<body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="fixed-top shadow-sm">
+
+        <!-- TOP BAR -->
+        <div class="top-header">
+            <div class="container d-flex justify-content-between align-items-center">
+                <ul class="list-unstyled d-flex m-0">
+                    <li><a href="pages/about.html" class="nav-link">អំពីយើង</a></li>
+                    <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
+                    <li><a href="opportunities.html" class="nav-link d-none d-md-block">ឱកាសសិក្សា</a></li>
+                </ul>
+                <div class="nav-action">
+                    <div class="dropdown">
+                        <button class="btn-lang dropdown-toggle border-0" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-globe2"></i> ភាសាខ្មែរ
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-check-lg text-primary me-1"></i>
+                                    ភាសាខ្មែរ</a></li>
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
+                        <i class="bi bi-moon-fill" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <div class="brand-icon"><img src="assets/images/logo.png" alt="EduKhmer logo"
+                            class="brand-logo-img"></div>
+                    <div>
+                        <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ
+                        </div>
+                        EduKhmer
+                    </div>
+                </a>
+
+                <!-- Mobile toggles -->
+                <div class="d-flex d-lg-none align-items-center gap-2">
+                    <div class="dropdown">
+                        <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle fs-5" style="color:var(--text-black)"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="login.html"><i
+                                        class="bi bi-box-arrow-in-right me-2"></i>ចូលគណនី</a></li>
+                            <li><a class="dropdown-item" href="register.html"><i
+                                        class="bi bi-person-plus me-2"></i>បង្កើតគណនី</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileMenu">
+                        <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
+                    </button>
+                </div>
+
+                <!-- Desktop nav -->
+                <ul class="navbar-nav mx-auto d-none d-lg-flex">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">ទំព័រដើម</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="scholarships.html">
+                            <i class="bi bi-award me-1"></i>អាហារូបករណ៍
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html"><i
+                                class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
+                    <li class="nav-item"><a class="nav-link" href="exchange.html"><i
+                                class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="internships.html"><i
+                                class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="volunteer.html"><i
+                                class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
+                </ul>
+                <div class="nav-auth d-none d-lg-flex">
+                    <button class="btn-login" onclick="location.href='pages/login.html'">ចូលគណនី</button>
+                    <button class="btn-register" onclick="location.href='pages/register.html'">ចុះឈ្មោះឥឡូវ</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title d-flex align-items-center gap-2" style="color:var(--primary-color)">
+                <i class="bi bi-mortarboard-fill"></i> EduKhmer
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="../index.html"><i
+                            class="bi bi-house me-2"></i>ទំព័រដើម</a></li>
+                <li class="nav-item"><a class="nav-link active py-3 border-bottom" href="scholarships.html"><i
+                            class="bi bi-award me-2"></i>អាហារូបករណ៍</a></li>
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="courses.html"><i
+                            class="bi bi-book me-2"></i>វគ្គសិក្សា</a></li>
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="exchange.html"><i
+                            class="bi bi-globe me-2"></i>កម្មវិធីផ្លាស់ប្តូរ</a></li>
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="internships.html"><i
+                            class="bi bi-briefcase me-2"></i>ហាត់ការ</a></li>
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="volunteer.html"><i
+                            class="bi bi-heart me-2"></i>ស្ម័គ្រចិត្ត</a></li>
+            </ul>
+            <div class="d-grid gap-2 mt-4">
+                <a href="login.html" class="btn btn-outline-primary">ចូលគណនី</a>
+                <a href="register.html" class="btn btn-primary">ចុះឈ្មោះ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== BREADCRUMB SECTION ===================== -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">ទំព័រដើម</a></li>
+                    <li class="breadcrumb-item"><a href="scholarships.html">អាហារូបករណ៍</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">ព័ត៌មានលម្អិត</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <main class="container" style="padding: 40px 0;">
+
+        <!-- HERO SECTION -->
+        <div class="scholarship-hero" data-aos="fade-up">
+            <div class="scholarship-hero-content">
+                <div class="scholarship-header">
+                    <div class="scholarship-logo" style="background: linear-gradient(135deg, #003580, #0053a0);">KR
+                    </div>
+                    <div class="scholarship-title-box">
+                        <h1>អាហារូបករណ៍ KOICA ២០២៦</h1>
+                        <p class="scholarship-provider">
+                            <i class="bi bi-building"></i> KOICA · កូរ៉េ
+                        </p>
+                        <div class="scholarship-badges">
+                            <span class="badge-item"><i class="bi bi-star"></i> ឧបត្ថម្ធពេញលេញ</span>
+                            <span class="badge-item"><i class="bi bi-globe"></i> ក្រៅប្រទេស</span>
+                            <span class="badge-item"><i class="bi bi-lightning"></i> ពេញលេញ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Info Grid -->
+                <div class="key-info-grid">
+                    <div class="info-card">
+                        <div class="info-label">
+                            <i class="bi bi-cash-coin"></i> ហិរញ្ញប្បទាន
+                        </div>
+                        <div class="info-value">ពេញលេញ</div>
+                        <div class="info-subtext">ឧបត្ថម្ធលើស្វា</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">
+                            <i class="bi bi-hourglass-split"></i> ចុងក្រោយ
+                        </div>
+                        <div class="info-value">៣០ មិថុនា</div>
+                        <div class="info-subtext">២០២៦</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">
+                            <i class="bi bi-calendar-event"></i> រយៈពេល
+                        </div>
+                        <div class="info-value">៣-១២ ខែ</div>
+                        <div class="info-subtext">អាស័យដ្ឋាន</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">
+                            <i class="bi bi-geo-alt"></i> ទីតាំង
+                        </div>
+                        <div class="info-value">សេអូល</div>
+                        <div class="info-subtext">កូរ៉េ</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scholarship Image -->
+            <div class="scholarship-hero-image">
+                <img src="https://www.koicascholarship.com/wp-content/uploads/2025/05/apply-now-koica-scholarship-2025-koica-scholarship-2026.png"
+                    alt="KOICA Scholarship" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT GRID -->
+        <div class="scholarship-content">
+            <!-- LEFT COLUMN -->
+            <div class="main-content">
+
+                <!-- DESCRIPTION SECTION -->
+                <section data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="bi bi-info-circle"></i> ពិពណ៌នា
+                    </h2>
+                    <p class="description-text">
+                        អាហារូបករណ៍ KOICA គឺជាកម្មវិធីឧត្តមសិក្សារបស់រដ្ឋាភិបាលកូរ៉េ ដែលផ្តល់ឱកាសដល់សិស្សកម្ពុជាដើម្បីទៅសិក្សាក្នុងប្រទេសកូរ៉េ។ កម្មវិធីនេះផ្តល់ឧបត្ថម្ធក្នុងផ្នែកថ្លៃបង់ការសិក្សា លំនៅដ្ឋាន ព្យាបាលសុខភាព និងលុយប្រាក់រស់នៅក្នុងរយៈពេលសិក្សា។
+                    </p>
+                    <p class="description-text">
+                        កម្មវិធីនេះផ្តល់នូវឱកាសឧត្តមសិក្សាក្នុងផ្នែកវិទ្យាសាស្ត្រ វិស្វកម្ម វិទ្យាសាស្ត្របច្ចេកវិទ្យា គ្រប់គ្រងហិរញ្ញវត្ថុ និងផ្នែកផ្សេងទៀត។ វាគឺជាឱកាសដ៏ល្អសម្រាប់សិស្សដែលមានលទ្ធផលសិក្សាល្អ ដោយវាផ្តល់គាំទ្នពេញលេញក្នុងការដើរដំណើរការសិក្សារបស់អ្នក។
+                    </p>
+                </section>
+
+                <!-- REQUIREMENTS SECTION -->
+                <section data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="bi bi-checklist"></i> តម្រូវការ
+                    </h2>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>លទ្ធផលសិក្សាល្អ</strong>
+                            <small>សិស្សត្រូវមានលទ្ធផលសិក្សាល្អក្នុងលំដាប់ដ៏ល្អរបស់ខ្លួន</small>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>ភាសាអង់គ្លេស</strong>
+                            <small>លទ្ធផល IELTS ៦.០ ឬលើសពីនេះ ឬ TOEFL ៥៥០ ឬលើសពីនេះ</small>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>ឯកសារសិក្សា</strong>
+                            <small>ប័ណ្ណសម្រង់ពិន្ទុ និងឯកសារលម្អិតពីស្ថាប័នអប់រំ</small>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>លិខិតលក្ខណៈល្អ</strong>
+                            <small>លិខិតលក្ខណៈល្អ ពីគ្រូ អ្នកគាំទ្ន ឬ អ្នកផ្តល់ការងារ</small>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>លក្ខណៈល្អ</strong>
+                            <small>ត្រូវស្ថិតក្នុងលក្ខណៈល្អ និងមានលក្ខណៈដែលស័ក្ដិសមក្នុងការសិក្សា</small>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- APPLICATION PROCESS SECTION -->
+                <section data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="bi bi-diagram-3"></i> ដំណើរការដាក់ពាក្យ
+                    </h2>
+
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>បង្កើតគណនី</h4>
+                            <p>ចូលទៅលើគេហទំព័រ KOICA ហើយបង្កើតគណនីប្រើប្រាស់របស់អ្នក។ បញ្ចូលព័ត៌មានលម្អិតដែលត្រូវការ រួមទាំងឈ្មោះ អ៊ីមែល លេខសម្ងាត់ និងលម្អិតប្រទេស។ រក្សាលេខសម្ងាត់របស់អ្នកឱ្យលាក់ដាក់ល្អ ដូច្នេះអ្នកអាចប្រើវាដើម្បីដាក់ពាក្យក្រោយមក។</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>រៀបចំឯកសារដែលចាំបាច់</h4>
+                            <p>រៀបចំឯកសារលម្អិតទាំងអស់ដូចជា ប័ណ្ណសម្រង់ពិន្ទុ លិខិតលក្ខណៈល្អ ឯកសារកម្មវិធីសិក្សា និងឯកសារផ្សេងទៀត។ ធានាថាឯកសារទាំងអស់ពេញលេញ រៀងរាល់ និងឆ្លាតវចនា។</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>ដាក់ពាក្យបង្ហាញ</h4>
+                            <p>ផ្ញើឯកសារលម្អិតរបស់អ្នក តាមរយៈប័ណ្ណាគារលម្អិតលើគេហទំព័រ KOICA ឬតាមរយៈលិខិតផ្ញើផ្សេងទៀត។ ធានាថាឯកសារទាំងអស់បានដាក់ជូនក្រុមវាយតម្លៃក្នុងកាលកំណត់ដែលកំណត់។</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>ចូលរួមក្នុងការសម្ភាសន៍</h4>
+                            <p>ប្រសិនបើដាក់ពាក្យរបស់អ្នកឈានដល់លក្ខណៈដែលត្រូវការ អ្នកនឹងបានហៅឱ្យចូលរួមក្នុងសម្ភាសន៍។ ក្រុមវាយតម្លៃនឹងសួរសំណួរអំពីលក្ខណៈរបស់អ្នក ការសិក្សា និងបំណងប្រាថ្នា។</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>ទទួលលទ្ធផលបង្ហាញ</h4>
+                            <p>លទ្ធផលដាក់ពាក្យរបស់អ្នក នឹងបានផ្ញើឱ្យអ្នក តាមរយៈលិខិត ឬអ៊ីមែល ក្នុងរយៈពេល ២-៣ខែ។ ប្រសិនបើអ្នកបានរងចាប់ផ្តើម លទ្ធផលនឹងបង្ហាញថា អ្នកមានលក្ខណៈសម្រាប់ក្នុងកម្មវិធីអាហារូបករណ៍នេះ។</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BENEFITS SECTION -->
+                <section data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="bi bi-gift"></i> អត្ថប្រយោជន៍
+                    </h2>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>ឧបត្ថម្ធថ្លៃបង់ (Tuition Support)</strong>
+                            <small>ឧបត្ថម្ធក្នុងផ្នែកថ្លៃបង់ការសិក្សា សម្រាប់រយៈពេលសិក្សាទាំងមូល សម្រាប់រាល់វិទ្យាល័យ</small>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>ប្រាក់រស់នៅក្នុងកូរ៉េ (Living Allowance)</strong>
+                            <small>ប្រាក់ប្រចាំខែដើម្បីគាំទ្នក្នុងរយៈពេលសិក្សាក្នុងកូរ៉េ</small>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>ព្យាបាលសុខភាព (Health Insurance)</strong>
+                            <small>ធានារបៀបព្យាបាលសម្រាប់អ្នកនិស្សិត រួមទាំងការពិគ្ষណ៍ និងថ្នាំលាបក្នុងមន្ទីរពេទ្យ សម្រាប់រយៈពេលសិក្សា</small>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>ឧបត្ថម្ធដ្ឋាន (Travel Allowance)</strong>
+                            <small>ឧបត្ថម្ធដ្ឋាន ដើម្បីគាំទ្នក្នុងរយៈពេលដ្ឋាននិងលើកលែង ពីប្រទេសកម្ពុជាទៅកូរ៉េ</small>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ SECTION -->
+                <section data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="bi bi-question-circle"></i> សំណួរ និង ចម្លើយ
+                    </h2>
+
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item border-0 mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1">
+                                    តើអាហារូបករណ៍ KOICA ជាអ្វីមួយ?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    អាហារូបករណ៍ KOICA គឺជាកម្មវិធីឧត្តមសិក្សារបស់រដ្ឋាភិបាលកូរ៉េ ដែលផ្តល់ឱកាសដល់សិស្សកម្ពុជាដើម្បីសិក្សាក្នុងប្រទេសកូរ៉េ។ វាផ្តល់ឧបត្ថម្ធពេញលេញក្នុងរយៈពេល ៣ ដល់ ១២ ខែ រួមទាំងថ្លៃបង់ការសិក្សា លំនៅដ្ឋាន និងលុយប្រាក់រស់នៅ។
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2">
+                                    តើអ្នកណាដែលមានលក្ខណៈសម្រាប់ដាក់ពាក្យ?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    អ្នកដែលមានលទ្ធផលសិក្សាល្អ និងមានជំនាញប្រើប្រាស់ ភាសាអង់គ្លេស ឬលទ្ធផល IELTS ៦.០ ឬលើសពីនេះ នឹងមានលក្ខណៈសម្រាប់ដាក់ពាក្យក្នុងកម្មវិធីនេះ។
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3">
+                                    តើមានតម្រូវការជាច្រើនប៉ុន្មាន?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    សិស្សត្រូវដាក់ពាក្យផ្សំមួយឯកសារច្រើន ដែលរួមបញ្ចូលលទ្ធផលសិក្សា លិខិតលក្ខណៈល្អ និងឯកសារផ្សេងទៀត សម្រាប់ដាក់ពាក្យក្នុងកម្មវិធីនេះ។
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- RIGHT SIDEBAR -->
+            <div class="sidebar">
+                <!-- APPLY CARD -->
+                <div class="sidebar-card">
+                    <div class="deadline-box">
+                        <div class="deadline-label">ចុងក្រោយក្នុងមួយថ្ងៃ</div>
+                        <div class="countdown">
+                            <i class="bi bi-hourglass-split"></i> ៩៩ ថ្ងៃលេច
+                        </div>
+                    </div>
+
+                    <button class="apply-button">
+                        <i class="bi bi-send"></i> ដាក់ពាក្យឥឡូវនេះ
+                    </button>
+                    <button class="save-button">
+                        <i class="bi bi-bookmark"></i> រក្សាទុក
+                    </button>
+
+                    <div class="share-section">
+                        <div class="share-title">ចែករំលែក</div>
+                        <div class="share-buttons">
+                            <button class="share-btn" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+                            <button class="share-btn" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </button>
+                            <button class="share-btn" title="Email">
+                                <i class="bi bi-envelope"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTACT CARD -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">ទំនាក់ទំនង</h3>
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <div>
+                            <small style="color: var(--text-muted); font-weight: 600;">ទូរស័ព្ទលម្អិត</small>
+                            <p style="color: var(--primary-color); font-weight: 700; margin: 5px 0 0 0;">
+                                <i class="bi bi-telephone"></i> +82-2-123-4567
+                            </p>
+                        </div>
+                        <div>
+                            <small style="color: var(--text-muted); font-weight: 600;">អ៉ីមែល</small>
+                            <p style="color: var(--primary-color); font-weight: 700; margin: 5px 0 0 0;">
+                                <i class="bi bi-envelope"></i> scholarship@koica.go.kr
+                            </p>
+                        </div>
+                        <div>
+                            <small style="color: var(--text-muted); font-weight: 600;">គេហទំព័រ</small>
+                            <p style="margin: 5px 0 0 0;">
+                                <a href="#" target="_blank"
+                                    style="color: var(--primary-color); text-decoration: none; font-weight: 600;">
+                                    <i class="bi bi-globe"></i> www.koica.go.kr
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TIPS CARD -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">
+                        <i class="bi bi-lightbulb"></i> ដំណឹងរបស់យើង
+                    </h3>
+                    <ul style="padding-left: 0; margin: 0; list-style: none;">
+                        <li
+                            style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border-color);">
+                            <small style="color: var(--text-muted); line-height: 1.6;">
+                                ធានាថាឯកសាររបស់អ្នក ត្រូវបានរៀបចំឱ្យស្អាត និងឆ្លាតវចនា ដើម្បីលើកសមត្ថភាពក្នុងការដាក់ពាក្យ។
+                            </small>
+                        </li>
+                        <li
+                            style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border-color);">
+                            <small style="color: var(--text-muted); line-height: 1.6;">
+                                ដាក់ពាក្យឱ្យទាន់ពេលវេលា មុនកាលកំណត់ ដើម្បីឱ្យប្រកាស់ប្រាកដថា ឯកសារលម្អិតរបស់អ្នក រៀបចំឡើងសម្រាប់ការសម្ភាសន៍។
+                            </small>
+                        </li>
+                        <li style="margin-bottom: 0;">
+                            <small style="color: var(--text-muted); line-height: 1.6;">
+                                ចូលរួមក្នុងសម្ភាសន៍ដែលត្រូវបានរៀបចំដោយក្រុមវាយតម្លៃ និងឆ្លើយសំណួរដោយស្មោះត្រង់ និងច្បាស់លាស់។
+                            </small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- RELATED SCHOLARSHIPS SECTION -->
+        <div class="related-scholarships" data-aos="fade-up">
+            <h2 class="related-title">
+                <i class="bi bi-award"></i> អាហារូបករណ៍ដែលពាក់ព័ន្ធ
+            </h2>
+
+            <div class="row g-4">
+                <!-- Card 1: ADB Scholarship -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="scholarship-card">
+                        <div class="scholarship-card-image">
+                            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&q=80"
+                                alt="ADB Scholarship" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="scholarship-card-body">
+                            <h4 class="scholarship-card-title">អាហារូបករណ៍ ADB ឆ្នាំ ២០២៦</h4>
+                            <p class="scholarship-card-provider">
+                                <i class="bi bi-building"></i> ADB · ធនាគារលោក
+                            </p>
+                            <div class="scholarship-card-meta">
+                                <span class="meta-item">
+                                    <i class="bi bi-cash-coin"></i> $15,000/ឆ្នាំ
+                                </span>
+                                <span class="meta-item">
+                                    <i class="bi bi-geo-alt"></i> ផីលីពីន
+                                </span>
+                            </div>
+                            <div class="scholarship-card-footer">
+                                <a href="adb-detail.html" class="view-btn" style="text-decoration: none; display: block;">មើលលម្អិត</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Chevening Scholarship -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="scholarship-card">
+                        <div class="scholarship-card-image">
+                            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80"
+                                alt="Chevening Scholarship" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="scholarship-card-body">
+                            <h4 class="scholarship-card-title">អាហារូបករណ៍ Chevening ឆ្នាំ ២០២៦</h4>
+                            <p class="scholarship-card-provider">
+                                <i class="bi bi-building"></i> Chevening · ចក្រភូមិអង់គ្លេស
+                            </p>
+                            <div class="scholarship-card-meta">
+                                <span class="meta-item">
+                                    <i class="bi bi-cash-coin"></i> £18,000/ឆ្នាំ
+                                </span>
+                                <span class="meta-item">
+                                    <i class="bi bi-geo-alt"></i> ឡុងដ័រ, ចក្រ
+                                </span>
+                            </div>
+                            <div class="scholarship-card-footer">
+                                <button class="view-btn">មើលលម្អិត</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: MEXT Scholarship -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="scholarship-card">
+                        <div class="scholarship-card-image">
+                            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80"
+                                alt="MEXT Scholarship" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="scholarship-card-body">
+                            <h4 class="scholarship-card-title">អាហារូបករណ៍ MEXT ២០២៦</h4>
+                            <p class="scholarship-card-provider">
+                                <i class="bi bi-building"></i> MEXT · ជប៉ុន
+                            </p>
+                            <div class="scholarship-card-meta">
+                                <span class="meta-item">
+                                    <i class="bi bi-cash-coin"></i> ឧបត្ថម្ធពេញលេញ
+                                </span>
+                                <span class="meta-item">
+                                    <i class="bi bi-geo-alt"></i> តូក្យូ, ជប៉ុន
+                                </span>
+                            </div>
+                            <div class="scholarship-card-footer">
+                                <button class="view-btn">មើលលម្អិត</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="footer-brand-name">
+                        <div class="footer-brand-icon"><img src="assets/images/logo.png" alt="EduKhmer logo"
+                                class="brand-logo-img"></div>
+                        EduKhmer
+                    </div>
+                    <p class="footer-desc">
+                        វេទិកាអប់រំលេខ ១ ក្នុងកម្ពុជា — ភ្ជាប់យុវជនខ្មែរ
+                        ជាមួយឱកាសសិក្សា និងការងារ ទូទាំងពិភពលោក ។
+                        ចូលរួមជាមួយគ្រួសារ EduKhmer ថ្ងៃនេះ — ឥតគិតថ្លៃ!
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="footer-heading">ឱកាសសិក្សា</h5>
+                    <ul class="footer-links">
+                        <li><a href="scholarships.html"><i class="bi bi-chevron-right"></i>អាហារូបករណ៍</a></li>
+                        <li><a href="courses.html"><i class="bi bi-chevron-right"></i>វគ្គសិក្សា</a></li>
+                        <li><a href="exchange.html"><i class="bi bi-chevron-right"></i>ផ្លាស់ប្តូរ</a></li>
+                        <li><a href="internships.html"><i class="bi bi-chevron-right"></i>ហាត់ការ</a></li>
+                        <li><a href="volunteer.html"><i class="bi bi-chevron-right"></i>ស្ម័គ្រចិត្ត</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="footer-heading">ជំនួយ</h5>
+                    <ul class="footer-links">
+                        <li><a href="cv-guide.html"><i class="bi bi-chevron-right"></i>ណែនាំ CV</a></li>
+                        <li><a href="motivation-letter.html"><i class="bi bi-chevron-right"></i>Motivation Letter</a>
+                        </li>
+                        <li><a href="interview-tips.html"><i class="bi bi-chevron-right"></i>Interview Tips</a></li>
+                        <li><a href="about.html"><i class="bi bi-chevron-right"></i>អំពីយើង</a></li>
+                        <li><a href="contact.html"><i class="bi bi-chevron-right"></i>ទំនាក់ទំនង</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-heading">ទំនាក់ទំនង</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="mailto:info@edukhmer.com">
+                                <i class="bi bi-envelope-at"></i> info@edukhmer.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://t.me/edukhmer">
+                                <i class="bi bi-telegram"></i> @EduKhmer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="bi bi-geo-alt"></i> ភ្នំពេញ, កម្ពុជា
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mt-4 p-3 rounded-3"
+                        style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">
+                        <p style="color:rgba(255,255,255,.6);font-size:.83rem;margin-bottom:10px">
+                            <i class="bi bi-bell me-1" style="color:var(--secondary-color)"></i>
+                            ជាវដើម្បីទទួលឱកាសសិក្សាថ្មីៗ
+                        </p>
+                        <div class="d-flex gap-2">
+                            <input type="email" class="form-control form-control-sm" placeholder="Email របស់អ្នក"
+                                style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff">
+                            <button class="btn btn-primary btn-sm px-3" style="white-space:nowrap">ជាវ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <span>© ២០២៥ EduKhmer. រក្សាសិទ្ធិគ្រប់យ៉ាង.</span>
+                <div class="d-flex gap-3">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Accordion styling
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+        accordionButtons.forEach(button => {
+            button.style.backgroundColor = 'transparent';
+            button.style.color = 'var(--text-black)';
+            button.style.fontWeight = '600';
+            button.style.border = '1px solid var(--border-color)';
+            button.style.borderRadius = '8px';
+            button.style.marginBottom = '10px';
+        });
+    </script>
+
+</body>
+
+</html>
