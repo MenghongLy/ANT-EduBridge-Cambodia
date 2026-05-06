@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>វគ្គសិក្សា & ការបណ្តុះបណ្តាល</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Google Fonts: Khmer + Latin -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Hanuman:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Css link -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/heng.css">
+</head>
+
+<body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="fixed-top shadow-sm">
+
+        <!-- TOP BAR -->
+        <div class="top-header">
+            <div class="container d-flex justify-content-between align-items-center">
+                <ul class="list-unstyled d-flex m-0">
+                    <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
+                    <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
+                    <li><a href="opportunities.html" class="nav-link d-none d-md-block">ឱកាសសិក្សា</a></li>
+                </ul>
+                <div class="nav-action">
+                    <div class="dropdown">
+                        <button class="btn-lang dropdown-toggle border-0" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-globe2"></i> ភាសាខ្មែរ
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-check-lg text-primary me-1"></i>
+                                    ភាសាខ្មែរ</a></li>
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
+                        <i class="bi bi-moon-fill" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <div class="brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                    <div>
+                        <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ
+                        </div>
+                        EduKhmer
+                    </div>
+                </a>
+
+                <!-- Mobile toggles -->
+                <div class="d-flex d-lg-none align-items-center gap-2">
+                    <div class="dropdown">
+                        <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle fs-5" style="color:var(--text-black)"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="login.html"><i
+                                        class="bi bi-box-arrow-in-right me-2"></i>ចូលគណនី</a></li>
+                            <li><a class="dropdown-item" href="register.html"><i
+                                        class="bi bi-person-plus me-2"></i>បង្កើតគណនី</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileMenu">
+                        <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
+                    </button>
+                </div>
+
+                <!-- Desktop nav -->
+                <ul class="navbar-nav mx-auto d-none d-lg-flex">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">ទំព័រដើម</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="scholarships.html">
+                            <i class="bi bi-award me-1"></i>អាហារូបករណ៍
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="courses.html"><i
+                                class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
+                    <li class="nav-item"><a class="nav-link" href="exchange.html"><i
+                                class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="internships.html"><i
+                                class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="volunteer.html"><i
+                                class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
+                </ul>
+                <div class="nav-auth d-none d-lg-flex">
+                    <button class="btn-login" onclick="location.href='login.html'">ចូលគណនី</button>
+                    <button class="btn-register" onclick="location.href='register.html'">ចុះឈ្មោះឥឡូវ</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title d-flex align-items-center gap-2" style="color:var(--primary-color)">
+                <i class="bi bi-mortarboard-fill"></i> EduKhmer
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="../index.html"><i
+                            class="bi bi-house me-2"></i>ទំព័រដើម</a></li>
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="scholarships.html"><i
+                            class="bi bi-award me-2"></i>អាហារូបករណ៍</a></li>
+                <li class="nav-item"><a class="nav-link active py-3 border-bottom" href="courses.html"><i
+                            class="bi bi-book me-2"></i>វគ្គសិក្សា</a></li>
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="exchange.html"><i
+                            class="bi bi-globe me-2"></i>កម្មវិធីផ្លាស់ប្តូរ</a></li>
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="internships.html"><i
+                            class="bi bi-briefcase me-2"></i>ហាត់ការ</a></li>
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="volunteer.html"><i
+                            class="bi bi-heart me-2"></i>ស្ម័គ្រចិត្ត</a></li>
+            </ul>
+            <div class="d-grid gap-2 mt-4">
+                <a href="login.html" class="btn btn-outline-primary">ចូលគណនី</a>
+                <a href="register.html" class="btn btn-primary">ចុះឈ្មោះ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== FILTER & SEARCH SECTION ===================== -->
+    <section class="scholarships-filter" style="padding: 50px 0; background: var(--bg-color);">
+        <div class="container">
+            <div class="text-center mb-4" data-aos="fade-up">
+                <h2 class="section-title-text" style="font-size: 1.75rem; margin-bottom: 0;">ស្វែងរក</h2>
+            </div>
+
+            <!-- Filter Cards Row -->
+            <div class="row g-2 mb-4" data-aos="fade-up">
+                <!-- Filter 1: Category -->
+                <div class="col-6 col-md-3">
+                    <div
+                        style="background: white; padding: 14px; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <div class="input-group"
+                            style="border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 8px;">
+                            <i class="bi bi-bookmark"
+                                style="color: var(--primary-color); margin-right: 6px; font-size: 0.95rem;"></i>
+                            <input type="text" class="form-control border-0" placeholder="ប្រភេទ..."
+                                style="background: transparent; color: var(--text-black); font-size: 0.85rem; padding: 0;">
+                        </div>
+                        <input type="text" class="form-control border-0" placeholder="ស្វែងរក..."
+                            style="background: transparent; color: var(--text-muted); font-size: 0.75rem; padding: 0;">
+                    </div>
+                </div>
+
+                <!-- Filter 2: Level -->
+                <div class="col-6 col-md-3">
+                    <div
+                        style="background: white; padding: 14px; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <div
+                            style="display: flex; align-items: center; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--border-color);">
+                            <i class="bi bi-graph-up"
+                                style="color: var(--secondary-color); margin-right: 6px; font-size: 0.95rem;"></i>
+                            <small style="color: var(--text-muted); font-weight: 500;">កម្រិត</small>
+                        </div>
+                        <select class="form-select border-0"
+                            style="background: transparent; color: var(--text-black); font-size: 0.85rem; padding: 0; height: auto;">
+                            <option>ទាំងអស់</option>
+                            <option>ផ្តើម</option>
+                            <option>កម្រិតមធ្យម</option>
+                            <option>កម្រិតខ្ពស់</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Filter 3: Language -->
+                <div class="col-6 col-md-3">
+                    <div
+                        style="background: white; padding: 14px; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <div
+                            style="display: flex; align-items: center; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--border-color);">
+                            <i class="bi bi-translate"
+                                style="color: var(--accent-gold); margin-right: 6px; font-size: 0.95rem;"></i>
+                            <small style="color: var(--text-muted); font-weight: 500;">ភាសា</small>
+                        </div>
+                        <select class="form-select border-0"
+                            style="background: transparent; color: var(--text-black); font-size: 0.85rem; padding: 0; height: auto;">
+                            <option>ទាំងអស់</option>
+                            <option>ភាសាខ្មែរ</option>
+                            <option>ភាសាអង់គ្លេស</option>
+                            <option>ចម្រុះ</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Filter 4: Duration -->
+                <div class="col-6 col-md-3">
+                    <div
+                        style="background: white; padding: 14px; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <div
+                            style="display: flex; align-items: center; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--border-color);">
+                            <i class="bi bi-hourglass-split"
+                                style="color: var(--accent-green); margin-right: 6px; font-size: 0.95rem;"></i>
+                            <small style="color: var(--text-muted); font-weight: 500;">រយៈពេល</small>
+                        </div>
+                        <select class="form-select border-0"
+                            style="background: transparent; color: var(--text-black); font-size: 0.85rem; padding: 0; height: auto;">
+                            <option>ទាំងអស់</option>
+                            <option>ក្រោម ១ ខែ</option>
+                            <option>១-៣ ខែ</option>
+                            <option>៣-៦ ខែ</option>
+                            <option>៦ ខែ +</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="row">
+                <div class="col-12 d-flex gap-2 justify-content-end" data-aos="fade-up">
+                    <button class="btn btn-sm"
+                        style="background: transparent; color: var(--primary-color); border: 1px solid var(--primary-color); border-radius: 6px; padding: 8px 18px; font-weight: 600; font-size: 0.85rem;">
+                        <i class="bi bi-arrow-clockwise me-1"></i> កំណត់
+                    </button>
+                    <button class="btn btn-sm"
+                        style="background: var(--primary-color); color: white; border: none; border-radius: 6px; padding: 8px 22px; font-weight: 600; font-size: 0.85rem;">
+                        <i class="bi bi-search me-1"></i> ស្វែងរក
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FEATURED COURSES ===================== -->
+    <section style="padding: 80px 0; background: var(--bg-page);">
+        <div class="container">
+            <div class="row align-items-end mb-5">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <div class="section-label"><i class="bi bi-star me-1"></i>ពិសេស</div>
+                    <h2 class="section-title-text">វគ្គសិក្សាដែលបានលើកឡើង</h2>
+                    <p class="section-desc">វគ្គសិក្សាដែលមានគុណភាពខ្ពស់ និងលទ្ធផលល្អបំផុត</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0" data-aos="fade-left">
+                    <a href="#" class="btn-view-all">
+                        មើលទាំងអស់ <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Course Card 1: Web Development -->
+                <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="opportunity-card">
+                        <div class="card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80"
+                                alt="Web Development Course" class="w-100" style="object-fit: cover;">
+                            <div class="card-tag scholarship"><i class="bi bi-code-square me-1"></i>វគ្គសិក្សា</div>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="card-org">
+                                <div class="card-org-badge"
+                                    style="background: linear-gradient(135deg, #FF6B6B, #FF8C42);">WEB</div>
+                                <span class="card-org-name">Udemy · ល្អក្នុងលេខ</span>
+                            </div>
+                            <div class="card-title-text">វគ្គសិក្សា Web Development សម្រាប់អ្នកចាប់ផ្តើម</div>
+                            <div class="card-meta">
+                                <div class="card-meta-item"><i class="bi bi-graph-up"></i> កម្រិតមធ្យម</div>
+                                <div class="card-meta-item"><i class="bi bi-hourglass-split"></i> ៤៨ ម៉ោង</div>
+                                <div class="card-meta-item"><i class="bi bi-translate"></i> ភាសាអង់គ្លេស</div>
+                                <div class="card-meta-item" style="color: rgba(34, 197, 94, 0.9); font-weight: 600;"><i
+                                        class="bi bi-cash-coin"></i> $49.99</div>
+                            </div>
+                            <div class="card-benefits">
+                                <span class="benefit-chip"><i class="bi bi-check2"></i> ឯកសារ</span>
+                                <span class="benefit-chip"><i class="bi bi-check2"></i> ស្ដាប់បាន</span>
+                            </div>
+                            <button class="btn-card-detail">
+                                <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 2: Data Science -->
+                <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="opportunity-card">
+                        <div class="card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"
+                                alt="Data Science Course" class="w-100" style="object-fit: cover;">
+                            <div class="card-tag" style="background: rgba(59, 130, 246,.9); color: #fff;"><i
+                                    class="bi bi-graph-up me-1"></i>វគ្គសិក្សា</div>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="card-org">
+                                <div class="card-org-badge"
+                                    style="background: linear-gradient(135deg, #667EEA, #764BA2);">DATA</div>
+                                <span class="card-org-name">Coursera · ផ្សេងទៀត</span>
+                            </div>
+                            <div class="card-title-text">វិទ្យាសាស្ត្របច្ចេកទេស Data Science</div>
+                            <div class="card-meta">
+                                <div class="card-meta-item"><i class="bi bi-graph-up"></i> កម្រិតខ្ពស់</div>
+                                <div class="card-meta-item"><i class="bi bi-hourglass-split"></i> ៦ ខែ</div>
+                                <div class="card-meta-item"><i class="bi bi-translate"></i> ភាសាអង់គ្លេស</div>
+                                <div class="card-meta-item" style="color: rgba(59, 130, 246, 0.9); font-weight: 600;"><i
+                                        class="bi bi-cash-coin"></i> $99/ខែ</div>
+                            </div>
+                            <div class="card-benefits">
+                                <span class="benefit-chip"><i class="bi bi-check2"></i> វិច័យលម្អិត</span>
+                                <span class="benefit-chip"><i class="bi bi-check2"></i> ឯកសារ</span>
+                            </div>
+                            <button class="btn-card-detail">
+                                <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 3: Digital Marketing -->
+                <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="opportunity-card">
+                        <div class="card-img-wrap">
+                            <img src="https://dtmvamahs40ux.cloudfront.net/public/seo-image/seo-image-396-free-digital-marketing-course.webp"
+                                alt="Digital Marketing Course" class="w-100" style="object-fit: cover;">
+                            <div class="card-tag exchange" style="background: rgba(0, 194, 178,.9); color: #fff;"><i
+                                    class="bi bi-megaphone me-1"></i>វគ្គសិក្សា</div>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="card-org">
+                                <div class="card-org-badge"
+                                    style="background: linear-gradient(135deg, #F093FB, #F5576C);">MARK</div>
+                                <span class="card-org-name">HubSpot Academy · អនឡាញ</span>
+                            </div>
+                            <div class="card-title-text">វគ្គសិក្សា Digital Marketing សម្រាប់អ្នកចាប់ផ្តើម</div>
+                            <div class="card-meta">
+                                <div class="card-meta-item"><i class="bi bi-graph-up"></i> កម្រិតមធ្យម</div>
+                                <div class="card-meta-item"><i class="bi bi-hourglass-split"></i> ៣ ខែ</div>
+                                <div class="card-meta-item"><i class="bi bi-translate"></i> ភាសាអង់គ្លេស</div>
+                                <div class="card-meta-item" style="color: rgba(0, 194, 178, 0.9); font-weight: 600;"><i
+                                        class="bi bi-cash-coin"></i> មិនគិតថ្លៃ</div>
+                            </div>
+                            <div class="card-benefits">
+                                <span class="benefit-chip"><i class="bi bi-check2"></i> វិច័យលម្អិត</span>
+                                <span class="benefit-chip"><i class="bi bi-check2"></i> ដាក់ពាក្យ</span>
+                            </div>
+                            <button class="btn-card-detail">
+                                <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 4: UI/UX Design -->
+                <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="opportunity-card">
+                        <div class="card-img-wrap">
+                            <img src="https://www.excelptp.com/wp-content/uploads/2023/01/ui-ux-banner-img2.jpg"
+                                alt="UI/UX Design Course" class="w-100" style="object-fit: cover;">
+                            <div class="card-tag scholarship"><i class="bi bi-palette me-1"></i>វគ្គសិក្សា</div>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="card-org">
+                                <div class="card-org-badge"
+                                    style="background: linear-gradient(135deg, #FA709A, #FEE140);">UXUI</div>
+                                <span class="card-org-name">Design School · អនឡាញ</span>
+                            </div>
+                            <div class="card-title-text">វគ្គសិក្សា UI/UX Design មូលដ្ឋាន</div>
+                            <div class="card-meta">
+                                <div class="card-meta-item"><i class="bi bi-graph-up"></i> កម្រិតផ្តើម</div>
+                                <div class="card-meta-item"><i class="bi bi-hourglass-split"></i> ៨ សប្តាហ៍</div>
+                                <div class="card-meta-item"><i class="bi bi-translate"></i> ភាសាខ្មែរ</div>
+                                <div class="card-meta-item" style="color: rgba(34, 197, 94, 0.9); font-weight: 600;"><i
+                                        class="bi bi-cash-coin"></i> $39.99</div>
+                            </div>
+                            <div class="card-benefits">
+                                <span class="benefit-chip"><i class="bi bi-check2"></i> ឯកសារ</span>
+                                <span class="benefit-chip"><i class="bi bi-check2"></i> ដាក់ពាក្យ</span>
+                            </div>
+                            <button class="btn-card-detail">
+                                <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 5: Mobile App Development -->
+                <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="opportunity-card">
+                        <div class="card-img-wrap">
+                            <img src="https://www.codewithtls.com/courses/mobile-app-development.jpg"
+                                alt="Mobile App Course" class="w-100" style="object-fit: cover;">
+                            <div class="card-tag scholarship"><i class="bi bi-phone me-1"></i>វគ្គសិក្សា</div>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="card-org">
+                                <div class="card-org-badge"
+                                    style="background: linear-gradient(135deg, #4158D0, #C850C0);">MOBILE</div>
+                                <span class="card-org-name">edX · ផ្សេងទៀត</span>
+                            </div>
+                            <div class="card-title-text">វគ្គសិក្សា Mobile App Development សម្រាប់អ្នកចាប់ផ្តើម</div>
+                            <div class="card-meta">
+                                <div class="card-meta-item"><i class="bi bi-graph-up"></i> កម្រិតខ្ពស់</div>
+                                <div class="card-meta-item"><i class="bi bi-hourglass-split"></i> ៤ ខែ</div>
+                                <div class="card-meta-item"><i class="bi bi-translate"></i> ភាសាអង់គ្លេស</div>
+                                <div class="card-meta-item" style="color: rgba(34, 197, 94, 0.9); font-weight: 600;"><i
+                                        class="bi bi-cash-coin"></i> $59.99</div>
+                            </div>
+                            <div class="card-benefits">
+                                <span class="benefit-chip"><i class="bi bi-check2"></i> ដំណើរការលម្អិត</span>
+                                <span class="benefit-chip"><i class="bi bi-check2"></i> ឯកសារ</span>
+                            </div>
+                            <button class="btn-card-detail">
+                                <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 6: Business English -->
+                <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="opportunity-card">
+                        <div class="card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80"
+                                alt="Business English Course" class="w-100" style="object-fit: cover;">
+                            <div class="card-tag scholarship"><i class="bi bi-chat-dots me-1"></i>វគ្គសិក្សា</div>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="card-org">
+                                <div class="card-org-badge"
+                                    style="background: linear-gradient(135deg, #FDBB2D, #22C1C3);">ENG</div>
+                                <span class="card-org-name">ELSA Speak · អនឡាញ</span>
+                            </div>
+                            <div class="card-title-text">វគ្គសិក្សា Business English ពិសេស</div>
+                            <div class="card-meta">
+                                <div class="card-meta-item"><i class="bi bi-graph-up"></i> កម្រិតមធ្យម</div>
+                                <div class="card-meta-item"><i class="bi bi-hourglass-split"></i> ៣ ខែ</div>
+                                <div class="card-meta-item"><i class="bi bi-translate"></i> ភាសាអង់គ្លេស</div>
+                                <div class="card-meta-item" style="color: rgba(34, 197, 94, 0.9); font-weight: 600;"><i
+                                        class="bi bi-cash-coin"></i> $29.99</div>
+                            </div>
+                            <div class="card-benefits">
+                                <span class="benefit-chip"><i class="bi bi-check2"></i> ស្ដាប់បាន</span>
+                                <span class="benefit-chip"><i class="bi bi-check2"></i> ឯកសារ</span>
+                            </div>
+                            <button class="btn-card-detail">
+                                <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5" data-aos="fade-up">
+                    <button class="btn btn-lg"
+                        style="background: var(--bg-subtle); color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 10px; padding: 12px 48px; font-weight: 600;">
+                        <i class="bi bi-download me-2"></i> ផ្ទុកលក្ខណៈបន្ថែម
+                    </button>
+                </div>
+            </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="footer-brand-name">
+                        <div class="footer-brand-icon"><img src="assets/images/logo.png" alt="EduKhmer logo"
+                                class="brand-logo-img"></div>
+                        EduKhmer
+                    </div>
+                    <p class="footer-desc">
+                        វេទិកាអប់រំលេខ ១ ក្នុងកម្ពុជា — ភ្ជាប់យុវជនខ្មែរ
+                        ជាមួយឱកាសសិក្សា និងការងារ ទូទាំងពិភពលោក ។
+                        ចូលរួមជាមួយគ្រួសារ EduKhmer ថ្ងៃនេះ — ឥតគិតថ្លៃ!
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="footer-heading">ឱកាសសិក្សា</h5>
+                    <ul class="footer-links">
+                        <li><a href="scholarships.html"><i class="bi bi-chevron-right"></i>អាហារូបករណ៍</a></li>
+                        <li><a href="courses.html"><i class="bi bi-chevron-right"></i>វគ្គសិក្សា</a></li>
+                        <li><a href="exchange.html"><i class="bi bi-chevron-right"></i>ផ្លាស់ប្តូរ</a></li>
+                        <li><a href="internships.html"><i class="bi bi-chevron-right"></i>ហាត់ការ</a></li>
+                        <li><a href="volunteer.html"><i class="bi bi-chevron-right"></i>ស្ម័គ្រចិត្ត</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="footer-heading">ជំនួយ</h5>
+                    <ul class="footer-links">
+                        <li><a href="cv-guide.html"><i class="bi bi-chevron-right"></i>ណែនាំ CV</a></li>
+                        <li><a href="motivation-letter.html"><i class="bi bi-chevron-right"></i>Motivation Letter</a>
+                        </li>
+                        <li><a href="interview-tips.html"><i class="bi bi-chevron-right"></i>Interview Tips</a></li>
+                        <li><a href="about.html"><i class="bi bi-chevron-right"></i>អំពីយើង</a></li>
+                        <li><a href="contact.html"><i class="bi bi-chevron-right"></i>ទំនាក់ទំនង</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-heading">ទំនាក់ទំនង</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="mailto:info@edukhmer.com">
+                                <i class="bi bi-envelope-at"></i> info@edukhmer.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://t.me/edukhmer">
+                                <i class="bi bi-telegram"></i> @EduKhmer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="bi bi-geo-alt"></i> ភ្នំពេញ, កម្ពុជា
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mt-4 p-3 rounded-3"
+                        style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">
+                        <p style="color:rgba(255,255,255,.6);font-size:.83rem;margin-bottom:10px">
+                            <i class="bi bi-bell me-1" style="color:var(--secondary-color)"></i>
+                            ជាវដើម្បីទទួលឱកាសសិក្សាថ្មីៗ
+                        </p>
+                        <div class="d-flex gap-2">
+                            <input type="email" class="form-control form-control-sm" placeholder="Email របស់អ្នក"
+                                style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff">
+                            <button class="btn btn-primary btn-sm px-3" style="white-space:nowrap">ជាវ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <span>© ២០២៥ EduKhmer. រក្សាសិទ្ធិគ្រប់យ៉ាង.</span>
+                <div class="d-flex gap-3">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Theme toggle
+        const themeToggle = document.querySelector('.btn-theme');
+        const html = document.documentElement;
+        if (themeToggle) {
+            themeToggle.addEventListener('click', function () {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                this.querySelector('i').classList.toggle('bi-moon-fill');
+                this.querySelector('i').classList.toggle('bi-sun-fill');
+            });
+        }
+    </script>
+
+</body>
+
+</html>
