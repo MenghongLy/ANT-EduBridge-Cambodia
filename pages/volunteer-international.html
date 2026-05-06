@@ -14,18 +14,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Hanuman:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/chhay.css">
+  <link rel="stylesheet" href="../assets/css/navbar.css">
 </head>
 
 <body class="user-root-page">
 
 <!-- ====================================================  HEADER  ==================================================== -->
 <header class="fixed-top shadow-sm">
+
+  <!-- TOP BAR -->
   <div class="top-header">
     <div class="container d-flex justify-content-between align-items-center">
       <ul class="list-unstyled d-flex m-0">
         <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
         <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
-        <li><a href="volunteer.html" class="nav-link d-none d-md-block">ស្ម័គ្រចិត្ត</a></li>
       </ul>
       <div class="nav-action">
         <div class="dropdown">
@@ -43,36 +45,46 @@
       </div>
     </div>
   </div>
+
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <div class="brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
+      <a class="navbar-brand" href="../index.html">
+        <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
         <div>
-          <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1">វេទិកាអប់រំ</div>
+          <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ</div>
           EduKhmer
         </div>
       </a>
+
+      <!-- Mobile toggles -->
       <div class="d-flex d-lg-none align-items-center gap-2">
         <div class="dropdown">
           <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
             <i class="bi bi-person-circle fs-5" style="color:var(--text-black)"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right me-2"></i>ចូលគណនី</a></li>
-            <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus me-2"></i>បង្កើតគណនី</a></li>
+            <li><a class="dropdown-item" href="pages/login.html"><i class="bi bi-box-arrow-in-right me-2"></i>ចូលគណនី</a></li>
+            <li><a class="dropdown-item" href="pages/register.html"><i class="bi bi-person-plus me-2"></i>បង្កើតគណនី</a></li>
           </ul>
         </div>
         <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
           <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
         </button>
       </div>
+
+      <!-- Desktop nav -->
       <ul class="navbar-nav mx-auto d-none d-lg-flex">
-        <li class="nav-item"><a class="nav-link" href="index.html">ទំព័រដើម</a></li>
-        <li class="nav-item"><a class="nav-link" href="scholarships.html"><i class="bi bi-award me-1"></i>អាហារូបករណ៍</a></li>
-        <li class="nav-item"><a class="nav-link" href="courses.html"><i class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
-        <li class="nav-item"><a class="nav-link" href="exchange.html"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
+        <li class="nav-item"><a class="nav-link " href="../index.html">ទំព័រដើម</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="scholarships.html">
+            <i class="bi bi-award me-1"></i>អាហារូបករណ៍
+          </a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="pages/courses.html"><i class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/exchange.html"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
         <li class="nav-item"><a class="nav-link" href="internships.html"><i class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
-        <li class="nav-item"><a class="nav-link active" href="volunteer.html"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
+        <li class="nav-item"><a class="nav-link active" href="pages/volunteer-international.html"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
       </ul>
       <div class="nav-auth d-none d-lg-flex">
         <button class="btn-login" onclick="location.href='login.html'">ចូលគណនី</button>
@@ -119,12 +131,6 @@
 <div class="page-hero animate__animated animate__fadeIn animate__slow">
   <div class="page-hero-grid"></div>
   <div class="container position-relative" style="z-index:2">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house me-1"></i>ទំព័រដើម</a></li>
-        <li class="breadcrumb-item active">ស្ម័គ្រចិត្តអន្តរជាតិ</li>
-      </ol>
-    </nav>
     <div class="row align-items-center">
       <div class="col-lg-7" data-aos="fade-right">
         <h1 class="page-hero-title">ស្ម័គ្រចិត្ត<br><span>ក្នុងស្រុក និងអន្តរជាតិ</span></h1>
@@ -163,19 +169,18 @@
       </div>
       <div class="col-lg-3 col-md-6">
         <select class="form-select form-select-lg" id="countryFilter" onchange="filterCards()">
-          <option value="">🌍 គ្រប់ប្រទេស</option>
+          <option value="">គ្រប់ប្រទេស</option>
           <option value="cambodia">🇰🇭 កម្ពុជា</option>
           <option value="japan">🇯🇵 ជប៉ុន</option>
           <option value="korea">🇰🇷 កូរ៉េ</option>
           <option value="usa">🇺🇸 អាមេរិក</option>
           <option value="australia">🇦🇺 អូស្ត្រាលី</option>
-          <option value="thailand">🇹🇭 ថៃ</option>
-          <option value="online">🌐 Online</option>
+          <option value="online"> Online</option>
         </select>
       </div>
       <div class="col-lg-2 col-md-6">
         <select class="form-select form-select-lg" id="levelFilter" onchange="filterCards()">
-          <option value="">🎓 គ្រប់កម្រិត</option>
+          <option value="">គ្រប់កម្រិត</option>
           <option value="volunteer">ស្ម័គ្រចិត្ត</option>
           <option value="community">សហគមន៍</option>
           <option value="education">អប់រំ</option>
