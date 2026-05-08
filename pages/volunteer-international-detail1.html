@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ព័ត៌មានលម្អិតស្ម័គ្រចិត្ត - World Vision Cambodia | EduKhmer</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Google Fonts: Khmer + Latin -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Hanuman:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Css link -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/heng.css">
+    <style>
+        /* Detail Page Specific Styles */
+        .volunteer-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--bg-subtle) 0%, var(--bg-color) 100%);
+            border-radius: 16px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        .volunteer-hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .volunteer-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .volunteer-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .volunteer-title-box h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-black);
+        }
+
+        .volunteer-provider {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .volunteer-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .badge-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: var(--bg-subtle);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .key-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .info-card {
+            padding: 15px;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .info-label {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .info-value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .info-subtext {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .volunteer-hero-image {
+            width: 100%;
+            height: 350px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .volunteer-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+        }
+
+        .main-content section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-black);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 12px;
+        }
+
+        .description-text {
+            color: var(--text-descript);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .requirement-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            background: var(--bg-subtle);
+            border-radius: 10px;
+            margin-bottom: 12px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .requirement-check {
+            color: var(--accent-green);
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .requirement-text strong {
+            color: var(--text-black);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .requirement-text small {
+            color: var(--text-muted);
+        }
+
+        .step-item {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background: var(--bg-subtle);
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            color: var(--text-black);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .step-content p {
+            color: var(--text-descript);
+            margin: 0;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-card {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .deadline-box {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .deadline-label {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .countdown {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .apply-button,
+        .save-button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .apply-button {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .apply-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 122, 204, 0.2);
+        }
+
+        .save-button {
+            background: var(--bg-subtle);
+            color: var(--primary-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .save-button:hover {
+            background: var(--border-color);
+        }
+
+        .share-section {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .share-title {
+            font-weight: 600;
+            color: var(--text-black);
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .share-btn {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-subtle);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .share-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-black);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .accordion-button {
+            background: transparent;
+            color: var(--text-black);
+            border: none;
+            font-weight: 600;
+            padding: 15px;
+            box-shadow: none;
+            border-radius: 8px;
+            background: var(--bg-subtle);
+            margin-bottom: 10px;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .accordion-body {
+            background: var(--bg-subtle);
+            color: var(--text-descript);
+            line-height: 1.7;
+            border-radius: 0 0 8px 8px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb-section {
+            background: var(--bg-subtle);
+            padding: 15px 0;
+            margin-top: 80px;
+        }
+
+        .breadcrumb {
+            margin-bottom: 0;
+        }
+
+        .breadcrumb-item.active {
+            color: var(--text-muted);
+        }
+
+        .breadcrumb-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .volunteer-hero {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .volunteer-hero-image {
+                height: 250px;
+            }
+
+            .volunteer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .key-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .step-item {
+                flex-direction: column;
+            }
+
+            .step-number {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="fixed-top shadow-sm">
+
+        <!-- TOP BAR -->
+        <div class="top-header">
+            <div class="container d-flex justify-content-between align-items-center">
+                <ul class="list-unstyled d-flex m-0">
+                    <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
+                    <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
+                    <li><a href="opportunities.html" class="nav-link d-none d-md-block">ឱកាזז</a></li>
+                </ul>
+                <div class="nav-action">
+                    <div class="dropdown">
+                        <button class="btn-lang dropdown-toggle border-0" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-globe2"></i> ភាសាខ្មែរ
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-check-lg text-primary me-1"></i>
+                                    ភាសាខ្មែរ</a></li>
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
+                        <i class="bi bi-moon-fill" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo"
+                            class="brand-logo-img"></div>
+                    <div>
+                        <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ
+                        </div>
+                        EduKhmer
+                    </div>
+                </a>
+
+                <!-- Mobile toggles -->
+                <div class="d-flex d-lg-none align-items-center gap-2">
+                    <div class="dropdown">
+                        <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle fs-5" style="color:var(--text-black)"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="login.html"><i
+                                        class="bi bi-box-arrow-in-right me-2"></i>ចូលគណនី</a></li>
+                            <li><a class="dropdown-item" href="register.html"><i
+                                        class="bi bi-person-plus me-2"></i>បង្កើតគណនី</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileMenu">
+                        <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
+                    </button>
+                </div>
+
+                <!-- Desktop nav -->
+                <ul class="navbar-nav mx-auto d-none d-lg-flex">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">ទំព័រដើម</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="scholarships.html">
+                            <i class="bi bi-award me-1"></i>អាហារូបករណ៍
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html"><i
+                                class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
+                    <li class="nav-item"><a class="nav-link" href="exchange.html"><i
+                                class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="internship-categories.html"><i
+                                class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="volunteer-international.html"><i
+                                class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
+                </ul>
+                <div class="nav-auth d-none d-lg-flex">
+                    <button class="btn-login" onclick="location.href='login.html'">ចូលគណនី</button>
+                    <button class="btn-register" onclick="location.href='register.html'">ចុះឈ្មោះឥឡូវ</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title d-flex align-items-center gap-2" style="color:var(--primary-color)">
+                <i class="bi bi-mortarboard-fill"></i> EduKhmer
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="../index.html"><i
+                            class="bi bi-house me-2"></i>ទំព័រដើម</a></li>
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="scholarships.html"><i
+                            class="bi bi-award me-2"></i>អាហារូបករណ៍</a></li>
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="courses.html"><i
+                            class="bi bi-book me-2"></i>វគ្គសិក្សា</a></li>
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="exchange.html"><i
+                            class="bi bi-globe me-2"></i>កម្មវិធីផ្លាស់ប្តូរ</a></li>
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="internship-categories.html"><i
+                            class="bi bi-briefcase me-2"></i>ហាត់ការ</a></li>
+                <li class="nav-item"><a class="nav-link active py-3 border-bottom" href="volunteer-international.html"><i
+                            class="bi bi-heart me-2"></i>ស្ម័គ្រចិត្ត</a></li>
+            </ul>
+            <div class="d-grid gap-2 mt-4">
+                <a href="login.html" class="btn btn-outline-primary">ចូលគណនី</a>
+                <a href="register.html" class="btn btn-primary">ចុះឈ្មោះ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== BREADCRUMB SECTION ===================== -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">ទំព័រដើម</a></li>
+                    <li class="breadcrumb-item"><a href="volunteer-international.html">ស្ម័គ្រចិត្ត</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">ព័ត៌មានលម្អិត</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <main class="container" style="padding: 40px 0;">
+
+        <!-- HERO SECTION -->
+        <div class="volunteer-hero" data-aos="fade-up">
+            <div class="volunteer-hero-content">
+                <div class="volunteer-header">
+                    <div class="volunteer-logo" style="background: linear-gradient(135deg, #00C2B2, #00A891);">
+                            <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <div class="volunteer-title-box">
+                            <h1>ស្ម័គ្រចិត្តផ្នែកអប់រំ — ជួយបង្រៀនកុមារជនបទ</h1>
+                        <p class="volunteer-provider">
+                                <i class="bi bi-globe"></i> World Vision · 🇰🇭 Cambodia
+                        </p>
+                        <div class="volunteer-badges">
+                                <span class="badge-item"><i class="bi bi-star"></i> ក្នុងស្រុក</span>
+                                <span class="badge-item"><i class="bi bi-globe"></i> សហគមន៍</span>
+                                <span class="badge-item"><i class="bi bi-lightning"></i> ២-៤ សប្ដាហ៍</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Info Grid -->
+                <div class="key-info-grid">
+                    <div class="info-card">
+                        <div class="info-label">
+                            <i class="bi bi-cash-coin"></i> ឥណទាន
+                        </div>
+                        <div class="info-value">ដឹកជញ្ជូន</div>
+                        <div class="info-subtext">លំនៅ និងអាហារ</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">
+                            <i class="bi bi-hourglass-split"></i> ចុងក្រោយ
+                        </div>
+                        <div class="info-value">បើកចុះឈ្មោះ</div>
+                        <div class="info-subtext">ចាប់ផ្ដើមភ្លាម</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">
+                            <i class="bi bi-calendar-event"></i> រយៈពេល
+                        </div>
+                        <div class="info-value">២-៤ សប្ដាហ៍</div>
+                        <div class="info-subtext">១០ កន្លែង</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-label">
+                            <i class="bi bi-geo-alt"></i> ទីតាំង
+                        </div>
+                        <div class="info-value">Kampong Cham</div>
+                        <div class="info-subtext">Cambodia</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Volunteer Image -->
+            <div class="volunteer-hero-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXpaO0ki0YIXslimemSFDv2qUgS-bttYnHww&s"
+                    alt="World Vision Cambodia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT GRID -->
+        <div class="volunteer-content">
+            <!-- LEFT COLUMN -->
+            <div class="main-content">
+
+                <!-- DESCRIPTION SECTION -->
+                <section data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="bi bi-info-circle"></i> ពិពណ៌នា
+                    </h2>
+                    <p class="description-text">
+                        World Vision Cambodia ផ្តល់ឱកាសសម្រាប់អ្នកស្ម័គ្រចិត្តជួយការអប់រំកុមារនៅតំបន់ជនបទ ដោយផ្តោតលើការបង្រៀន មេរៀនគាំទ្រ និងសកម្មភាពសហគមន៍។
+                    </p>
+                    <p class="description-text">
+                        កម្មវិធីនេះសមស្របសម្រាប់អ្នកដែលចង់មានបទពិសោធន៍ជាក់ស្តែងក្នុងសេវាសហគមន៍ និងចូលរួមបង្កើនឱកាសសិក្សាសម្រាប់កុមារក្នុងមូលដ្ឋាន។
+                    </p>
+                </section>
+
+                <!-- REQUIREMENTS SECTION -->
+                <section data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="bi bi-checklist"></i> តម្រូវការ
+                    </h2>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>ចំណង់ចំណូលចិត្តអប់រំ</strong>
+                            <small>មានចិត្តចង់ជួយបង្រៀន និងធ្វើការជាមួយកុមារ</small>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>ភាពបត់បែន</strong>
+                            <small>អាចធ្វើការនៅបរិយាកាសជនបទ និងសម្របខ្លួនទៅនឹងកាលវិភាគសហគមន៍</small>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>ភាសាខ្មែរ/អង់គ្លេស</strong>
+                            <small>អាចទំនាក់ទំនងបានល្អជាមួយកុមារ និងក្រុមគ្រូ</small>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>ភាពទទួលខុសត្រូវ</strong>
+                            <small>អាចបំពេញតួនាទីទៀងទាត់ និងគោរពវិន័យ</small>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>ការងារជាក្រុម</strong>
+                            <small>អាចធ្វើការជាមួយគ្រូ និងសហគមន៍ក្នុងគោលបំណងរួម</small>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- APPLICATION PROCESS SECTION -->
+                <section data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="bi bi-diagram-3"></i> ដំណើរការដាក់ពាក្យ
+                    </h2>
+
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>បំពេញទម្រង់ចុះឈ្មោះ</h4>
+                            <p>បំពេញព័ត៌មានផ្ទាល់ខ្លួន និងជ្រើសរើសមុខតំណែងដែលអ្នកចង់ជួយនៅតំបន់កុមារជនបទ។</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>ពិនិត្យសមស្រប</h4>
+                            <p>ក្រុមគម្រោងនឹងពិនិត្យភាពសមស្រប អ្នកចង់ធ្វើការជាមួយកុមារ និងកាលវិភាគរបស់អ្នក។</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>សម្របសម្រួលខ្លី</h4>
+                            <p>បេក្ខជនដែលជាប់ជម្រើសនឹងត្រូវបានអញ្ជើញសម្រាប់សម្របសម្រួលខ្លី ឬសម្ភាសន៍តាមទូរស័ព្ទ។</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>ទទួលការណែនាំ</h4>
+                            <p>បេក្ខជនដែលត្រូវបានជ្រើសរើសនឹងទទួលពេលវេលាចាប់ផ្ដើម និងការណែនាំអំពីតំបន់បេសកកម្ម។</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BENEFITS SECTION -->
+                <section data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="bi bi-gift"></i> អត្ថប្រយោជន៍
+                    </h2>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>ដឹកជញ្ជូន</strong>
+                            <small>ការគាំទ្រផ្នែកដឹកជញ្ជូនទៅកាន់ទីតាំងសកម្មភាព</small>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>លំនៅដ្ឋាន</strong>
+                            <small>មានការរៀបចំកន្លែងស្នាក់នៅសមរម្យសម្រាប់អ្នកស្ម័គ្រចិត្ត</small>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>អាហារ</strong>
+                            <small>ផ្តល់អាហារ ឬប្រាក់ឧបត្ថម្ភអាហារតាមគម្រោង</small>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check">✓</div>
+                        <div class="requirement-text">
+                            <strong>បទពិសោធន៍សហគមន៍</strong>
+                            <small>អាចធ្វើការជិតស្និទ្ធជាមួយសហគមន៍ និងកុមារនៅមូលដ្ឋាន</small>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ SECTION -->
+                <section data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="bi bi-question-circle"></i> សំណួរ និង ចម្លើយ
+                    </h2>
+
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item border-0 mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1">
+                                    តើកម្មវិធី World Vision Cambodia នេះជាអ្វី?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    នេះជាកម្មវិធីស្ម័គ្រចិត្តផ្នែកអប់រំដែលអនុញ្ញាតឱ្យអ្នកជួយបង្រៀនកុមារនៅតំបន់ជនបទ និងគាំទ្រការរៀនសូត្រក្នុងសហគមន៍។
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2">
+                                    តើអ្នកណាដែលមានលក្ខណៈសម្រាប់ដាក់ពាក្យ?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    អ្នកដែលមានចិត្តចង់ជួយអប់រំកុមារ អាចសម្របខ្លួនទៅជនបទ និងធ្វើការជាក្រុមអាចដាក់ពាក្យបាន។
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3">
+                                    តើលាប់ពេលលេខលម្អិតបានប៉ុន្មាន?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    រយៈពេលគម្រោងគឺប្រហែល ២-៤ សប្ដាហ៍ និងអាចកែសម្រួលតាមកាលវិភាគសកម្មភាព។
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- RIGHT SIDEBAR -->
+            <div class="sidebar">
+                <!-- APPLY CARD -->
+                <div class="sidebar-card">
+                    <div class="deadline-box">
+                        <div class="deadline-label">ចុងក្រោយក្នុងរយៈពេល</div>
+                        <div class="countdown">
+                            <i class="bi bi-hourglass-split"></i> បើកចុះឈ្មោះ
+                        </div>
+                    </div>
+
+                    <button class="apply-button">
+                        <i class="bi bi-send"></i> ដាក់ពាក្យឥឡូវនេះ
+                    </button>
+                    <button class="save-button">
+                        <i class="bi bi-bookmark"></i> រក្សាទុក
+                    </button>
+
+                    <div class="share-section">
+                        <div class="share-title">ចែករំលែក</div>
+                        <div class="share-buttons">
+                            <button class="share-btn" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+                            <button class="share-btn" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </button>
+                            <button class="share-btn" title="Email">
+                                <i class="bi bi-envelope"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTACT CARD -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">ទំនាក់ទំនង</h3>
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <div>
+                            <small style="color: var(--text-muted); font-weight: 600;">ទំនាក់ទំនង</small>
+                            <p style="color: var(--primary-color); font-weight: 700; margin: 5px 0 0 0;">
+                                <i class="bi bi-telephone"></i> World Vision Cambodia
+                            </p>
+                        </div>
+                        <div>
+                            <small style="color: var(--text-muted); font-weight: 600;">ទីតាំង</small>
+                            <p style="color: var(--primary-color); font-weight: 700; margin: 5px 0 0 0;">
+                                <i class="bi bi-envelope"></i> Kampong Cham, Cambodia
+                            </p>
+                        </div>
+                        <div>
+                            <small style="color: var(--text-muted); font-weight: 600;">កាលវិភាគ</small>
+                            <p style="margin: 5px 0 0 0;">
+                                <a href="#" target="_blank"
+                                    style="color: var(--primary-color); text-decoration: none; font-weight: 600;">
+                                    <i class="bi bi-globe"></i> ចាប់ផ្ដើមភ្លាម
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TIPS CARD -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">
+                        <i class="bi bi-lightbulb"></i> ដំណឹងរបស់យើង
+                    </h3>
+                    <ul style="padding-left: 0; margin: 0; list-style: none;">
+                        <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border-color); color: var(--text-descript);">
+                            <strong style="color: var(--text-black);">💡 ដំបូង៖</strong> បង្ហាញចំណង់ចំណូលចិត្តក្នុងការជួយកុមារ
+                        </li>
+                        <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border-color); color: var(--text-descript);">
+                            <strong style="color: var(--text-black);">💡 ទីពីរ៖</strong> រៀបចំពេលវេលាដែលអ្នកអាចចូលរួមបាន
+                        </li>
+                        <li style="color: var(--text-descript);">
+                            <strong style="color: var(--text-black);">💡 ទីបី៖</strong> ត្រៀមខ្លួនធ្វើការជាក្រុម និងជាមួយសហគមន៍
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, offset: 50 });
+
+        // Theme toggle
+        const themeToggle = document.querySelector('[data-theme-toggle]');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlElement = document.documentElement;
+
+        themeToggle?.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeIcon.className = newTheme === 'light' ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
+        });
+    </script>
+</body>
+
+</html>
