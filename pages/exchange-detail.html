@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ព័ត៌មានលម្អិត JENESYS 2025 | EduKhmer</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Hanuman:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/navbar.css">
+</head>
+
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="fixed-top shadow-sm">
+
+  <!-- TOP BAR -->
+  <div class="top-header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <ul class="list-unstyled d-flex m-0">
+        <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
+        <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
+      </ul>
+      <div class="nav-action">
+        <div class="dropdown">
+          <button class="btn-lang dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-globe2"></i> ភាសាខ្មែរ
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-check-lg text-primary me-1"></i> ភាសាខ្មែរ</a></li>
+            <li><a class="dropdown-item" href="#">English</a></li>
+          </ul>
+        </div>
+        <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
+          <i class="bi bi-moon-fill" id="theme-icon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
+        <div>
+          <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ</div>
+          EduKhmer
+        </div>
+      </a>
+
+      <!-- Mobile toggles -->
+      <div class="d-flex d-lg-none align-items-center gap-2">
+        <div class="dropdown">
+          <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
+            <i class="bi bi-person-circle fs-5" style="color:var(--text-black)"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right me-2"></i>ចូលគណនី</a></li>
+            <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus me-2"></i>បង្កើតគណនី</a></li>
+          </ul>
+        </div>
+        <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+          <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
+        </button>
+      </div>
+
+      <!-- Desktop nav -->
+      <ul class="navbar-nav mx-auto d-none d-lg-flex">
+        <li class="nav-item"><a class="nav-link" href="../index.html">ទំព័រដើម</a></li>
+        <li class="nav-item">
+          <a class="nav-link " href="scholarships.html">
+            <i class="bi bi-award me-1"></i>អាហារូបករណ៍
+          </a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="courses.html"><i class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
+        <li class="nav-item"><a class="nav-link active" href="exchange.html"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
+        <li class="nav-item"><a class="nav-link" href="internship-categories.html"><i class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
+        <li class="nav-item"><a class="nav-link" href="volunteer-international.html"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
+      </ul>
+      <div class="nav-auth d-none d-lg-flex">
+        <button class="btn-login" onclick="location.href='login.html'">ចូលគណនី</button>
+        <button class="btn-register" onclick="location.href='register.html'">ចុះឈ្មោះឥឡូវ</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Mobile Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title d-flex align-items-center gap-2" style="color:var(--primary-color)">
+      <i class="bi bi-mortarboard-fill"></i> EduKhmer
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li><a class="nav-link py-3 border-bottom" href="index.html"><i class="bi bi-house me-2"></i>ទំព័រដើម</a></li>
+      <li><a class="nav-link py-3 border-bottom" href="scholarships.html"><i class="bi bi-award me-2"></i>អាហារូបករណ៍</a></li>
+      <li><a class="nav-link py-3 border-bottom" href="courses.html"><i class="bi bi-book me-2"></i>វគ្គសិក្សា</a></li>
+      <li><a class="nav-link active py-3 border-bottom" href="exchange.html"><i class="bi bi-globe me-2"></i>ផ្លាស់ប្តូរ</a></li>
+      <li><a class="nav-link py-3 border-bottom" href="internship-categories.html"><i class="bi bi-briefcase me-2"></i>ហាត់ការ</a></li>
+      <li><a class="nav-link py-3 border-bottom" href="volunteer-international.html"><i class="bi bi-heart me-2"></i>ស្ម័គ្រចិត្ត</a></li>
+    </ul>
+    <div class="d-grid gap-2 mt-4">
+      <a href="login.html" class="btn btn-outline-primary">ចូលគណនី</a>
+      <a href="register.html" class="btn btn-primary">ចុះឈ្មោះ</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== MAIN ===================== -->
+<main style="padding: 60px 0 80px;">
+  <div class="container">
+    <!-- ── HERO BLOCK ── -->
+    <div class="detail-hero" data-aos="fade-up">
+      <!-- Left content -->
+      <div class="detail-hero-content">
+        <div class="prog-header">
+          <div class="prog-logo-fallback" style="background:linear-gradient(135deg,#BC002D,#e60033)">🇯🇵</div>
+          <div class="prog-title-box">
+            <h1>JENESYS 2025 — Japan-East Asia Network of Exchange for Students and Youths</h1>
+            <div class="prog-provider">
+              <i class="bi bi-building"></i> Japan Foundation / JICA · ជប៉ុន
+            </div>
+            <div class="prog-badges">
+              <span class="prog-badge pb-green"><i class="bi bi-check-circle-fill"></i> ចំហចុះឈ្មោះ</span>
+              <span class="prog-badge pb-gold"><i class="bi bi-star-fill"></i> ឧបត្ថម្ភ ១០០%</span>
+              <span class="prog-badge pb-blue"><i class="bi bi-globe"></i> អន្តរជាតិ</span>
+              <span class="prog-badge pb-purple"><i class="bi bi-people-fill"></i> Youth Exchange</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key info grid -->
+        <div class="key-info-grid">
+          <div class="kig-card">
+            <div class="kig-label"><i class="bi bi-cash-coin"></i> ហិរញ្ញប្បទាន</div>
+            <div class="kig-value">ពេញលេញ</div>
+            <div class="kig-sub">ឧបត្ថម្ភ ១០០%</div>
+          </div>
+          <div class="kig-card">
+            <div class="kig-label"><i class="bi bi-hourglass-split"></i> ចុងក្រោយ</div>
+            <div class="kig-value" style="color:#e53e3e">៣០ ឧសភា</div>
+            <div class="kig-sub">ឆ្នាំ ២០២៥</div>
+          </div>
+          <div class="kig-card">
+            <div class="kig-label"><i class="bi bi-calendar-event"></i> រយៈពេល</div>
+            <div class="kig-value">១០ ថ្ងៃ</div>
+            <div class="kig-sub">Short-term</div>
+          </div>
+          <div class="kig-card">
+            <div class="kig-label"><i class="bi bi-geo-alt"></i> ទីតាំង</div>
+            <div class="kig-value">Tokyo</div>
+            <div class="kig-sub">Osaka · Kyoto</div>
+          </div>
+        </div>
+
+        <!-- Seat progress -->
+        <div class="mt-4 pt-3" style="border-top:1px solid var(--border-color)">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <span style="font-size:.83rem;color:var(--text-muted);font-weight:600">កន្លែងដែលនៅសល់</span>
+            <span style="font-size:.88rem;font-weight:700;color:var(--primary-color)">12 / 30 កន្លែង</span>
+          </div>
+          <div class="progress-custom">
+            <div class="progress-fill" style="width:60%" id="seat-bar"></div>
+          </div>
+          <div style="font-size:.76rem;color:var(--text-muted);margin-top:5px">⚠️ នៅសល់ ១២ កន្លែងប៉ុណ្ណោះ!</div>
+        </div>
+      </div>
+
+      <!-- Right image -->
+      <div class="detail-hero-img">
+        <img src="https://asean.org/wp-content/uploads/2021/08/4-11.png" alt="Japan Exchange Program">
+        <div class="detail-hero-img-overlay"></div>
+        <!-- Floating badge -->
+        <div style="position:absolute;top:20px;right:20px;background:rgba(10,22,40,.85);backdrop-filter:blur(10px);border:1px solid rgba(77,184,255,.3);border-radius:12px;padding:12px 16px;color:#fff;text-align:center">
+          <div style="font-size:1.8rem;line-height:1">🗾</div>
+          <div style="font-size:.7rem;color:rgba(255,255,255,.7);margin-top:4px">Japan</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MAIN LAYOUT ── -->
+    <div class="detail-layout">
+
+      <!-- ─── LEFT COLUMN ─── -->
+      <div class="detail-main">
+
+        <!-- DESCRIPTION -->
+        <div class="detail-section" data-aos="fade-up">
+          <h2 class="ds-title"><i class="bi bi-info-circle-fill"></i> ពិពណ៌នា</h2>
+          <p class="desc-text">
+            <strong>JENESYS (Japan-East Asia Network of Exchange for Students and Youths)</strong>
+            គឺជាកម្មវិធីផ្លាស់ប្តូររបស់រដ្ឋាភិបាលជប៉ុន ដែលរៀបចំដោយ Japan Foundation
+            ក្នុងគោលដៅពង្រឹង ទំនាក់ទំនងប្រជាជន ជប៉ុន-ASEAN ។
+            អ្នកចូលរួមនឹងទទួលបាន បទពិសោធន៍វប្បធម៌ ជប៉ុន ជួបជំនួបសិស្សជប៉ុន
+            ធ្វើដំណើរទៅ Tokyo Osaka Kyoto ឥតគិតថ្លៃ ១០០%!
+          </p>
+          <p class="desc-text">
+            កម្មវិធីនេះ ផ្ដោតលើ <strong>Youth Leadership, Innovation, Culture Exchange</strong>
+            ។ អ្នកចូលរួម នឹងធ្វើ Presentation, Workshop, Home Visit ជាមួយ
+            ក្រុមគ្រួសារជប៉ុន — ហើយកសាង Network ជំនាន់ ASEAN ។
+            EduKhmer ជ្រើសរើស ១០ ក្នុងចំណោម ៣០ កន្លែងសម្រាប់កម្ពុជា!
+          </p>
+          <p class="desc-text">
+            ✅ ការធ្វើដំណើរ · ✅ លំនៅដ្ឋាន · ✅ អាហារ · ✅ ការធានា
+            · ✅ ប្រាក់ចំណាយប្រចាំថ្ងៃ — <strong>គ្មានការចំណាយ !</strong>
+          </p>
+        </div>
+
+        <!-- ELIGIBILITY -->
+        <div class="detail-section" data-aos="fade-up">
+          <h2 class="ds-title"><i class="bi bi-person-check-fill"></i> គុណសម្បត្តិ / Eligibility</h2>
+          <div class="elig-row">
+            <div class="elig-key"><i class="bi bi-flag"></i> សញ្ជាតិ</div>
+            <div class="elig-val">ប្រជាជន ASEAN (រួមទាំងកម្ពុជា) 🇰🇭</div>
+          </div>
+          <div class="elig-row">
+            <div class="elig-key"><i class="bi bi-calendar-person"></i> អាយុ</div>
+            <div class="elig-val">១៨ — ៣០ ឆ្នាំ</div>
+          </div>
+          <div class="elig-row">
+            <div class="elig-key"><i class="bi bi-mortarboard"></i> កម្រិតសិក្សា</div>
+            <div class="elig-val">University Student / Graduate / Young Professional</div>
+          </div>
+          <div class="elig-row">
+            <div class="elig-key"><i class="bi bi-translate"></i> ភាសា</div>
+            <div class="elig-val">ភាសាអង់គ្លេស — សរសេរ និងនិយាយ (មិនទាមទារ IELTS)</div>
+          </div>
+          <div class="elig-row">
+            <div class="elig-key"><i class="bi bi-people"></i> ចំនួន</div>
+            <div class="elig-val">១០ កន្លែង</div>
+          </div>
+          <div class="elig-row">
+            <div class="elig-key"><i class="bi bi-x-circle"></i> ដែនកំណត់</div>
+            <div class="elig-val">អ្នកធ្លាប់ចូលរួម JENESYS មិនអាចដាក់ពាក្យម្ដងទៀត</div>
+          </div>
+        </div>
+
+        <!-- REQUIREMENTS -->
+        <div class="detail-section" data-aos="fade-up">
+          <h2 class="ds-title"><i class="bi bi-checklist"></i> លក្ខខណ្ឌ / Requirements</h2>
+
+          <div class="req-item">
+            <div class="req-check">✓</div>
+            <div class="req-text">
+              <strong>ប្រវត្តិសិក្សា / CV</strong>
+              <small>CV / Resume ជាភាសាអង់គ្លេស — ១-២ ទំព័រ ។ រៀបចំ Skill, Experience, Leadership</small>
+            </div>
+          </div>
+          <div class="req-item">
+            <div class="req-check">✓</div>
+            <div class="req-text">
+              <strong>Motivation Letter / Essay</strong>
+              <small>Essay ១ ទំព័រ — "Why do you want to join JENESYS?" + "What will you bring back to Cambodia?"</small>
+            </div>
+          </div>
+          <div class="req-item">
+            <div class="req-check">✓</div>
+            <div class="req-text">
+              <strong>លិខិតអនុសាសន៍ / Reference Letter</strong>
+              <small>លិខិតអនុសាសន៍ ១ ចេញពី Professor / Employer / Community Leader</small>
+            </div>
+          </div>
+          <div class="req-item">
+            <div class="req-check">✓</div>
+            <div class="req-text">
+              <strong>លិខិតឆ្លងដែន / Passport</strong>
+              <small>Passport ត្រូវមានសុពលភាព ≥ ៦ ខែ (ចាប់ពីថ្ងៃចេញដំណើរ)</small>
+            </div>
+          </div>
+          <div class="req-item">
+            <div class="req-check">✓</div>
+            <div class="req-text">
+              <strong>រូបថត / Photo</strong>
+              <small>រូបថតថ្មី ២ x ២ inch ផ្ទៃខ្នងស White Background ក្នុង ៦ ខែ</small>
+            </div>
+          </div>
+          <div class="req-item">
+            <div class="req-check">✓</div>
+            <div class="req-text">
+              <strong>Transcript / ផ្លែចំណេះ</strong>
+              <small>ផ្លែចំណេះ / Transcript ជាភាសាអង់គ្លេស (Official Copy) — CGPA ≥ 2.5</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- DOCUMENTS CHECKLIST -->
+        <div class="detail-section" data-aos="fade-up">
+          <h2 class="ds-title"><i class="bi bi-folder2-open"></i> បញ្ជីឯកសារ / Document Checklist</h2>
+          <div class="doc-item"><i class="bi bi-file-earmark-person"></i> CV / Resume (English) <span class="doc-required">ចាំបាច់</span></div>
+          <div class="doc-item"><i class="bi bi-file-earmark-text"></i> Motivation Letter / Personal Statement <span class="doc-required">ចាំបាច់</span></div>
+          <div class="doc-item"><i class="bi bi-file-earmark-check"></i> Reference Letter (ចេញពីស្ថាប័ន) <span class="doc-required">ចាំបាច់</span></div>
+          <div class="doc-item"><i class="bi bi-passport"></i> Passport Copy (All pages with info) <span class="doc-required">ចាំបាច់</span></div>
+          <div class="doc-item"><i class="bi bi-mortarboard"></i> Academic Transcript (Official) <span class="doc-required">ចាំបាច់</span></div>
+          <div class="doc-item"><i class="bi bi-image"></i> Passport Photo (2×2 inch) <span class="doc-required">ចាំបាច់</span></div>
+          <div class="doc-item"><i class="bi bi-card-text"></i> Student ID / Professional ID <span class="doc-optional">Optional</span></div>
+          <div class="doc-item"><i class="bi bi-award"></i> Certificates (Activities, Leadership) <span class="doc-optional">Optional</span></div>
+        </div>
+
+        <!-- APPLICATION PROCESS -->
+        <div class="detail-section" data-aos="fade-up">
+          <h2 class="ds-title"><i class="bi bi-diagram-3-fill"></i> ដំណើរការដាក់ពាក្យ</h2>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-dot">១</div>
+              <div class="tl-title">ចុះឈ្មោះ EduKhmer + ដាក់ពាក្យ Pre-Selection</div>
+              <p class="tl-body">ចុះឈ្មោះ EduKhmer ហើយ Fill Form Pre-Selection ។ EduKhmer ជ្រើស Shortlist ១០ ក្នុង ៣០ — Review CV, Motivation Letter, Background ។</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot">២</div>
+              <div class="tl-title">Review ឯកសារ + Feedback</div>
+              <p class="tl-body">EduKhmer Review CV និង Motivation Letter ហើយ ផ្ញើ Feedback — ជួយ Revise ដើម្បីបង្កើន ឱកាស ។</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot">៣</div>
+              <div class="tl-title">ដាក់ពាក្យ Official ជូន Japan Foundation</div>
+              <p class="tl-body">ដាក់ Form Official + ឯកសារទាំងអស់ ជូន Japan Foundation តាម Email ។ Deadline: <strong style="color:#e53e3e">៣០ ឧសភា ២០២៥</strong> !</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot">៤</div>
+              <div class="tl-title">Interview (Video Call)</div>
+              <p class="tl-body">ក្រុម Japan Foundation / EduKhmer សម្ភាសន៍ Video Call ១៥-៣០ នាទី ។ ត្រៀមពន្យល់ "Why Japan" "What you will learn" ។</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot">៥</div>
+              <div class="tl-title">ទទួលលទ្ធផល + ត្រៀម Pre-Departure</div>
+              <p class="tl-body">ទទួល Offer Letter — EduKhmer ជួយ Pre-Departure Training: ភាសាជប៉ុន វប្បធម៌ Visa ។ ចេញដំណើរ! 🗾</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- BENEFITS -->
+        <div class="detail-section" data-aos="fade-up">
+          <h2 class="ds-title"><i class="bi bi-gift-fill"></i> អត្ថប្រយោជន៍ / Benefits</h2>
+
+          <div class="benefit-item">
+            <div class="benefit-icon blue"><i class="bi bi-airplane-fill"></i></div>
+            <div class="benefit-text">
+              <strong>ទឹកប្រាក់ធ្វើដំណើរ (Round-trip Airfare)</strong>
+              <small>ដំណើរ Round-trip Phnom Penh → Tokyo ត្រូវបានបង់ ១០០% ។ Economy Class ។</small>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon green"><i class="bi bi-house-fill"></i></div>
+            <div class="benefit-text">
+              <strong>លំនៅដ្ឋាន (Accommodation)</strong>
+              <small>Hotel / Youth Hostel 3-4 Star ។ ថ្ងៃ Home Stay ១-២ យប់ ជាមួយ ក្រុមគ្រួសារជប៉ុន !</small>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon gold"><i class="bi bi-fork-knife"></i></div>
+            <div class="benefit-text">
+              <strong>អាហារ (Meals)</strong>
+              <small>អាហារ ៣ ពេលជារៀងរាល់ថ្ងៃ — បញ្ចូលតែ Japanese Cuisine !</small>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon purple"><i class="bi bi-heart-pulse-fill"></i></div>
+            <div class="benefit-text">
+              <strong>ការធានា (Travel Insurance)</strong>
+              <small>Travel Insurance គ្រប់ ១០ ថ្ងៃ — Cover Emergency Medical, Trip Cancellation ។</small>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon red"><i class="bi bi-cash-coin"></i></div>
+            <div class="benefit-text">
+              <strong>ប្រាក់ចំណាយប្រចាំថ្ងៃ (Daily Allowance)</strong>
+              <small>¥2,000 / ថ្ងៃ (ប្រហែល $15) ។ + Pocket Money ❗</small>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon blue"><i class="bi bi-patch-check-fill"></i></div>
+            <div class="benefit-text">
+              <strong>វិញ្ញាបនបត្រ (Certificate of Participation)</strong>
+              <small>Certificate ជាផ្លូវការ ចេញដោយ Japan Foundation + EduKhmer !</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROGRAM GALLERY -->
+        <div class="detail-section" data-aos="fade-up">
+          <h2 class="ds-title"><i class="bi bi-images"></i> រូបភាពកម្មវិធី</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="https://asean.org/wp-content/uploads/2021/08/4-11.png" alt="Tokyo">
+              <div class="gallery-item-overlay"><i class="bi bi-zoom-in"></i></div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://d22dvihj4pfop3.cloudfront.net/wp-content/uploads/sites/65/2025/07/17095741/IMG_7158-1024x683.jpg" alt="Japan Culture">
+              <div class="gallery-item-overlay"><i class="bi bi-zoom-in"></i></div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://d22dvihj4pfop3.cloudfront.net/wp-content/uploads/sites/65/2024/03/19073016/IMG_2090-e1710835030711.jpg" alt="Osaka">
+              <div class="gallery-item-overlay"><i class="bi bi-zoom-in"></i></div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://live.staticflickr.com/65535/54962034037_ae9a4669ee_b.jpg" alt="Kyoto">
+              <div class="gallery-item-overlay"><i class="bi bi-zoom-in"></i></div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://live.staticflickr.com/65535/54819577483_b641a8c91d_b.jpg" alt="Sakura">
+              <div class="gallery-item-overlay"><i class="bi bi-zoom-in"></i></div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://kpl.gov.la/Media/Upload/News/Thumb/2022/10/28/student.jpg" alt="Exchange Youth">
+              <div class="gallery-item-overlay"><i class="bi bi-zoom-in"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="detail-section" data-aos="fade-up">
+          <h2 class="ds-title"><i class="bi bi-question-circle-fill"></i> សំណួរ & ចម្លើយ</h2>
+          <div class="accordion" id="faqAcc">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                  តើ JENESYS ជាអ្វី? ហើយ EduKhmer ជ្រើស ១០ នាក់ ដោយរបៀបណា?
+                </button>
+              </h2>
+              <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  JENESYS គឺជាកម្មវិធីផ្លាស់ប្តូររបស់ Japan Foundation ។
+                  EduKhmer ជ្រើស Shortlist ១០ ក្នុង ៣០ កន្លែង — Review CV, Motivation Letter, Leadership Experience ។
+                  ដំណើរការ Fair, Transparent — <strong>គ្មានលក្ខខណ្ឌហិរញ្ញប្បទាន</strong> ។
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+                  តើខ្ញុំគ្រប់គ្រាន់ CGPA ប៉ុន្មាន? ហើយ IELTS ត្រូវការទេ?
+                </button>
+              </h2>
+              <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  CGPA ≥ 2.5 គ្រប់គ្រាន់ ។ <strong>IELTS / TOEFL មិនតម្រូវ</strong> ។
+                  ប្រើ Conversational English — Interview Video Call — ប៉ុន្ដែ
+                  ត្រូវវាស់ ហ !</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+                  ខ្ញុំចូលធ្វើការ/ហាត់ការ — អាចដាក់ពាក្យ?
+                </button>
+              </h2>
+              <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  បាទ/ចាស! JENESYS ។ ទទួលទាំង University Student, Young Professional (<strong>អាយុ ≤ ៣០</strong>) ។
+                  ប្រសិន​បើ Working — ផ្ញើ Reference Letter ពី Employer ។
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4">
+                  EduKhmer ជួយ Visa Application ទេ?
+                </button>
+              </h2>
+              <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  ✅ Japan Foundation Handle Japan Visa ជំនួស ។
+                  EduKhmer ជួយ Pre-Departure Briefing — Guide Visa Document, Packing, Culture Prep ។
+                  អ្នកត្រូវ <strong>ផ្ញើ Passport ទៅ Japan Embassy</strong> ។
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5">
+                  ប្រសិនបើខ្ញុំបានចូលរួម JENESYS ពីមុន — អាចដាក់ម្ដងទៀតទេ?
+                </button>
+              </h2>
+              <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  <strong>មិនអាច</strong> ។ Japan Foundation Rule: ចូលរួមបានតែ <strong>១ ដង</strong> ក្នុង ៣ ឆ្នាំ ។
+                  ប្រសិន​បើ ចូលរួម ក្នុង ២០២២/२०২३ — ត្រូវស្ទើរ Eligible ។
+                  ប្រើ <strong>Other Japan Programs</strong> ជំនួស: MEXT, JASSO, JICA ។
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /detail-main -->
+
+      <!-- ─── RIGHT SIDEBAR ─── -->
+      <div class="detail-sidebar">
+
+        <!-- Apply card -->
+        <div class="sidebar-card" style="position:sticky;top:150px">
+          <!-- Countdown -->
+          <div class="deadline-box">
+            <div class="deadline-label"> ចុងក្រោយ / Application Deadline</div>
+            <div class="deadline-date">៣០ ឧសភា ២០២៥</div>
+            <div class="countdown-chips">
+              <div class="cc-chip"><div class="cc-num" id="cnt-d">22</div><div class="cc-lbl">ថ្ងៃ</div></div>
+              <div class="cc-chip"><div class="cc-num" id="cnt-h">14</div><div class="cc-lbl">ម៉ោង</div></div>
+              <div class="cc-chip"><div class="cc-num" id="cnt-m">33</div><div class="cc-lbl">នាទី</div></div>
+            </div>
+          </div>
+
+          <button class="btn-apply" onclick="applyNow()">
+            <i class="bi bi-send-fill"></i> ដាក់ពាក្យឥឡូវ!
+          </button>
+          <button class="btn-save" id="save-btn" onclick="toggleSaveBtn()">
+            <i class="bi bi-bookmark" id="save-icon"></i> រក្សាទុក
+          </button>
+
+          <!-- Share -->
+          <div class="share-label"><i class="bi bi-share me-1"></i>ចែករំលែកឱ្យមិត្ត</div>
+          <div class="share-row">
+            <button class="share-btn" title="Facebook" onclick="shareTo('facebook')"><i class="bi bi-facebook"></i></button>
+            <button class="share-btn" title="Telegram" onclick="shareTo('telegram')"><i class="bi bi-telegram"></i></button>
+            <button class="share-btn" title="Twitter/X" onclick="shareTo('twitter')"><i class="bi bi-twitter-x"></i></button>
+            <button class="share-btn" title="Copy Link" onclick="copyLink()"><i class="bi bi-link-45deg"></i></button>
+          </div>
+        </div>
+
+        <!-- Contact card -->
+        <div class="sidebar-card">
+          <div class="sidebar-title"><i class="bi bi-telephone-fill"></i>ទំនាក់ទំនង</div>
+          <div class="sib-row">
+            <div class="sib-icon" style="background:rgba(0,122,204,.1)"><i class="bi bi-telegram" style="color:var(--primary-color)"></i></div>
+            <div>
+              <div class="sib-label">Telegram EduKhmer</div>
+              <div class="sib-val"><a href="#">@EduKhmerSupport</a></div>
+            </div>
+          </div>
+          <div class="sib-row">
+            <div class="sib-icon" style="background:rgba(245,166,35,.1)"><i class="bi bi-envelope-fill" style="color:var(--accent-gold)"></i></div>
+            <div>
+              <div class="sib-label">Email</div>
+              <div class="sib-val"><a href="mailto:info@edukhmer.com">info@edukhmer.com</a></div>
+            </div>
+          </div>
+          <div class="sib-row">
+            <div class="sib-icon" style="background:rgba(0,194,178,.1)"><i class="bi bi-globe2" style="color:var(--accent-green)"></i></div>
+            <div>
+              <div class="sib-label">Official Website</div>
+              <div class="sib-val"><a href="#" target="_blank">www.jenesys.jp</a></div>
+            </div>
+          </div>
+          <div class="sib-row">
+            <div class="sib-icon" style="background:rgba(130,80,255,.1)"><i class="bi bi-clock-fill" style="color:var(--accent-purple)"></i></div>
+            <div>
+              <div class="sib-label">ម៉ោងបម្រើ</div>
+              <div class="sib-val">ច. — សុ. 08:00–18:00</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tips card -->
+        <div class="sidebar-card">
+          <div class="sidebar-title"><i class="bi bi-lightbulb-fill"></i>Tips ពី EduKhmer</div>
+          <div class="tip-item">
+            <i class="bi bi-star-fill"></i>
+            <span>ផ្ដោតលើ Leadership Experience ក្នុង Motivation Letter — JENESYS ចង់ឃើញ Future Leader !</span>
+          </div>
+          <div class="tip-item">
+            <i class="bi bi-star-fill"></i>
+            <span>ហៅ EduKhmer ជួយ Review Motivation Letter — យើងដឹងថាត្រូវ Focus ផ្ណែកណា !</span>
+          </div>
+          <div class="tip-item">
+            <i class="bi bi-star-fill"></i>
+            <span>ដាក់ពាក្យ Early — Shortlist Review ចាប់ផ្ដើម ២ សប្ដាហ៍ មុន Deadline !</span>
+          </div>
+          <div class="tip-item">
+            <i class="bi bi-star-fill"></i>
+            <span>Interview ត្រូវ Confident + Authentic — ត្រង់ ស្មោះ !</span>
+          </div>
+        </div>
+
+        <!-- Quick stats -->
+        <div class="sidebar-card">
+          <div class="sidebar-title"><i class="bi bi-bar-chart-fill"></i>ស្ថិតិ</div>
+          <div class="sib-row">
+            <div class="sib-icon" style="background:rgba(0,122,204,.1)"><i class="bi bi-eye" style="color:var(--primary-color)"></i></div>
+            <div>
+              <div class="sib-label">ចំនួនអ្នកមើល</div>
+              <div class="sib-val">1,248 view</div>
+            </div>
+          </div>
+          <div class="sib-row">
+            <div class="sib-icon" style="background:rgba(0,194,178,.1)"><i class="bi bi-send" style="color:var(--accent-green)"></i></div>
+            <div>
+              <div class="sib-label">ចំនួនអ្នកដាក់ពាក្យ</div>
+              <div class="sib-val">84 នាក់</div>
+            </div>
+          </div>
+          <div class="sib-row">
+            <div class="sib-icon" style="background:rgba(245,166,35,.1)"><i class="bi bi-bookmark" style="color:var(--accent-gold)"></i></div>
+            <div>
+              <div class="sib-label">ចំនួនរក្សាទុក</div>
+              <div class="sib-val">312 នាក់</div>
+            </div>
+          </div>
+          <div class="sib-row">
+            <div class="sib-icon" style="background:rgba(130,80,255,.1)"><i class="bi bi-trophy" style="color:var(--accent-purple)"></i></div>
+            <div>
+              <div class="sib-label">Acceptance Rate</div>
+              <div class="sib-val" style="color:var(--accent-green);font-weight:700">~35%</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /sidebar -->
+
+    </div><!-- /detail-layout -->
+
+    <!-- ── RELATED PROGRAMS ── -->
+    <div class="related-section" data-aos="fade-up">
+      <h2 class="related-title"><i class="bi bi-globe-americas"></i> កម្មវិធីផ្លាស់ប្តូរ ដែលពាក់ព័ន្ធ</h2>
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="rel-card">
+            <div class="rel-card-img">
+              <img src="https://www.sungshin.ac.kr/editorUpload/images/000599/%ED%95%9C%EC%95%84%EC%84%B8%EC%95%882.jpg" alt="Korea">
+            </div>
+            <div class="rel-card-body">
+              <span class="rel-card-tag" style="background:rgba(0,122,204,.9)"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</span>
+              <div class="rel-card-title">Korea-ASEAN Youth Leadership Exchange 2025</div>
+              <div class="rel-card-meta">
+                <span><i class="bi bi-geo-alt"></i> Seoul & Busan · Korea 🇰🇷</span>
+                <span><i class="bi bi-clock"></i> ២ សប្ដាហ៍ · ២០ កន្លែង</span>
+                <span><i class="bi bi-calendar-check"></i> ផុត: ១ មិថុនា ២០២៥</span>
+              </div>
+              <button class="btn-view-rel" onclick="location.href='exchange-detail.html'">
+                <i class="bi bi-arrow-right-circle me-1"></i> មើលលម្អិត
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="rel-card">
+            <div class="rel-card-img">
+              <img src="https://id.usembassy.gov/wp-content/uploads/sites/162/2025/06/yseali-9900000000079e3c.png" alt="USA">
+            </div>
+            <div class="rel-card-body">
+              <span class="rel-card-tag" style="background:rgba(130,80,255,.9)"><i class="bi bi-star me-1"></i>Leadership</span>
+              <div class="rel-card-title">YSEALI Academic Fellowship — Washington D.C. 2025</div>
+              <div class="rel-card-meta">
+                <span><i class="bi bi-geo-alt"></i> Washington D.C. · USA 🇺🇸</span>
+                <span><i class="bi bi-clock"></i> ៦ សប្ដាហ៍ · ១២ កន្លែង</span>
+                <span><i class="bi bi-calendar-check"></i> ផុត: ១ ឧសភា ២០២៥</span>
+              </div>
+              <button class="btn-view-rel" onclick="location.href='exchange-detail.html'">
+                <i class="bi bi-arrow-right-circle me-1"></i> មើលលម្អិត
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="rel-card">
+            <div class="rel-card-img">
+              <img src="https://asean.org/wp-content/uploads/elementor/thumbs/Photo-for-ASEC-website-pb9u1lspsbuhyqg98ncy0fn6xosfyew7ogxcjtvx4k.jpg" alt="ASEAN">
+            </div>
+            <div class="rel-card-body">
+              <span class="rel-card-tag" style="background:rgba(0,194,178,.9)"><i class="bi bi-globe me-1"></i>ASEAN</span>
+              <div class="rel-card-title">ASEAN Data Science Explorers Exchange 2025</div>
+              <div class="rel-card-meta">
+                <span><i class="bi bi-geo-alt"></i> Jakarta · Indonesia 🌏</span>
+                <span><i class="bi bi-clock"></i> ១ ខែ · Open</span>
+                <span><i class="bi bi-calendar-check"></i> ចាប់ផ្ដើម: ១ ឧសភា ២០២៥</span>
+              </div>
+              <button class="btn-view-rel" onclick="location.href='exchange-detail.html'">
+                <i class="bi bi-arrow-right-circle me-1"></i> មើលលម្អិត
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /container -->
+</main>
+
+<!-- ====================================================
+     FOOTER
+===================================================== -->
+<footer>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand-name">
+          <div class="footer-brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
+          EduKhmer
+        </div>
+        <p class="footer-desc">
+          វេទិកាអប់រំលេខ ១ ក្នុងកម្ពុជា  ភ្ជាប់យុវជនខ្មែរ
+          ជាមួយឱកាសសិក្សា និងការងារ ទូទាំងពិភពលោក ។
+          ចូលរួមជាមួយគ្រួសារ EduKhmer ថ្ងៃនេះ ឥតគិតថ្លៃ!
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5 class="footer-heading">ឱកាសសិក្សា</h5>
+        <ul class="footer-links">
+          <li><a href="scholarships.html"><i class="bi bi-chevron-right"></i>អាហារូបករណ៍</a></li>
+          <li><a href="courses.html"><i class="bi bi-chevron-right"></i>វគ្គសិក្សា</a></li>
+          <li><a href="exchange.html"><i class="bi bi-chevron-right"></i>ផ្លាស់ប្តូរ</a></li>
+          <li><a href="internships.html"><i class="bi bi-chevron-right"></i>ហាត់ការ</a></li>
+          <li><a href="volunteer.html"><i class="bi bi-chevron-right"></i>ស្ម័គ្រចិត្ត</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5 class="footer-heading">ជំនួយ</h5>
+        <ul class="footer-links">
+          <li><a href="about.html"><i class="bi bi-chevron-right"></i>អំពីយើង</a></li>
+          <li><a href="contact.html"><i class="bi bi-chevron-right"></i>ទំនាក់ទំនង</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5 class="footer-heading">ទំនាក់ទំនង</h5>
+        <ul class="footer-links">
+          <li>
+            <a href="mailto:info@edukhmer.com">
+              <i class="bi bi-envelope-at"></i> info@edukhmer.com
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/edukhmer">
+              <i class="bi bi-telegram"></i> @EduKhmer
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-geo-alt"></i> ភ្នំពេញ, កម្ពុជា
+            </a>
+          </li>
+        </ul>
+        <div class="mt-4 p-3 rounded-3" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">
+          <p style="color:rgba(255,255,255,.6);font-size:.83rem;margin-bottom:10px">
+            <i class="bi bi-bell me-1" style="color:var(--secondary-color)"></i>
+            ជាវដើម្បីទទួលឱកាសសិក្សាថ្មីៗ
+          </p>
+          <div class="d-flex gap-2">
+            <input type="email" class="form-control form-control-sm" placeholder="Email របស់អ្នក"
+              style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff">
+            <button class="btn btn-primary btn-sm px-3" style="white-space:nowrap">ជាវ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <span>© ២០២៦ EduKhmer. រក្សាសិទ្ធិគ្រប់យ៉ាង.</span>
+      <div class="d-flex gap-3">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== SCRIPTS ===================== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({ duration: 700, once: true, offset: 60 });
+
+  // Dark mode
+  document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    document.getElementById('theme-icon').className = isDark ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
+  });
+
+  // Navbar shrink
+  window.addEventListener('scroll', () => {
+    document.querySelector('.navbar').style.padding = window.scrollY > 50 ? '6px 0' : '12px 0';
+  });
+
+  // ── COUNTDOWN ──
+  function updateCountdown() {
+    const deadline = new Date('2025-05-30T23:59:59');
+    const now = new Date();
+    const diff = deadline - now;
+    if (diff <= 0) {
+      document.getElementById('cnt-d').textContent = '0';
+      document.getElementById('cnt-h').textContent = '0';
+      document.getElementById('cnt-m').textContent = '0';
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    document.getElementById('cnt-d').textContent = d;
+    document.getElementById('cnt-h').textContent = h;
+    document.getElementById('cnt-m').textContent = m;
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 60000);
+
+  // ── SAVE TOGGLE ──
+  let saved = false;
+  function toggleSaveBtn() {
+    saved = !saved;
+    const btn  = document.getElementById('save-btn');
+    const icon = document.getElementById('save-icon');
+    icon.className = saved ? 'bi bi-bookmark-fill' : 'bi bi-bookmark';
+    btn.style.background = saved ? 'var(--bg-subtle)' : '';
+  }
+
+  // ── APPLY ──
+  function applyNow() {
+    const modal = `
+      <div class="modal fade" id="applyModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content" style="border-radius:18px;border:1px solid var(--border-color);background:var(--bg-card)">
+            <div class="modal-header border-0 pb-0">
+              <h5 class="modal-title" style="color:var(--text-black);font-weight:700"><i class="bi bi-send-fill me-2" style="color:var(--primary-color)"></i>ដាក់ពាក្យ JENESYS 2025</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <div class="p-3 rounded-3 mb-3" style="background:rgba(0,194,178,.08);border:1px solid rgba(0,194,178,.2)">
+                <small style="color:var(--accent-green);font-weight:600"><i class="bi bi-check-circle-fill me-1"></i>EduKhmer Pre-Selection — FREE!</small>
+              </div>
+              <div class="mb-3">
+                <label style="font-size:.85rem;font-weight:600;color:var(--text-black);margin-bottom:6px;display:block">ឈ្មោះ *</label>
+                <input type="text" class="form-control" placeholder="ឈ្មោះពេញ (Khmer + Latin)" style="font-family:inherit">
+              </div>
+              <div class="mb-3">
+                <label style="font-size:.85rem;font-weight:600;color:var(--text-black);margin-bottom:6px;display:block">Email *</label>
+                <input type="email" class="form-control" placeholder="example@gmail.com">
+              </div>
+              <div class="mb-3">
+                <label style="font-size:.85rem;font-weight:600;color:var(--text-black);margin-bottom:6px;display:block">Telegram *</label>
+                <input type="text" class="form-control" placeholder="@username">
+              </div>
+              <div class="mb-3">
+                <label style="font-size:.85rem;font-weight:600;color:var(--text-black);margin-bottom:6px;display:block">ស្ថាប័ន / University *</label>
+                <input type="text" class="form-control" placeholder="ឈ្មោះ University ឬ ស្ថាប័ន">
+              </div>
+              <div class="mb-3">
+                <label style="font-size:.85rem;font-weight:600;color:var(--text-black);margin-bottom:6px;display:block">ហេតុអ្វីចង់ចូលរួម? (Short Answer)</label>
+                <textarea class="form-control" rows="3" placeholder="ប្រាប់ EduKhmer ៣-៥ ប្រយោគ..." style="font-family:inherit;resize:none"></textarea>
+              </div>
+            </div>
+            <div class="modal-footer border-0 pt-0">
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">បោះបង់</button>
+              <button type="button" class="btn btn-primary px-4 fw-bold" onclick="submitApplication()">
+                <i class="bi bi-send me-1"></i> ដាក់ Pre-Application
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    document.body.insertAdjacentHTML('beforeend', modal);
+    const m = new bootstrap.Modal(document.getElementById('applyModal'));
+    m.show();
+    document.getElementById('applyModal').addEventListener('hidden.bs.modal', function() { this.remove(); });
+  }
+
+  function submitApplication() {
+    const modal = bootstrap.Modal.getInstance(document.getElementById('applyModal'));
+    modal.hide();
+    setTimeout(() => {
+      alert('🎉  សូមអរគុណ! EduKhmer បានទទួល Pre-Application របស់អ្នក ។ ក្រុមការងារ នឹងទំនាក់ទំនងតាម Telegram/Email ក្នុងរយៈពេល ២-៣ ថ្ងៃ!');
+    }, 400);
+  }
+
+  // ── SHARE ──
+  function shareTo(platform) {
+    const url = encodeURIComponent(window.location.href);
+    const txt = encodeURIComponent('JENESYS 2025 — Japan Exchange Program! ❤️ ផ្លាស់ប្ដូររស់ ~ EduKhmer');
+    const links = {
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+      telegram:  `https://t.me/share/url?url=${url}&text=${txt}`,
+      twitter:   `https://twitter.com/intent/tweet?url=${url}&text=${txt}`
+    };
+    if (links[platform]) window.open(links[platform], '_blank', 'width=600,height=400');
+  }
+  function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => alert('Link បានចម្លង ✅'));
+  }
+
+  // ── SEAT BAR ANIMATION ──
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const bar = document.getElementById('seat-bar');
+      if (bar) bar.style.width = '60%';
+    }, 500);
+  });
+</script>
+
+</body>
+</html>
