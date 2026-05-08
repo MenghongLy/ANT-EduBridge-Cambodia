@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>កម្មវិធីផ្លាស់ប្តូរ — EduKhmer</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Hanuman:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+  <!-- EduKhmer Exchange Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/navbar.css">
+  <link rel="stylesheet" href="../assets/css/heng.css">
+
+</head>
+
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="fixed-top shadow-sm">
+
+  <!-- TOP BAR -->
+  <div class="top-header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <ul class="list-unstyled d-flex m-0">
+        <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
+        <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
+      </ul>
+      <div class="nav-action">
+        <div class="dropdown">
+          <button class="btn-lang dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-globe2"></i> ភាសាខ្មែរ
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-check-lg text-primary me-1"></i> ភាសាខ្មែរ</a></li>
+            <li><a class="dropdown-item" href="#">English</a></li>
+          </ul>
+        </div>
+        <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
+          <i class="bi bi-moon-fill" id="theme-icon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
+        <div>
+          <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ</div>
+          EduKhmer
+        </div>
+      </a>
+
+      <!-- Mobile toggles -->
+      <div class="d-flex d-lg-none align-items-center gap-2">
+        <div class="dropdown">
+          <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
+            <i class="bi bi-person-circle fs-5" style="color:var(--text-black)"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right me-2"></i>ចូលគណនី</a></li>
+            <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus me-2"></i>បង្កើតគណនី</a></li>
+          </ul>
+        </div>
+        <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+          <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
+        </button>
+      </div>
+
+      <!-- Desktop nav -->
+      <ul class="navbar-nav mx-auto d-none d-lg-flex">
+        <li class="nav-item"><a class="nav-link" href="../index.html">ទំព័រដើម</a></li>
+        <li class="nav-item">
+          <a class="nav-link " href="scholarships.html">
+            <i class="bi bi-award me-1"></i>អាហារូបករណ៍
+          </a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="courses.html"><i class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
+        <li class="nav-item"><a class="nav-link active" href="exchange.html"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
+        <li class="nav-item"><a class="nav-link" href="internship-categories.html"><i class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
+        <li class="nav-item"><a class="nav-link" href="volunteer-international.html"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
+      </ul>
+      <div class="nav-auth d-none d-lg-flex">
+        <button class="btn-login" onclick="location.href='login.html'">ចូលគណនី</button>
+        <button class="btn-register" onclick="location.href='register.html'">ចុះឈ្មោះឥឡូវ</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Mobile Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title d-flex align-items-center gap-2" style="color:var(--primary-color)">
+      <i class="bi bi-mortarboard-fill"></i> EduKhmer
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link py-3 border-bottom" href="index.html"><i class="bi bi-house me-2"></i>ទំព័រដើម</a></li>
+      <li class="nav-item"><a class="nav-link py-3 border-bottom" href="scholarships.html"><i class="bi bi-award me-2"></i>អាហារូបករណ៍</a></li>
+      <li class="nav-item"><a class="nav-link py-3 border-bottom" href="courses.html"><i class="bi bi-book me-2"></i>វគ្គសិក្សា</a></li>
+      <li class="nav-item"><a class="nav-link active py-3 border-bottom" href="exchange.html"><i class="bi bi-globe me-2"></i>ផ្លាស់ប្តូរ</a></li>
+      <li class="nav-item"><a class="nav-link py-3 border-bottom" href="internship-categories.html"><i class="bi bi-briefcase me-2"></i>ហាត់ការ</a></li>
+      <li class="nav-item"><a class="nav-link py-3 border-bottom" href="volunteer-international.html"><i class="bi bi-heart me-2"></i>ស្ម័គ្រចិត្ត</a></li>
+    </ul>
+    <div class="d-grid gap-2 mt-4">
+      <a href="login.html" class="btn btn-outline-primary">ចូលគណនី</a>
+      <a href="register.html" class="btn btn-primary">ចុះឈ្មោះ</a>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Filter Offcanvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="filterDrawer">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title" style="color:var(--primary-color)"><i class="bi bi-funnel me-2"></i>ត្រងកម្មវិធី</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="mb-4">
+      <div style="font-size:.85rem;font-weight:700;color:var(--text-black);margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px">ប្រទេស / តំបន់</div>
+      <label class="filter-check"><input type="checkbox" checked><span class="check-box"></span><span class="check-label">🇯🇵 ជប៉ុន</span><span class="check-count">18</span></label>
+      <label class="filter-check"><input type="checkbox" checked><span class="check-box"></span><span class="check-label">🇰🇷 កូរ៉េ</span><span class="check-count">14</span></label>
+      <label class="filter-check"><input type="checkbox" checked><span class="check-box"></span><span class="check-label">🇨🇳 ចិន</span><span class="check-count">12</span></label>
+      <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">🇺🇸 អាមេរិក</span><span class="check-count">8</span></label>
+      <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">🇬🇧 អង់គ្លេស</span><span class="check-count">6</span></label>
+      <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">🇦🇺 អូស្ត្រាលី</span><span class="check-count">5</span></label>
+      <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">🇪🇺 អឺរ៉ុប</span><span class="check-count">10</span></label>
+    </div>
+    <hr>
+    <div class="mb-4">
+      <div style="font-size:.85rem;font-weight:700;color:var(--text-black);margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px">រយៈពេល</div>
+      <label class="filter-check"><input type="checkbox" checked><span class="check-box"></span><span class="check-label">១ — ២ សប្ដាហ៍</span><span class="check-count">12</span></label>
+      <label class="filter-check"><input type="checkbox" checked><span class="check-box"></span><span class="check-label">១ ខែ</span><span class="check-count">20</span></label>
+      <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">២ — ៣ ខែ</span><span class="check-count">18</span></label>
+      <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">១ ឆ្នាំ</span><span class="check-count">10</span></label>
+    </div>
+    <hr>
+    <div class="mb-4">
+      <div style="font-size:.85rem;font-weight:700;color:var(--text-black);margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px">ផលប្រយោជន៍</div>
+      <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">ទឹកប្រាក់ធ្វើដំណើរ</span></label>
+      <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">លំនៅដ្ឋានឥតគិតថ្លៃ</span></label>
+      <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">ប្រាក់ខែ / Stipend</span></label>
+      <label class="filter-check"><input type="checkbox"><span class="check-box"></span><span class="check-label">ការបណ្ដុះបណ្ដាលភាសា</span></label>
+    </div>
+    <button class="btn btn-primary w-100" data-bs-dismiss="offcanvas">អនុវត្ត</button>
+  </div>
+</div>
+
+<!-- ===================== PAGE HERO ===================== -->
+<div class="page-hero animate__animated animate__fadeIn animate__slow">
+  <div class="page-hero-grid"></div>
+  <div class="container position-relative" style="z-index:2">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7" data-aos="fade-right">
+        <div class="online-badge mb-3">
+          <span class="dot"></span> កម្មវិធីថ្មីៗ ធ្វើបច្ចុប្បន្នភាពជារៀងរាល់ថ្ងៃ
+        </div>
+        <h1 class="page-hero-title">
+          កម្មវិធីផ្លាស់ប្តូរ<br>
+          <span>ក្នុងស្រុក & អន្តរជាតិ</span>
+        </h1>
+        <p class="page-hero-desc">
+          ស្វែងរកកម្មវិធីផ្លាស់ប្តូរ ដែលសាកសមនឹងអ្នក — ពី ASEAN Youth Exchange
+          រហូតដល់ Summer School ក្នុងប្រទេសជប៉ុន កូរ៉េ ចិន អឺរ៉ុប និងច្រើនទៀត ។
+          ទទួលបានបទពិសោធន៍ ភាពម្ចាស់ការ និងមិត្តភ័ក្តិអន្តរជាតិ!
+        </p>
+      </div>
+      <div class="col-lg-5 d-none d-lg-flex justify-content-end gap-3 align-items-center" data-aos="fade-left" data-aos-delay="150">
+        <div class="hero-stat-pill">
+          <div class="hsp-num">80+</div>
+          <div class="hsp-lbl">កម្មវិធីសកម្ម</div>
+        </div>
+        <div class="hero-stat-pill">
+          <div class="hsp-num">30+</div>
+          <div class="hsp-lbl">ប្រទេស</div>
+        </div>
+        <div class="hero-stat-pill">
+          <div class="hsp-num" style="color:var(--accent-gold)">ថ្មី</div>
+          <div class="hsp-lbl">រៀងរាល់ថ្ងៃ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SEARCH BAR ===================== -->
+<div class="search-bar-wrap">
+  <div class="container">
+    <div class="row g-3 align-items-center">
+      <div class="col-lg-5 col-md-12">
+        <div class="input-group input-group-lg">
+          <span class="input-group-text bg-white"><i class="bi bi-search text-muted"></i></span>
+          <input type="text" class="form-control" id="searchInput"
+            placeholder="ស្វែងរក កម្មវិធី ប្រទេស ឬ ស្ថាប័ន..."
+            oninput="filterCards()">
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <select class="form-select form-select-lg" id="countryFilter" onchange="filterCards()">
+          <option value=""> គ្រប់ប្រទេស</option>
+          <option value="ជប៉ុន">🇯🇵 ជប៉ុន</option>
+          <option value="កូរ៉េ">🇰🇷 កូរ៉េ</option>
+          <option value="ចិន">🇨🇳 ចិន</option>
+          <option value="អាមេរិក">🇺🇸 អាមេរិក</option>
+          <option value="អង់គ្លេស">🇬🇧 អង់គ្លេស</option>
+          <option value="អូស្ត្រាលី">🇦🇺 អូស្ត្រាលី</option>
+          <option value="ASEAN"> ASEAN</option>
+        </select>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <select class="form-select form-select-lg" id="levelFilter" onchange="filterCards()">
+          <option value="">⏱ គ្រប់រយៈពេល</option>
+          <option value="short">Short Term (≤ ១ ខែ)</option>
+          <option value="medium">Medium (២-៣ ខែ)</option>
+          <option value="long">Long Term (≥ ៦ ខែ)</option>
+          <option value="summer">Summer Program</option>
+        </select>
+      </div>
+      <div class="col-lg-1 col-6 d-grid">
+        <button class="btn btn-primary btn-lg" onclick="filterCards()">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+      <div class="col-lg-1 col-6 d-grid d-lg-none">
+        <button class="btn btn-outline-primary btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterDrawer">
+          <i class="bi bi-funnel"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== TYPE TABS ===================== -->
+<div class="type-tabs">
+  <div class="container">
+    <div class="nav nav-pills flex-nowrap overflow-auto py-2 gap-2" role="tablist">
+      <button class="btn btn-sm btn-outline-primary tab-btn active" data-type="all" onclick="setTab(this,'all')">
+        <i class="bi bi-grid-3x3-gap"></i> ទាំងអស់ <span class="tab-count">80+</span>
+      </button>
+      <button class="btn btn-sm btn-outline-primary tab-btn" data-type="asean" onclick="setTab(this,'asean')">
+        <i class="bi bi-globe-asia-australia"></i> ASEAN <span class="tab-count">22</span>
+      </button>
+      <button class="btn btn-sm btn-outline-primary tab-btn" data-type="government" onclick="setTab(this,'government')">
+        <i class="bi bi-bank"></i> រដ្ឋាភិបាល <span class="tab-count">18</span>
+      </button>
+      <button class="btn btn-sm btn-outline-primary tab-btn" data-type="summer" onclick="setTab(this,'summer')">
+        <i class="bi bi-sun"></i> Summer Program <span class="tab-count">15</span>
+      </button>
+      <button class="btn btn-sm btn-outline-primary tab-btn" data-type="research" onclick="setTab(this,'research')">
+        <i class="bi bi-journal-bookmark"></i> Research <span class="tab-count">12</span>
+      </button>
+      <button class="btn btn-sm btn-outline-primary tab-btn" data-type="leadership" onclick="setTab(this,'leadership')">
+        <i class="bi bi-star"></i> Leadership <span class="tab-count">8</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== MAIN CONTENT ===================== -->
+<section style="background: var(--bg-page);">
+  <div class="container">
+    <!-- Cards Grid -->
+    <div class="row g-4" id="cards-grid">
+
+      <!-- Card 1 — JENESYS Japan -->
+      <div class="col-md-6 col-xl-4 opp-item" data-type="government" data-aos="fade-up" data-aos-delay="0">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://asean.org/wp-content/uploads/2021/08/4-11.png" alt="Japan Exchange">
+            <div class="card-tag exchange"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</div>
+            <div class="card-deadline urgent"><i class="bi bi-clock"></i> ១ ខែ</div>
+            <div class="card-flag-strip">
+              <span class="cf-flag">🇯🇵</span>
+              <span class="cf-country">Japan</span>
+            </div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background:linear-gradient(135deg,#BC002D,#e60033)">JP</div>
+              <span class="card-org-name">Japan Foundation · JICA</span>
+            </div>
+            <div class="card-title-text">JENESYS 2025 — Japan-ASEAN Youth Exchange Program</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Tokyo, Osaka, Kyoto · Japan</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ផុតថ្ងៃ: ៣០ ឧសភា ២០២៥</div>
+              <div class="card-meta-item"><i class="bi bi-people"></i> ៣០ កន្លែង · អាយុ ១៨-៣០ ឆ្នាំ</div>
+              <div class="card-meta-item" style="color:rgba(0,194,178,.9);font-weight:600"><i class="bi bi-cash-coin"></i> ឧបត្ថម្ភ ១០០% ពេញលេញ</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</span>
+              <span class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</span>
+              <span class="benefit-chip"><i class="bi bi-fork-knife"></i> អាហារ</span>
+            </div>
+            <a href="exchange-detail.html" class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 — Korea Youth -->
+      <div class="col-md-6 col-xl-4 opp-item" data-type="asean" data-aos="fade-up" data-aos-delay="80">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://www.sungshin.ac.kr/editorUpload/images/000599/%ED%95%9C%EC%95%84%EC%84%B8%EC%95%882.jpg" alt="Korea Exchange">
+            <div class="card-tag short"><i class="bi bi-star me-1"></i>Leadership</div>
+            <div class="card-deadline"><i class="bi bi-clock"></i> ២ ខែ</div>
+            <div class="card-flag-strip">
+              <span class="cf-flag">🇰🇷</span>
+              <span class="cf-country">Korea</span>
+\            </div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background:linear-gradient(135deg,#003580,#0053a0)">KOICA</div>
+              <span class="card-org-name">KOICA · Korea</span>
+            </div>
+            <div class="card-title-text">Korea-ASEAN Youth Leadership Exchange 2025</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Seoul & Busan · Korea</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ផុតថ្ងៃ: ១ មិថុនា ២០២៥</div>
+              <div class="card-meta-item"><i class="bi bi-people"></i> ២០ កន្លែង · University Students</div>
+              <div class="card-meta-item" style="color:rgba(0,194,178,.9);font-weight:600"><i class="bi bi-cash-coin"></i> ឧបត្ថម្ភ ១០០%</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</span>
+              <span class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</span>
+              <span class="benefit-chip"><i class="bi bi-patch-check"></i> Certificate</span>
+            </div>
+            <a href="exchange-detail.html" class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 — China Summer School -->
+      <div class="col-md-6 col-xl-4 opp-item" data-type="summer" data-aos="fade-up" data-aos-delay="160">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://www.sysu.edu.cn/__local/4/5D/8B/872021CB51D54EDF2F0C78C2D5D_96EF26DE_63967.jpg" alt="China Summer">
+            <div class="card-tag exchange" style="background:rgba(255,140,0,.9)"><i class="bi bi-sun me-1"></i>Summer</div>
+            <div class="card-deadline"><i class="bi bi-clock"></i> ៣ ខែ</div>
+
+            <div class="card-flag-strip">
+              <span class="cf-flag">🇨🇳</span>
+              <span class="cf-country">China</span>
+            </div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background:linear-gradient(135deg,#de2910,#ff3a1a)">CN</div>
+              <span class="card-org-name">Hanban / MOFCOM · China</span>
+            </div>
+            <div class="card-title-text">Chinese Government Summer Language & Culture Program 2025</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Beijing & Shanghai · China</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ផុតថ្ងៃ: ១ កក្កដា ២០២៥</div>
+              <div class="card-meta-item"><i class="bi bi-people"></i> ១៥ កន្លែង · អ្នករៀនចិន</div>
+              <div class="card-meta-item" style="color:rgba(245,166,35,.9);font-weight:600"><i class="bi bi-cash-coin"></i> ចំណែកហិរញ្ញប្បទាន</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</span>
+              <span class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</span>
+              <span class="benefit-chip"><i class="bi bi-translate"></i> ភាសា</span>
+            </div>
+            <a href="exchange-detail.html" class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 — ASEAN Foundation -->
+      <div class="col-md-6 col-xl-4 opp-item" data-type="asean" data-aos="fade-up" data-aos-delay="0">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://youcanleadbn.com/wp-content/uploads/2025/04/ASEAN-DSE.jpg" alt="ASEAN">
+            <div class="card-tag scholarship" style="background:rgba(0,122,204,.9)"><i class="bi bi-people me-1"></i>ASEAN</div>
+            <div class="card-deadline open"><i class="bi bi-check"></i> ១​ ខែ​</div>
+            <div class="card-flag-strip">
+              <span class="cf-flag">🌏</span>
+              <span class="cf-country">ASEAN Region</span>
+            </div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background:linear-gradient(135deg,#0047AB,#4169E1)">ASEAN</div>
+              <span class="card-org-name">ASEAN Foundation</span>
+            </div>
+            <div class="card-title-text">ASEAN Data Science Explorers Exchange Program 2025</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Jakarta · Indonesia</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ចាប់ផ្ដើម: ១ ឧសភា ២០២៥</div>
+              <div class="card-meta-item"><i class="bi bi-people"></i> ២ ក្នុងក្រុម · Open</div>
+              <div class="card-meta-item" style="color:rgba(0,194,178,.9);font-weight:600"><i class="bi bi-cash-coin"></i> ឧបត្ថម្ភ ១០០%</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</span>
+              <span class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</span>
+              <span class="benefit-chip"><i class="bi bi-trophy"></i> Prize</span>
+            </div>
+            <a href="exchange-detail.html" class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 — Erasmus+ Europe -->
+      <div class="col-md-6 col-xl-4 opp-item" data-type="government" data-aos="fade-up" data-aos-delay="80">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://www.scholarshipregion.com/wp-content/uploads/2024/10/Erasmus-Exchange-Program.jpg" alt="Europe">
+            <div class="card-tag research"><i class="bi bi-journal-bookmark me-1"></i>Research</div>
+            <div class="card-deadline"><i class="bi bi-clock"></i> ៤ ខែ</div>
+            <div class="card-flag-strip">
+              <span class="cf-flag">🇪🇺</span>
+              <span class="cf-country">Europe</span>
+            </div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background:linear-gradient(135deg,#003087,#0056d2)">EU</div>
+              <span class="card-org-name">Erasmus+ · EU Commission</span>
+            </div>
+            <div class="card-title-text">Erasmus+ Exchange Semester — European Universities 2025</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Germany, France, Netherlands</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ផុតថ្ងៃ: ១ វិចិ្ឆកា ២០២៥</div>
+              <div class="card-meta-item"><i class="bi bi-people"></i> ៥ កន្លែង · Master Students</div>
+              <div class="card-meta-item" style="color:rgba(0,194,178,.9);font-weight:600"><i class="bi bi-cash-coin"></i> €800/ខែ + ដំណើរ</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</span>
+              <span class="benefit-chip"><i class="bi bi-cash"></i> ប្រាក់ខែ</span>
+              <span class="benefit-chip"><i class="bi bi-mortarboard"></i> Credit</span>
+            </div>
+            <a href="exchange-detail.html" class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 — USA State Dept -->
+      <div class="col-md-6 col-xl-4 opp-item" data-type="leadership" data-aos="fade-up" data-aos-delay="160">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://images.squarespace-cdn.com/content/v1/5f905f080bdb104e26196e25/1606928652785-2TD2RKJFZBNZY7N8U1NF/Group+Photo+Fellows+Holding+YSEALI+Sign.jpg" alt="USA Exchange">
+            <div class="card-tag leadership"><i class="bi bi-star me-1"></i>Leadership</div>
+            <div class="card-deadline urgent"><i class="bi bi-clock"></i> ២ ខែ</div>
+            <div class="card-flag-strip">
+              <span class="cf-flag">🇺🇸</span>
+              <span class="cf-country">USA</span>
+            </div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background:linear-gradient(135deg,#B22234,#3C3B6E)">US</div>
+              <span class="card-org-name">US State Dept · YSEALI</span>
+            </div>
+            <div class="card-title-text">YSEALI Academic Fellowship — Washington D.C. 2025</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Washington D.C. · USA</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ផុតថ្ងៃ: ១ ឧសភា ២០២៥</div>
+              <div class="card-meta-item"><i class="bi bi-people"></i> ១២ កន្លែង · Youth Leaders</div>
+              <div class="card-meta-item" style="color:rgba(0,194,178,.9);font-weight:600"><i class="bi bi-cash-coin"></i> ឧបត្ថម្ភ ១០០%</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</span>
+              <span class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</span>
+              <span class="benefit-chip"><i class="bi bi-patch-check"></i> Certificate</span>
+            </div>
+            <a href="exchange-detail.html" class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 — Australia -->
+      <div class="col-md-6 col-xl-4 opp-item" data-type="government" data-aos="fade-up" data-aos-delay="0">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://www.deakin.edu.au/__data/assets/image/0026/53855/Tile-Mobility-220x146px.jpg" alt="Australia">
+            <div class="card-tag exchange"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</div>
+            <div class="card-deadline"><i class="bi bi-clock"></i> ៥ ខែ</div>
+            <div class="card-flag-strip">
+              <span class="cf-flag">🇦🇺</span>
+              <span class="cf-country">Australia</span>
+            </div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background:linear-gradient(135deg,#00205b,#003087)">AUS</div>
+              <span class="card-org-name">DFAT · Australia</span>
+            </div>
+            <div class="card-title-text">New Colombo Plan Exchange Program 2026 — Australia</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Sydney & Melbourne · Australia</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ផុតថ្ងៃ: ១ ធ្នូ ២០២៥</div>
+              <div class="card-meta-item"><i class="bi bi-people"></i> ១០ កន្លែង</div>
+              <div class="card-meta-item" style="color:rgba(245,166,35,.9);font-weight:600"><i class="bi bi-cash-coin"></i> AUD $3,000 Stipend</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</span>
+              <span class="benefit-chip"><i class="bi bi-cash"></i> Stipend</span>
+              <span class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</span>
+            </div>
+            <a href="exchange-detail.html" class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 — Singapore ASEAN -->
+      <div class="col-md-6 col-xl-4 opp-item" data-type="asean" data-aos="fade-up" data-aos-delay="80">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://static.sif.org.sg/2026-04-20/AYF%202023.jpg" alt="Singapore">
+            <div class="card-tag scholarship" style="background:rgba(239,59,57,.9)"><i class="bi bi-building me-1"></i>Gov</div>
+            <div class="card-deadline"><i class="bi bi-clock"></i> ៣ ខែ</div>
+            <div class="card-flag-strip">
+              <span class="cf-flag">🇸🇬</span>
+              <span class="cf-country">Singapore</span>
+            </div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background:linear-gradient(135deg,#EF3B39,#FF5733)">SG</div>
+              <span class="card-org-name">MFA Singapore · MOE</span>
+            </div>
+            <div class="card-title-text">Singapore-ASEAN Youth Fellowship 2025</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Singapore</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ផុតថ្ងៃ: ១ សីហា ២០២៥</div>
+              <div class="card-meta-item"><i class="bi bi-people"></i> ២ / ប្រទេស ASEAN</div>
+              <div class="card-meta-item" style="color:rgba(0,194,178,.9);font-weight:600"><i class="bi bi-cash-coin"></i> ឧបត្ថម្ភ ១០០%</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</span>
+              <span class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</span>
+              <span class="benefit-chip"><i class="bi bi-fork-knife"></i> អាហារ</span>
+            </div>
+            <a href="exchange-detail.html" class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 9 — Germany Research -->
+      <div class="col-md-6 col-xl-4 opp-item" data-type="research" data-aos="fade-up" data-aos-delay="160">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://www.studyabroad.pk/images/newsimages/RISE-Germany-Summer-Internship-2026Fully-Funded-DAAD-Research-Program.jpg" alt="Germany">
+            <div class="card-tag research"><i class="bi bi-journal-bookmark me-1"></i>Research</div>
+            <div class="card-deadline"><i class="bi bi-clock"></i> ៥ ខែ</div>
+            <div class="card-flag-strip">
+              <span class="cf-flag">🇩🇪</span>
+              <span class="cf-country">Germany</span>
+            </div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background:linear-gradient(135deg,#1C1C1C,#555)">DAAD</div>
+              <span class="card-org-name">DAAD · Germany</span>
+            </div>
+            <div class="card-title-text">DAAD Research Internship — RISE Worldwide 2026</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Berlin, Munich · Germany</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ផុតថ្ងៃ: ១ ធ្នូ ២០២៥</div>
+              <div class="card-meta-item"><i class="bi bi-people"></i> Undergrad Students</div>
+              <div class="card-meta-item" style="color:rgba(245,166,35,.9);font-weight:600"><i class="bi bi-cash-coin"></i> €850/ខែ</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-cash"></i> ប្រាក់ខែ</span>
+              <span class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</span>
+              <span class="benefit-chip"><i class="bi bi-flask"></i> Lab</span>
+            </div>
+            <a href="exchange-detail.html" class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 10 — Canada -->
+      <div class="col-md-6 col-xl-4 opp-item" data-type="summer" data-aos="fade-up" data-aos-delay="0">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://asean.org/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-08-at-09.38.12_03b98fc8-ed-scaled.jpg" alt="Canada">
+            <div class="card-tag exchange" style="background:rgba(255,140,0,.9)"><i class="bi bi-sun me-1"></i>Summer</div>
+            <div class="card-deadline"><i class="bi bi-clock"></i> ៤ ខែ</div>
+            <div class="card-flag-strip">
+              <span class="cf-flag">🇨🇦</span>
+              <span class="cf-country">Canada</span>
+            </div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background:linear-gradient(135deg,#E74C3C,#C41E3A)">CA</div>
+              <span class="card-org-name">Global Affairs Canada</span>
+            </div>
+            <div class="card-title-text">Canada-ASEAN Summer School on Democracy and Governance 2025</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Toronto & Ottawa · Canada</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ផុតថ្ងៃ: ១ កញ្ញា ២០២៥</div>
+              <div class="card-meta-item"><i class="bi bi-people"></i> ១០ កន្លែង · Graduate</div>
+              <div class="card-meta-item" style="color:rgba(0,194,178,.9);font-weight:600"><i class="bi bi-cash-coin"></i> ឧបត្ថម្ភ ១០០%</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</span>
+              <span class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</span>
+              <span class="benefit-chip"><i class="bi bi-patch-check"></i> Certificate</span>
+            </div>
+            <a href="exchange-detail.html" class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 11 — Taiwan -->
+      <div class="col-md-6 col-xl-4 opp-item" data-type="research" data-aos="fade-up" data-aos-delay="80">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://opportunitiesnexus.com/wp-content/uploads/2026/01/thumbnail-ok-final.svg" alt="Taiwan">
+            <div class="card-tag research"><i class="bi bi-journal-bookmark me-1"></i>Research</div>
+            <div class="card-deadline open"><i class="bi bi-check"></i> ចំហ</div>
+            <div class="card-flag-strip">
+              <span class="cf-flag">🇹🇼</span>
+              <span class="cf-country">Taiwan</span>
+            </div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background:linear-gradient(135deg,#0e3380,#1a56c4)">TW</div>
+              <span class="card-org-name">MOFA Taiwan · ICDF</span>
+            </div>
+            <div class="card-title-text">ICDF International Research Internship — Taiwan 2025</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> Taipei · Taiwan</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ចុះឈ្មោះ Opening!</div>
+              <div class="card-meta-item"><i class="bi bi-people"></i> Graduate Students</div>
+              <div class="card-meta-item" style="color:rgba(0,194,178,.9);font-weight:600"><i class="bi bi-cash-coin"></i> NTD $25,000/ខែ</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</span>
+              <span class="benefit-chip"><i class="bi bi-cash"></i> ប្រាក់ខែ</span>
+              <span class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</span>
+            </div>
+            <a href="exchange-detail.html" class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 12 — UK Chevening -->
+      <div class="col-md-6 col-xl-4 opp-item" data-type="leadership" data-aos="fade-up" data-aos-delay="160">
+        <div class="opportunity-card">
+          <div class="card-img-wrap">
+            <img src="https://i0.wp.com/opportunitiesforyouth.org/wp-content/uploads/2024/08/1722948884021.jpeg" alt="UK">
+            <div class="card-tag leadership"><i class="bi bi-star me-1"></i>Leadership</div>
+            <div class="card-deadline"><i class="bi bi-clock"></i> ៦ ខែ</div>
+            <div class="card-flag-strip">
+              <span class="cf-flag">🇬🇧</span>
+              <span class="cf-country">UK</span>
+            </div>
+          </div>
+          <div class="card-body-custom">
+            <div class="card-org">
+              <div class="card-org-badge" style="background:linear-gradient(135deg,#1e293b,#334155)">UK</div>
+              <span class="card-org-name">British Council · FCO</span>
+            </div>
+            <div class="card-title-text">Chevening UK Immersion Programme — Young Leaders 2026</div>
+            <div class="card-meta">
+              <div class="card-meta-item"><i class="bi bi-geo-alt"></i> London & Edinburgh · UK</div>
+              <div class="card-meta-item"><i class="bi bi-calendar-check"></i> ផុតថ្ងៃ: ១ វិចិ្ឆកា ២០២៥</div>
+              <div class="card-meta-item"><i class="bi bi-people"></i> ៥ / ប្រទេស · Young Leaders</div>
+              <div class="card-meta-item" style="color:rgba(0,194,178,.9);font-weight:600"><i class="bi bi-cash-coin"></i> ឧបត្ថម្ភ ១០០%</div>
+            </div>
+            <div class="card-benefits">
+              <span class="benefit-chip"><i class="bi bi-airplane"></i> ដំណើរ</span>
+              <span class="benefit-chip"><i class="bi bi-house"></i> លំនៅ</span>
+              <span class="benefit-chip"><i class="bi bi-patch-check"></i> Network</span>
+            </div>
+            <a href="exchange-detail.html" class="btn-card-detail">
+              <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /cards-grid -->
+
+    <!-- Empty state -->
+    <div class="text-center py-5 d-none" id="empty-state">
+      <div style="font-size:3rem;opacity:.35;margin-bottom:14px">🔍</div>
+      <div style="font-size:1.2rem;font-weight:700;color:var(--text-black);margin-bottom:8px">រកមិនឃើញ!</div>
+      <p style="color:var(--text-muted)">សូមផ្លាស់ប្ដូរ keyword ហើយព្យាយាមម្ដងទៀត ។</p>
+      <button class="btn btn-outline-primary mt-2" onclick="clearFilters()">លុបការត្រង</button>
+    </div>
+
+    <!-- Pagination -->
+    <div class="text-center mt-5" data-aos="fade-up">
+      <div class="pagination-wrap">
+        <button class="page-btn" disabled><i class="bi bi-chevron-left"></i></button>
+        <button class="page-btn active">១</button>
+        <button class="page-btn" onclick="goPage(this)">២</button>
+        <button class="page-btn" onclick="goPage(this)">៣</button>
+        <button class="page-btn" onclick="goPage(this)">...</button>
+        <button class="page-btn" onclick="goPage(this)">៨</button>
+        <button class="page-btn" onclick="goPage(this)"><i class="bi bi-chevron-right"></i></button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section style="padding: 80px 0; background: var(--bg-page);">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="zoom-in-down">
+      <div class="section-label"><i class="bi bi-compass me-1"></i>របៀបដាក់ពាក្យ</div>
+      <h2 class="section-title-text">៤ ជំហានងាយស្រួល</h2>
+      <p class="section-desc mx-auto text-center">ចាប់ផ្ដើមដំណើររបស់អ្នក — ចូលរួមកម្មវិធីផ្លាស់ប្តូរ</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="step-card">
+          <div class="step-icon" style="background:rgba(0,122,204,.1)">
+            <i class="bi bi-search" style="color:var(--primary-color)"></i>
+          </div>
+          <div class="step-num" style="background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff;position:absolute;top:-18px;left:50%;transform:translateX(-50%)">១</div>
+          <div class="step-title">ស្វែងរក & ជ្រើសរើស</div>
+          <p class="step-desc">ស្វែងរកកម្មវិធីដែលសាកសម ត្រងតាមប្រទេស រយៈពេល និងប្រភេទ</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="step-card">
+          <div class="step-icon" style="background:rgba(245,166,35,.1)">
+            <i class="bi bi-file-earmark-text" style="color:var(--accent-gold)"></i>
+          </div>
+          <div class="step-num" style="background:linear-gradient(135deg,var(--accent-gold),#e08e00);color:#fff;position:absolute;top:-18px;left:50%;transform:translateX(-50%)">២</div>
+          <div class="step-title">ត្រៀមឯកសារ</div>
+          <p class="step-desc">រៀបចំ CV Motivation Letter លិខិតអនុសាសន៍ — ក្រុមយើងជួយ Review</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="step-card">
+          <div class="step-icon" style="background:rgba(0,194,178,.1)">
+            <i class="bi bi-send-fill" style="color:var(--accent-green)"></i>
+          </div>
+          <div class="step-num" style="background:linear-gradient(135deg,var(--accent-green),#009e90);color:#fff;position:absolute;top:-18px;left:50%;transform:translateX(-50%)">៣</div>
+          <div class="step-title">ដាក់ពាក្យ</div>
+          <p class="step-desc">ដាក់ពាក្យទៅស្ថាប័ន — EduKhmer ណែនាំជំហានគ្រប់ជំហាន</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="step-card">
+          <div class="step-icon" style="background:rgba(130,80,255,.1)">
+            <i class="bi bi-airplane-fill" style="color:var(--accent-purple)"></i>
+          </div>
+          <div class="step-num" style="background:linear-gradient(135deg,var(--accent-purple),#6030CC);color:#fff;position:absolute;top:-18px;left:50%;transform:translateX(-50%)">៤</div>
+          <div class="step-title">ចេញដំណើរ!</div>
+          <p class="step-desc">ទទួលការចូលរួម — ហើយចាប់ផ្ដើមបទពិសោធន៍ប្រទេសថ្មី!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section style="padding: 80px 0; background: var(--bg-page);">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4" data-aos="fade-right">
+        <div class="section-label"><i class="bi bi-question-circle me-1"></i>FAQ</div>
+        <h2 class="section-title-text">សំណួរដែលគេ<br>សួរញឹកញាប់</h2>
+        <p class="section-desc mb-4">ស្វែងរកចម្លើយ ចំពោះកម្មវិធីផ្លាស់ប្តូរ — ឬ ទំនាក់ទំនងយើង!</p>
+        <div style="background:var(--bg-subtle);padding:22px;border-radius:14px;border-left:4px solid var(--primary-color)">
+          <h5 style="color:var(--text-black);font-size:1rem;margin-bottom:8px">មិនឃើញចម្លើយ?</h5>
+          <p style="color:var(--text-muted);font-size:.88rem;margin-bottom:14px">ទំនាក់ទំនង Telegram ឬ Email យើង!</p>
+          <button class="btn btn-sm btn-primary" onclick="location.href='contact.html'">
+            <i class="bi bi-chat-dots me-1"></i> ទំនាក់ទំនង
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-8" data-aos="fade-left">
+        <div class="accordion" id="faqAcc">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                <i class="bi bi-globe me-2" style="color:var(--primary-color)"></i>
+                តើកម្មវិធីផ្លាស់ប្តូរ ខុសពីអាហារូបករណ៍ដូចម្ដេច?
+              </button>
+            </h2>
+            <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                កម្មវិធីផ្លាស់ប្តូរ (Exchange Programs) ផ្ដោតលើ <strong>បទពិសោធន៍ វប្បធម៌ ការណែនាំ</strong>
+                ក្នុងរយៈពេលខ្លី (១ ថ្ងៃ — ១ ឆ្នាំ) ។ ខណ:អាហារូបករណ៍ ផ្ដោតលើ
+                <strong>ការសិក្សាវិជ្ជាជីវៈ</strong> ក្នុងរយៈពេលវែងជាង ។
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+                <i class="bi bi-mortarboard me-2" style="color:var(--accent-gold)"></i>
+                តើខ្ញុំអាចចូលរួមកម្មវិធីផ្លាស់ប្តូរ ក្នុងអំឡុងសិក្សា?
+              </button>
+            </h2>
+            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                បាទ! ភាគច្រើន Exchange Programs ត្រូវបានរៀបចំ Summer ឬ Semester Break
+                ដើម្បីឱ្យ <strong>Student ចូលរួមដោយមិនប៉ះពាល់ ការសិក្សា</strong> ។
+                ប្រភេទ Semester Exchange ក៏ ផ្ដល់ Academic Credit ផ្ទេរ ។
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+                <i class="bi bi-translate me-2" style="color:var(--accent-green)"></i>
+                ខ្ញុំភ្លេចភាសា — អាចដាក់ពាក្យទេ?
+              </button>
+            </h2>
+            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                ភាគច្រើន Exchange Programs <strong>មិនទាមទារ IELTS/TOEFL</strong> ។
+                ប្រើ Interview ភាសាអង់គ្លេស ឬ ភាសាស្ថាប័ន ។ ប្រភេទ Language Program
+                ផ្ដល់ <strong>ការបណ្ដុះបណ្ដាលភាសា</strong> ទៅពេលចូលដល់!
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4">
+                <i class="bi bi-cash-coin me-2" style="color:var(--primary-color)"></i>
+                "ឧបត្ថម្ភ ១០០%" មានន័យដូចម្ដេច?
+              </button>
+            </h2>
+            <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                "ឧបត្ថម្ភ ១០០%" សំដៅទៅ ការ Cover ។ ទឹកប្រាក់ធ្វើដំណើររបស់យើង
+                <strong> វ៉ីសា លំនៅដ្ឋាន អាហារ ប្រាក់ចំណាយប្រចាំថ្ងៃ</strong>
+                ត្រូវបានបង់ ១០០% ដោយ Funder — អ្នកចំណាយ ZERO!
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5">
+                <i class="bi bi-people me-2" style="color:var(--accent-purple)"></i>
+                EduKhmer ជួយផ្ណែកណា ក្នុងការដាក់ពាក្យ?
+              </button>
+            </h2>
+            <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body">
+                EduKhmer ជួយ <strong>ជូនដំណឹង Review CV និង Motivation Letter
+                ផ្ដល់ Template ណែនាំ ជំហានដាក់ពាក្យ</strong> ។ ក្រៅ ពីនេះ
+                Community EduKhmer មានអ្នករួចរាល់ ដែលចែករំលែកបទពិសោធន៍ !!!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="cta-section" style="background: linear-gradient(135deg, var(--primary-color), #0054B3);">
+  <div class="container position-relative" style="z-index:1">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7" data-aos="fade-right">
+        <div class="section-label" style="background:rgba(255,255,255,.15);color:#fff;margin-bottom:16px">
+          <i class="bi bi-rocket-takeoff me-1"></i> ចាប់ផ្ដើម
+        </div>
+        <h2 class="section-title-text" style="color:#fff">
+          ត្រៀមខ្លួន ដើម្បីផ្លាស់ប្តូរ<br>ជីវិតរបស់អ្នក?
+        </h2>
+        <p style="color:rgba(255,255,255,.8);font-size:1rem;line-height:1.9;">
+          ចូលរួមជាមួយ EduKhmer — ទទួលការជូនដំណឹងបន្ទាន់
+          ពី Exchange Programs ថ្មីៗ — ឥតគិតថ្លៃ!
+        </p>
+      </div>
+      <div class="col-lg-5 text-lg-end" data-aos="fade-left">
+        <div class="d-flex flex-wrap gap-3 justify-content-lg-end">
+          <button class="btn btn-lg" style="background:var(--accent-gold);color:#fff;border:none;border-radius:10px;padding:14px 32px;font-weight:700;font-family:inherit" onclick="location.href='register.html'">
+            <i class="bi bi-person-plus-fill me-2"></i>ចុះឈ្មោះឥតគិតថ្លៃ
+          </button>
+          <button class="btn btn-lg" style="background:rgba(255,255,255,.1);color:#fff;border:2px solid rgba(255,255,255,.4);border-radius:10px;padding:14px 28px;font-weight:600;font-family:inherit" onclick="location.href='contact.html'">
+            <i class="bi bi-telegram me-2"></i>ទំនាក់ទំនង
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     FOOTER
+===================================================== -->
+<footer>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand-name">
+          <div class="footer-brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
+          EduKhmer
+        </div>
+        <p class="footer-desc">
+          វេទិកាអប់រំលេខ ១ ក្នុងកម្ពុជា  ភ្ជាប់យុវជនខ្មែរ
+          ជាមួយឱកាសសិក្សា និងការងារ ទូទាំងពិភពលោក ។
+          ចូលរួមជាមួយគ្រួសារ EduKhmer ថ្ងៃនេះ ឥតគិតថ្លៃ!
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5 class="footer-heading">ឱកាសសិក្សា</h5>
+        <ul class="footer-links">
+          <li><a href="scholarships.html"><i class="bi bi-chevron-right"></i>អាហារូបករណ៍</a></li>
+          <li><a href="courses.html"><i class="bi bi-chevron-right"></i>វគ្គសិក្សា</a></li>
+          <li><a href="exchange.html"><i class="bi bi-chevron-right"></i>ផ្លាស់ប្តូរ</a></li>
+          <li><a href="internships.html"><i class="bi bi-chevron-right"></i>ហាត់ការ</a></li>
+          <li><a href="volunteer.html"><i class="bi bi-chevron-right"></i>ស្ម័គ្រចិត្ត</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5 class="footer-heading">ជំនួយ</h5>
+        <ul class="footer-links">
+          <li><a href="about.html"><i class="bi bi-chevron-right"></i>អំពីយើង</a></li>
+          <li><a href="contact.html"><i class="bi bi-chevron-right"></i>ទំនាក់ទំនង</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5 class="footer-heading">ទំនាក់ទំនង</h5>
+        <ul class="footer-links">
+          <li>
+            <a href="mailto:info@edukhmer.com">
+              <i class="bi bi-envelope-at"></i> info@edukhmer.com
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/edukhmer">
+              <i class="bi bi-telegram"></i> @EduKhmer
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-geo-alt"></i> ភ្នំពេញ, កម្ពុជា
+            </a>
+          </li>
+        </ul>
+        <div class="mt-4 p-3 rounded-3" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">
+          <p style="color:rgba(255,255,255,.6);font-size:.83rem;margin-bottom:10px">
+            <i class="bi bi-bell me-1" style="color:var(--secondary-color)"></i>
+            ជាវដើម្បីទទួលឱកាសសិក្សាថ្មីៗ
+          </p>
+          <div class="d-flex gap-2">
+            <input type="email" class="form-control form-control-sm" placeholder="Email របស់អ្នក"
+              style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff">
+            <button class="btn btn-primary btn-sm px-3" style="white-space:nowrap">ជាវ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <span>© ២០២៦ EduKhmer. រក្សាសិទ្ធិគ្រប់យ៉ាង.</span>
+      <div class="d-flex gap-3">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== SCRIPTS ===================== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  // AOS
+  AOS.init({ offset: 80, duration: 600, easing: 'ease-in-out', once: true });
+
+  // Dark / Light toggle
+  document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    document.getElementById('theme-icon').className = isDark ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
+  });
+
+  // Navbar scroll shrink
+  window.addEventListener('scroll', () => {
+    document.querySelector('.navbar').style.padding = window.scrollY > 50 ? '6px 0' : '12px 0';
+  });
+
+  /* ── FILTER ── */
+  let activeType = 'all';
+
+  function filterCards() {
+    const kw      = document.getElementById('searchInput').value.toLowerCase();
+    const country = document.getElementById('countryFilter').value.toLowerCase();
+    const items   = document.querySelectorAll('.opp-item');
+    let shown = 0;
+
+    items.forEach(item => {
+      const text    = item.innerText.toLowerCase();
+      const typeOk  = activeType === 'all' || item.dataset.type === activeType;
+      const kwOk    = !kw      || text.includes(kw);
+      const cntOk   = !country || text.includes(country);
+      const visible = typeOk && kwOk && cntOk;
+      item.style.display = visible ? '' : 'none';
+      if (visible) shown++;
+    });
+
+    const empty = document.getElementById('empty-state');
+    empty.classList.toggle('d-none', shown > 0);
+  }
+
+  function setTab(btn, type) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeType = type;
+    filterCards();
+  }
+
+  function filterByCountry(country) {
+    document.getElementById('countryFilter').value = country;
+    activeType = 'all';
+    document.querySelectorAll('.tab-btn').forEach((b,i) => b.classList.toggle('active', i===0));
+    filterCards();
+    window.scrollTo({ top: document.getElementById('cards-grid').offsetTop - 180, behavior: 'smooth' });
+  }
+
+  function clearFilters() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('countryFilter').value = '';
+    document.getElementById('levelFilter').value = '';
+    activeType = 'all';
+    document.querySelectorAll('.tab-btn').forEach((b,i) => b.classList.toggle('active', i===0));
+    filterCards();
+  }
+
+  /* ── SAVE BOOKMARK ── */
+  function toggleSave(btn) {
+    btn.classList.toggle('saved');
+    btn.querySelector('i').className = btn.classList.contains('saved')
+      ? 'bi bi-bookmark-fill' : 'bi bi-bookmark';
+  }
+
+  /* ── PAGINATION ── */
+  function goPage(btn) {
+    document.querySelectorAll('.page-btn').forEach(b => b.classList.remove('active'));
+    if (!btn.querySelector('i')) btn.classList.add('active');
+    window.scrollTo({ top: 400, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
