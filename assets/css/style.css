@@ -4408,3 +4408,45 @@ select.form-control-custom {
   font-size: .9rem;
   line-height: 1.9;
 }
+
+/* Empty State */
+.empty-state {
+  display: none;
+  text-align: center;
+  padding: 80px 20px;
+  margin: 40px 0;
+  width: 100%;
+  background: var(--bg-page);
+  border-radius: 12px;
+  position: relative;
+  z-index: 10;
+}
+
+.empty-state.show {
+  display: block !important;
+}
+
+.empty-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+  display: block;
+}
+
+.empty-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-black);
+  margin-bottom: 10px;
+  font-family: 'Kantumruy Pro', sans-serif;
+}
+
+.empty-desc {
+  color: var(--text-descript);
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
