@@ -713,11 +713,17 @@
     </div><!-- /cards-grid -->
 
     <!-- Empty state -->
-    <div class="text-center py-5 d-none" id="empty-state">
-      <div style="font-size:3rem;opacity:.35;margin-bottom:14px">🔍</div>
-      <div style="font-size:1.2rem;font-weight:700;color:var(--text-black);margin-bottom:8px">រកមិនឃើញ!</div>
-      <p style="color:var(--text-muted)">សូមផ្លាស់ប្ដូរ keyword ហើយព្យាយាមម្ដងទៀត ។</p>
-      <button class="btn btn-outline-primary mt-2" onclick="clearFilters()">លុបការត្រង</button>
+    <div class="row w-100">
+      <div class="col-12">
+        <div class="empty-state" id="empty-state" style="display: none;">
+          <div class="empty-icon">🔍</div>
+          <div class="empty-title">រកមិនឃើញ !</div>
+          <p class="empty-desc">សូមផ្លាស់ប្ដូរ keyword ឬ លុបការត្រង ហើយព្យាយាមម្ដងទៀត ។</p>
+          <button class="btn-card-detail" style="display:inline-block;width:auto;padding:10px 24px" onclick="clearFilters()">
+            <i class="bi bi-x-circle me-1"></i> លុបការត្រង
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- Pagination -->
@@ -1042,7 +1048,7 @@
     });
 
     const empty = document.getElementById('empty-state');
-    empty.classList.toggle('d-none', shown > 0);
+    empty.style.display = shown > 0 ? 'none' : 'block';
   }
 
   function setTab(btn, type) {

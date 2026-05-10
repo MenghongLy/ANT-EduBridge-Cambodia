@@ -449,7 +449,14 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="empty-state" id="empty-state" style="display: none;">
+                  <div class="empty-icon">🔍</div>
+                  <div class="empty-title">រកមិនឃើញ !</div>
+                  <p class="empty-desc">សូមផ្លាស់ប្ដូរ keyword ឬ លុបការត្រង ហើយព្យាយាមម្ដងទៀត ។</p>
+                  <button class="btn-card-detail" style="display:inline-block;width:auto;padding:10px 24px" onclick="clearFilters()">
+                    <i class="bi bi-x-circle me-1"></i> លុបការត្រង
+                  </button>
+                </div>
                 <div class="text-center mt-5" data-aos="fade-up">
                     <!-- PAGINATION -->
                     <div class="pagination-wrap" id="pagination">
@@ -579,6 +586,7 @@
             const categoryFilter = document.getElementById('categoryFilter').value;
             const levelFilter = document.getElementById('levelFilter').value;
             const cards = document.querySelectorAll('.opportunity-card');
+            let visibleCount = 0;
 
             cards.forEach(card => {
                 const title = card.querySelector('.card-title-text').textContent.toLowerCase();
@@ -589,8 +597,24 @@
                 const matchesCategory = !categoryFilter || meta.includes(categoryFilter.toLowerCase());
                 const matchesLevel = !levelFilter || meta.includes(levelFilter.toLowerCase());
 
-                card.closest('[class*="col"]').style.display = (matchesSearch && matchesCategory && matchesLevel) ? 'block' : 'none';
+                const shouldDisplay = (matchesSearch && matchesCategory && matchesLevel);
+                card.closest('[class*="col"]').style.display = shouldDisplay ? 'block' : 'none';
+                if (shouldDisplay) visibleCount++;
             });
+
+            // Show/hide empty state
+            const emptyState = document.getElementById('empty-state');
+            if (emptyState) {
+                emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+            }
+        }
+
+        // Clear all filters
+        function clearFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('categoryFilter').value = '';
+            document.getElementById('levelFilter').value = '';
+            filterCards();
         }
 
         // Set active tab
@@ -599,14 +623,24 @@
             btn.classList.add('active');
 
             const cards = document.querySelectorAll('.opportunity-card');
+            let visibleCount = 0;
             cards.forEach(card => {
                 if (type === 'all') {
                     card.closest('[class*="col"]').style.display = 'block';
+                    visibleCount++;
                 } else {
                     const cardType = card.getAttribute('data-type') || 'all';
-                    card.closest('[class*="col"]').style.display = (cardType === type || type === 'all') ? 'block' : 'none';
+                    const shouldDisplay = (cardType === type || type === 'all');
+                    card.closest('[class*="col"]').style.display = shouldDisplay ? 'block' : 'none';
+                    if (shouldDisplay) visibleCount++;
                 }
             });
+
+            // Show/hide empty state
+            const emptyState = document.getElementById('empty-state');
+            if (emptyState) {
+                emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+            }
         }
     </script>
 
