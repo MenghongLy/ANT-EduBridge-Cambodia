@@ -4407,6 +4407,11 @@ select.form-control-custom {
   color: var(--text-descript);
   font-size: .9rem;
   line-height: 1.9;
+
+.accordion-body {
+  color: var(--text-descript);
+  font-size: .9rem;
+  line-height: 1.9;
 }
 
 /* Empty State */
