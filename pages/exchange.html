@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ផ្លាស់ប្តូរសិស្ស & អាកាដឹមិក</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Google Fonts: Khmer + Latin -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Hanuman:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Css link -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/heng.css">
+</head>
+
+<body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="fixed-top shadow-sm">
+
+        <!-- TOP BAR -->
+        <div class="top-header">
+            <div class="container d-flex justify-content-between align-items-center">
+                <ul class="list-unstyled d-flex m-0">
+                    <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
+                    <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
+                    <li><a href="opportunities.html" class="nav-link d-none d-md-block">ឱកាសសិក្សា</a></li>
+                </ul>
+                <div class="nav-action">
+                    <div class="dropdown">
+                        <button class="btn-lang dropdown-toggle border-0" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-globe2"></i> ភាសាខ្មែរ
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-check-lg text-primary me-1"></i>
+                                    ភាសាខ្មែរ</a></li>
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
+                        <i class="bi bi-moon-fill" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <div class="brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                    <div>
+                        <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ
+                        </div>
+                        EduKhmer
+                    </div>
+                </a>
+
+                <!-- Mobile toggles -->
+                <div class="d-flex d-lg-none align-items-center gap-2">
+                    <div class="dropdown">
+                        <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle fs-5" style="color:var(--text-black)"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="login.html"><i
+                                        class="bi bi-box-arrow-in-right me-2"></i>ចូលគណនី</a></li>
+                            <li><a class="dropdown-item" href="register.html"><i
+                                        class="bi bi-person-plus me-2"></i>បង្កើតគណនី</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileMenu">
+                        <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
+                    </button>
+                </div>
+
+                <!-- Desktop nav -->
+                <ul class="navbar-nav mx-auto d-none d-lg-flex">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">ទំព័រដើម</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="scholarships.html">
+                            <i class="bi bi-award me-1"></i>អាហារូបករណ៍
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="courses.html"><i
+                                class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
+                    <li class="nav-item"><a class="nav-link" href="exchange.html"><i
+                                class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="internships.html"><i
+                                class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="volunteer.html"><i
+                                class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
+                </ul>
+                <div class="nav-auth d-none d-lg-flex">
+                    <button class="btn-login" onclick="location.href='login.html'">ចូលគណនី</button>
+                    <button class="btn-register" onclick="location.href='register.html'">ចុះឈ្មោះឥឡូវ</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title d-flex align-items-center gap-2" style="color:var(--primary-color)">
+                <i class="bi bi-mortarboard-fill"></i> EduKhmer
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="../index.html"><i
+                            class="bi bi-house me-2"></i>ទំព័រដើម</a></li>
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="scholarships.html"><i
+                            class="bi bi-award me-2"></i>អាហារូបករណ៍</a></li>
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="courses.html"><i
+                            class="bi bi-book me-2"></i>វគ្គសិក្សា</a></li>
+                <li class="nav-item"><a class="nav-link active py-3 border-bottom" href="exchange.html"><i
+                            class="bi bi-globe me-2"></i>កម្មវិធីផ្លាស់ប្តូរ</a></li>
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="internships.html"><i
+                            class="bi bi-briefcase me-2"></i>ហាត់ការ</a></li>
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="volunteer.html"><i
+                            class="bi bi-heart me-2"></i>ស្ម័គ្រចិត្ត</a></li>
+            </ul>
+            <div class="d-grid gap-2 mt-4">
+                <a href="login.html" class="btn btn-outline-primary">ចូលគណនី</a>
+                <a href="register.html" class="btn btn-primary">ចុះឈ្មោះ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== PAGE HERO ===================== -->
+    <div class="page-hero animate__animated animate__fadeIn animate__slow">
+        <div class="page-hero-grid"></div>
+        <div class="container position-relative" style="z-index:2">
+            <div class="row align-items-center">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <h1 class="page-hero-title">ផ្លាស់ប្តូរសិស្ស<br><span>ជ្រើសរើសតាមបណ្តាប្រទេស</span></h1>
+                    <p class="page-hero-desc">
+                        ស្វែងរកឱកាសផ្លាស់ប្តូរសិស្សលើពិភពលោកដែលនឹងឡើងគុណលម្អិតលម្អរគ្រឹះស្ថានប័ណ្ណសិក្សារបស់អ្នក។
+                        ទាក់ទងយើងដើម្បីទទួលបានព័ត៌មាននិងការគាំទ័រពេញលេញក្នុងដំណើរនៃការដាក់ពាក់ព័ន្ធលើកម្មវិធីផ្លាស់ប្តូរដ៏ល្អបំផុត។
+                    </p>
+                </div>
+                <div class="col-lg-5 d-none d-lg-flex justify-content-end gap-3 align-items-center"
+                    data-aos="fade-left">
+                    <div class="text-center p-3 rounded-3"
+                        style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);min-width:90px">
+                        <div style="font-size:1.8rem;font-weight:700;color:#fff">50+</div>
+                        <div style="font-size:.78rem;color:rgba(255,255,255,.6)">ឱកាស</div>
+                    </div>
+                    <div class="text-center p-3 rounded-3"
+                        style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);min-width:90px">
+                        <div style="font-size:1.8rem;font-weight:700;color:#fff">25+</div>
+                        <div style="font-size:.78rem;color:rgba(255,255,255,.6)">ប្រទេស</div>
+                    </div>
+                    <div class="text-center p-3 rounded-3"
+                        style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);min-width:90px">
+                        <div style="font-size:1.8rem;font-weight:700;color:var(--accent-gold)">ថ្មី</div>
+                        <div style="font-size:.78rem;color:rgba(255,255,255,.6)">រៀងរាល់ថ្ងៃ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SEARCH BAR ===================== -->
+    <div class="search-bar-wrap">
+        <div class="container">
+            <div class="row g-3 align-items-center">
+                <div class="col-lg-5 col-md-12">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+                        <input type="text" class="form-control" id="searchInput"
+                            placeholder="ស្វែងរក កម្មវិធីឬ ប្រទេស..." oninput="filterCards()">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <select class="form-select form-select-lg" id="regionFilter" onchange="filterCards()">
+                        <option value="">គ្រប់តំបន់</option>
+                        <option value="asia">អាស៊ី</option>
+                        <option value="europe">អឺរ៉ុប</option>
+                        <option value="americas">អាមេរិកា</option>
+                        <option value="oceania">អូសេអានី</option>
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <select class="form-select form-select-lg" id="durationFilter" onchange="filterCards()">
+                        <option value="">រយៈពេលទាំងអស់</option>
+                        <option value="semester">មួយឆមាស</option>
+                        <option value="year">មួយឆ្នាំ</option>
+                        <option value="summer">ក្នុងរដូវក្តៅ</option>
+                        <option value="short">ខ្លី</option>
+                    </select>
+                </div>
+                <div class="col-lg-1 col-6 d-grid">
+                    <button class="btn btn-primary btn-lg" onclick="filterCards()">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== TYPE TABS ===================== -->
+    <div class="type-tabs">
+        <div class="container">
+            <div class="nav nav-pills flex-nowrap overflow-auto py-2 gap-2" role="tablist">
+                <button class="btn btn-sm btn-outline-primary tab-btn active" data-type="all"
+                    onclick="setTab(this,'all')">
+                    <i class="bi bi-globe2"></i> ទាំងអស់ <span class="tab-count">50+</span>
+                </button>
+                <button class="btn btn-sm btn-outline-primary tab-btn" data-type="asia"
+                    onclick="setTab(this,'asia')">
+                    <i class="bi bi-geo-alt"></i> អាស៊ី <span class="tab-count">19</span>
+                </button>
+                <button class="btn btn-sm btn-outline-primary tab-btn" data-type="europe"
+                    onclick="setTab(this,'europe')">
+                    <i class="bi bi-geo-alt"></i> អឺរ៉ុប <span class="tab-count">15</span>
+                </button>
+                <button class="btn btn-sm btn-outline-primary tab-btn" data-type="americas"
+                    onclick="setTab(this,'americas')">
+                    <i class="bi bi-geo-alt"></i> អាមេរិកា <span class="tab-count">11</span>
+                </button>
+                <button class="btn btn-sm btn-outline-primary tab-btn" data-type="oceania"
+                    onclick="setTab(this,'oceania')">
+                    <i class="bi bi-geo-alt"></i> អូសេអានី <span class="tab-count">5</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== FEATURED PROGRAMS ===================== -->
+    <section style="padding: 80px 0; background: var(--bg-page);">
+        <div class="container">
+
+            <div class="row g-4">
+            <!-- Exchange 1: South Korea -->
+            <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="opportunity-card">
+                    <div class="card-img-wrap">
+                        <img src="https://smapse.com/storage/2018/10/converted/825_585_iwha-university-in-korea-4.jpg"
+                            alt="Ewha Women's University" class="w-100" style="display: block; object-fit: cover;">
+                        <div class="card-tag exchange" style="background: rgba(255, 107, 107,.9); color: #fff;"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</div>
+                    </div>
+                    <div class="card-body-custom">
+                        <div class="card-org">
+                            <div class="card-org-badge"
+                                style="background: linear-gradient(135deg, #FF6B6B, #FF8C42);">KOR</div>
+                            <span class="card-org-name">កូរេ • Ewha University</span>
+                        </div>
+                        <div class="card-title-text">កម្មវិធីផ្លាស់ប្តូរកូរេ</div>
+                        <div class="card-meta">
+                            <div class="card-meta-item"><i class="bi bi-globe2"></i> អាស៊ី</div>
+                            <div class="card-meta-item"><i class="bi bi-clock"></i> ១ឆ្នាំ</div>
+                            <div class="card-meta-item"><i class="bi bi-translate"></i> ភាសាកូរេ</div>
+                            <div class="card-meta-item" style="color: rgba(34, 197, 94, 0.9); font-weight: 600;"><i class="bi bi-calendar-event"></i> សីហា ២០២៦</div>
+                        </div>
+                        <div class="card-benefits">
+                            <span class="benefit-chip"><i class="bi bi-check2"></i> ឯកសារ</span>
+                            <span class="benefit-chip"><i class="bi bi-check2"></i> ការគាំទ័រ</span>
+                        </div>
+                        <a href="exchange-detail.html?id=korea" class="btn-card-detail" style="text-decoration: none; display: inline-block;">
+                            <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exchange 2: Japan -->
+            <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="opportunity-card">
+                    <div class="card-img-wrap">
+                        <img src="https://www.titech.ac.jp/english/public-relations/img/110-campuses-ookayama.jpg"
+                            alt="Tokyo Tech Campus" class="w-100" style="display: block; object-fit: cover;">
+                        <div class="card-tag" style="background: rgba(255, 27, 109,.9); color: #fff;"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</div>
+                    </div>
+                    <div class="card-body-custom">
+                        <div class="card-org">
+                            <div class="card-org-badge"
+                                style="background: linear-gradient(135deg, #FF1B6D, #C41E3A);">JPN</div>
+                            <span class="card-org-name">ជប៉ុន • Tokyo Tech</span>
+                        </div>
+                        <div class="card-title-text">កម្មវិធីផ្លាស់ប្តូរជប៉ុន</div>
+                        <div class="card-meta">
+                            <div class="card-meta-item"><i class="bi bi-globe2"></i> អាស៊ី</div>
+                            <div class="card-meta-item"><i class="bi bi-clock"></i> ១ឆ្នាំ</div>
+                            <div class="card-meta-item"><i class="bi bi-translate"></i> ភាសាជប៉ុន</div>
+                            <div class="card-meta-item" style="color: rgba(34, 197, 94, 0.9); font-weight: 600;"><i class="bi bi-calendar-event"></i> មករា ២០២៦</div>
+                        </div>
+                        <div class="card-benefits">
+                            <span class="benefit-chip"><i class="bi bi-check2"></i> ឯកសារ</span>
+                            <span class="benefit-chip"><i class="bi bi-check2"></i> ស្តាប់បាន</span>
+                        </div>
+                        <a href="exchange-detail.html?id=japan" class="btn-card-detail" style="text-decoration: none; display: inline-block;">
+                            <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exchange 3: Australia -->
+            <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="opportunity-card">
+                    <div class="card-img-wrap">
+                        <img src="https://international.tdtu.edu.vn/sites/international/files/International/Parkville_-_University_of_Melbourne_(Queen%E2%80%99s_College).jpg"
+                            alt="University of Melbourne" class="w-100" style="display: block; object-fit: cover;">
+                        <div class="card-tag" style="background: rgba(0, 194, 178,.9); color: #fff;"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</div>
+                    </div>
+                    <div class="card-body-custom">
+                        <div class="card-org">
+                            <div class="card-org-badge"
+                                style="background: linear-gradient(135deg, #002B7F, #FFD100);">AUS</div>
+                            <span class="card-org-name">អូស្ត្រាលី • Melbourne</span>
+                        </div>
+                        <div class="card-title-text">កម្មវិធីផ្លាស់ប្តូរអូស្ត្រាលី</div>
+                        <div class="card-meta">
+                            <div class="card-meta-item"><i class="bi bi-globe2"></i> អូសេអានី</div>
+                            <div class="card-meta-item"><i class="bi bi-clock"></i> ១ឆ្នាំ</div>
+                            <div class="card-meta-item"><i class="bi bi-translate"></i> ភាសាអង់គ្លេស</div>
+                            <div class="card-meta-item" style="color: rgba(34, 197, 94, 0.9); font-weight: 600;"><i class="bi bi-calendar-event"></i> កក្កដា ២០២៦</div>
+                        </div>
+                        <div class="card-benefits">
+                            <span class="benefit-chip"><i class="bi bi-check2"></i> ឯកសារ</span>
+                            <span class="benefit-chip"><i class="bi bi-check2"></i> ការគាំទ័រ</span>
+                        </div>
+                        <a href="exchange-detail.html?id=australia" class="btn-card-detail" style="text-decoration: none; display: inline-block;">
+                            <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exchange 4: Germany -->
+            <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="opportunity-card">
+                    <div class="card-img-wrap">
+                        <img src="https://media.beam.usnews.com/7c/cb/b598b2ad49658e8c035dbd00c2d8/160815-humboldtuniversitat-submitted.jpg"
+                            alt="Humboldt University Berlin" class="w-100" style="display: block; object-fit: cover;">
+                        <div class="card-tag" style="background: rgba(255, 0, 0,.9); color: #fff;"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</div>
+                    </div>
+                    <div class="card-body-custom">
+                        <div class="card-org">
+                            <div class="card-org-badge"
+                                style="background: linear-gradient(135deg, #FF0000, #000000);">DEU</div>
+                            <span class="card-org-name">អាល្លឺម៉ង់ • Berlin</span>
+                        </div>
+                        <div class="card-title-text">កម្មវិធីផ្លាស់ប្តូរអាល្លឺម៉ង់</div>
+                        <div class="card-meta">
+                            <div class="card-meta-item"><i class="bi bi-globe2"></i> អឺរ៉ុប</div>
+                            <div class="card-meta-item"><i class="bi bi-clock"></i> ៦ខែ</div>
+                            <div class="card-meta-item"><i class="bi bi-translate"></i> ភាសាអាល្លឺម៉ង់</div>
+                            <div class="card-meta-item" style="color: rgba(34, 197, 94, 0.9); font-weight: 600;"><i class="bi bi-calendar-event"></i> កញ្ញា ២០២៦</div>
+                        </div>
+                        <div class="card-benefits">
+                            <span class="benefit-chip"><i class="bi bi-check2"></i> ឯកសារ</span>
+                            <span class="benefit-chip"><i class="bi bi-check2"></i> វត្តមាន</span>
+                        </div>
+                        <a href="exchange-detail.html?id=germany" class="btn-card-detail" style="text-decoration: none; display: inline-block;">
+                            <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exchange 5: USA -->
+            <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="opportunity-card">
+                    <div class="card-img-wrap">
+                        <img src="https://operations.cufo.columbia.edu/sites/operations.cufo.columbia.edu/files/content/Images/Buildings/Low.jpg"
+                            alt="Columbia University" class="w-100" style="display: block; object-fit: cover;">
+                        <div class="card-tag" style="background: rgba(10, 49, 97,.9); color: #fff;"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</div>
+                    </div>
+                    <div class="card-body-custom">
+                        <div class="card-org">
+                            <div class="card-org-badge"
+                                style="background: linear-gradient(135deg, #0A3161, #FFFFFF);">USA</div>
+                            <span class="card-org-name">អាមេរិកា • New York</span>
+                        </div>
+                        <div class="card-title-text">កម្មវិធីផ្លាស់ប្តូរអាមេរិកា</div>
+                        <div class="card-meta">
+                            <div class="card-meta-item"><i class="bi bi-globe2"></i> អាមេរិកា</div>
+                            <div class="card-meta-item"><i class="bi bi-clock"></i> ១ឆ្នាំ</div>
+                            <div class="card-meta-item"><i class="bi bi-translate"></i> ភាសាអង់គ្លេស</div>
+                            <div class="card-meta-item" style="color: rgba(34, 197, 94, 0.9); font-weight: 600;"><i class="bi bi-calendar-event"></i> សីហា ២០២៦</div>
+                        </div>
+                        <div class="card-benefits">
+                            <span class="benefit-chip"><i class="bi bi-check2"></i> ឯកសារ</span>
+                            <span class="benefit-chip"><i class="bi bi-check2"></i> ការគាំទ័រ</span>
+                        </div>
+                        <a href="exchange-detail.html?id=usa" class="btn-card-detail" style="text-decoration: none; display: inline-block;">
+                            <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exchange 6: Canada -->
+            <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="500">
+                <div class="opportunity-card">
+                    <div class="card-img-wrap">
+                        <img src="https://cdn.prod.website-files.com/67b4dc673e2f2f31df52d3db/685af1a5936ab16b5b2b769c_664f5b920e69b8f7e88ee60d_university-of-toronto.webp"
+                            alt="University of Toronto" class="w-100" style="display: block; object-fit: cover;">
+                        <div class="card-tag" style="background: rgba(255, 0, 0,.9); color: #fff;"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</div>
+                    </div>
+                    <div class="card-body-custom">
+                        <div class="card-org">
+                            <div class="card-org-badge"
+                                style="background: linear-gradient(135deg, #FF0000, #FFFFFF);">CAN</div>
+                            <span class="card-org-name">កាណាដា • Toronto</span>
+                        </div>
+                        <div class="card-title-text">កម្មវិធីផ្លាស់ប្តូរកាណាដា</div>
+                        <div class="card-meta">
+                            <div class="card-meta-item"><i class="bi bi-globe2"></i> អាមេរិកា</div>
+                            <div class="card-meta-item"><i class="bi bi-clock"></i> ១ឆ្នាំ</div>
+                            <div class="card-meta-item"><i class="bi bi-translate"></i> ភាសាអង់គ្លេស</div>
+                            <div class="card-meta-item" style="color: rgba(34, 197, 94, 0.9); font-weight: 600;"><i class="bi bi-calendar-event"></i> កក្កដា ២០២៦</div>
+                        </div>
+                        <div class="card-benefits">
+                            <span class="benefit-chip"><i class="bi bi-check2"></i> ឯកសារ</span>
+                            <span class="benefit-chip"><i class="bi bi-check2"></i> ការគាំទ័រ</span>
+                        </div>
+                        <a href="exchange-detail.html?id=canada" class="btn-card-detail" style="text-decoration: none; display: inline-block;">
+                            <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="pagination-wrap" style="margin-top:60px">
+            <button class="page-btn" onclick="previousPage()">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="page-btn active" onclick="goToPage(1)">១</button>
+            <button class="page-btn" onclick="goToPage(2)">២ </button>
+            <button class="page-btn" onclick="goToPage(3)">៣</button>
+            <span style="color:var(--text-muted)">...</span>
+            <button class="page-btn" onclick="goToPage(8)">៨</button>
+            <button class="page-btn" onclick="nextPage()">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="footer-brand-name">
+                        <div class="footer-brand-icon"><img src="assets/images/logo.png" alt="EduKhmer logo"
+                                class="brand-logo-img"></div>
+                        EduKhmer
+                    </div>
+                    <p class="footer-desc">
+                        វេទិកាអប់រំលេខ ១ ក្នុងកម្ពុជា — ភ្ជាប់យុវជនខ្មែរ
+                        ជាមួយឱកាសសិក្សា និងការងារ ទូទាំងពិភពលោក ។
+                        ចូលរួមជាមួយគ្រួសារ EduKhmer ថ្ងៃនេះ — ឥតគិតថ្លៃ!
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="footer-heading">ឱកាសសិក្សា</h5>
+                    <ul class="footer-links">
+                        <li><a href="scholarships.html"><i class="bi bi-chevron-right"></i>អាហារូបករណ៍</a></li>
+                        <li><a href="courses.html"><i class="bi bi-chevron-right"></i>វគ្គសិក្សា</a></li>
+                        <li><a href="exchange.html"><i class="bi bi-chevron-right"></i>ផ្លាស់ប្តូរ</a></li>
+                        <li><a href="internships.html"><i class="bi bi-chevron-right"></i>ហាត់ការ</a></li>
+                        <li><a href="volunteer.html"><i class="bi bi-chevron-right"></i>ស្ម័គ្រចិត្ត</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="footer-heading">ជំនួយ</h5>
+                    <ul class="footer-links">
+                        <li><a href="cv-guide.html"><i class="bi bi-chevron-right"></i>ណែនាំ CV</a></li>
+                        <li><a href="motivation-letter.html"><i class="bi bi-chevron-right"></i>Motivation Letter</a>
+                        </li>
+                        <li><a href="interview-tips.html"><i class="bi bi-chevron-right"></i>Interview Tips</a></li>
+                        <li><a href="about.html"><i class="bi bi-chevron-right"></i>អំពីយើង</a></li>
+                        <li><a href="contact.html"><i class="bi bi-chevron-right"></i>ទំនាក់ទំនង</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-heading">ទំនាក់ទំនង</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="mailto:info@edukhmer.com">
+                                <i class="bi bi-envelope-at"></i> info@edukhmer.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://t.me/edukhmer">
+                                <i class="bi bi-telegram"></i> @EduKhmer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="bi bi-geo-alt"></i> ភ្នំពេញ, កម្ពុជា
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mt-4 p-3 rounded-3"
+                        style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">
+                        <p style="color:rgba(255,255,255,.6);font-size:.83rem;margin-bottom:10px">
+                            <i class="bi bi-bell me-1" style="color:var(--secondary-color)"></i>
+                            ជាវដើម្បីទទួលឱកាសសិក្សាថ្មីៗ
+                        </p>
+                        <div class="d-flex gap-2">
+                            <input type="email" class="form-control form-control-sm" placeholder="Email របស់អ្នក"
+                                style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff">
+                            <button class="btn btn-primary btn-sm px-3" style="white-space:nowrap">ជាវ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <span>© ២០២៥ EduKhmer. រក្សាសិទ្ធិគ្រប់យ៉ាង.</span>
+                <div class="d-flex gap-3">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Search and Filter
+        function filterCards() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const regionFilter = document.getElementById('regionFilter').value;
+            const durationFilter = document.getElementById('durationFilter').value;
+
+            const cards = document.querySelectorAll('.opportunity-card');
+            cards.forEach(card => {
+                let matchesSearch = card.textContent.toLowerCase().includes(searchInput);
+                let matchesRegion = !regionFilter || card.dataset.region === regionFilter;
+                let matchesDuration = !durationFilter || card.dataset.duration === durationFilter;
+
+                if (matchesSearch && matchesRegion && matchesDuration) {
+                    card.parentElement.style.display = 'block';
+                } else {
+                    card.parentElement.style.display = 'none';
+                }
+            });
+        }
+
+        // Pagination
+        let currentPage = 1;
+
+        function goToPage(page) {
+            currentPage = page;
+            const buttons = document.querySelectorAll('.page-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            buttons[page].classList.add('active');
+        }
+
+        function nextPage() {
+            goToPage(Math.min(currentPage + 1, 8));
+        }
+
+        function previousPage() {
+            goToPage(Math.max(currentPage - 1, 1));
+        }
+
+        // Type Tabs
+        function setTab(element, type) {
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+            filterCards();
+        }
+
+        // Theme Toggle
+        const themeToggle = document.querySelector('[data-theme-toggle]');
+        const htmlElement = document.documentElement;
+        const themeIcon = document.getElementById('theme-icon');
+
+        themeToggle?.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            if (theme === 'dark') {
+                themeIcon.classList.remove('bi-moon-fill');
+                themeIcon.classList.add('bi-sun-fill');
+            } else {
+                themeIcon.classList.remove('bi-sun-fill');
+                themeIcon.classList.add('bi-moon-fill');
+            }
+        }
+
+        // Load theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+    </script>
+</body>
+
+</html>

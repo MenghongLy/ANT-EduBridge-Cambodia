@@ -330,6 +330,7 @@ body {
   height: 220px;
   overflow: hidden;
   background: var(--bg-subtle);
+  display: flex;
 }
 
 .card-img-wrap img {
@@ -337,6 +338,7 @@ body {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .opportunity-card:hover .card-img-wrap img {
@@ -1100,6 +1102,138 @@ footer {
   align-items: center;
 }
 
+.exchange-hero {
+  background: linear-gradient(135deg, #0B1F33 0%, #153E66 52%, #2E6FA7 100%);
+}
+
+.exchange-hero::before {
+  background: radial-gradient(circle at 18% 18%, rgba(77, 184, 255, 0.18) 0%, transparent 32%), radial-gradient(circle at 82% 24%, rgba(245, 166, 35, 0.12) 0%, transparent 28%), radial-gradient(circle at 70% 86%, rgba(0, 194, 178, 0.08) 0%, transparent 30%);
+  opacity: 1;
+}
+
+.exchange-hero .scholarship-logo {
+  background: linear-gradient(135deg, rgba(77, 184, 255, 0.28), rgba(255, 255, 255, 0.1));
+}
+
+.exchange-hero .scholarship-provider,
+.exchange-hero .badge-item {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.exchange-hero .badge-item {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.exchange-hero .info-card {
+  border: 0;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.exchange-hero .info-label,
+.exchange-hero .info-subtext {
+  color: var(--text-muted);
+}
+
+.exchange-hero .info-label {
+  justify-content: flex-start;
+  white-space: nowrap;
+  font-size: 0.75rem;
+}
+
+.exchange-hero .info-label i {
+  flex-shrink: 0;
+}
+
+.exchange-hero .info-value {
+  color: var(--text-black);
+}
+
+.course-hero {
+  background: linear-gradient(135deg, #102a43 0%, #18588d 52%, #4a90c2 100%);
+}
+
+.course-hero::before {
+  background: radial-gradient(circle at 16% 20%, rgba(255, 138, 66, 0.14) 0%, transparent 30%), radial-gradient(circle at 84% 22%, rgba(77, 184, 255, 0.14) 0%, transparent 28%), radial-gradient(circle at 68% 84%, rgba(245, 166, 35, 0.10) 0%, transparent 32%);
+  opacity: 1;
+}
+
+.scholarship-detail-hero {
+  background: linear-gradient(135deg, #2d1b69 0%, #5a3d9a 50%, #7f5bbd 100%);
+}
+
+.scholarship-detail-hero::before {
+  background: radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.14) 0%, transparent 30%), radial-gradient(circle at 82% 24%, rgba(245, 166, 35, 0.16) 0%, transparent 30%), radial-gradient(circle at 70% 82%, rgba(77, 184, 255, 0.10) 0%, transparent 28%);
+  opacity: 1;
+}
+
+.adb-hero {
+  background: linear-gradient(135deg, #06263b 0%, #0b4d73 52%, #0e7a8a 100%);
+}
+
+.adb-hero::before {
+  background: radial-gradient(circle at 16% 18%, rgba(255, 255, 255, 0.14) 0%, transparent 28%), radial-gradient(circle at 82% 24%, rgba(0, 194, 178, 0.14) 0%, transparent 30%), radial-gradient(circle at 70% 86%, rgba(245, 166, 35, 0.10) 0%, transparent 30%);
+  opacity: 1;
+}
+
+.course-hero .scholarship-logo,
+.scholarship-detail-hero .scholarship-logo,
+.adb-hero .scholarship-logo {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.1));
+}
+
+.course-hero .badge-item,
+.scholarship-detail-hero .badge-item,
+.adb-hero .badge-item {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.course-hero .info-card,
+.scholarship-detail-hero .info-card,
+.adb-hero .info-card {
+  border: 0;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.course-hero .info-label,
+.scholarship-detail-hero .info-label,
+.adb-hero .info-label {
+  justify-content: flex-start;
+  white-space: nowrap;
+  font-size: 0.75rem;
+}
+
+.course-hero .info-label i,
+.scholarship-detail-hero .info-label i,
+.adb-hero .info-label i {
+  flex-shrink: 0;
+}
+
+.course-hero .info-label,
+.course-hero .info-subtext,
+.scholarship-detail-hero .info-label,
+.scholarship-detail-hero .info-subtext,
+.adb-hero .info-label,
+.adb-hero .info-subtext {
+  color: var(--text-muted);
+}
+
+.course-hero .info-value,
+.scholarship-detail-hero .info-value,
+.adb-hero .info-value {
+  color: var(--text-black);
+}
+
 .scholarship-hero::before {
   content: '';
   position: absolute;
@@ -1468,6 +1602,23 @@ footer {
   opacity: 0.85;
 }
 
+/* Deadline box colors based on page context */
+.course-hero ~ .scholarship-content .deadline-box {
+  background: linear-gradient(135deg, #007ACC, #4DB8FF);
+}
+
+.scholarship-detail-hero ~ .scholarship-content .deadline-box {
+  background: linear-gradient(135deg, #7f5bbd, #5a3d9a);
+}
+
+.adb-hero ~ .scholarship-content .deadline-box {
+  background: linear-gradient(135deg, #0e7a8a, #0b4d73);
+}
+
+.exchange-hero ~ .scholarship-content .deadline-box {
+  background: linear-gradient(135deg, #FF6B6B, #FF8C42);
+}
+
 .apply-button {
   width: 100%;
   background: linear-gradient(135deg, #007ACC, #4DB8FF);
@@ -1658,6 +1809,155 @@ footer {
 
 .view-btn:hover {
   background: var(--secondary-color);
+}
+
+/* ===================== EXCHANGE DETAIL PAGE ===================== */
+.exchange-detail-main {
+  padding: 40px 0;
+}
+
+.exchange-brand-subtitle {
+  font-size: .75rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.exchange-header-icon {
+  color: var(--text-black);
+}
+
+.exchange-offcanvas-title {
+  color: var(--primary-color);
+}
+
+.exchange-detail-logo {
+  background: linear-gradient(135deg, #FF6B6B, #FF8C42);
+}
+
+.exchange-detail-flag {
+  width: 56px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.exchange-detail-hero-image {
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.exchange-detail-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+}
+
+.exchange-application-box {
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.08), rgba(0, 123, 255, 0.04));
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.exchange-application-step {
+  margin-bottom: 25px;
+}
+
+.exchange-application-step:last-child {
+  margin-bottom: 0;
+}
+
+.exchange-application-step-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.exchange-application-step-number {
+  width: 35px;
+  height: 35px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.exchange-application-step-title {
+  font-weight: 700;
+  color: var(--text-black);
+  font-size: 1.05rem;
+}
+
+.exchange-application-step-desc {
+  margin-left: 47px;
+  color: var(--text-secondary);
+}
+
+.exchange-sidebar-list,
+.exchange-sidebar-features {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.exchange-sidebar-item,
+.exchange-sidebar-feature {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.exchange-sidebar-item:last-child,
+.exchange-sidebar-feature:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.exchange-sidebar-text {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.exchange-sidebar-icon {
+  color: var(--primary-color);
+}
+
+.exchange-apply-button {
+  background: linear-gradient(135deg, #007ACC, #4DB8FF);
+  color: white;
+  border: none;
+}
+
+.exchange-related {
+  margin-top: 80px;
+  padding-top: 60px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.exchange-related .scholarship-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.exchange-pagination {
+  margin-top: 60px;
 }
 
 /* ===================== PAGINATION ===================== */

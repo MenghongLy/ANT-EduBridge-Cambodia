@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ព័ត៌មានលម្អិតវគ្គសិក្សា | EduKhmer</title>
+    <title>ព័ត៌មានលម្អិតកម្មវិធីផ្លាស់ប្តូរ | EduKhmer</title>
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -37,9 +37,9 @@
         <div class="top-header">
             <div class="container d-flex justify-content-between align-items-center">
                 <ul class="list-unstyled d-flex m-0">
-                    <li><a href="pages/about.html" class="nav-link">អំពីយើង</a></li>
+                    <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
                     <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
-                    <li><a href="opportunities.html" class="nav-link d-none d-md-block">ឱកាស</a></li>
+                    <li><a href="opportunities.html" class="nav-link d-none d-md-block">ឱកាសសិក្សា</a></li>
                 </ul>
                 <div class="nav-action">
                     <div class="dropdown">
@@ -63,12 +63,10 @@
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <div class="brand-icon"><img src="assets/images/logo.png" alt="EduKhmer logo"
-                            class="brand-logo-img"></div>
+                <a class="navbar-brand" href="../index.html">
+                    <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
                     <div>
-                        <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ
-                        </div>
+                        <div class="exchange-brand-subtitle"> វេទិកាអប់រំ</div>
                         EduKhmer
                     </div>
                 </a>
@@ -77,7 +75,7 @@
                 <div class="d-flex d-lg-none align-items-center gap-2">
                     <div class="dropdown">
                         <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
-                            <i class="bi bi-person-circle fs-5" style="color:var(--text-black)"></i>
+                            <i class="bi bi-person-circle fs-5 exchange-header-icon"></i>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="login.html"><i
@@ -88,13 +86,13 @@
                     </div>
                     <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#mobileMenu">
-                        <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
+                        <i class="fa-solid fa-bars fs-5 exchange-header-icon"></i>
                     </button>
                 </div>
 
                 <!-- Desktop nav -->
                 <ul class="navbar-nav mx-auto d-none d-lg-flex">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">ទំព័រដើម</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">ទំព័រដើម</a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="scholarships.html">
                             <i class="bi bi-award me-1"></i>អាហារូបករណ៍
@@ -102,7 +100,7 @@
                     </li>
                     <li class="nav-item"><a class="nav-link" href="courses.html"><i
                                 class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
-                    <li class="nav-item"><a class="nav-link" href="exchange.html"><i
+                    <li class="nav-item"><a class="nav-link active" href="exchange.html"><i
                                 class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
                     <li class="nav-item"><a class="nav-link" href="internships.html"><i
                                 class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
@@ -110,8 +108,8 @@
                                 class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
                 </ul>
                 <div class="nav-auth d-none d-lg-flex">
-                    <button class="btn-login" onclick="location.href='pages/login.html'">ចូលគណនី</button>
-                    <button class="btn-register" onclick="location.href='pages/register.html'">ចុះឈ្មោះឥឡូវ</button>
+                    <button class="btn-login" onclick="location.href='login.html'">ចូលគណនី</button>
+                    <button class="btn-register" onclick="location.href='register.html'">ចុះឈ្មោះឥឡូវ</button>
                 </div>
             </div>
         </nav>
@@ -120,7 +118,7 @@
     <!-- Mobile Offcanvas -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
         <div class="offcanvas-header border-bottom">
-            <h5 class="offcanvas-title d-flex align-items-center gap-2" style="color:var(--primary-color)">
+            <h5 class="offcanvas-title d-flex align-items-center gap-2 exchange-offcanvas-title">
                 <i class="bi bi-mortarboard-fill"></i> EduKhmer
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -129,11 +127,11 @@
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link py-3 border-bottom" href="../index.html"><i
                             class="bi bi-house me-2"></i>ទំព័រដើម</a></li>
-                <li class="nav-item"><a class="nav-link active py-3 border-bottom" href="scholarships.html"><i
+                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="scholarships.html"><i
                             class="bi bi-award me-2"></i>អាហារូបករណ៍</a></li>
                 <li class="nav-item"><a class="nav-link py-3 border-bottom" href="courses.html"><i
                             class="bi bi-book me-2"></i>វគ្គសិក្សា</a></li>
-                <li class="nav-item"><a class="nav-link py-3 border-bottom" href="exchange.html"><i
+                <li class="nav-item"><a class="nav-link active py-3 border-bottom" href="exchange.html"><i
                             class="bi bi-globe me-2"></i>កម្មវិធីផ្លាស់ប្តូរ</a></li>
                 <li class="nav-item"><a class="nav-link py-3 border-bottom" href="internships.html"><i
                             class="bi bi-briefcase me-2"></i>ហាត់ការ</a></li>
@@ -153,7 +151,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="../index.html">ទំព័រដើម</a></li>
-                    <li class="breadcrumb-item"><a href="courses.html">វគ្គសិក្សា</a></li>
+                    <li class="breadcrumb-item"><a href="exchange.html">ផ្លាស់ប្តូរ</a></li>
                     <li class="breadcrumb-item active" aria-current="page">ព័ត៌មានលម្អិត</li>
                 </ol>
             </nav>
@@ -161,23 +159,24 @@
     </div>
 
     <!-- ===================== MAIN CONTENT ===================== -->
-    <main class="container" style="padding: 40px 0;">
+    <main class="container exchange-detail-main">
 
         <!-- HERO SECTION -->
-        <div class="scholarship-hero course-hero" data-aos="fade-up">
+        <div class="scholarship-hero exchange-hero" data-aos="fade-up">
             <div class="scholarship-hero-content">
                 <div class="scholarship-header">
-                    <div class="scholarship-logo" style="background: linear-gradient(135deg, #FF6B6B, #FF8C42);">
-                        <i class="bi bi-code-square" style="font-size: 2.5rem; color: white;"></i>
+                    <div class="scholarship-logo exchange-detail-logo">
+                        <img id="programFlag" class="exchange-detail-flag" alt="Korea flag" src="https://flagcdn.com/w160/kr.png">
                     </div>
                     <div class="scholarship-title-box">
-                        <h1>វគ្គសិក្សា Web Development សម្រាប់អ្នកចាប់ផ្តើម</h1>
-                        <p class="scholarship-provider">
-                            <i class="bi bi-building"></i> Udemy · ល្អក្នុងលេខ
+                        <h1 id="programTitle">កម្មវិធីផ្លាស់ប្តូរកូរេ</h1>
+                        <p class="scholarship-provider" id="programUniversity">
+                            <i class="bi bi-building"></i> កូរេ • Ewha University
                         </p>
                         <div class="scholarship-badges">
-                            <span class="badge-item"><i class="bi bi-graph-up"></i> កម្រិតមធ្យម</span>
-                            <span class="badge-item"><i class="bi bi-translate"></i> ភាសាអង់គ្លេស</span>
+                            <span class="badge-item"><i class="bi bi-globe2"></i> អាស៊ី</span>
+                            <span class="badge-item"><i class="bi bi-clock"></i> ១ឆ្នាំ</span>
+                            <span class="badge-item"><i class="bi bi-translate"></i> ភាសាកូរេ</span>
                             <span class="badge-item"><i class="bi bi-check-circle"></i> ឯកសារ</span>
                         </div>
                     </div>
@@ -187,39 +186,39 @@
                 <div class="key-info-grid">
                     <div class="info-card">
                         <div class="info-label">
-                            <i class="bi bi-cash-coin"></i> តម្លៃ
+                            <i class="bi bi-map"></i> ប្រទេស
                         </div>
-                        <div class="info-value">$49.99</div>
-                        <div class="info-subtext">តម្លៃលម្អិត</div>
+                        <div class="info-value" id="infCountry">កូរេ</div>
+                        <div class="info-subtext">ទីតាំង</div>
                     </div>
                     <div class="info-card">
                         <div class="info-label">
                             <i class="bi bi-hourglass-split"></i> រយៈពេល
                         </div>
-                        <div class="info-value">៤៨ ម៉ោង</div>
+                        <div class="info-value" id="infDuration">១ឆ្នាំ</div>
                         <div class="info-subtext">ពេលសិក្សា</div>
                     </div>
                     <div class="info-card">
                         <div class="info-label">
-                            <i class="bi bi-graph-up"></i> កម្រិត
+                            <i class="bi bi-translate"></i> ភាសា
                         </div>
-                        <div class="info-value">មធ្យម</div>
-                        <div class="info-subtext">សម្រាប់អ្នកចាប់ផ្តើម</div>
+                        <div class="info-value" id="infLanguage">កូរេ</div>
+                        <div class="info-subtext">ការបង្រៀន</div>
                     </div>
                     <div class="info-card">
                         <div class="info-label">
-                            <i class="bi bi-globe"></i> ភាសា
+                            <i class="bi bi-calendar-event"></i> ការដាក់ពាក់ព័ន្ធ
                         </div>
-                        <div class="info-value">អង់គ្លេស</div>
-                        <div class="info-subtext">ការបង្រៀន</div>
+                        <div class="info-value" id="infDeadline">សីហា</div>
+                        <div class="info-subtext">ឆ្នាំ ២០២៦</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Course Image -->
-            <div class="scholarship-hero-image">
-                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80"
-                    alt="Web Development Course" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+            <!-- Program Image -->
+            <div class="scholarship-hero-image exchange-detail-hero-image">
+                <img id="programImage" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80"
+                    alt="Exchange Program">
             </div>
         </div>
 
@@ -231,98 +230,147 @@
                 <!-- DESCRIPTION SECTION -->
                 <section data-aos="fade-up">
                     <h2 class="section-title">
-                        <i class="bi bi-info-circle"></i> ពិពណ៌នា
+                        <i class="bi bi-info-circle"></i> ពិពណ៌នាកម្មវិធី
                     </h2>
                     <p class="description-text">
-                        វគ្គសិក្សា Web Development នេះរចនាឡើងដើម្បីបង្រៀនមូលដ្ឋាននៃការរចនា និង development គេហទំព័រ។ វគ្គសិក្សាគ្របដណ្តប់ពីការផ្តើម HTML, CSS និង JavaScript រហូតដល់ការប្រើប្រាស់ React និង Node.js។ វាល្អសម្រាប់អ្នកដែលចង់ចាប់ផ្តើមក្នុងមុខរបរការងារ Web Development ឬលើកកម្ពស់ជំនាញរបស់ខ្លួន។
+                        កម្មវិធីផ្លាស់ប្តូរនេះផ្តល់ឱកាសល្អនឹងសិស្សឆ្មាញ់ក្នុងការរស់នៅនិងសិក្សាក្នុងបរិយាកាសអន្តរជាតិ។ អ្នកនឹងបង្កើតទំនាក់ទំនងថ្មីជាមួយគ្រូបង្រៀនលោកខាងក្រៅ ហើយលាយលူតលាយលើលក្ខណៈពិសេសនៃវប្បធម៌ខ្មែរនិងវប្បធម៌ក្នុងស្រុក។
                     </p>
                     <p class="description-text">
-                        វគ្គសិក្សាផ្តល់ឧទាហរណ៍ជាក់ស្តែង ការងារទាក់ទងគ្នា និងឱកាសក្នុងការសិក្សាលើគម្រោងពិតប្រាកដ។ អ្នកនឹងរៀនពីបច្ចេកទេស និងច្បាប់ល្អបំផុតក្នុងការរចនាគេហទំព័រ រួមទាំងការអនុវត្តក្នុងឧស្សាហ៍។
+                        កម្មវិធីនេះ រួមបញ្ចូលលក្ខណៈពិសេស និងការគាំទ័រពេញលេញក្នុងដំណើរ រក្សាមូលដ្ឋានលម្អិតរបស់អ្នក ដូច្នេះគ្មាននឹងរឿងឆ្ងាយៗដែលត្រូវបារម្ភក្នុងរៀងរាល់ពេល។
                     </p>
                 </section>
 
-                <!-- COURSE CONTENT SECTION -->
+                <!-- PROGRAM HIGHLIGHTS -->
                 <section data-aos="fade-up">
                     <h2 class="section-title">
-                        <i class="bi bi-list-task"></i> មាតិកាវគ្គសិក្សា
+                        <i class="bi bi-star"></i> ចំណុចប្រសើរ
                     </h2>
 
                     <div class="requirement-item">
-                        <div class="requirement-check"><i class="bi bi-book-fill"></i></div>
+                        <div class="requirement-check"><i class="bi bi-mortarboard"></i></div>
                         <div class="requirement-text">
-                            <strong>ម៉ូឌុល ១៖ មូលដ្ឋាន HTML និង CSS</strong>
-                            <small>រៀនបង្កើតរចនាសម្ព័ន្ធ HTML ក្រាហ្វិក និងរចនាប័ទ្ម CSS</small>
+                            <strong>បង្រៀនគុណលម្អិតលម្អរ</strong>
+                            <small>រៀនមូលដ្ឋានក្នុងរយៈពេលមួយឆ្នាំក្រោមការដឹកនាំដ៏ល្អ</small>
                         </div>
                     </div>
 
                     <div class="requirement-item">
-                        <div class="requirement-check"><i class="bi bi-book-fill"></i></div>
+                        <div class="requirement-check"><i class="bi bi-people"></i></div>
                         <div class="requirement-text">
-                            <strong>ម៉ូឌុល ២៖ JavaScript សម្រាប់ Web</strong>
-                            <small>រៀនភាសា JavaScript ដើម្បីបង្កើតលក្ខណៈស្វាគមន៍អន្តរកម្ម</small>
+                            <strong>ដាក់ពាក់ព័ន្ធក្នុងសង្គម</strong>
+                            <small>ជួបប្រទះក្រុមបាលមិត្តថ្មីពីច្រើនប្រទេស</small>
                         </div>
                     </div>
 
                     <div class="requirement-item">
-                        <div class="requirement-check"><i class="bi bi-book-fill"></i></div>
+                        <div class="requirement-check"><i class="bi bi-house"></i></div>
                         <div class="requirement-text">
-                            <strong>ម៉ូឌុល ៣៖ React Framework</strong>
-                            <small>ស្វាគមន៍ React និងរៀនបង្កើតលក្ខណៈ dynamic ដំណើរការ</small>
+                            <strong>ស្នាក់នៅក្នុងផ្សារ ឬលំនៅរបស់សិស្ស</strong>
+                            <small>ផ្ដល់ការគាំទ័រលម្អិត និងបរិយាកាសសុវត្ថិ</small>
                         </div>
                     </div>
 
                     <div class="requirement-item">
-                        <div class="requirement-check"><i class="bi bi-book-fill"></i></div>
+                        <div class="requirement-check"><i class="bi bi-briefcase"></i></div>
                         <div class="requirement-text">
-                            <strong>ម៉ូឌុល ៤៖ Backend Development</strong>
-                            <small>រៀល Node.js និង Express ដើម្បីលើកដង្កើល backend API</small>
+                            <strong>ឱកាសឧស្សាហ៍ក្នុងស្រុក</strong>
+                            <small>ភ្ជាប់ដើម្បីលើកកម្ពស់ជំនាញវិជ្ជាសម្បទា</small>
                         </div>
                     </div>
 
                     <div class="requirement-item">
-                        <div class="requirement-check"><i class="bi bi-book-fill"></i></div>
+                        <div class="requirement-check"><i class="bi bi-award"></i></div>
                         <div class="requirement-text">
-                            <strong>ម៉ូឌុល ៥៖ ការលើកដង្កើលគម្រោង</strong>
-                            <small>ធ្វើការលើកដង្កើលគម្រោង Web Development ពេញលេញ</small>
+                            <strong>លក្ខណៈត្រាកូលលម្អិត</strong>
+                            <small>ទទួលបានលក្ខណៈត្រាកូលដែលលម្អិតបន្ទាប់ពីបញ្ចប់</small>
                         </div>
                     </div>
                 </section>
 
-                <!-- LEARNING OUTCOMES SECTION -->
+                <!-- ELIGIBILITY REQUIREMENTS -->
                 <section data-aos="fade-up">
                     <h2 class="section-title">
-                        <i class="bi bi-check-circle"></i> លទ្ធផលសិក្សា
+                        <i class="bi bi-clipboard-check"></i> លក្ខខណ្ឌលម្អិត
                     </h2>
 
                     <div class="requirement-item">
                         <div class="requirement-check"><i class="bi bi-check-circle-fill"></i></div>
                         <div class="requirement-text">
-                            <strong>ជំនាញក្នុងការបង្កើត Websites</strong>
-                            <small>គ្របដណ្តប់ HTML, CSS, JavaScript និង responsive design</small>
+                            <strong>ការសិក្សាលម្អិត</strong>
+                            <small>ត្រូវរៀនលម្អិតឆ្នាំទី ២ ឬលើសពីនេះក្នុងសាលាមាន្ទិត</small>
                         </div>
                     </div>
 
                     <div class="requirement-item">
                         <div class="requirement-check"><i class="bi bi-check-circle-fill"></i></div>
                         <div class="requirement-text">
-                            <strong>React Framework Knowledge</strong>
-                            <small>រៀនបង្កើតលក្ខណៈ dynamic ដោយប្រើ React components</small>
+                            <strong>ភាសាលម្អិត</strong>
+                            <small>គួរតែមាននូវលម្អិតលេខលម្អិតក្នុងប្រទេសលម្អិត</small>
                         </div>
                     </div>
 
                     <div class="requirement-item">
                         <div class="requirement-check"><i class="bi bi-check-circle-fill"></i></div>
                         <div class="requirement-text">
-                            <strong>Backend Development Skills</strong>
-                            <small>រៀន Node.js និង Express ដើម្បីលើកដង្កើល REST API</small>
+                            <strong>ឯកសារលម្អិត</strong>
+                            <small>ឯកសារលម្អិតលម្អ់ដែលមានលម្អិតលម្អ់</small>
                         </div>
                     </div>
 
                     <div class="requirement-item">
                         <div class="requirement-check"><i class="bi bi-check-circle-fill"></i></div>
                         <div class="requirement-text">
-                            <strong>ការលើកដង្កើលគម្រោងពេញលេញ</strong>
-                            <small>សមត្ថភាពក្នុងការលើកដង្កើលគម្រោង Web ពេញលេញ ពីដើមដល់ចប់</small>
+                            <strong>សុខភាព</strong>
+                            <small>ត្រូវផ្តល់វិច័យឯកសារលម្អិតបច្ចុប្បន្ន</small>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-check"><i class="bi bi-check-circle-fill"></i></div>
+                        <div class="requirement-text">
+                            <strong>ឆ្លងលម្អិត</strong>
+                            <small>មានលម្អិតលក្ខណៈលម្អិតដែលមាននូវរយៈពេលលម្អិត</small>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- APPLICATION PROCESS -->
+                <section data-aos="fade-up">
+                    <h2 class="section-title">
+                        <i class="bi bi-file-earmark-text"></i> ដំណើរការដាក់ពាក់ព័ន្ធ
+                    </h2>
+
+                    <div class="exchange-application-box">
+                        <div class="exchange-application-step">
+                            <div class="exchange-application-step-head">
+                                <div class="exchange-application-step-number">១</div>
+                                <span class="exchange-application-step-title">ស្វាគមន៍ក្នុងគេហទំព័រ</span>
+                            </div>
+                            <p class="exchange-application-step-desc">ដាក់ពាក់ព័ន្ធលក្ខណៈលម្អិតរបស់អ្នក ហើយបង្កើតលក្ខណៈឯកសារលម្អិត</p>
+                        </div>
+
+                        <div class="exchange-application-step">
+                            <div class="exchange-application-step-head">
+                                <div class="exchange-application-step-number">២</div>
+                                <span class="exchange-application-step-title">ផ្ទៀងផ្ទាត់ឯកសារ</span>
+                            </div>
+                            <p class="exchange-application-step-desc">បង្ហាញឯកសារលម្អិត និងលក្ខណៈលម្អិតរបស់អ្នក</p>
+                        </div>
+
+                        <div class="exchange-application-step">
+                            <div class="exchange-application-step-head">
+                                <div class="exchange-application-step-number">៣</div>
+                                <span class="exchange-application-step-title">សម្ភាសន៍</span>
+                            </div>
+                            <p class="exchange-application-step-desc">អនុវត្តក្នុងសម្ភាសន៍លម្អិតលម្អ់ក្នុងរយៈពេលលម្អិត</p>
+                        </div>
+
+                        <div class="exchange-application-step">
+                            <div class="exchange-application-step-head">
+                                <div class="exchange-application-step-number">៤</div>
+                                <span class="exchange-application-step-title">ទទួលបានលក្ខណៈលម្អិត</span>
+                            </div>
+                            <p class="exchange-application-step-desc">ទទួលបានលក្ខណៈលម្អិតលម្អ់ ហើយរៀបចំសម្រាប់ដាក់ពាក់ព័ន្ធលម្អិត</p>
                         </div>
                     </div>
                 </section>
@@ -338,12 +386,12 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq1">
-                                    តើជាកម្មករណ៍ដែលសម្រាប់ក្រុមមួយ ដែលមិនមានបទពិសោធន៍?
+                                    តើលក្ខខណ្ឌលម្អិតក្នុងការដាក់ពាក់ព័ន្ធលម្អិតដូចម្តេច?
                                 </button>
                             </h2>
                             <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    បាទ, វគ្គសិក្សានេះរចនាឡើងសម្រាប់អ្នកដែលមិនមានបទពិសោធន៍ក្នុងការងារ Web Development។ វាផ្តើមមកពីដើម និងឡើងដល់ផ្នែកកម្រិតកម្រិត ដូច្នេះអ្នកក៏អាចធ្វើឲ្យស្វាគមន៍បានដែរ។
+                                    លក្ខខណ្ឌលម្អិតរួមបញ្ចូលការផ្ទៀងផ្ទាត់ឯកសារលម្អិត លក្ខណៈលម្អិតលម្អ់ ឆ្លងលម្អិតលម្អ់ ផ្លូវលម្អិត។ អ្នកគួរតែឆ្លងលម្អិតលម្អ់នូវលក្ខខណ្ឌទាំងនេះដើម្បីឱ្យប្រើក្នុងការដាក់ពាក់ព័ន្ធលម្អិត។
                                 </div>
                             </div>
                         </div>
@@ -352,12 +400,12 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq2">
-                                    តើលើកដង្កើលវគ្គសិក្សាគឺរៀងរាល់ដង?
+                                    តើលម្អិតលម្អ់ប៉ុន្មានក្នុងការដាក់ពាក់ព័ន្ធ?
                                 </button>
                             </h2>
                             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    អ្នកក៏អាចលើកដង្កើលវគ្គសិក្សាបានក្នុងលក្ខណៈ self-paced ដែលមានន័យថាអ្នកកំណត់ល្បឿនរបស់ខ្លួន។ អ្នក​នឹង​មាន​ការ​ចូលប្រើ​មាតិកា​ពេញលេញ​ក្នុង​រយៈពេល 12 ខែ។
+                                    លម្អិតលម្អ់ក្នុងការដាក់ពាក់ព័ន្ធដូចជាលក្ខណៈលម្អិត ឯកសារលម្អិត ឆ្លងលម្អិតលម្អ់ ផលិតផលលម្អិតលម្អ់ គឺលម្អិតទាំងនោះដែលត្រូវផ្ទៀងផ្ទាត់ដាច់ដោយឡែកនៅលើកម្មវិធីលម្អិត។
                                 </div>
                             </div>
                         </div>
@@ -366,12 +414,26 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq3">
-                                    តើមានលក្ខណៈត្រាកូលបន្ទាប់ពីបញ្ចប់?
+                                    តើដំណើរការលម្អិតប៉ុន្មានសប្តាហ៍?
                                 </button>
                             </h2>
                             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    បាទ, លើកដង្កើលវគ្គសិក្សាបាន លើកដង្កើលប្រកាសលក្ខណៈត្រាកូលដែលឆ្លុះបញ្ចាំងពីមាតិកាលម្អិតនៃវគ្គសិក្សា។ លក្ខណៈត្រាកូលនេះអាចបង្ហាញលើ LinkedIn និងលើក្រុម។
+                                    ដំណើរការលម្អិតលម្អ់ធម្មតាប្រហែលនឹងស្ពត្តិលម្អិត ៤-៦ សប្តាហ៍ ពីកាលពេលដាក់ពាក់ព័ន្ធរហូតលង់ទទួលបានលក្ខណៈលម្អិត។ ក្នុងខ្លះករណីវាអាចយូរ ឬខ្លីជាងនេះ។
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq4">
+                                    តើលម្អិតលម្អ់ក្នុងដូរប្តូរលម្អិត?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    ប្តូរលម្អិតលម្អ់ផ្តល់ឱកាសក្នុងការរៀនសូត្របច្ចេកទេស គ្រាប់ក្រឹត្យល់ដឹងពីវប្បធម៌ ហើយកើតលម្អិតថ្មីក្នុងបរិយាកាសអន្តរជាតិ។ វាគឺលម្អិតលម្អ់ដ៏ល្អក្នុងលម្អិតលម្អ់ដែលលម្អិត។
                                 </div>
                             </div>
                         </div>
@@ -382,17 +444,17 @@
 
             <!-- RIGHT SIDEBAR -->
             <div class="sidebar">
-                <!-- ENROLL CARD -->
                 <div class="sidebar-card">
                     <div class="deadline-box">
+                        <div class="deadline-label">កំណត់ពេលដាក់ពាក្យ</div>
+                        <div class="deadline-date" id="sidebarDeadline">សីហា ២០២៦</div>
                         <div class="countdown">
-                            <span style="font-size: 1.2rem; font-weight: 700;">៤.៨</span> /៥
+                            <i class="bi bi-calendar-event me-1"></i> រង់ចាំដាក់ពាក្យមុនថ្ងៃផុតកំណត់
                         </div>
-                        <small style="color: var(--text-muted); text-align: center; display: block;">ពីការវាយតម្លៃ ៣,៦៧៩ នាក់</small>
                     </div>
 
-                    <button class="apply-button" style="background: var(--accent-gold); color: white; border: none;">
-                        <i class="bi bi-play-circle"></i> ចូលក្រុម ឥឡូវនេះ
+                    <button class="apply-button exchange-apply-button" onclick="location.href='login.html'">
+                        <i class="bi bi-play-circle"></i> ដាក់ពាក្យឥឡូវនេះ
                     </button>
                     <button class="save-button">
                         <i class="bi bi-bookmark"></i> រក្សាទុក
@@ -417,47 +479,59 @@
                     </div>
                 </div>
 
-                <!-- INSTRUCTOR CARD -->
                 <div class="sidebar-card">
-                    <h3 class="sidebar-title">គ្រូបង្រៀន</h3>
-                    <div style="display: flex; flex-direction: column; gap: 15px;">
-                        <div style="text-align: center;">
-                            <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #FF6B6B, #FF8C42); display: flex; align-items: center; justify-content: center; margin: 0 auto 10px;">
-                                <i class="bi bi-person-fill" style="font-size: 2rem; color: white;"></i>
-                            </div>
-                            <h5 style="color: var(--text-black); margin-bottom: 5px;">John Smith</h5>
-                            <small style="color: var(--text-muted);">Full Stack Developer</small>
-                        </div>
-                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
-                            John មាន 10 ឆ្នាំនៃបទពិសោធន៍ក្នុងការងារ Web Development ហើយបង្រៀននូវលើយបុក្កល វិស័យលម្អិត។ គាត់អស់លឹងក្នុងការបង្រៀនបច្ចេកទេសស្មុគស្មាញក្នុងរបៀបដ៏សាមញ្ញ។
-                        </p>
-                    </div>
+                    <h3 class="sidebar-title">ព័ត៌មានសំខាន់</h3>
+                    <ul class="exchange-sidebar-list">
+                        <li class="exchange-sidebar-item">
+                            <small class="exchange-sidebar-text">
+                                <i class="bi bi-globe me-2 exchange-sidebar-icon"></i>
+                                ប្រទេស: <span id="sidebarCountry">កូរេ</span>
+                            </small>
+                        </li>
+                        <li class="exchange-sidebar-item">
+                            <small class="exchange-sidebar-text">
+                                <i class="bi bi-building me-2 exchange-sidebar-icon"></i>
+                                សាកលវិទ្យាល័យ: <span id="sidebarUniversity">Ewha University</span>
+                            </small>
+                        </li>
+                        <li class="exchange-sidebar-item">
+                            <small class="exchange-sidebar-text">
+                                <i class="bi bi-clock me-2 exchange-sidebar-icon"></i>
+                                រយៈពេល: <span id="sidebarDuration">១ឆ្នាំ</span>
+                            </small>
+                        </li>
+                        <li class="exchange-sidebar-item">
+                            <small class="exchange-sidebar-text">
+                                <i class="bi bi-translate me-2 exchange-sidebar-icon"></i>
+                                ភាសា: <span id="sidebarLanguage">ភាសាកូរេ</span>
+                            </small>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- INCLUDES CARD -->
                 <div class="sidebar-card">
                     <h3 class="sidebar-title">
                         <i class="bi bi-check-circle"></i> រួមបញ្ចូល
                     </h3>
-                    <ul style="padding-left: 0; margin: 0; list-style: none;">
-                        <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border-color);">
-                            <small style="color: var(--text-muted); line-height: 1.6;">
-                                <i class="bi bi-file-earmark-play me-2" style="color: var(--accent-gold);"></i> វីដេអូក្រម ៤៨ ម៉ោង
+                    <ul class="exchange-sidebar-features">
+                        <li class="exchange-sidebar-feature">
+                            <small class="exchange-sidebar-text">
+                                <i class="bi bi-airplane me-2 exchange-sidebar-icon"></i> ជំនួយលើការធ្វើដំណើរ និងការរៀបចំដំណើរ
                             </small>
                         </li>
-                        <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border-color);">
-                            <small style="color: var(--text-muted); line-height: 1.6;">
-                                <i class="bi bi-file-earmark-code me-2" style="color: var(--accent-gold);"></i> ឯកសារសម្រាប់ការលើកដង្កើល
+                        <li class="exchange-sidebar-feature">
+                            <small class="exchange-sidebar-text">
+                                <i class="bi bi-house-door me-2 exchange-sidebar-icon"></i> ព័ត៌មានអំពីស្នាក់នៅ និងទីតាំង
                             </small>
                         </li>
-                        <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border-color);">
-                            <small style="color: var(--text-muted); line-height: 1.6;">
-                                <i class="bi bi-chat-left me-2" style="color: var(--accent-gold);"></i> ការគាំទ្ននិងសង្សัយ
+                        <li class="exchange-sidebar-feature">
+                            <small class="exchange-sidebar-text">
+                                <i class="bi bi-chat-left-text me-2 exchange-sidebar-icon"></i> ការណែនាំ និងការគាំទ្រក្នុងដំណើរការ
                             </small>
                         </li>
-                        <li style="margin-bottom: 0;">
-                            <small style="color: var(--text-muted); line-height: 1.6;">
-                                <i class="bi bi-award me-2" style="color: var(--accent-gold);"></i> លក្ខណៈត្រាកូលផ្តល់
+                        <li class="exchange-sidebar-feature">
+                            <small class="exchange-sidebar-text">
+                                <i class="bi bi-award me-2 exchange-sidebar-icon"></i> លិខិតបញ្ជាក់ និងការទទួលស្គាល់បន្ទាប់បញ្ចប់
                             </small>
                         </li>
                     </ul>
@@ -465,89 +539,77 @@
             </div>
         </div>
 
-        <!-- RELATED COURSES SECTION -->
-        <div class="related-scholarships" data-aos="fade-up">
+        <!-- RELATED PROGRAMS SECTION -->
+        <div class="related-scholarships exchange-related" data-aos="fade-up">
             <h2 class="related-title">
-                <i class="bi bi-book"></i> វគ្គសិក្សាដែលពាក់ព័ន្ធ
+                <i class="bi bi-grid-3x2-gap"></i> កម្មវិធីផ្លាស់ប្តូរដែលពាក់ព័ន្ធ
             </h2>
 
             <div class="row g-4">
-                <!-- Card 1: Data Science -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-md-6 col-xl-4">
                     <div class="scholarship-card">
                         <div class="scholarship-card-image">
-                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80"
-                                alt="Data Science Course" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="https://www.titech.ac.jp/english/public-relations/img/110-campuses-ookayama.jpg"
+                                alt="Tokyo Tech Campus">
                         </div>
                         <div class="scholarship-card-body">
-                            <h4 class="scholarship-card-title">វគ្គសិក្សា Data Science</h4>
+                            <h4 class="scholarship-card-title">កម្មវិធីផ្លាស់ប្តូរជប៉ុន</h4>
                             <p class="scholarship-card-provider">
-                                <i class="bi bi-building"></i> Coursera · ក្រុងនយោបាយ
+                                <i class="bi bi-building"></i> Tokyo Tech · ជប៉ុន
                             </p>
                             <div class="scholarship-card-meta">
-                                <span class="meta-item">
-                                    <i class="bi bi-cash-coin"></i> $99.99
-                                </span>
-                                <span class="meta-item">
-                                    <i class="bi bi-hourglass-split"></i> ៦០ ម៉ោង
-                                </span>
+                                <span class="meta-item"><i class="bi bi-globe2"></i> អាស៊ី</span>
+                                <span class="meta-item"><i class="bi bi-clock"></i> ១ឆ្នាំ</span>
+                                <span class="meta-item"><i class="bi bi-translate"></i> ភាសាជប៉ុន</span>
                             </div>
                             <div class="scholarship-card-footer">
-                                <button class="view-btn">មើលលម្អិត</button>
+                                <a href="exchange-detail.html?id=japan" class="view-btn text-decoration-none">មើលលម្អិត</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 2: UI/UX Design -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-md-6 col-xl-4">
                     <div class="scholarship-card">
                         <div class="scholarship-card-image">
-                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80"
-                                alt="UI/UX Design Course" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="https://media.beam.usnews.com/7c/cb/b598b2ad49658e8c035dbd00c2d8/160815-humboldtuniversitat-submitted.jpg"
+                                alt="Humboldt University Berlin">
                         </div>
                         <div class="scholarship-card-body">
-                            <h4 class="scholarship-card-title">វគ្គសិក្សា UI/UX Design</h4>
+                            <h4 class="scholarship-card-title">កម្មវិធីផ្លាស់ប្តូរអាល្លឺម៉ង់</h4>
                             <p class="scholarship-card-provider">
-                                <i class="bi bi-building"></i> Skillshare · ការរចនា
+                                <i class="bi bi-building"></i> Berlin · Humboldt University
                             </p>
                             <div class="scholarship-card-meta">
-                                <span class="meta-item">
-                                    <i class="bi bi-cash-coin"></i> $39.99
-                                </span>
-                                <span class="meta-item">
-                                    <i class="bi bi-hourglass-split"></i> ៤០ ម៉ោង
-                                </span>
+                                <span class="meta-item"><i class="bi bi-globe2"></i> អឺរ៉ុប</span>
+                                <span class="meta-item"><i class="bi bi-clock"></i> ៦ខែ</span>
+                                <span class="meta-item"><i class="bi bi-translate"></i> ភាសាអាល្លឺម៉ង់</span>
                             </div>
                             <div class="scholarship-card-footer">
-                                <button class="view-btn">មើលលម្អិត</button>
+                                <a href="exchange-detail.html?id=germany" class="view-btn text-decoration-none">មើលលម្អិត</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 3: Mobile App Development -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-md-6 col-xl-4">
                     <div class="scholarship-card">
                         <div class="scholarship-card-image">
-                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80"
-                                alt="Mobile App Development" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="https://operations.cufo.columbia.edu/sites/operations.cufo.columbia.edu/files/content/Images/Buildings/Low.jpg"
+                                alt="Columbia University">
                         </div>
                         <div class="scholarship-card-body">
-                            <h4 class="scholarship-card-title">វគ្គសិក្សា Mobile App Development</h4>
+                            <h4 class="scholarship-card-title">កម្មវិធីផ្លាស់ប្តូរអាមេរិកា</h4>
                             <p class="scholarship-card-provider">
-                                <i class="bi bi-building"></i> Udacity · ផលិតកម្ម
+                                <i class="bi bi-building"></i> New York · Columbia University
                             </p>
                             <div class="scholarship-card-meta">
-                                <span class="meta-item">
-                                    <i class="bi bi-cash-coin"></i> $199.99
-                                </span>
-                                <span class="meta-item">
-                                    <i class="bi bi-hourglass-split"></i> ៨០ ម៉ោង
-                                </span>
+                                <span class="meta-item"><i class="bi bi-globe2"></i> អាមេរិក</span>
+                                <span class="meta-item"><i class="bi bi-clock"></i> ១ឆ្នាំ</span>
+                                <span class="meta-item"><i class="bi bi-translate"></i> ភាសាអង់គ្លេស</span>
                             </div>
                             <div class="scholarship-card-footer">
-                                <button class="view-btn">មើលលម្អិត</button>
+                                <a href="exchange-detail.html?id=usa" class="view-btn text-decoration-none">មើលលម្អិត</a>
                             </div>
                         </div>
                     </div>
@@ -644,7 +706,7 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- ===================== SCRIPTS ===================== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -653,31 +715,46 @@
         // Initialize AOS
         AOS.init({
             duration: 1000,
-            once: true
+            once: true,
+            offset: 100
         });
 
-        // Accordion styling
-        const accordionButtons = document.querySelectorAll('.accordion-button');
-        accordionButtons.forEach(button => {
-            button.style.backgroundColor = 'transparent';
-            button.style.color = 'var(--text-black)';
-            button.style.fontWeight = '600';
-            button.style.border = '1px solid var(--border-color)';
-            button.style.borderRadius = '8px';
-            button.style.marginBottom = '10px';
+        // Save program
+        document.querySelector('.save-button')?.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const text = this.textContent.includes('រក្សាទុក') ? 'បានរក្សាទុក' : 'រក្សាទុក';
+            this.innerHTML = this.innerHTML.replace(/រក្សាទុក|បានរក្សាទុក/g, text);
         });
 
-        // Dark/light toggle
+        // Theme Toggle
         const themeToggle = document.querySelector('[data-theme-toggle]');
-        const themeIcon   = document.getElementById('theme-icon');
-        const html = document.documentElement;
-        themeToggle?.addEventListener('click', () => {
-            const isDark = html.getAttribute('data-theme') === 'dark';
-            html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-            themeIcon.className = isDark ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
-        });
-    </script>
+        const htmlElement = document.documentElement;
+        const themeIcon = document.getElementById('theme-icon');
 
+        themeToggle?.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            if (theme === 'dark') {
+                themeIcon.classList.remove('bi-moon-fill');
+                themeIcon.classList.add('bi-sun-fill');
+            } else {
+                themeIcon.classList.remove('bi-sun-fill');
+                themeIcon.classList.add('bi-moon-fill');
+            }
+        }
+
+        // Load theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+    </script>
 </body>
 
 </html>
