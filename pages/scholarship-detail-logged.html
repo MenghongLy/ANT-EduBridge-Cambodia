@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ព័ត៌មានលម្អិតអាហារូបករណ៍ ADB | EduKhmer</title>
+    <title>ព័ត៌មានលម្អិតអាហារូបករណ៍ | EduKhmer</title>
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -60,7 +60,7 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="../index.html">
+      <a class="navbar-brand" href="../index-logged.html">
         <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
         <div>
           <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ</div>
@@ -72,11 +72,60 @@
       <div class="d-flex d-lg-none align-items-center gap-2">
         <div class="dropdown">
           <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
-            <i class="bi bi-person-circle fs-5" style="color:var(--text-black)"></i>
+            <span class="position-relative d-inline-flex">
+              <i class="bi bi-bell fs-5" style="color:var(--text-black)"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:.6rem">3</span>
+            </span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" style="min-width: 310px;">
+            <li class="px-3 pt-2 pb-1">
+              <h3 class="fs-6 mb-0">ការជូនដំណឹង</h3>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-facebook text-primary mt-1"></i>
+                <span>
+                  Facebook <br>
+                  អ្នកបានភ្ជាប់គណនីជាមួយ Facebook <br>
+                  <span class="text-secondary">ឥឡូវនេះ</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-gear-fill text-secondary mt-1"></i>
+                <span>
+                  ការកំណត់ <br>
+                  អ្នកបានផ្លាស់ប្តូរពាក្យសម្ងាត់បានជោកជ័យ <br>
+                  <span class="text-secondary">៣០នាទីមុន</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-check-circle-fill text-success mt-1"></i>
+                <span>
+                  ការដាក់ពាក្យ <br>
+                  ការដាក់ពាក្យរបស់អ្នកបានជោគជ័យ <br>
+                  <span class="text-secondary">២ម៉ោងមុន</span>
+                </span>
+              </a>
+            </li>
+            <li class="my-2 text-center">
+              <a href="#" class="text-decoration-none">មើលការជូនដំណឹងទាំងអស់</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <button class="btn border-0 p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://ui-avatars.com/api/?name=Edu+User&background=0B5ED7&color=fff" alt="Profile" width="32" height="32" class="rounded-circle">
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right me-2"></i>ចូលគណនី</a></li>
-            <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus me-2"></i>បង្កើតគណនី</a></li>
+            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>ប្រវត្តិរូប</a></li>
+            <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>ការកំណត់</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="../index-logged.html"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a></li>
           </ul>
         </div>
         <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
@@ -86,20 +135,76 @@
 
       <!-- Desktop nav -->
       <ul class="navbar-nav mx-auto d-none d-lg-flex">
-        <li class="nav-item"><a class="nav-link" href="../index.html">ទំព័រដើម</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index-logged.html">ទំព័រដើម</a></li>
         <li class="nav-item">
-          <a class="nav-link active" href="scholarships.html">
+          <a class="nav-link active" href="scholarship-logged.html">
             <i class="bi bi-award me-1"></i>អាហារូបករណ៍
           </a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="courses.html"><i class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
-        <li class="nav-item"><a class="nav-link" href="exchange.html"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
-        <li class="nav-item"><a class="nav-link" href="internship-categories.html"><i class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
-        <li class="nav-item"><a class="nav-link" href="volunteer-international.html"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/courses.html"><i class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/exchange.html"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/internship-categories.html"><i class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/volunteer-international.html"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
       </ul>
-      <div class="nav-auth d-none d-lg-flex">
-        <button class="btn-login" onclick="location.href='login.html'">ចូលគណនី</button>
-        <button class="btn-register" onclick="location.href='register.html'">ចុះឈ្មោះឥឡូវ</button>
+      <div class="nav-auth d-none d-lg-flex align-items-center gap-2">
+        <div class="dropdown">
+          <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown" aria-label="ការជូនដំណឹង" title="ការជូនដំណឹង">
+            <span class="position-relative d-inline-flex">
+              <i class="bi bi-bell fs-5" style="color:var(--text-black)"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:.6rem">3</span>
+            </span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" style="min-width: 320px;">
+            <li class="px-3 pt-2 pb-1">
+              <h3 class="fs-6 mb-0">ការជូនដំណឹង</h3>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-facebook text-primary mt-1"></i>
+                <span>
+                  Facebook <br>
+                  អ្នកបានភ្ជាប់គណនីជាមួយ Facebook <br>
+                  <span class="text-secondary">ឥឡូវនេះ</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-gear-fill text-secondary mt-1"></i>
+                <span>
+                  ការកំណត់ <br>
+                  អ្នកបានផ្លាស់ប្តូរពាក្យសម្ងាត់បានជោកជ័យ <br>
+                  <span class="text-secondary">៣០នាទីមុន</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-check-circle-fill text-success mt-1"></i>
+                <span>
+                  ការដាក់ពាក្យ <br>
+                  ការដាក់ពាក្យរបស់អ្នកបានជោគជ័យ <br>
+                  <span class="text-secondary">២ម៉ោងមុន</span>
+                </span>
+              </a>
+            </li>
+            <li class="my-2 text-center">
+              <a href="#" class="text-decoration-none">មើលការជូនដំណឹងទាំងអស់</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <button class="btn border-0 p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="ប្រវត្តិរូប" title="ប្រវត្តិរូប">
+            <img src="https://ui-avatars.com/api/?name=Edu+User&background=0B5ED7&color=fff" alt="Profile" width="34" height="34" class="rounded-circle">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>ប្រវត្តិរូប</a></li>
+            <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>ការកំណត់</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="login.html"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
@@ -135,26 +240,24 @@
         </div>
     </div>
 
-
     <!-- ===================== MAIN CONTENT ===================== -->
     <main class="container" style="padding: 60px 0;">
 
         <!-- HERO SECTION -->
-        <div class="scholarship-hero" data-aos="fade-up" style="padding: 30px; gap: 25px;">
+        <div class="scholarship-hero" data-aos="fade-up">
             <div class="scholarship-hero-content">
                 <div class="scholarship-header">
-                    <div class="scholarship-logo">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Asian_Development_Bank_logo.svg/960px-Asian_Development_Bank_logo.svg.png" alt="ADB Logo" style="max-width: 90%; max-height: 90%; width: auto; height: auto; object-fit: contain;">
+                    <div class="scholarship-logo" style="background: linear-gradient(135deg, #003580, #0053a0);">KR
                     </div>
                     <div class="scholarship-title-box">
-                        <h1>អាហារូបករណ៍ ADB ឆ្នាំ ២០២៦</h1>
+                        <h1>អាហារូបករណ៍ KOICA ២០២៦</h1>
                         <p class="scholarship-provider">
-                            <i class="bi bi-building"></i> ADB · ធនាគារលោក
+                            <i class="bi bi-building"></i> KOICA · កូរ៉េ
                         </p>
                         <div class="scholarship-badges">
                             <span class="badge-item"><i class="bi bi-star"></i> ឧបត្ថម្ធពេញលេញ</span>
                             <span class="badge-item"><i class="bi bi-globe"></i> ក្រៅប្រទេស</span>
-                            <span class="badge-item"><i class="bi bi-lightning"></i> ២ ឆ្នាំ</span>
+                            <span class="badge-item"><i class="bi bi-lightning"></i> ពេញលេញ</span>
                         </div>
                     </div>
                 </div>
@@ -165,37 +268,37 @@
                         <div class="info-label">
                             <i class="bi bi-cash-coin"></i> ហិរញ្ញប្បទាន
                         </div>
-                        <div class="info-value">$១៥,០००</div>
-                        <div class="info-subtext">ក្នុងមួយឆ្នាំ</div>
+                        <div class="info-value">ពេញលេញ</div>
+                        <div class="info-subtext">ឧបត្ថម្ធលើស្វា</div>
                     </div>
                     <div class="info-card">
                         <div class="info-label">
                             <i class="bi bi-hourglass-split"></i> ចុងក្រោយ
                         </div>
-                        <div class="info-value">៣១ មេសា</div>
+                        <div class="info-value">៣០ មិថុនា</div>
                         <div class="info-subtext">២០២៦</div>
                     </div>
                     <div class="info-card">
                         <div class="info-label">
                             <i class="bi bi-calendar-event"></i> រយៈពេល
                         </div>
-                        <div class="info-value">២ ឆ្នាំ</div>
-                        <div class="info-subtext">ម៉ាស្តារៈ/ថ្នាក់បឋម</div>
+                        <div class="info-value">៣-១២ ខែ</div>
+                        <div class="info-subtext">អាស័យដ្ឋាន</div>
                     </div>
                     <div class="info-card">
                         <div class="info-label">
                             <i class="bi bi-geo-alt"></i> ទីតាំង
                         </div>
-                        <div class="info-value">ម៉ានីល</div>
-                        <div class="info-subtext">ផីលីពីន</div>
+                        <div class="info-value">សេអូល</div>
+                        <div class="info-subtext">កូរ៉េ</div>
                     </div>
                 </div>
             </div>
 
             <!-- Scholarship Image -->
-            <div class="scholarship-hero-image" style="min-height: 280px; max-height: 280px;">
-                <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&q=80"
-                    alt="ADB Scholarship" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+            <div class="scholarship-hero-image">
+                <img src="https://www.koicascholarship.com/wp-content/uploads/2025/05/apply-now-koica-scholarship-2025-koica-scholarship-2026.png"
+                    alt="KOICA Scholarship" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
             </div>
         </div>
 
@@ -210,10 +313,10 @@
                         <i class="bi bi-info-circle"></i> ពិពណ៌នា
                     </h2>
                     <p class="description-text">
-                        អាហារូបករណ៍ ADB (Asian Development Bank) គឺជាកម្មវិធីឧត្តមសិក្សាដ៏សំខាន់របស់ធនាគារលោកអាស៊ីដែលផ្តល់ឱកាសដល់សិស្សកម្ពុជាដើម្បីទទួលបានការអប់រំឧត្តមវេទិក។ កម្មវិធីនេះផ្តល់ឧបត្ថម្ធពេញលេញក្នុងផ្នែកថ្លៃបង់ការសិក្សា លំនៅដ្ឋាន ព្យាបាលសុខភាព និងថ្លៃផ្លូវចរណ៍។
+                        អាហារូបករណ៍ KOICA គឺជាកម្មវិធីឧត្តមសិក្សារបស់រដ្ឋាភិបាលកូរ៉េ ដែលផ្តល់ឱកាសដល់សិស្សកម្ពុជាដើម្បីទៅសិក្សាក្នុងប្រទេសកូរ៉េ។ កម្មវិធីនេះផ្តល់ឧបត្ថម្ធក្នុងផ្នែកថ្លៃបង់ការសិក្សា លំនៅដ្ឋាន ព្យាបាលសុខភាព និងលុយប្រាក់រស់នៅក្នុងរយៈពេលសិក្សា។
                     </p>
                     <p class="description-text">
-                        កម្មវិធីនេះផ្តល់នូវឱកាសឧត្តមសិក្សាក្នុងផ្នែកសេដ្ឋកិច្ច អភិវឌ្ឍន៍ការងារ ព័ត៌មាធិការ លេខាធិការ និងផ្នែកដែលទាក់ទងនឹងការអភិវឌ្ឍន៍ក្នុងផ្នែកអាស៊ីប៉ាស៊ីហ្វីក។ វាគឺជាឱកាសដ៏ល្អសម្រាប់សិស្សដែលមានលទ្ធផលសិក្សាល្អ ដោយវាផ្តល់គាំទ្នពេញលេញក្នុងការដើរដំណើរការសិក្សារបស់អ្នក។
+                        កម្មវិធីនេះផ្តល់នូវឱកាសឧត្តមសិក្សាក្នុងផ្នែកវិទ្យាសាស្ត្រ វិស្វកម្ម វិទ្យាសាស្ត្របច្ចេកវិទ្យា គ្រប់គ្រងហិរញ្ញវត្ថុ និងផ្នែកផ្សេងទៀត។ វាគឺជាឱកាសដ៏ល្អសម្រាប់សិស្សដែលមានលទ្ធផលសិក្សាល្អ ដោយវាផ្តល់គាំទ្នពេញលេញក្នុងការដើរដំណើរការសិក្សារបស់អ្នក។
                     </p>
                 </section>
 
@@ -227,7 +330,7 @@
                         <div class="requirement-check">✓</div>
                         <div class="requirement-text">
                             <strong>លទ្ធផលសិក្សាល្អ</strong>
-                            <small>អាកប្បកិរិយាលើស្វា អាកប្បកិរិយាលេខ ៣.០ ឬលើស (មាត្រដ្ឋាន ៤.០)</small>
+                            <small>សិស្សត្រូវមានលទ្ធផលសិក្សាល្អក្នុងលំដាប់ដ៏ល្អរបស់ខ្លួន</small>
                         </div>
                     </div>
 
@@ -235,7 +338,7 @@
                         <div class="requirement-check">✓</div>
                         <div class="requirement-text">
                             <strong>ភាសាអង់គ្លេស</strong>
-                            <small>លទ្ធផល TOEFL ៩០ ឬលើសពីនេះ ឬ IELTS ៦.៥ ឬលើសពីនេះ</small>
+                            <small>លទ្ធផល IELTS ៦.០ ឬលើសពីនេះ ឬ TOEFL ៥៥០ ឬលើសពីនេះ</small>
                         </div>
                     </div>
 
@@ -273,24 +376,24 @@
                     <div class="step-item">
                         <div class="step-number">1</div>
                         <div class="step-content">
-                            <h4>មើលលម្អិត ADB Scholarships</h4>
-                            <p>ចូលទៅលើគេហទំព័រ ADB Scholarships ហើយមើលលម្អិតលម្អិតអំពីកម្មវិធីឧត្តមសិក្សា។ យល់ដឹងពេញលេញអំពីតម្រូវការ លក្ខណៈដែលត្រូវការ និងដំណើរការដាក់ពាក្យលម្អិត។</p>
+                            <h4>បង្កើតគណនី</h4>
+                            <p>ចូលទៅលើគេហទំព័រ KOICA ហើយបង្កើតគណនីប្រើប្រាស់របស់អ្នក។ បញ្ចូលព័ត៌មានលម្អិតដែលត្រូវការ រួមទាំងឈ្មោះ អ៊ីមែល លេខសម្ងាត់ និងលម្អិតប្រទេស។ រក្សាលេខសម្ងាត់របស់អ្នកឱ្យលាក់ដាក់ល្អ ដូច្នេះអ្នកអាចប្រើវាដើម្បីដាក់ពាក្យក្រោយមក។</p>
                         </div>
                     </div>
 
                     <div class="step-item">
                         <div class="step-number">2</div>
                         <div class="step-content">
-                            <h4>បង្កើតគណនីលើ ADB Portal</h4>
-                            <p>បង្កើតគណនីប្រើប្រាស់របស់អ្នកលើវេបសាយ ឬ ADB Scholarships Portal ដើម្បីរៀបចំឯកសារ និងដាក់ពាក្យ។</p>
+                            <h4>រៀបចំឯកសារដែលចាំបាច់</h4>
+                            <p>រៀបចំឯកសារលម្អិតទាំងអស់ដូចជា ប័ណ្ណសម្រង់ពិន្ទុ លិខិតលក្ខណៈល្អ ឯកសារកម្មវិធីសិក្សា និងឯកសារផ្សេងទៀត។ ធានាថាឯកសារទាំងអស់ពេញលេញ រៀងរាល់ និងឆ្លាតវចនា។</p>
                         </div>
                     </div>
 
                     <div class="step-item">
                         <div class="step-number">3</div>
                         <div class="step-content">
-                            <h4>រៀបចំ និងផ្ញើឯកសារ</h4>
-                            <p>រៀបចំឯកសារលម្អិតទាំងអស់ដូចជា ប័ណ្ណសម្រង់ពិន្ទុ លិខិតលក្ខណៈល្អ ឯកសារកម្មវិធីសិក្សា ឯកសារផ្សេងទៀត។ ផ្ញើឯកសារទាំងអស់តាមរយៈ ADB Portal រឹងក្នុងកាលកំណត់។</p>
+                            <h4>ដាក់ពាក្យបង្ហាញ</h4>
+                            <p>ផ្ញើឯកសារលម្អិតរបស់អ្នក តាមរយៈប័ណ្ណាគារលម្អិតលើគេហទំព័រ KOICA ឬតាមរយៈលិខិតផ្ញើផ្សេងទៀត។ ធានាថាឯកសារទាំងអស់បានដាក់ជូនក្រុមវាយតម្លៃក្នុងកាលកំណត់ដែលកំណត់។</p>
                         </div>
                     </div>
 
@@ -298,15 +401,15 @@
                         <div class="step-number">4</div>
                         <div class="step-content">
                             <h4>ចូលរួមក្នុងការសម្ភាសន៍</h4>
-                            <p>ប្រសិនបើដាក់ពាក្យរបស់អ្នកឈានដល់លក្ខណៈដែលត្រូវការ អ្នកនឹងបានហៅឱ្យចូលរួមក្នុងសម្ភាសន៍ តាមរយៈ Skype ឬប្រឹក្សាយោបល់។</p>
+                            <p>ប្រសិនបើដាក់ពាក្យរបស់អ្នកឈានដល់លក្ខណៈដែលត្រូវការ អ្នកនឹងបានហៅឱ្យចូលរួមក្នុងសម្ភាសន៍។ ក្រុមវាយតម្លៃនឹងសួរសំណួរអំពីលក្ខណៈរបស់អ្នក ការសិក្សា និងបំណងប្រាថ្នា។</p>
                         </div>
                     </div>
 
                     <div class="step-item">
                         <div class="step-number">5</div>
                         <div class="step-content">
-                            <h4>ទទួលលទ្ធផលដាក់ពាក្យ</h4>
-                            <p>លទ្ធផលដាក់ពាក្យរបស់អ្នក នឹងបានផ្ញើឱ្យអ្នក តាមរយៈលិខិត ឬអ៊ីមែល ក្នុងរយៈពេល ៦-៨ ខែ។</p>
+                            <h4>ទទួលលទ្ធផលបង្ហាញ</h4>
+                            <p>លទ្ធផលដាក់ពាក្យរបស់អ្នក នឹងបានផ្ញើឱ្យអ្នក តាមរយៈលិខិត ឬអ៊ីមែល ក្នុងរយៈពេល ២-៣ខែ។ ប្រសិនបើអ្នកបានរងចាប់ផ្តើម លទ្ធផលនឹងបង្ហាញថា អ្នកមានលក្ខណៈសម្រាប់ក្នុងកម្មវិធីអាហារូបករណ៍នេះ។</p>
                         </div>
                     </div>
                 </section>
@@ -321,15 +424,15 @@
                         <div class="requirement-check">✓</div>
                         <div class="requirement-text">
                             <strong>ឧបត្ថម្ធថ្លៃបង់ (Tuition Support)</strong>
-                            <small>ឧបត្ថម្ធក្នុងផ្នែកថ្លៃបង់ការសិក្សា សម្រាប់រយៈពេលសិក្សាទាំងមូល</small>
+                            <small>ឧបត្ថម្ធក្នុងផ្នែកថ្លៃបង់ការសិក្សា សម្រាប់រយៈពេលសិក្សាទាំងមូល សម្រាប់រាល់វិទ្យាល័យ</small>
                         </div>
                     </div>
 
                     <div class="requirement-item">
                         <div class="requirement-check">✓</div>
                         <div class="requirement-text">
-                            <strong>ប្រាក់រស់នៅក្នុងផីលីពីន (Living Allowance)</strong>
-                            <small>ប្រាក់ប្រចាំខែដើម្បីគាំទ្នក្នុងរយៈពេលសិក្សាក្នុងផីលីពីន</small>
+                            <strong>ប្រាក់រស់នៅក្នុងកូរ៉េ (Living Allowance)</strong>
+                            <small>ប្រាក់ប្រចាំខែដើម្បីគាំទ្នក្នុងរយៈពេលសិក្សាក្នុងកូរ៉េ</small>
                         </div>
                     </div>
 
@@ -337,7 +440,7 @@
                         <div class="requirement-check">✓</div>
                         <div class="requirement-text">
                             <strong>ព្យាបាលសុខភាព (Health Insurance)</strong>
-                            <small>ធានារបៀបព្យាបាលលើការសម្រម ព្យាបាលពិគ្ষណ៍ និងថ្នាំលាប សម្រាប់រយៈពេលសិក្សា</small>
+                            <small>ធានារបៀបព្យាបាលសម្រាប់អ្នកនិស្សិត រួមទាំងការពិគ្ষណ៍ និងថ្នាំលាបក្នុងមន្ទីរពេទ្យ សម្រាប់រយៈពេលសិក្សា</small>
                         </div>
                     </div>
 
@@ -345,7 +448,7 @@
                         <div class="requirement-check">✓</div>
                         <div class="requirement-text">
                             <strong>ឧបត្ថម្ធដ្ឋាន (Travel Allowance)</strong>
-                            <small>ឧបត្ថម្ធថ្លៃឡើងយន្ត្រ ដើម្បីផ្លាស់ប្តូរទៅកាន់ប្រទេស</small>
+                            <small>ឧបត្ថម្ធដ្ឋាន ដើម្បីគាំទ្នក្នុងរយៈពេលដ្ឋាននិងលើកលែង ពីប្រទេសកម្ពុជាទៅកូរ៉េ</small>
                         </div>
                     </div>
                 </section>
@@ -361,12 +464,12 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq1">
-                                    តើអាហារូបករណ៍ ADB ជាអ្វីមួយ?
+                                    តើអាហារូបករណ៍ KOICA ជាអ្វីមួយ?
                                 </button>
                             </h2>
                             <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    អាហារូបករណ៍ ADB គឺជាកម្មវិធីឧត្តមសិក្សារបស់ធនាគារលោកអាស៊ីដែលផ្តល់ឱកាសដល់សិស្សកម្ពុជាដើម្បីគាំទ្នក្នុងការសិក្សាឧត្តមសិក្សា។ វាផ្តល់ឧបត្ថម្ធពេញលេញក្នុងរយៈពេល ២ ឆ្នាំ។
+                                    អាហារូបករណ៍ KOICA គឺជាកម្មវិធីឧត្តមសិក្សារបស់រដ្ឋាភិបាលកូរ៉េ ដែលផ្តល់ឱកាសដល់សិស្សកម្ពុជាដើម្បីសិក្សាក្នុងប្រទេសកូរ៉េ។ វាផ្តល់ឧបត្ថម្ធពេញលេញក្នុងរយៈពេល ៣ ដល់ ១២ ខែ រួមទាំងថ្លៃបង់ការសិក្សា លំនៅដ្ឋាន និងលុយប្រាក់រស់នៅ។
                                 </div>
                             </div>
                         </div>
@@ -380,7 +483,7 @@
                             </h2>
                             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    អ្នកដែលមានលទ្ធផលសិក្សាល្អ ៣.០ ឬលើស និងមានលក្ខណៈល្អ នឹងមានលក្ខណៈសម្រាប់ដាក់ពាក្យក្នុងកម្មវិធីនេះ។ ក៏ប៉ុន្តែ ត្រូវមានលទ្ធផលភាសាអង់គ្លេសល្អដែរ។
+                                    អ្នកដែលមានលទ្ធផលសិក្សាល្អ និងមានជំនាញប្រើប្រាស់ ភាសាអង់គ្លេស ឬលទ្ធផល IELTS ៦.០ ឬលើសពីនេះ នឹងមានលក្ខណៈសម្រាប់ដាក់ពាក្យក្នុងកម្មវិធីនេះ។
                                 </div>
                             </div>
                         </div>
@@ -389,12 +492,12 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq3">
-                                    តើការហៅពិនិត្យមានរយៈពេលប៉ុន្មាន?
+                                    តើមានតម្រូវការជាច្រើនប៉ុន្មាន?
                                 </button>
                             </h2>
                             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    ដំណើរការវាយតម្លៃយូរប្រហែល ៦ ទៅ ៨ ខែ។ អ្នកអាចរៀបរាប់ដាក់ពាក្យឱ្យទាន់ពេលវេលា ដើម្បីឱ្យទាន់មុនកាលកំណត់។
+                                    សិស្សត្រូវដាក់ពាក្យផ្សំមួយឯកសារច្រើន ដែលរួមបញ្ចូលលទ្ធផលសិក្សា លិខិតលក្ខណៈល្អ និងឯកសារផ្សេងទៀត សម្រាប់ដាក់ពាក្យក្នុងកម្មវិធីនេះ។
                                 </div>
                             </div>
                         </div>
@@ -410,7 +513,7 @@
                     <div class="deadline-box">
                         <div class="deadline-label">ចុងក្រោយក្នុងរយៈពេល</div>
                         <div class="countdown">
-                            <i class="bi bi-hourglass-split"></i> ២៦ ថ្ងៃ
+                            <i class="bi bi-hourglass-split"></i> ៩៩ ថ្ងៃ
                         </div>
                     </div>
 
@@ -447,13 +550,13 @@
                         <div>
                             <small style="color: var(--text-muted); font-weight: 600;">ទូរស័ព្ទលម្អិត</small>
                             <p style="color: var(--primary-color); font-weight: 700; margin: 5px 0 0 0;">
-                                <i class="bi bi-telephone"></i> +63-2-632-6000
+                                <i class="bi bi-telephone"></i> +82-2-123-4567
                             </p>
                         </div>
                         <div>
                             <small style="color: var(--text-muted); font-weight: 600;">អ៉ីមែល</small>
                             <p style="color: var(--primary-color); font-weight: 700; margin: 5px 0 0 0;">
-                                <i class="bi bi-envelope"></i> adbscholarship@adb.org
+                                <i class="bi bi-envelope"></i> scholarship@koica.go.kr
                             </p>
                         </div>
                         <div>
@@ -461,7 +564,7 @@
                             <p style="margin: 5px 0 0 0;">
                                 <a href="#" target="_blank"
                                     style="color: var(--primary-color); text-decoration: none; font-weight: 600;">
-                                    <i class="bi bi-globe"></i> www.adb.org/scholarships
+                                    <i class="bi bi-globe"></i> www.koica.go.kr
                                 </a>
                             </p>
                         </div>
@@ -477,7 +580,7 @@
                         <li
                             style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border-color);">
                             <small style="color: var(--text-muted); line-height: 1.6;">
-                                ធានាថាឯកសារលម្អិតរបស់អ្នក ត្រូវបានរៀបចំឱ្យស្អាត និងឆ្លាតវចនា ដើម្បីលើកសមត្ថភាពក្នុងការដាក់ពាក្យ។
+                                ធានាថាឯកសាររបស់អ្នក ត្រូវបានរៀបចំឱ្យស្អាត និងឆ្លាតវចនា ដើម្បីលើកសមត្ថភាពក្នុងការដាក់ពាក្យ។
                             </small>
                         </li>
                         <li
@@ -503,28 +606,28 @@
             </h2>
 
             <div class="row g-4">
-                <!-- Card 1: KOICA Scholarship -->
+                <!-- Card 1: ADB Scholarship -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="scholarship-card">
                         <div class="scholarship-card-image">
-                            <img src="https://www.koicascholarship.com/wp-content/uploads/2025/05/apply-now-koica-scholarship-2025-koica-scholarship-2026.png"
-                                alt="KOICA Scholarship" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&q=80"
+                                alt="ADB Scholarship" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div class="scholarship-card-body">
-                            <h4 class="scholarship-card-title">អាហារូបករណ៍ KOICA ឆ្នាំ ២០២៦</h4>
+                            <h4 class="scholarship-card-title">អាហារូបករណ៍ ADB ឆ្នាំ ២០២៦</h4>
                             <p class="scholarship-card-provider">
-                                <i class="bi bi-building"></i> KOICA · កូរ៉េ
+                                <i class="bi bi-building"></i> ADB · ធនាគារលោក
                             </p>
                             <div class="scholarship-card-meta">
                                 <span class="meta-item">
-                                    <i class="bi bi-cash-coin"></i> ឧបត្ថម្ធពេញលេញ
+                                    <i class="bi bi-cash-coin"></i> $15,000/ឆ្នាំ
                                 </span>
                                 <span class="meta-item">
-                                    <i class="bi bi-geo-alt"></i> សេអូល, កូរ៉េ
+                                    <i class="bi bi-geo-alt"></i> ផីលីពីន
                                 </span>
                             </div>
                             <div class="scholarship-card-footer">
-                                <a href="scholarship-detail.html" class="view-btn" style="text-decoration: none; display: block;">មើលលម្អិត</a>
+                                <a href="adb-detail.html" class="view-btn" style="text-decoration: none; display: block;">មើលលម្អិត</a>
                             </div>
                         </div>
                     </div>

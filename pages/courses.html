@@ -29,92 +29,80 @@
 </head>
 
 <body>
+<!-- ===================== HEADER ===================== -->
+<header class="fixed-top shadow-sm">
 
-    <!-- ===================== HEADER ===================== -->
-    <header class="fixed-top shadow-sm">
-
-        <!-- TOP BAR -->
-        <div class="top-header">
-            <div class="container d-flex justify-content-between align-items-center">
-                <ul class="list-unstyled d-flex m-0">
-                    <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
-                    <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
-                    <li><a href="opportunities.html" class="nav-link d-none d-md-block">ឱកាសសិក្សា</a></li>
-                </ul>
-                <div class="nav-action">
-                    <div class="dropdown">
-                        <button class="btn-lang dropdown-toggle border-0" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="bi bi-globe2"></i> ភាសាខ្មែរ
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-check-lg text-primary me-1"></i>
-                                    ភាសាខ្មែរ</a></li>
-                            <li><a class="dropdown-item" href="#">English</a></li>
-                        </ul>
-                    </div>
-                    <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
-                        <i class="bi bi-moon-fill" id="theme-icon"></i>
-                    </button>
-                </div>
-            </div>
+  <!-- TOP BAR -->
+  <div class="top-header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <ul class="list-unstyled d-flex m-0">
+        <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
+        <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
+      </ul>
+      <div class="nav-action">
+        <div class="dropdown">
+          <button class="btn-lang dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-globe2"></i> ភាសាខ្មែរ
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-check-lg text-primary me-1"></i> ភាសាខ្មែរ</a></li>
+            <li><a class="dropdown-item" href="#">English</a></li>
+          </ul>
         </div>
+        <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
+          <i class="bi bi-moon-fill" id="theme-icon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
 
-        <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="../index.html">
-                    <div class="brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
-                    <div>
-                        <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ
-                        </div>
-                        EduKhmer
-                    </div>
-                </a>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
+        <div>
+          <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ</div>
+          EduKhmer
+        </div>
+      </a>
 
-                <!-- Mobile toggles -->
-                <div class="d-flex d-lg-none align-items-center gap-2">
-                    <div class="dropdown">
-                        <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
-                            <i class="bi bi-person-circle fs-5" style="color:var(--text-black)"></i>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="login.html"><i
-                                        class="bi bi-box-arrow-in-right me-2"></i>ចូលគណនី</a></li>
-                            <li><a class="dropdown-item" href="register.html"><i
-                                        class="bi bi-person-plus me-2"></i>បង្កើតគណនី</a></li>
-                        </ul>
-                    </div>
-                    <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#mobileMenu">
-                        <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
-                    </button>
-                </div>
+      <!-- Mobile toggles -->
+      <div class="d-flex d-lg-none align-items-center gap-2">
+        <div class="dropdown">
+          <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
+            <i class="bi bi-person-circle fs-5" style="color:var(--text-black)"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right me-2"></i>ចូលគណនី</a></li>
+            <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus me-2"></i>បង្កើតគណនី</a></li>
+          </ul>
+        </div>
+        <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+          <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
+        </button>
+      </div>
 
-                <!-- Desktop nav -->
-                <ul class="navbar-nav mx-auto d-none d-lg-flex">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">ទំព័រដើម</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="scholarships.html">
-                            <i class="bi bi-award me-1"></i>អាហារូបករណ៍
-                        </a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link active" href="courses.html"><i
-                                class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
-                    <li class="nav-item"><a class="nav-link" href="exchange.html"><i
-                                class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="internships.html"><i
-                                class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="volunteer.html"><i
-                                class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
-                </ul>
-                <div class="nav-auth d-none d-lg-flex">
-                    <button class="btn-login" onclick="location.href='login.html'">ចូលគណនី</button>
-                    <button class="btn-register" onclick="location.href='register.html'">ចុះឈ្មោះឥឡូវ</button>
-                </div>
-            </div>
-        </nav>
-    </header>
+      <!-- Desktop nav -->
+      <ul class="navbar-nav mx-auto d-none d-lg-flex">
+        <li class="nav-item"><a class="nav-link" href="../index.html">ទំព័រដើម</a></li>
+        <li class="nav-item">
+          <a class="nav-link " href="scholarships.html">
+            <i class="bi bi-award me-1"></i>អាហារូបករណ៍
+          </a>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="courses.html"><i class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
+        <li class="nav-item"><a class="nav-link " href="exchange.html"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
+        <li class="nav-item"><a class="nav-link" href="internship-categories.html"><i class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
+        <li class="nav-item"><a class="nav-link" href="volunteer-international.html"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
+      </ul>
+      <div class="nav-auth d-none d-lg-flex">
+        <button class="btn-login" onclick="location.href='login.html'">ចូលគណនី</button>
+        <button class="btn-register" onclick="location.href='register.html'">ចុះឈ្មោះឥឡូវ</button>
+      </div>
+    </div>
+  </nav>
+</header>
 
     <!-- Mobile Offcanvas -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
@@ -152,7 +140,7 @@
         <div class="container position-relative" style="z-index:2">
             <div class="row align-items-center">
                 <div class="col-lg-7" data-aos="fade-right">
-                    <h1 class="page-hero-title">វគ្គសិក្សា<br><span>ប្រឹក្សាយោបល់ និងការងាក</span></h1>
+                    <h1 class="page-hero-title">វគ្គសិក្សា<br><span>ប្រឹក្សាយោបល់ និងការងារ</span></h1>
                     <p class="page-hero-desc">
                         ស្វែងរកវគ្គសិក្សាដែលសមស្របសម្រាប់អ្នក ដោយបញ្ចូលទាំងវគ្គសិក្សាប្រឹក្សាយោបល់ និងក្ដាច់វគ្គសិក្សា។
                         ជ្រើសរើសតាមផ្នែកសិក្សា កម្រិត ភាសា និងរយៈពេល ដែលមានបច្ចុប្បន្នភាពជារៀងរាល់ថ្ងៃ។
@@ -288,9 +276,9 @@
                                 <span class="benefit-chip"><i class="bi bi-check2"></i> ឯកសារ</span>
                                 <span class="benefit-chip"><i class="bi bi-check2"></i> ស្ដាប់បាន</span>
                             </div>
-                            <button class="btn-card-detail">
+                            <a href="course-detail.html" class="btn-card-detail" style="text-decoration: none; display: inline-block;">
                                 <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -322,9 +310,9 @@
                                 <span class="benefit-chip"><i class="bi bi-check2"></i> វិច័យលម្អិត</span>
                                 <span class="benefit-chip"><i class="bi bi-check2"></i> ឯកសារ</span>
                             </div>
-                            <button class="btn-card-detail">
+                            <a href="course-detail.html" class="btn-card-detail" style="text-decoration: none; display: inline-block;">
                                 <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -356,9 +344,9 @@
                                 <span class="benefit-chip"><i class="bi bi-check2"></i> វិច័យលម្អិត</span>
                                 <span class="benefit-chip"><i class="bi bi-check2"></i> ដាក់ពាក្យ</span>
                             </div>
-                            <button class="btn-card-detail">
+                            <a href="course-detail.html" class="btn-card-detail" style="text-decoration: none; display: inline-block;">
                                 <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -389,9 +377,9 @@
                                 <span class="benefit-chip"><i class="bi bi-check2"></i> ឯកសារ</span>
                                 <span class="benefit-chip"><i class="bi bi-check2"></i> ដាក់ពាក្យ</span>
                             </div>
-                            <button class="btn-card-detail">
+                            <a href="course-detail.html" class="btn-card-detail" style="text-decoration: none; display: inline-block;">
                                 <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -422,9 +410,9 @@
                                 <span class="benefit-chip"><i class="bi bi-check2"></i> ដំណើរការលម្អិត</span>
                                 <span class="benefit-chip"><i class="bi bi-check2"></i> ឯកសារ</span>
                             </div>
-                            <button class="btn-card-detail">
+                            <a href="course-detail.html" class="btn-card-detail" style="text-decoration: none; display: inline-block;">
                                 <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -455,9 +443,9 @@
                                 <span class="benefit-chip"><i class="bi bi-check2"></i> ស្ដាប់បាន</span>
                                 <span class="benefit-chip"><i class="bi bi-check2"></i> ឯកសារ</span>
                             </div>
-                            <button class="btn-card-detail">
+                            <a href="course-detail.html" class="btn-card-detail" style="text-decoration: none; display: inline-block;">
                                 <i class="bi bi-info-circle me-1"></i> ព័ត៌មានលម្អិត
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

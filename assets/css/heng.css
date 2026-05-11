@@ -627,23 +627,7 @@ body {
   font-weight: 600;
 }
 
-.btn-card-detail {
-  width: 100%;
-  padding: 10px 16px;
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
-  font-family: inherit;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-}
+
 
 .btn-card-detail:hover {
   background: #0054B3;
