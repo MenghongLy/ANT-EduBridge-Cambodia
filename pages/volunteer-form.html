@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ដាក់ពាក្យ ស្ម័គ្រចិត្ត — EduKhmer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Hanuman:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/navbar.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+<!-- ===================== HEADER ===================== -->
+<header class="fixed-top shadow-sm">
+
+  <!-- TOP BAR -->
+  <div class="top-header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <ul class="list-unstyled d-flex m-0">
+        <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
+        <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
+      </ul>
+      <div class="nav-action">
+        <div class="dropdown">
+          <button class="btn-lang dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-globe2"></i> ភាសាខ្មែរ
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-check-lg text-primary me-1"></i> ភាសាខ្មែរ</a></li>
+            <li><a class="dropdown-item" href="#">English</a></li>
+          </ul>
+        </div>
+        <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
+          <i class="bi bi-moon-fill" id="theme-icon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="../index-logged.html">
+        <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
+        <div>
+          <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ</div>
+          EduKhmer
+        </div>
+      </a>
+
+      <!-- Mobile toggles -->
+      <div class="d-flex d-lg-none align-items-center gap-2">
+        <div class="dropdown">
+          <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
+            <span class="position-relative d-inline-flex">
+              <i class="bi bi-bell fs-5" style="color:var(--text-black)"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:.6rem">3</span>
+            </span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" style="min-width: 310px;">
+            <li class="px-3 pt-2 pb-1">
+              <h3 class="fs-6 mb-0">ការជូនដំណឹង</h3>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-facebook text-primary mt-1"></i>
+                <span>
+                  Facebook <br>
+                  អ្នកបានភ្ជាប់គណនីជាមួយ Facebook <br>
+                  <span class="text-secondary">ឥឡូវនេះ</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-gear-fill text-secondary mt-1"></i>
+                <span>
+                  ការកំណត់ <br>
+                  អ្នកបានផ្លាស់ប្តូរពាក្យសម្ងាត់បានជោកជ័យ <br>
+                  <span class="text-secondary">៣០នាទីមុន</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-check-circle-fill text-success mt-1"></i>
+                <span>
+                  ការដាក់ពាក្យ <br>
+                  ការដាក់ពាក្យរបស់អ្នកបានជោគជ័យ <br>
+                  <span class="text-secondary">២ម៉ោងមុន</span>
+                </span>
+              </a>
+            </li>
+            <li class="my-2 text-center">
+              <a href="#" class="text-decoration-none">មើលការជូនដំណឹងទាំងអស់</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <button class="btn border-0 p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://ui-avatars.com/api/?name=Edu+User&background=0B5ED7&color=fff" alt="Profile" width="32" height="32" class="rounded-circle">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>ប្រវត្តិរូប</a></li>
+            <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>ការកំណត់</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="../index-logged.html"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a></li>
+          </ul>
+        </div>
+        <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+          <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
+        </button>
+      </div>
+
+      <!-- Desktop nav -->
+      <ul class="navbar-nav mx-auto d-none d-lg-flex">
+        <li class="nav-item"><a class="nav-link" href="../index-logged.html">ទំព័រដើម</a></li>
+        <li class="nav-item">
+          <a class="nav-link " href="scholarship-logged.html">
+            <i class="bi bi-award me-1"></i>អាហារូបករណ៍
+          </a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="courses-logged.html"><i class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
+        <li class="nav-item"><a class="nav-link " href="exchange-logged.html"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/internship-categories.html"><i class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
+        <li class="nav-item"><a class="nav-link active" href="pages/volunteer-international.html"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
+      </ul>
+      <div class="nav-auth d-none d-lg-flex align-items-center gap-2">
+        <div class="dropdown">
+          <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown" aria-label="ការជូនដំណឹង" title="ការជូនដំណឹង">
+            <span class="position-relative d-inline-flex">
+              <i class="bi bi-bell fs-5" style="color:var(--text-black)"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:.6rem">3</span>
+            </span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" style="min-width: 320px;">
+            <li class="px-3 pt-2 pb-1">
+              <h3 class="fs-6 mb-0">ការជូនដំណឹង</h3>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-facebook text-primary mt-1"></i>
+                <span>
+                  Facebook <br>
+                  អ្នកបានភ្ជាប់គណនីជាមួយ Facebook <br>
+                  <span class="text-secondary">ឥឡូវនេះ</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-gear-fill text-secondary mt-1"></i>
+                <span>
+                  ការកំណត់ <br>
+                  អ្នកបានផ្លាស់ប្តូរពាក្យសម្ងាត់បានជោកជ័យ <br>
+                  <span class="text-secondary">៣០នាទីមុន</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-check-circle-fill text-success mt-1"></i>
+                <span>
+                  ការដាក់ពាក្យ <br>
+                  ការដាក់ពាក្យរបស់អ្នកបានជោគជ័យ <br>
+                  <span class="text-secondary">២ម៉ោងមុន</span>
+                </span>
+              </a>
+            </li>
+            <li class="my-2 text-center">
+              <a href="#" class="text-decoration-none">មើលការជូនដំណឹងទាំងអស់</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <button class="btn border-0 p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="ប្រវត្តិរូប" title="ប្រវត្តិរូប">
+            <img src="https://ui-avatars.com/api/?name=Edu+User&background=0B5ED7&color=fff" alt="Profile" width="34" height="34" class="rounded-circle">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>ប្រវត្តិរូប</a></li>
+            <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>ការកំណត់</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="login.html"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title d-flex align-items-center gap-2" style="color:var(--volunteer)"><i
+          class="bi bi-heart-fill"></i> EduKhmer</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li><a class="nav-link py-3 border-bottom" href="index.html"><i class="bi bi-house me-2"></i>ទំព័រដើម</a></li>
+        <li><a class="nav-link py-3 border-bottom" href="scholarships.html"><i
+              class="bi bi-award me-2"></i>អាហារូបករណ៍</a></li>
+        <li><a class="nav-link py-3 border-bottom" href="exchange.html"><i class="bi bi-globe me-2"></i>ផ្លាស់ប្តូរ</a>
+        </li>
+        <li><a class="nav-link py-3 border-bottom" href="internships.html"><i
+              class="bi bi-briefcase me-2"></i>ហាត់ការ</a></li>
+        <li><a class="nav-link active py-3 border-bottom" href="volunteer-local.html"><i
+              class="bi bi-heart me-2"></i>ស្ម័គ្រចិត្ត</a></li>
+      </ul>
+      <div class="d-grid gap-2 mt-4">
+        <a href="login.html" class="btn btn-outline-primary">ចូលគណនី</a>
+        <a href="register.html" class="btn btn-primary">ចុះឈ្មោះ</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="container position-relative" style="z-index:2">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h1 class="hero-title">ដាក់ពាក្យ<br><span>ស្ម័គ្រចិត្ត</span></h1>
+          <p class="hero-desc">ចូលរួមបម្រើសហគមន៍ — ចែករំលែកជំនាញ ពេលវេលា និងភាពស្រឡាញ់ ។ ក្រុមការងារ EduKhmer
+            នឹងឆ្លើយក្នុង <strong style="color:#ff8080">៤៨ ម៉ោង</strong> ។</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEPPER -->
+  <div class="stepper-wrap">
+    <div class="container">
+      <div class="stepper" id="stepper">
+        <div class="step-item active" id="si-1">
+          <div class="step-circle">១</div>
+          <div class="step-label">ព័ត៌មានផ្ទាល់ខ្លួន</div>
+        </div>
+        <div class="step-item" id="si-2">
+          <div class="step-circle">២</div>
+          <div class="step-label">ជំនាញ &amp; ពេលវេលា</div>
+        </div>
+        <div class="step-item" id="si-3">
+          <div class="step-circle">៣</div>
+          <div class="step-label">សំណើ &amp; ឯកសារ</div>
+        </div>
+        <div class="step-item" id="si-4">
+          <div class="step-circle">៤</div>
+          <div class="step-label">ពិនិត្យ &amp; បញ្ជាក់</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="form-layout">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-8">
+          <div class="form-card">
+            <div class="form-progress-bar" id="progress-bar" style="width:25%"></div>
+
+            <!-- STEP 1 -->
+            <div class="step-panel active" id="panel-1">
+              <div class="form-card-header">
+                <div class="fch-step"><i class="bi bi-person me-1"></i>ជំហានទី ១ / ៤</div>
+                <h2>ព័ត៌មានផ្ទាល់ខ្លួន</h2>
+                <p>ព័ត៌មានបំពេញត្រូវស្មោះត្រង់ — ក្រុមការងារ EduKhmer ពិនិត្យ</p>
+              </div>
+              <div class="form-card-body">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <div class="field-group">
+                      <label class="field-label">នាមខ្មែរ (ពេញ)<span class="req">*</span></label>
+                      <input type="text" class="f-input" id="name-km" placeholder="ឧ. ហ៊ួ ចាន់ ណារ៉ា">
+                      <div class="field-error" id="err-name-km">សូមបំពេញ នាម</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="field-group">
+                      <label class="field-label">ឈ្មោះ អក្សរលាតិន<span class="req">*</span></label>
+                      <input type="text" class="f-input" id="name-en" placeholder="e.g. HOUN CHANNA">
+                      <div class="field-error" id="err-name-en">សូមបំពេញ ឈ្មោះ</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <div class="field-group">
+                      <label class="field-label">ថ្ងៃខែឆ្នាំ<span class="req">*</span></label>
+                      <div class="input-icon-wrap"><i class="bi bi-calendar3 iw-icon"></i><input type="date"
+                          class="f-input" id="dob"></div>
+                      <div class="field-error" id="err-dob">សូមជ្រើស ថ្ងៃ</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="field-group">
+                      <label class="field-label">យេនឌ័រ<span class="req">*</span></label>
+                      <select class="f-select" id="gender">
+                        <option value="" disabled selected>ជ្រើស...</option>
+                        <option>ប្រុស</option>
+                        <option>ស្រី</option>
+                        <option>មិនចង់ប្រាប់</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <div class="field-group">
+                      <label class="field-label">Email<span class="req">*</span></label>
+                      <div class="input-icon-wrap"><i class="bi bi-envelope iw-icon"></i><input type="email"
+                          class="f-input" id="email" placeholder="your@email.com"></div>
+                      <div class="field-error" id="err-email">Email មិនត្រឹមត្រូវ</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="field-group">
+                      <label class="field-label">ទូរស័ព្ទ<span class="req">*</span></label>
+                      <div class="input-icon-wrap"><i class="bi bi-phone iw-icon"></i><input type="tel" class="f-input"
+                          id="phone" placeholder="0XX XXX XXX"></div>
+                      <div class="field-error" id="err-phone">សូមបំពេញ ទូរស័ព្ទ</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <div class="field-group">
+                      <label class="field-label">Telegram <span class="hint">(ស្រេចចិត្ត)</span></label>
+                      <div class="input-icon-wrap"><i class="bi bi-telegram iw-icon"></i><input type="text"
+                          class="f-input" id="telegram" placeholder="@username"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="field-group">
+                      <label class="field-label">ទីលំនៅ / ខេត្ត<span class="req">*</span></label>
+                      <select class="f-select" id="province">
+                        <option value="" disabled selected>ខេត្ត / រាជធានី...</option>
+                        <option>ភ្នំពេញ</option>
+                        <option>សៀមរាប</option>
+                        <option>ព្រះសីហនុ</option>
+                        <option>កំពត</option>
+                        <option>កណ្ដាល</option>
+                        <option>ត្បូងឃ្មុំ</option>
+                        <option>ក្រចេះ</option>
+                        <option>ស្ទឹងត្រែង</option>
+                        <option>រតនគិរី</option>
+                        <option>មណ្ឌលគិរី</option>
+                        <option>ឧត្ដរមានជ័យ</option>
+                        <option>បន្ទាយមានជ័យ</option>
+                        <option>បាត់ដំបង</option>
+                        <option>ពោធ៍សាត់</option>
+                        <option>កំពង់ចាម</option>
+                        <option>ផ្សេង</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!-- Volunteer type -->
+                <div class="field-group">
+                  <label class="field-label">ប្រភេទ ស្ម័គ្រចិត្ត ដែលចង់ចូលរួម<span class="req">*</span></label>
+                  <div class="chip-group" id="vol-type">
+                    <label class="chip-label selected"><input type="checkbox" onchange="toggleChip(this)"
+                        checked><span>🏫 ការបង្រៀន / អប់រំ</span></label>
+                    <label class="chip-label"><input type="checkbox" onchange="toggleChip(this)"><span>🌿
+                        បរិស្ថាន</span></label>
+                    <label class="chip-label"><input type="checkbox" onchange="toggleChip(this)"><span>🏥
+                        សុខភាព</span></label>
+                    <label class="chip-label"><input type="checkbox" onchange="toggleChip(this)"><span>💻 បច្ចេកទេស /
+                        IT</span></label>
+                    <label class="chip-label"><input type="checkbox" onchange="toggleChip(this)"><span>🎨 សិល្បៈ /
+                        វប្បធម៌</span></label>
+                    <label class="chip-label"><input type="checkbox" onchange="toggleChip(this)"><span>🤝
+                        សហគមន៍</span></label>
+                    <label class="chip-label"><input type="checkbox" onchange="toggleChip(this)"><span>📸 Media /
+                        ផ្សព្វផ្សាយ</span></label>
+                  </div>
+                </div>
+                <div class="form-nav">
+                  <button class="btn-next" onclick="goNext(1)">ជំហានបន្ទាប់ <i class="bi bi-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="step-panel" id="panel-2">
+              <div class="form-card-header">
+                <div class="fch-step"><i class="bi bi-tools me-1"></i>ជំហានទី ២ / ៤</div>
+                <h2>ជំនាញ &amp; ពេលវេលា</h2>
+                <p>ប្រាប់យើងពី ជំនាញ ការសិក្សា និង ពេលវេលា ទំនេររបស់អ្នក</p>
+              </div>
+              <div class="form-card-body">
+                <!-- Education -->
+                <div class="row g-3">
+                  <div class="col-sm-7">
+                    <div class="field-group">
+                      <label class="field-label">គ្រឹះស្ថានសិក្សា / ការងារ<span class="req">*</span></label>
+                      <input type="text" class="f-input" id="org" placeholder="ឧ. RUPP / ក្រុមហ៊ុន XYZ">
+                      <div class="field-error" id="err-org">សូមបំពេញ</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="field-group">
+                      <label class="field-label">ជំនាញ / Field<span class="req">*</span></label>
+                      <input type="text" class="f-input" id="major" placeholder="ឧ. Computer Science">
+                      <div class="field-error" id="err-major">សូមបំពេញ</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Skills rating -->
+                <div class="field-group">
+                  <label class="field-label">ចំណាត់ ជំនាញ <span class="hint">(ចុច ⭐ = ចាប់ផ្ដើម → ⭐⭐⭐ =
+                      ជំនាញ)</span></label>
+                  <div id="skills-wrap">
+                    <div class="skill-row" data-skill="ការបង្រៀន">
+                      <span class="skill-name">ការបង្រៀន</span>
+                      <div class="skill-stars">
+                        <button type="button" class="skill-star active" onclick="rateStar(this,1)">⭐</button>
+                        <button type="button" class="skill-star" onclick="rateStar(this,2)">⭐</button>
+                        <button type="button" class="skill-star" onclick="rateStar(this,3)">⭐</button>
+                      </div>
+                    </div>
+                    <div class="skill-row" data-skill="IT / Computer">
+                      <span class="skill-name">IT / Computer</span>
+                      <div class="skill-stars">
+                        <button type="button" class="skill-star" onclick="rateStar(this,1)">⭐</button>
+                        <button type="button" class="skill-star" onclick="rateStar(this,2)">⭐</button>
+                        <button type="button" class="skill-star" onclick="rateStar(this,3)">⭐</button>
+                      </div>
+                    </div>
+                    <div class="skill-row" data-skill="ភាសា / Translation">
+                      <span class="skill-name">ភាសា / Translation</span>
+                      <div class="skill-stars">
+                        <button type="button" class="skill-star" onclick="rateStar(this,1)">⭐</button>
+                        <button type="button" class="skill-star" onclick="rateStar(this,2)">⭐</button>
+                        <button type="button" class="skill-star" onclick="rateStar(this,3)">⭐</button>
+                      </div>
+                    </div>
+                    <div class="skill-row" data-skill="Design / Media">
+                      <span class="skill-name">Design / Media</span>
+                      <div class="skill-stars">
+                        <button type="button" class="skill-star" onclick="rateStar(this,1)">⭐</button>
+                        <button type="button" class="skill-star" onclick="rateStar(this,2)">⭐</button>
+                        <button type="button" class="skill-star" onclick="rateStar(this,3)">⭐</button>
+                      </div>
+                    </div>
+                    <div class="skill-row" data-skill="ការដឹកនាំ (Leadership)">
+                      <span class="skill-name">Leadership</span>
+                      <div class="skill-stars">
+                        <button type="button" class="skill-star" onclick="rateStar(this,1)">⭐</button>
+                        <button type="button" class="skill-star" onclick="rateStar(this,2)">⭐</button>
+                        <button type="button" class="skill-star" onclick="rateStar(this,3)">⭐</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-divider">ពេលវេលាទំនេរ</div>
+                <!-- Availability -->
+                <div class="field-group">
+                  <label class="field-label">ថ្ងៃទំនេរ (ជ្រើសបានច្រើន)<span class="req">*</span></label>
+                  <div class="avail-grid">
+                    <div class="avail-card selected" onclick="toggleAvail(this)">
+                      <div class="ac-day">ច័ន្ទ</div>
+                      <div class="ac-time">Mon</div>
+                    </div>
+                    <div class="avail-card selected" onclick="toggleAvail(this)">
+                      <div class="ac-day">អង្គារ</div>
+                      <div class="ac-time">Tue</div>
+                    </div>
+                    <div class="avail-card" onclick="toggleAvail(this)">
+                      <div class="ac-day">ពុធ</div>
+                      <div class="ac-time">Wed</div>
+                    </div>
+                    <div class="avail-card" onclick="toggleAvail(this)">
+                      <div class="ac-day">ព្រហស្បតិ៍</div>
+                      <div class="ac-time">Thu</div>
+                    </div>
+                    <div class="avail-card" onclick="toggleAvail(this)">
+                      <div class="ac-day">សុក្រ</div>
+                      <div class="ac-time">Fri</div>
+                    </div>
+                    <div class="avail-card selected" onclick="toggleAvail(this)">
+                      <div class="ac-day">សៅរ៍</div>
+                      <div class="ac-time">Sat</div>
+                    </div>
+                    <div class="avail-card selected" onclick="toggleAvail(this)">
+                      <div class="ac-day">អាទិត្យ</div>
+                      <div class="ac-time">Sun</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <div class="field-group">
+                      <label class="field-label">ម៉ោងទំនេរ<span class="req">*</span></label>
+                      <select class="f-select" id="time-slot">
+                        <option value="" disabled selected>ជ្រើស...</option>
+                        <option>ព្រឹក (07:00-12:00)</option>
+                        <option>រសៀល (12:00-17:00)</option>
+                        <option>ល្ងាច (17:00-21:00)</option>
+                        <option>ពេញថ្ងៃ</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="field-group">
+                      <label class="field-label">រយៈពេល ស្ម័គ្រចិត្ត<span class="req">*</span></label>
+                      <select class="f-select" id="duration">
+                        <option value="" disabled selected>ជ្រើស...</option>
+                        <option>១ សប្ដាហ៍</option>
+                        <option>២ — ៤ សប្ដាហ៍</option>
+                        <option>១ — ២ ខែ</option>
+                        <option>៣ ខែ+</option>
+                        <option>ស្ម័គ្រចិត្ត ប្រចាំ (Regular)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!-- Transport -->
+                <div class="field-group">
+                  <label class="field-label">មានអ្វី ចូលរួម?</label>
+                  <div class="chip-group">
+                    <label class="chip-label"><input type="checkbox" onchange="toggleChip(this)"><span>🏍️
+                        Motorbike</span></label>
+                    <label class="chip-label"><input type="checkbox" onchange="toggleChip(this)"><span>🚗
+                        Car</span></label>
+                    <label class="chip-label"><input type="checkbox" onchange="toggleChip(this)"><span>💻
+                        Laptop</span></label>
+                    <label class="chip-label"><input type="checkbox" onchange="toggleChip(this)"><span>📷
+                        Camera</span></label>
+                  </div>
+                </div>
+                <div class="form-nav">
+                  <button class="btn-back" onclick="goBack(2)"><i class="bi bi-arrow-left"></i> ថយក្រោយ</button>
+                  <button class="btn-next" onclick="goNext(2)">ជំហានបន្ទាប់ <i class="bi bi-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="step-panel" id="panel-3">
+              <div class="form-card-header">
+                <div class="fch-step"><i class="bi bi-file-earmark-heart me-1"></i>ជំហានទី ៣ / ៤</div>
+                <h2>សំណើ &amp; ឯកសារ</h2>
+                <p>ប្រាប់យើងពី ការលើកទឹកចិត្ត ហើយ Upload ឯកសារ</p>
+              </div>
+              <div class="form-card-body">
+                <div class="field-group">
+                  <label class="field-label">ហេតុអ្វីចង់ ស្ម័គ្រចិត្ត?<span class="req">*</span><span class="hint">(Min
+                      80 ពាក្យ)</span></label>
+                  <textarea class="f-textarea" id="motivation" style="min-height:130px"
+                    placeholder="ចែករំលែក ហេតុផល ចំណាប់អារម្មណ៍ ឬ បទពិសោធន៍ ដែលបណ្ដាលឱ្យអ្នក ចង់ ស្ម័គ្រចិត្ត..."></textarea>
+                  <div style="display:flex;justify-content:space-between;margin-top:5px">
+                    <div class="field-error" id="err-motivation">Min 80 ពាក្យ</div>
+                    <div style="font-size:.76rem;color:var(--text-muted)" id="mot-count">0 ពាក្យ</div>
+                  </div>
+                </div>
+                <div class="field-group">
+                  <label class="field-label">ចំណេះដឹង / ជំនាញ ផ្ដល់ជូនសហគមន៍<span class="req">*</span></label>
+                  <textarea class="f-textarea" id="skills-desc" style="min-height:100px"
+                    placeholder="ពណ៌នា ជំនាញ ឬ ចំណេះដឹង ដែលអ្នកនឹងចែករំលែក..."></textarea>
+                  <div class="field-error" id="err-skills">សូមបំពេញ</div>
+                </div>
+                <div class="field-group">
+                  <label class="field-label">គោលដៅ ក្រោយ ស្ម័គ្រចិត្ត</label>
+                  <textarea class="f-textarea" id="goals" style="min-height:80px"
+                    placeholder="ចង់បានអ្វី ពីបទពិសោធ ស្ម័គ្រចិត្ត..."></textarea>
+                </div>
+                <div class="form-divider">ឯកសារ Upload</div>
+                <div class="field-group">
+                  <label class="field-label">CV / Resume <span class="hint">(ស្រេចចិត្ត)</span></label>
+                  <label class="file-drop" id="drop-cv" for="file-cv">
+                    <input type="file" id="file-cv" accept=".pdf,.doc,.docx"
+                      onchange="handleFile(this,'drop-cv','cv-name')">
+                    <div class="fd-icon"><i class="bi bi-file-earmark-person"></i></div>
+                    <div class="fd-text" id="cv-name">ចុច ឬ ទាញ CV / Resume</div>
+                    <div class="fd-hint">PDF, DOC · Max 5MB</div>
+                  </label>
+                </div>
+                <div class="field-group">
+                  <label class="field-label">រូបថត Profile <span class="hint">(ស្រេចចិត្ត)</span></label>
+                  <label class="file-drop" id="drop-photo" for="file-photo">
+                    <input type="file" id="file-photo" accept=".jpg,.jpeg,.png"
+                      onchange="handleFile(this,'drop-photo','photo-name')">
+                    <div class="fd-icon"><i class="bi bi-person-square"></i></div>
+                    <div class="fd-text" id="photo-name">ចុច ឬ ទាញ រូបថត</div>
+                    <div class="fd-hint">JPG, PNG · Max 3MB</div>
+                  </label>
+                </div>
+                <div class="field-group">
+                  <label class="field-label">ចំណាំ / ព័ត៌មានបន្ថែម <span class="hint">(ស្រេចចិត្ត)</span></label>
+                  <textarea class="f-textarea" id="notes" style="min-height:70px"
+                    placeholder="ព័ត៌មានបន្ថែម ឬ សំណួរ..."></textarea>
+                </div>
+                <div class="form-nav">
+                  <button class="btn-back" onclick="goBack(3)"><i class="bi bi-arrow-left"></i> ថយក្រោយ</button>
+                  <button class="btn-next" onclick="goNext(3)">ពិនិត្យ <i class="bi bi-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="step-panel" id="panel-4">
+              <div class="form-card-header">
+                <div class="fch-step"><i class="bi bi-check-circle me-1"></i>ជំហានទី ៤ / ៤</div>
+                <h2>ពិនិត្យ &amp; បញ្ជាក់</h2>
+                <p>ពិនិត្យព័ត៌មានម្ដងទៀត — ចុច <strong>កែ</strong> ប្រសិនចង់ផ្លាស់ប្ដូរ</p>
+              </div>
+              <div class="form-card-body">
+                <div class="review-section">
+                  <div class="rs-title"><i class="bi bi-person-fill"></i>ព័ត៌មានផ្ទាល់ខ្លួន<span class="edit-link"
+                      onclick="goToStep(1)"><i class="bi bi-pencil me-1"></i>កែ</span></div>
+                  <div class="rs-row"><span class="rs-label">នាមខ្មែរ</span><span class="rs-val" id="rv-km">—</span>
+                  </div>
+                  <div class="rs-row"><span class="rs-label">ឈ្មោះ Latin</span><span class="rs-val" id="rv-en">—</span>
+                  </div>
+                  <div class="rs-row"><span class="rs-label">Email</span><span class="rs-val" id="rv-email">—</span>
+                  </div>
+                  <div class="rs-row"><span class="rs-label">ទូរស័ព្ទ</span><span class="rs-val" id="rv-phone">—</span>
+                  </div>
+                  <div class="rs-row"><span class="rs-label">ខេត្ត</span><span class="rs-val" id="rv-prov">—</span>
+                  </div>
+                </div>
+                <div class="review-section">
+                  <div class="rs-title"><i class="bi bi-tools"></i>ជំនាញ &amp; ពេលវេលា<span class="edit-link"
+                      onclick="goToStep(2)"><i class="bi bi-pencil me-1"></i>កែ</span></div>
+                  <div class="rs-row"><span class="rs-label">សាកលវិទ្យាល័យ / ក្រុមហ៊ុន</span><span class="rs-val"
+                      id="rv-org">—</span></div>
+                  <div class="rs-row"><span class="rs-label">ជំនាញ</span><span class="rs-val" id="rv-maj">—</span></div>
+                  <div class="rs-row"><span class="rs-label">ម៉ោងទំនេរ</span><span class="rs-val" id="rv-time">—</span>
+                  </div>
+                  <div class="rs-row"><span class="rs-label">រយៈពេល</span><span class="rs-val" id="rv-dur">—</span>
+                  </div>
+                </div>
+                <div class="review-section">
+                  <div class="rs-title"><i class="bi bi-heart-fill"></i>សំណើ<span class="edit-link"
+                      onclick="goToStep(3)"><i class="bi bi-pencil me-1"></i>កែ</span></div>
+                  <div class="rs-row"><span class="rs-label">Motivation</span><span class="rs-val" id="rv-mot"
+                      style="font-size:.8rem;font-weight:400;color:var(--text-sub);line-height:1.7;max-width:360px">—</span>
+                  </div>
+                </div>
+                <div class="field-group mt-3">
+                  <label style="display:flex;align-items:flex-start;gap:12px;cursor:pointer">
+                    <input type="checkbox" id="declare"
+                      style="width:18px;height:18px;margin-top:2px;accent-color:var(--volunteer);flex-shrink:0">
+                    <span style="font-size:.88rem;color:var(--text-sub);line-height:1.7">
+                      ខ្ញុំបញ្ជាក់ ព័ត៌មានខាងលើ <strong style="color:var(--text-main)">ត្រឹមត្រូវ</strong> ។
+                      ខ្ញុំយល់ព្រម ស្ម័គ្រចិត្ត ដោយ ស្មោះ ហើយ ចូលរួម តាមពេលវេលា ដែលបានប្រគល់ ។
+                    </span>
+                  </label>
+                  <div class="field-error" id="err-declare">សូម Check ប្រអប់ នេះ</div>
+                </div>
+                <div class="form-nav">
+                  <button class="btn-back" onclick="goBack(4)"><i class="bi bi-arrow-left"></i> ថយក្រោយ</button>
+                  <button class="btn-submit-main" onclick="submitForm()"><i class="bi bi-heart-fill"></i> ដាក់ពាក្យ
+                    ស្ម័គ្រចិត្ត</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- SUCCESS -->
+            <div class="success-screen" id="success-screen">
+              <div class="success-icon"><i class="bi bi-heart-fill"></i></div>
+              <h2>ពាក្យ ស្ម័គ្រចិត្ត បានដាក់ ✅</h2>
+              <p>អរគុណ! ក្រុមការងារ EduKhmer ទទួលបានពាក្យរបស់អ្នករួចហើយ ។ យើងនឹង ជូនដំណឹង ក្នុង <strong>៤៨ ម៉ោង</strong>
+                ។</p>
+              <div class="ref-code" id="ref-code">Ref: VOL-2025-XXXXX</div>
+              <div class="next-steps">
+                <div class="next-step-item">
+                  <div class="ns-num">១</div>
+                  <div class="ns-text"><strong>ពិនិត្យ Email</strong> — Confirmation Letter នឹងផ្ញើជូន</div>
+                </div>
+                <div class="next-step-item">
+                  <div class="ns-num">២</div>
+                  <div class="ns-text"><strong>ចូលក្រុម Telegram</strong> @EduKhmerVolunteer — ព័ត៌មានបន្ថែម</div>
+                </div>
+                <div class="next-step-item">
+                  <div class="ns-num">៣</div>
+                  <div class="ns-text"><strong>ត្រៀមចាប់ផ្ដើម</strong> — ក្រុមការងារ Coordinator នឹងទំនាក់ទំនង</div>
+                </div>
+              </div>
+              <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <button onclick="location.href='volunteer-local.html'" class="btn btn-outline-danger">← ទំព័រ
+                  ស្ម័គ្រចិត្ត</button>
+                <button onclick="location.href='opportunities.html'" class="btn btn-primary">ស្វែងរក ឱកាស ផ្សេង</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="sidebar-card">
+            <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&q=80" class="sc-img"
+              alt="Volunteer">
+            <div class="sc-body">
+              <div class="sc-tag"><i class="bi bi-heart-fill"></i> ស្ម័គ្រចិត្ត · Local</div>
+              <div class="sc-title">ស្ម័គ្រចិត្ត ជួយបង្រៀន — World Vision Cambodia</div>
+              <div class="sc-row"><i class="bi bi-building"></i> World Vision Cambodia</div>
+              <div class="sc-row"><i class="bi bi-geo-alt"></i> Kampong Cham · Cambodia</div>
+              <div class="sc-row"><i class="bi bi-clock-history"></i> ២ — ៤ សប្ដាហ៍</div>
+              <div class="sc-row"><i class="bi bi-people"></i> ១០ កន្លែង</div>
+              <hr class="sc-divider">
+              <div class="sc-benefit"><i class="bi bi-check-circle-fill"></i> ដឹកជញ្ជូន ទៅ-មក</div>
+              <div class="sc-benefit"><i class="bi bi-check-circle-fill"></i> លំនៅដ្ឋាន ឥតគិតថ្លៃ</div>
+              <div class="sc-benefit"><i class="bi bi-check-circle-fill"></i> អាហារ ៣ ពេល</div>
+              <div class="sc-benefit"><i class="bi bi-check-circle-fill"></i> វិញ្ញាបនបត្រ</div>
+              <hr class="sc-divider">
+              <div class="deadline-box">
+                <div class="deadline-label"> ចុងក្រោយ / Application Deadline</div>
+                <div class="deadline-date">៣០ ឧសភា ២០២៥</div>
+                <div class="countdown-chips">
+                  <div class="cc-chip">
+                    <div class="cc-num" id="cnt-d">22</div>
+                    <div class="cc-lbl">ថ្ងៃ</div>
+                  </div>
+                  <div class="cc-chip">
+                    <div class="cc-num" id="cnt-h">14</div>
+                    <div class="cc-lbl">ម៉ោង</div>
+                  </div>
+                  <div class="cc-chip">
+                    <div class="cc-num" id="cnt-m">33</div>
+                    <div class="cc-lbl">នាទី</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-card);padding:20px;box-shadow:var(--shadow-sm)">
+            <div style="font-size:.95rem;font-weight:700;color:var(--text-main);margin-bottom:10px">
+              <i class="bi bi-headset me-2" style="color:var(--primary)"></i>ត្រូវការជំនួយ?
+            </div>
+            <p style="font-size:.83rem;color:var(--text-sub);line-height:1.7;margin-bottom:14px">
+              ក្រុមការងារ EduKhmer ត្រៀម Review CV &amp; Motivation Letter ជូន — ឥតគិតថ្លៃ!
+            </p>
+            <a href="https://t.me/EduKhmer" target="_blank" class="btn btn-sm btn-primary w-100">
+              <i class="bi bi-telegram me-1"></i> ទំនាក់ Telegram
+            </a>
+            <a href="contact.html" class="btn btn-sm btn-outline-secondary w-100 mt-2">
+              <i class="bi bi-envelope me-1"></i> ផ្ញើ Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-brand-name">
+            <div class="footer-brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo"
+                class="brand-logo-img"></div>
+            EduKhmer
+          </div>
+          <p class="footer-desc">
+            វេទិកាអប់រំលេខ ១ ក្នុងកម្ពុជា ភ្ជាប់យុវជនខ្មែរ
+            ជាមួយឱកាសសិក្សា និងការងារ ទូទាំងពិភពលោក​​​។
+            ចូលរួមជាមួយគ្រួសារ EduKhmer ថ្ងៃនេះ ឥតគិតថ្លៃ!
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">ឱកាសសិក្សា</h5>
+          <ul class="footer-links">
+            <li><a href="scholarship-logged.html"><i class="bi bi-chevron-right"></i>អាហារូបករណ៍</a></li>
+            <li><a href="pages/courses.html"><i class="bi bi-chevron-right"></i>វគ្គសិក្សា</a></li>
+            <li><a href="pages/exchange.html"><i class="bi bi-chevron-right"></i>ផ្លាស់ប្តូរ</a></li>
+            <li><a href="pages/internship-categories.html"><i class="bi bi-chevron-right"></i>ហាត់ការ</a></li>
+            <li><a href="pages/volunteer-international.html"><i class="bi bi-chevron-right"></i>ស្ម័គ្រចិត្ត</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">ជំនួយ</h5>
+          <ul class="footer-links">
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i>អំពីយើង</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i>ទំនាក់ទំនង</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="footer-heading">ទំនាក់ទំនង</h5>
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:info@edukhmer.com">
+                <i class="bi bi-envelope-at"></i> info@edukhmer.com
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/edukhmer">
+                <i class="bi bi-telegram"></i> @EduKhmer
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bi bi-geo-alt"></i> ភ្នំពេញ, កម្ពុជា
+              </a>
+            </li>
+          </ul>
+          <div class="mt-4 p-3 rounded-3"
+            style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">
+            <p style="color:rgba(255,255,255,.6);font-size:.83rem;margin-bottom:10px">
+              <i class="bi bi-bell me-1" style="color:var(--secondary-color)"></i>
+              ជាវដើម្បីទទួលឱកាសសិក្សាថ្មីៗ
+            </p>
+            <div class="d-flex gap-2">
+              <input type="email" class="form-control form-control-sm" placeholder="Email របស់អ្នក"
+                style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff">
+              <button class="btn btn-primary btn-sm px-3" style="white-space:nowrap">ជាវ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <span>© ២០២៦ EduKhmer. រក្សាសិទ្ធិគ្រប់យ៉ាង.</span>
+        <div class="d-flex gap-3">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => { const d = document.documentElement.getAttribute('data-theme') === 'dark'; document.documentElement.setAttribute('data-theme', d ? 'light' : 'dark'); document.getElementById('theme-icon').className = d ? 'bi bi-moon-fill' : 'bi bi-sun-fill' });
+    window.addEventListener('scroll', () => { document.querySelector('.navbar').style.padding = window.scrollY > 50 ? '6px 0' : '12px 0' });
+    document.getElementById('motivation').addEventListener('input', function () { const w = this.value.trim().split(/\s+/).filter(Boolean).length; const el = document.getElementById('mot-count'); el.textContent = w + ' ពាក្យ'; el.style.color = w >= 80 ? 'var(--green)' : 'var(--text-muted)' });
+    function toggleChip(input) { const lbl = input.closest('.chip-label'); if (input.type === 'checkbox') lbl.classList.toggle('selected', input.checked); if (input.type === 'radio') { document.querySelectorAll(`input[name="${input.name}"]`).forEach(r => r.closest('.chip-label')?.classList.toggle('selected', r === input)) } }
+    function toggleAvail(card) { card.classList.toggle('selected') }
+    function rateStar(btn, level) { const row = btn.closest('.skill-row'); const stars = row.querySelectorAll('.skill-star'); stars.forEach((s, i) => s.classList.toggle('active', i < level)) }
+    function handleFile(input, dropId, nameId) { const drop = document.getElementById(dropId); const nameEl = document.getElementById(nameId); if (input.files.length) { drop.classList.add('has-file'); nameEl.textContent = '✓ ' + input.files[0].name } }
+    let currentStep = 1;
+    const progressPct = [0, 25, 50, 75, 100];
+    function updateStepper(step) { for (let i = 1; i <= 4; i++) { const si = document.getElementById('si-' + i); si.classList.remove('active', 'done'); if (i < step) si.classList.add('done'); if (i === step) si.classList.add('active') } document.getElementById('progress-bar').style.width = progressPct[step] + '%'; document.querySelector('.stepper-wrap').scrollIntoView({ behavior: 'smooth', block: 'start' }) }
+    function showPanel(step) { document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active')); document.getElementById('panel-' + step).classList.add('active'); updateStepper(step); currentStep = step }
+    function goToStep(step) { showPanel(step) }
+    function validateStep(step) {
+      let ok = true; const req = (id, errId, check) => { const el = document.getElementById(id); const err = document.getElementById(errId); if (!el) return; const pass = check ? check(el) : (el.value.trim() !== ''); el.classList.toggle('error', !pass); if (err) err.classList.toggle('show', !pass); if (!pass) ok = false };
+      if (step === 1) { req('name-km', 'err-name-km'); req('name-en', 'err-name-en'); req('dob', 'err-dob'); req('email', 'err-email', el => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value)); req('phone', 'err-phone') }
+      if (step === 2) { req('org', 'err-org'); req('major', 'err-major') }
+      if (step === 3) { req('motivation', 'err-motivation', el => el.value.trim().split(/\s+/).filter(Boolean).length >= 80); req('skills-desc', 'err-skills') }
+      if (step === 4) { const dec = document.getElementById('declare'); const ok2 = dec.checked; document.getElementById('err-declare').classList.toggle('show', !ok2); if (!ok2) ok = false }
+      return ok
+    }
+    function fillReview() { const g = id => (document.getElementById(id)?.value || '—'); document.getElementById('rv-km').textContent = g('name-km'); document.getElementById('rv-en').textContent = g('name-en'); document.getElementById('rv-email').textContent = g('email'); document.getElementById('rv-phone').textContent = g('phone'); document.getElementById('rv-prov').textContent = g('province') || '—'; document.getElementById('rv-org').textContent = g('org'); document.getElementById('rv-maj').textContent = g('major'); document.getElementById('rv-time').textContent = g('time-slot') || '—'; document.getElementById('rv-dur').textContent = g('duration') || '—'; const mot = document.getElementById('motivation').value.trim(); document.getElementById('rv-mot').textContent = mot ? (mot.slice(0, 120) + (mot.length > 120 ? '…' : '')) : ' —' }
+    function goNext(from) { if (!validateStep(from)) return; if (from === 3) fillReview(); showPanel(from + 1) }
+    function goBack(from) { showPanel(from - 1) }
+    function submitForm() { if (!validateStep(4)) return; const ref = 'VOL-2025-' + Math.random().toString(36).substr(2, 5).toUpperCase(); document.getElementById('ref-code').textContent = 'Ref: ' + ref; document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active')); document.getElementById('success-screen').classList.add('show'); for (let i = 1; i <= 4; i++) { const si = document.getElementById('si-' + i); si.classList.remove('active'); si.classList.add('done'); si.querySelector('.step-circle').innerHTML = '<i class="bi bi-check-lg"></i>' } document.getElementById('progress-bar').style.width = '100%'; document.querySelector('.stepper-wrap').scrollIntoView({ behavior: 'smooth' }) }
+  </script>
+</body>
+
+</html>
