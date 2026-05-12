@@ -52,7 +52,7 @@
       <a class="navbar-brand" href="../index.html">
         <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
         <div>
-          <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ</div>
+          <div class="brand-subtitle"> វេទិកាអប់រំ</div>
           EduKhmer
         </div>
       </a>
@@ -61,7 +61,7 @@
       <div class="d-flex d-lg-none align-items-center gap-2">
         <div class="dropdown">
           <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
-            <i class="bi bi-person-circle fs-5" style="color:var(--text-black)"></i>
+            <i class="bi bi-person-circle fs-5 icon-text-black"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="pages/login.html"><i class="bi bi-box-arrow-in-right me-2"></i>ចូលគណនី</a></li>
@@ -69,7 +69,7 @@
           </ul>
         </div>
         <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-          <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
+          <i class="fa-solid fa-bars fs-5 icon-text-black"></i>
         </button>
       </div>
 
@@ -97,7 +97,7 @@
 <!-- Mobile Offcanvas -->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
   <div class="offcanvas-header border-bottom">
-    <h5 class="offcanvas-title d-flex align-items-center gap-2" style="color:var(--primary-color)">
+    <h5 class="offcanvas-title d-flex align-items-center gap-2 accent-primary">
       <i class="bi bi-mortarboard-fill"></i> EduKhmer
     </h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -121,7 +121,7 @@
 <!-- Mobile Filter Offcanvas -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="filterDrawer">
   <div class="offcanvas-header border-bottom">
-    <h5 class="offcanvas-title" style="color:var(--primary-color)"><i class="bi bi-funnel me-2"></i>ត្រង</h5>
+    <h5 class="offcanvas-title accent-primary"><i class="bi bi-funnel me-2"></i>ត្រង</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
   <div class="offcanvas-body" id="filter-drawer-body"></div>
@@ -130,7 +130,7 @@
 <!-- ====================================================  PAGE HERO  ==================================================== -->
 <div class="page-hero animate__animated animate__fadeIn animate__slow">
   <div class="page-hero-grid"></div>
-  <div class="container position-relative" style="z-index:2">
+  <div class="container position-relative page-hero-content">
     <div class="row align-items-center">
       <div class="col-lg-7" data-aos="fade-right">
         <h1 class="page-hero-title">ស្ម័គ្រចិត្ត<br><span>ក្នុងស្រុក និងអន្តរជាតិ</span></h1>
@@ -140,17 +140,17 @@
         </p>
       </div>
       <div class="col-lg-5 d-none d-lg-flex justify-content-end gap-3 align-items-center" data-aos="fade-left">
-        <div class="text-center p-3 rounded-3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);min-width:90px">
-          <div style="font-size:1.8rem;font-weight:700;color:#fff">500+</div>
-          <div style="font-size:.78rem;color:rgba(255,255,255,.6)">គម្រោងសកម្ម</div>
+        <div class="text-center p-3 rounded-3 hero-stat-card">
+          <div class="hero-stat-value">500+</div>
+          <div class="hero-stat-label">គម្រោងសកម្ម</div>
         </div>
-        <div class="text-center p-3 rounded-3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);min-width:90px">
-          <div style="font-size:1.8rem;font-weight:700;color:#fff">45+</div>
-          <div style="font-size:.78rem;color:rgba(255,255,255,.6)">ប្រទេស/តំបន់</div>
+        <div class="text-center p-3 rounded-3 hero-stat-card">
+          <div class="hero-stat-value">45+</div>
+          <div class="hero-stat-label">ប្រទេស/តំបន់</div>
         </div>
-        <div class="text-center p-3 rounded-3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);min-width:90px">
-          <div style="font-size:1.8rem;font-weight:700;color:var(--accent-gold)">ថ្មី</div>
-          <div style="font-size:.78rem;color:rgba(255,255,255,.6)">រៀងរាល់ថ្ងៃ</div>
+        <div class="text-center p-3 rounded-3 hero-stat-card">
+          <div class="hero-stat-value hero-stat-value--gold">ថ្មី</div>
+          <div class="hero-stat-label">រៀងរាល់ថ្ងៃ</div>
         </div>
       </div>
     </div>
@@ -263,7 +263,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#e55000,#ff6600)">KH</div>
+                    <div class="card-org-logo logo-kh">KH</div>
                     <span class="card-org-name">World Vision · 🇰🇭 Cambodia</span>
                   </div>
                   <div class="card-title-text">ស្ម័គ្រចិត្តផ្នែកអប់រំ — ជួយបង្រៀនកុមារជនបទ</div>
@@ -293,7 +293,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#BC002D,#e60033)">JP</div>
+                    <div class="card-org-logo logo-jp">JP</div>
                     <span class="card-org-name">JICA · 🇯🇵 Japan</span>
                   </div>
                   <div class="card-title-text">គម្រោងស្ម័គ្រចិត្តអប់រំ — បង្រៀនភាសាអង់គ្លេសនៅជប៉ុន</div>
@@ -323,7 +323,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#0b7a75,#15b7a8)">EC</div>
+                    <div class="card-org-logo logo-eco">EC</div>
                     <span class="card-org-name">Eco Network · 🌐 Online</span>
                   </div>
                   <div class="card-title-text">យុទ្ធនាការសម្អាតបរិស្ថាន និងដាំដើមឈើ</div>
@@ -348,12 +348,12 @@
                 <div class="card-img-wrap">
                   <img src="https://mpowerminds.com/assetOLD/images/New-content-for-old-blog.png" alt="">
                   <div class="card-tag tag-volunteer"><i class="bi bi-heart me-1"></i>សុខភាព</div>
-                  <div class="card-deadline" style="background:rgba(229,62,62,.75)"><i class="bi bi-clock"></i> ១៥ ថ្ងៃ!</div>
+                  <div class="card-deadline alert-red"><i class="bi bi-clock"></i> ១៥ ថ្ងៃ!</div>
                   <button class="card-saved" onclick="toggleSave(this)"><i class="bi bi-bookmark"></i></button>
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#009edb,#00b0f0)">UN</div>
+                    <div class="card-org-logo logo-ed">UN</div>
                     <span class="card-org-name">UNDP · 🇰🇭 Cambodia</span>
                   </div>
                   <div class="card-title-text">ស្ម័គ្រចិត្តផ្នែកសុខភាពសហគមន៍ — ភ្នំពេញ ២០២៥</div>
@@ -383,7 +383,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#d4000f,#f50018)">AU</div>
+                    <div class="card-org-logo logo-au">AU</div>
                     <span class="card-org-name">AAS · 🇦🇺 Australia</span>
                   </div>
                   <div class="card-title-text">Volunteer in Australia — Community Support Program</div>
@@ -408,12 +408,12 @@
                 <div class="card-img-wrap">
                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH_D0TMOmipl2VpmY3TQIE2d8NNrMetzcpQw&s" alt="">
                   <div class="card-tag tag-volunteer"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</div>
-                  <div class="card-deadline" style="background:rgba(0,194,178,.75)"><i class="bi bi-check"></i> ចាប់ភ្លាម</div>
+                  <div class="card-deadline alert-green"><i class="bi bi-check"></i> ចាប់ភ្លាម</div>
                   <button class="card-saved" onclick="toggleSave(this)"><i class="bi bi-bookmark"></i></button>
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#0b7a75,#15b7a8)">EC</div>
+                    <div class="card-org-logo logo-eco">EC</div>
                     <span class="card-org-name">Eco Network · 🌐 Online</span>
                   </div>
                   <div class="card-title-text">Virtual Volunteer — Environmental Awareness Campaign</div>
@@ -443,7 +443,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#0047ab,#0066cc)">UN</div>
+                    <div class="card-org-logo logo-un">UN</div>
                     <span class="card-org-name">UNDP · 🇰🇭 Cambodia</span>
                   </div>
                   <div class="card-title-text">Community Health Outreach Volunteer</div>
@@ -473,7 +473,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#e60033,#bc002d)">JP</div>
+                    <div class="card-org-logo logo-jp-alt">JP</div>
                     <span class="card-org-name">JICA · 🇯🇵 Japan</span>
                   </div>
                   <div class="card-title-text">Volunteer Teaching Assistant — Tokyo Youth Center</div>
@@ -503,7 +503,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#0b7a75,#15b7a8)">TH</div>
+                    <div class="card-org-logo logo-eco">TH</div>
                     <span class="card-org-name">Green Volunteers · 🇹🇭 Thailand</span>
                   </div>
                   <div class="card-title-text">Cross-border Tree Planting and River Clean-up</div>
@@ -533,7 +533,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#0047ab,#0066cc)">UN</div>
+                    <div class="card-org-logo logo-un">UN</div>
                     <span class="card-org-name">UNDP · 🇰🇭 Cambodia</span>
                   </div>
                   <div class="card-title-text">School Library Support Volunteer</div>
@@ -563,7 +563,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#003087,#0056d2)">EU</div>
+                    <div class="card-org-logo logo-it">EU</div>
                     <span class="card-org-name">Erasmus+ · 🇪🇺 Europe</span>
                   </div>
                   <div class="card-title-text">Youth Community Mentor Program — Europe</div>
@@ -588,12 +588,12 @@
                 <div class="card-img-wrap">
                   <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=500&q=80" alt="">
                   <div class="card-tag tag-volunteer"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</div>
-                  <div class="card-deadline" style="background:rgba(0,194,178,.75)"><i class="bi bi-check"></i> ចាប់ភ្លាម</div>
+                  <div class="card-deadline alert-green"><i class="bi bi-check"></i> ចាប់ភ្លាម</div>
                   <button class="card-saved" onclick="toggleSave(this)"><i class="bi bi-bookmark"></i></button>
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#0047ab,#0066cc)">UN</div>
+                    <div class="card-org-logo logo-un">UN</div>
                     <span class="card-org-name">UN Volunteer · 🌍 International</span>
                   </div>
                   <div class="card-title-text">UN Online Volunteer Program — Youth & Technology</div>
@@ -619,7 +619,7 @@
             <div class="empty-icon">🔍</div>
             <div class="empty-title">រកមិនឃើញ !</div>
             <p class="empty-desc">សូមផ្លាស់ប្ដូរ keyword ឬ លុបការត្រង ហើយព្យាយាមម្ដងទៀត ។</p>
-            <button class="btn-card-detail" style="display:inline-block;width:auto;padding:10px 24px" onclick="clearFilters()">
+            <button class="btn-card-detail btn-card-detail--inline" onclick="clearFilters()">
               <i class="bi bi-x-circle me-1"></i> លុបការត្រង
             </button>
           </div>
@@ -633,8 +633,8 @@
             <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=200&q=80" class="list-img" alt="">
             <div class="list-body">
               <div class="d-flex align-items-center gap-2 mb-1">
-                <span class="card-tag tag-scholarship" style="position:static;font-size:.7rem;padding:2px 9px"><i class="bi bi-award me-1"></i>អាហារូបករណ៍</span>
-                <span style="font-size:.75rem;color:#e53e3e;font-weight:600"><i class="bi bi-clock me-1"></i>ផុត: ៣០ មិថុនា</span>
+                <span class="card-tag tag-scholarship tag-inline"><i class="bi bi-award me-1"></i>អាហារូបករណ៍</span>
+                <span class="meta-deadline-red"><i class="bi bi-clock me-1"></i>ផុត: ៣០ មិថុនា</span>
               </div>
               <div class="list-title">School Library Support Volunteer</div>
               <div class="list-meta">
@@ -659,8 +659,8 @@
             <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=200&q=80" class="list-img" alt="">
             <div class="list-body">
               <div class="d-flex align-items-center gap-2 mb-1">
-                <span class="card-tag tag-exchange" style="position:static;font-size:.7rem;padding:2px 9px"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</span>
-                <span style="font-size:.75rem;color:var(--accent-gold);font-weight:600"><i class="bi bi-clock me-1"></i>ផុត: ១៥ ឧសភា</span>
+                <span class="card-tag tag-exchange tag-inline"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</span>
+                <span class="meta-deadline-gold"><i class="bi bi-clock me-1"></i>ផុត: ១៥ ឧសភា</span>
               </div>
               <div class="list-title">Volunteer Teaching Assistant — Tokyo Youth Center</div>
               <div class="list-meta">
@@ -685,8 +685,8 @@
             <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=200&q=80" class="list-img" alt="">
             <div class="list-body">
               <div class="d-flex align-items-center gap-2 mb-1">
-                <span class="card-tag tag-course" style="position:static;font-size:.7rem;padding:2px 9px"><i class="bi bi-laptop me-1"></i>វគ្គសិក្សា</span>
-                <span style="font-size:.75rem;color:var(--accent-green);font-weight:600"><i class="bi bi-infinity me-1"></i>ឥតគិតថ្លៃ</span>
+                <span class="card-tag tag-course tag-inline"><i class="bi bi-laptop me-1"></i>វគ្គសិក្សា</span>
+                <span class="meta-deadline-green"><i class="bi bi-infinity me-1"></i>ឥតគិតថ្លៃ</span>
               </div>
               <div class="list-title">Virtual Volunteer — Environmental Awareness Campaign</div>
               <div class="list-meta">
@@ -782,15 +782,14 @@
             </a>
           </li>
         </ul>
-        <div class="mt-4 p-3 rounded-3" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">
-          <p style="color:rgba(255,255,255,.6);font-size:.83rem;margin-bottom:10px">
-            <i class="bi bi-bell me-1" style="color:var(--secondary-color)"></i>
+        <div class="mt-4 p-3 rounded-3 footer-subscribe-card">
+          <p class="footer-subscribe-text">
+            <i class="bi bi-bell me-1 footer-subscribe-icon"></i>
             ជាវដើម្បីទទួលឱកាសសិក្សាថ្មីៗ
           </p>
           <div class="d-flex gap-2">
-            <input type="email" class="form-control form-control-sm" placeholder="Email របស់អ្នក"
-              style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff">
-            <button class="btn btn-primary btn-sm px-3" style="white-space:nowrap">ជាវ</button>
+            <input type="email" class="form-control form-control-sm footer-subscribe-input" placeholder="Email របស់អ្នក">
+            <button class="btn btn-primary btn-sm px-3 btn-nowrap">ជាវ</button>
           </div>
         </div>
       </div>
