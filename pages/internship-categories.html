@@ -51,16 +51,16 @@
       <a class="navbar-brand" href="../index.html">
         <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
         <div>
-          <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ</div>
+          <div class="brand-subtitle"> វេទិកាអប់រំ</div>
           EduKhmer
         </div>
       </a>
 
       <!-- Mobile toggles -->
-      <div class="d-flex d-lg-none align-items-center gap-2">
+        <div class="d-flex d-lg-none align-items-center gap-2">
         <div class="dropdown">
           <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
-            <i class="bi bi-person-circle fs-5" style="color:var(--text-black)"></i>
+            <i class="bi bi-person-circle fs-5 icon-text-black"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="pages/login.html"><i class="bi bi-box-arrow-in-right me-2"></i>ចូលគណនី</a></li>
@@ -68,7 +68,7 @@
           </ul>
         </div>
         <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-          <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
+          <i class="fa-solid fa-bars fs-5 icon-text-black"></i>
         </button>
       </div>
 
@@ -95,7 +95,7 @@
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
   <div class="offcanvas-header border-bottom">
-    <h5 class="offcanvas-title d-flex align-items-center gap-2" style="color:var(--primary-color)">
+    <h5 class="offcanvas-title d-flex align-items-center gap-2 accent-primary">
       <i class="bi bi-mortarboard-fill"></i> EduKhmer
     </h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -118,7 +118,7 @@
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="filterDrawer">
   <div class="offcanvas-header border-bottom">
-    <h5 class="offcanvas-title" style="color:var(--primary-color)"><i class="bi bi-funnel me-2"></i>ត្រង</h5>
+    <h5 class="offcanvas-title accent-primary"><i class="bi bi-funnel me-2"></i>ត្រង</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
   <div class="offcanvas-body" id="filter-drawer-body"></div>
@@ -126,7 +126,7 @@
 
 <div class="page-hero animate__animated animate__fadeIn animate__slow">
   <div class="page-hero-grid"></div>
-  <div class="container position-relative" style="z-index:2">
+  <div class="container position-relative hero-zindex">
     <div class="row align-items-center">
       <div class="col-lg-7" data-aos="fade-right">
         <h1 class="page-hero-title">ប្រភេទហាត់ការ<br><span>ជ្រើសរើសតាមអាជីព</span></h1>
@@ -137,17 +137,17 @@
         </p>
       </div>
       <div class="col-lg-5 d-none d-lg-flex justify-content-end gap-3 align-items-center" data-aos="fade-left">
-        <div class="text-center p-3 rounded-3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);min-width:90px">
-          <div style="font-size:1.8rem;font-weight:700;color:#fff">60+</div>
-          <div style="font-size:.78rem;color:rgba(255,255,255,.6)">តួនាទីហាត់ការ</div>
+        <div class="text-center p-3 rounded-3 stat-hero">
+          <div class="stat-number">60+</div>
+          <div class="stat-subtext">តួនាទីហាត់ការ</div>
         </div>
-        <div class="text-center p-3 rounded-3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);min-width:90px">
-          <div style="font-size:1.8rem;font-weight:700;color:#fff">12</div>
-          <div style="font-size:.78rem;color:rgba(255,255,255,.6)">វិស័យចម្បង</div>
+        <div class="text-center p-3 rounded-3 stat-hero">
+          <div class="stat-number">12</div>
+          <div class="stat-subtext">វិស័យចម្បង</div>
         </div>
-        <div class="text-center p-3 rounded-3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);min-width:90px">
-          <div style="font-size:1.8rem;font-weight:700;color:var(--accent-gold)">ថ្មី</div>
-          <div style="font-size:.78rem;color:rgba(255,255,255,.6)">Update ប្រចាំថ្ងៃ</div>
+        <div class="text-center p-3 rounded-3 stat-hero">
+          <div class="stat-number stat-number--accent">ថ្មី</div>
+          <div class="stat-subtext">Update ប្រចាំថ្ងៃ</div>
         </div>
       </div>
     </div>
@@ -246,7 +246,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#003087,#0056d2)">IT</div>
+                    <div class="card-org-logo logo-it">IT</div>
                     <span class="card-org-name">Tech Hub Cambodia</span>
                   </div>
                   <div class="card-title-text">Frontend Developer Internship Track</div>
@@ -275,7 +275,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#e55000,#ff7b00)">BZ</div>
+                    <div class="card-org-logo logo-bz">BZ</div>
                     <span class="card-org-name">Growth Partners</span>
                   </div>
                   <div class="card-title-text">Marketing and Sales Internship Category</div>
@@ -304,7 +304,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#1f7a8c,#2ec4b6)">DA</div>
+                    <div class="card-org-logo logo-da">DA</div>
                     <span class="card-org-name">Data Lab Asia</span>
                   </div>
                   <div class="card-title-text">Data Analyst Internship Program</div>
@@ -333,7 +333,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#8d5a97,#b98bc8)">HR</div>
+                    <div class="card-org-logo logo-hr">HR</div>
                     <span class="card-org-name">People First Co.</span>
                   </div>
                   <div class="card-title-text">Human Resources Internship</div>
@@ -362,7 +362,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#ef476f,#ff7b00)">CM</div>
+                    <div class="card-org-logo logo-cm">CM</div>
                     <span class="card-org-name">Campus Media</span>
                   </div>
                   <div class="card-title-text">Content Creator Internship</div>
@@ -391,7 +391,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#0b7a75,#1db954)">SV</div>
+                    <div class="card-org-logo logo-sv">SV</div>
                     <span class="card-org-name">Social Vision</span>
                   </div>
                   <div class="card-title-text">Community Outreach Internship</div>
@@ -420,7 +420,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#8250ff,#9f6dff)">UX</div>
+                    <div class="card-org-logo logo-ux">UX</div>
                     <span class="card-org-name">Creative Studio KH</span>
                   </div>
                   <div class="card-title-text">UI/UX and Graphic Internship Roles</div>
@@ -449,7 +449,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#009edb,#00b0f0)">ED</div>
+                    <div class="card-org-logo logo-ed">ED</div>
                     <span class="card-org-name">Learning Lab</span>
                   </div>
                   <div class="card-title-text">Teaching Assistant and Curriculum Internship</div>
@@ -478,7 +478,7 @@
                 </div>
                 <div class="card-body-custom">
                   <div class="card-org">
-                    <div class="card-org-logo" style="background:linear-gradient(135deg,#0b7a75,#15b7a8)">NG</div>
+                    <div class="card-org-logo logo-ng">NG</div>
                     <span class="card-org-name">Impact Cambodia</span>
                   </div>
                   <div class="card-title-text">Community and Project Coordination Internship</div>
@@ -503,7 +503,7 @@
             <div class="empty-icon">🔍</div>
             <div class="empty-title">រកមិនឃើញ !</div>
             <p class="empty-desc">សូមផ្លាស់ប្ដូរ keyword ឬ លុបការត្រង ហើយព្យាយាមម្ដងទៀត ។</p>
-            <button class="btn-card-detail" style="display:inline-block;width:auto;padding:10px 24px" onclick="clearFilters()">
+            <button class="btn-card-detail btn-card-detail--inline" onclick="clearFilters()">
               <i class="bi bi-x-circle me-1"></i> លុបការត្រង
             </button>
           </div>
@@ -516,8 +516,8 @@
             <img src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=200&q=80" class="list-img" alt="">
             <div class="list-body">
               <div class="d-flex align-items-center gap-2 mb-1">
-                <span class="card-tag tag-internship" style="position:static;font-size:.7rem;padding:2px 9px"><i class="bi bi-cpu me-1"></i>Tech</span>
-                <span style="font-size:.75rem;color:#e53e3e;font-weight:600"><i class="bi bi-clock me-1"></i>៣ ខែ</span>
+                <span class="card-tag tag-internship tag-inline"><i class="bi bi-cpu me-1"></i>Tech</span>
+                <span class="meta-time-red"><i class="bi bi-clock me-1"></i>៣ ខែ</span>
               </div>
               <div class="list-title">Frontend Developer Internship Track</div>
               <div class="list-meta">
@@ -541,8 +541,8 @@
             <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=200&q=80" class="list-img" alt="">
             <div class="list-body">
               <div class="d-flex align-items-center gap-2 mb-1">
-                <span class="card-tag tag-internship" style="position:static;font-size:.7rem;padding:2px 9px"><i class="bi bi-briefcase me-1"></i>Business</span>
-                <span style="font-size:.75rem;color:var(--accent-gold);font-weight:600"><i class="bi bi-clock me-1"></i>២ ខែ</span>
+                <span class="card-tag tag-internship tag-inline"><i class="bi bi-briefcase me-1"></i>Business</span>
+                <span class="meta-time-gold"><i class="bi bi-clock me-1"></i>២ ខែ</span>
               </div>
               <div class="list-title">Marketing and Sales Internship Category</div>
               <div class="list-meta">
@@ -565,8 +565,8 @@
             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&q=80" class="list-img" alt="">
             <div class="list-body">
               <div class="d-flex align-items-center gap-2 mb-1">
-                <span class="card-tag tag-internship" style="position:static;font-size:.7rem;padding:2px 9px"><i class="bi bi-palette me-1"></i>Design</span>
-                <span style="font-size:.75rem;color:var(--accent-green);font-weight:600"><i class="bi bi-clock me-1"></i>១-២ ខែ</span>
+                <span class="card-tag tag-internship tag-inline"><i class="bi bi-palette me-1"></i>Design</span>
+                <span class="meta-time-green"><i class="bi bi-clock me-1"></i>១-២ ខែ</span>
               </div>
               <div class="list-title">UI/UX and Graphic Internship Roles</div>
               <div class="list-meta">
@@ -670,15 +670,14 @@
             </a>
           </li>
         </ul>
-        <div class="mt-4 p-3 rounded-3" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">
-          <p style="color:rgba(255,255,255,.6);font-size:.83rem;margin-bottom:10px">
-            <i class="bi bi-bell me-1" style="color:var(--secondary-color)"></i>
+        <div class="mt-4 p-3 rounded-3 footer-subscribe">
+          <p class="footer-subscribe-text">
+            <i class="bi bi-bell me-1 icon-secondary"></i>
             ជាវដើម្បីទទួលឱកាសសិក្សាថ្មីៗ
           </p>
           <div class="d-flex gap-2">
-            <input type="email" class="form-control form-control-sm" placeholder="Email របស់អ្នក"
-              style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff">
-            <button class="btn btn-primary btn-sm px-3" style="white-space:nowrap">ជាវ</button>
+            <input type="email" class="form-control form-control-sm footer-input" placeholder="Email របស់អ្នក">
+            <button class="btn btn-primary btn-sm px-3 nowrap">ជាវ</button>
           </div>
         </div>
       </div>
