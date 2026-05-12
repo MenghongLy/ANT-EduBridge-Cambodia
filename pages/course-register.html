@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ចុះឈ្មោះ​វគ្គសិក្សា | EduKhmer</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/heng.css">
+</head>
+<body>
+  <main class="container register-container" style="padding:40px 0;">
+    <h1 class="section-title">ចុះឈ្មោះវគ្គសិក្សា</h1>
+    <form id="courseForm" class="register-form" novalidate>
+      <div class="form-row">
+        <label>ឈ្មោះពេញ</label>
+        <input name="fullname" type="text" required placeholder="ឈ្មោះរបស់អ្នក">
+      </div>
+      <div class="form-row">
+        <label>អ៊ីមែល</label>
+        <input name="email" type="email" required placeholder="you@example.com">
+      </div>
+      <div class="form-row">
+        <label>លេខទូរស័ព្ទ</label>
+        <input name="phone" type="tel" required placeholder="012 345 678">
+      </div>
+      <div class="form-row">
+        <label>កម្រិតសិក្សា</label>
+        <select name="level" required>
+          <option value="">-- ជ្រើសកម្រិត --</option>
+          <option value="beginner">ចាប់ផ្តើម</option>
+          <option value="intermediate">មធ្យម</option>
+          <option value="advanced">ខ្ពស់</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>ចំណាប់អារម្មណ៍/គោលបំណង</label>
+        <textarea name="notes" rows="4" placeholder="សេចក្តីពណ៌នា"></textarea>
+      </div>
+      <div class="form-row">
+        <button type="submit" class="btn btn-primary">ចុះឈ្មោះ</button>
+        <button type="button" class="btn btn-outline-secondary" onclick="history.back()">បោះបង់</button>
+      </div>
+      <div id="courseMessage" class="form-message" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById('courseForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const form = e.target;
+      if (!form.checkValidity()) {
+        document.getElementById('courseMessage').textContent = 'សូមបំពេញព័ត៌មានទាំងអស់ដែលចាំបាច់។';
+        return;
+      }
+      document.getElementById('courseMessage').textContent = 'ចុះឈ្មោះបានសម្រេច — ព័ត៌មានបន្ថែមនឹងត្រូវផ្ញើទៅអ៊ីម៉ែលរបស់អ្នក។';
+      form.reset();
+    });
+  </script>
+</body>
+</html>

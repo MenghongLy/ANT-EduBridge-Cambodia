@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ចុះឈ្មោះ​សម្រាប់​អាហារូបករណ៍ | EduKhmer</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/heng.css">
+</head>
+<body>
+  <main class="container register-container" style="padding:40px 0;">
+    <h1 class="section-title">ចុះឈ្មោះសម្រាប់អាហារូបករណ៍</h1>
+    <form id="scholarshipForm" class="register-form" novalidate>
+      <div class="form-row">
+        <label>ឈ្មោះពេញ</label>
+        <input name="fullname" type="text" required placeholder="ឈ្មោះរបស់អ្នក">
+      </div>
+      <div class="form-row">
+        <label>អ៊ីមែល</label>
+        <input name="email" type="email" required placeholder="you@example.com">
+      </div>
+      <div class="form-row">
+        <label>លេខទូរស័ព្ទ</label>
+        <input name="phone" type="tel" required placeholder="012 345 678">
+      </div>
+      <div class="form-row">
+        <label>សាកលវិទ្យាល័យ / ស្ថាប័ន</label>
+        <input name="institution" type="text" placeholder="ឧ. Royal University of Phnom Penh">
+      </div>
+      <div class="form-row">
+        <label>កម្មវិធីដែលចង់ដាក់ពាក្យ</label>
+        <select name="program" required>
+          <option value="">-- ជ្រើសកម្មវិធី --</option>
+          <option value="korea">កូរេ</option>
+          <option value="japan">ជប៉ុន</option>
+          <option value="australia">អូស្ត្រាលី</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>ហេតុផល/សង្ខេបបណ្តា</label>
+        <textarea name="motivation" rows="5" placeholder="សេចក្តីពណ៌នា(ជាភាសាខ្មែរ/អង់គ្លេស)"></textarea>
+      </div>
+      <div class="form-row">
+        <button type="submit" class="btn btn-primary">ដាក់ពាក្យ</button>
+        <button type="button" class="btn btn-outline-secondary" onclick="history.back()">បោះបង់</button>
+      </div>
+      <div id="scholarshipMessage" class="form-message" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById('scholarshipForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const form = e.target;
+      if (!form.checkValidity()) {
+        document.getElementById('scholarshipMessage').textContent = 'សូមបំពេញព័ត៌មានទាំងអស់ដែលចាំបាច់។';
+        return;
+      }
+      // Simple success feedback (no backend)
+      document.getElementById('scholarshipMessage').textContent = 'ការដាក់ពាក្យបានយល់ព្រម — យើងនឹងទំនាក់ទំនងមកអ្នក។';
+      form.reset();
+    });
+  </script>
+</body>
+</html>

@@ -2002,3 +2002,38 @@ footer {
   opacity: 0.4;
   cursor: not-allowed;
 }
+
+/* Registration form styles (added for scholarship/course register pages) */
+.register-container {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.register-form {
+  background: var(--bg-color);
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: var(--shadow-md);
+}
+.register-form .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.register-form label {
+  font-weight: 600;
+  color: var(--text-black);
+}
+.register-form input,
+.register-form select,
+.register-form textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+.form-message {
+  margin-top: 10px;
+  color: var(--primary-color);
+  font-weight: 600;
+}
