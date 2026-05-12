@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="../assets/css/chhay.css">
 </head>
 <body class="user-root-page">
+<!-- ===================== HEADER ===================== -->
 <header class="fixed-top shadow-sm">
 
   <!-- TOP BAR -->
@@ -46,7 +47,7 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="../index-logged.html">
         <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
         <div>
           <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ</div>
@@ -108,10 +109,10 @@
             <img src="https://ui-avatars.com/api/?name=Edu+User&background=0B5ED7&color=fff" alt="Profile" width="32" height="32" class="rounded-circle">
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="pages/profile.html"><i class="bi bi-person me-2"></i>ប្រវត្តិរូប</a></li>
-            <li><a class="dropdown-item" href="pages/settings.html"><i class="bi bi-gear me-2"></i>ការកំណត់</a></li>
+            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>ប្រវត្តិរូប</a></li>
+            <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>ការកំណត់</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item text-danger" href="index.html"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a></li>
+            <li><a class="dropdown-item text-danger" href="../index-logged.html"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a></li>
           </ul>
         </div>
         <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
@@ -121,16 +122,16 @@
 
       <!-- Desktop nav -->
       <ul class="navbar-nav mx-auto d-none d-lg-flex">
-        <li class="nav-item"><a class="nav-link active" href="index.html">ទំព័រដើម</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index-logged.html">ទំព័រដើម</a></li>
         <li class="nav-item">
-          <a class="nav-link" href="scholarships.html">
+          <a class="nav-link" href="scholarship-logged.html">
             <i class="bi bi-award me-1"></i>អាហារូបករណ៍
           </a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="courses.html"><i class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
-        <li class="nav-item"><a class="nav-link" href="exchange.html"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
-        <li class="nav-item"><a class="nav-link" href="internships.html"><i class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
-        <li class="nav-item"><a class="nav-link" href="volunteer.html"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
+        <li class="nav-item"><a class="nav-link" href="courses-logged.html"><i class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/exchange.html"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/internship-categories.html"><i class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/volunteer-international.html"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
       </ul>
       <div class="nav-auth d-none d-lg-flex align-items-center gap-2">
         <div class="dropdown">
@@ -185,10 +186,10 @@
             <img src="https://ui-avatars.com/api/?name=Edu+User&background=0B5ED7&color=fff" alt="Profile" width="34" height="34" class="rounded-circle">
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="pages/profile.html"><i class="bi bi-person me-2"></i>ប្រវត្តិរូប</a></li>
-            <li><a class="dropdown-item" href="pages/settings.html"><i class="bi bi-gear me-2"></i>ការកំណត់</a></li>
+            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>ប្រវត្តិរូប</a></li>
+            <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>ការកំណត់</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item text-danger" href="pages/login.html"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a></li>
+            <li><a class="dropdown-item text-danger" href="login.html"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a></li>
           </ul>
         </div>
       </div>
@@ -220,7 +221,7 @@
 </div>
 
 	<main class="container ur-container">
-		<section class="ur-hero mb-3">
+		<section class="ur-hero mb-3 mt-5">
 			<span class="ur-chip mb-2"><i class="bi bi-sliders"></i>Account Preferences</span>
 			<h1 class="ur-hero-title">ការកំណត់ <span class="ur-highlight">គណនីរបស់អ្នក</span></h1>
 			<p class="ur-hero-desc">គ្រប់គ្រងលក្ខណៈ notification, privacy និង language preferences ដើម្បីរៀបចំលក្ខណៈគណនីរបស់អ្នក។</p>
@@ -293,7 +294,88 @@
 			</div>
 		</div>
 	</main>
+<!-- ====================================================
+     FOOTER
+===================================================== -->
 <footer>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand-name">
+          <div class="footer-brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
+          EduKhmer
+        </div>
+        <p class="footer-desc">
+          វេទិកាអប់រំលេខ ១ ក្នុងកម្ពុជា  ភ្ជាប់យុវជនខ្មែរ
+          ជាមួយឱកាសសិក្សា និងការងារ ទូទាំងពិភពលោក ។
+          ចូលរួមជាមួយគ្រួសារ EduKhmer ថ្ងៃនេះ ឥតគិតថ្លៃ!
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5 class="footer-heading">ឱកាសសិក្សា</h5>
+        <ul class="footer-links">
+          <li><a href="scholarships.html"><i class="bi bi-chevron-right"></i>អាហារូបករណ៍</a></li>
+          <li><a href="courses.html"><i class="bi bi-chevron-right"></i>វគ្គសិក្សា</a></li>
+          <li><a href="exchange.html"><i class="bi bi-chevron-right"></i>ផ្លាស់ប្តូរ</a></li>
+          <li><a href="internships.html"><i class="bi bi-chevron-right"></i>ហាត់ការ</a></li>
+          <li><a href="volunteer.html"><i class="bi bi-chevron-right"></i>ស្ម័គ្រចិត្ត</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5 class="footer-heading">ជំនួយ</h5>
+        <ul class="footer-links">
+          <li><a href="about.html"><i class="bi bi-chevron-right"></i>អំពីយើង</a></li>
+          <li><a href="contact.html"><i class="bi bi-chevron-right"></i>ទំនាក់ទំនង</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5 class="footer-heading">ទំនាក់ទំនង</h5>
+        <ul class="footer-links">
+          <li>
+            <a href="mailto:info@edukhmer.com">
+              <i class="bi bi-envelope-at"></i> info@edukhmer.com
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/edukhmer">
+              <i class="bi bi-telegram"></i> @EduKhmer
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-geo-alt"></i> ភ្នំពេញ, កម្ពុជា
+            </a>
+          </li>
+        </ul>
+        <div class="mt-4 p-3 rounded-3" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">
+          <p style="color:rgba(255,255,255,.6);font-size:.83rem;margin-bottom:10px">
+            <i class="bi bi-bell me-1" style="color:var(--secondary-color)"></i>
+            ជាវដើម្បីទទួលឱកាសសិក្សាថ្មីៗ
+          </p>
+          <div class="d-flex gap-2">
+            <input type="email" class="form-control form-control-sm" placeholder="Email របស់អ្នក"
+              style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff">
+            <button class="btn btn-primary btn-sm px-3" style="white-space:nowrap">ជាវ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <span>© ២០២៦ EduKhmer. រក្សាសិទ្ធិគ្រប់យ៉ាង.</span>
+      <div class="d-flex gap-3">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
   <div class="container">
     <div class="row g-5">
       <div class="col-lg-4">
@@ -374,7 +456,7 @@
       </div>
     </div>
   </div>
-</footer>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
