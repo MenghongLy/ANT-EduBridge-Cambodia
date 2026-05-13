@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>គ្រប់គ្រងប្រភេទ — Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Hanuman:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+</head>
+
+<body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="fixed-top shadow-sm">
+        <div class="top-header">
+            <div class="container d-flex justify-content-between align-items-center">
+                <ul class="list-unstyled d-flex m-0">
+                    <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
+                    <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
+                </ul>
+                <div class="nav-action">
+                    <div class="dropdown">
+                        <button class="btn-lang dropdown-toggle border-0" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-globe2"></i> ភាសាខ្មែរ
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-check-lg text-primary me-1"></i>
+                                    ភាសាខ្មែរ</a></li>
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
+                        <i class="bi bi-moon-fill" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="../index-logged.html">
+                    <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo"
+                            class="brand-logo-img"></div>
+                    <div>
+                        <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> Admin
+                            Dashboard</div>
+                        EduKhmer
+                    </div>
+                </a>
+
+                <div class="d-flex d-lg-none align-items-center gap-2">
+                    <div class="dropdown">
+                        <button class="btn border-0 p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://ui-avatars.com/api/?name=Admin+User&background=0B5ED7&color=fff"
+                                alt="Profile" width="32" height="32" class="rounded-circle">
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="profile.html"><i
+                                        class="bi bi-person me-2"></i>ប្រវត្តិរូប</a>
+                            </li>
+                            <li><a class="dropdown-item" href="settings.html"><i
+                                        class="bi bi-gear me-2"></i>ការកំណត់</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="../index-logged.html"><i
+                                        class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileMenu">
+                        <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
+                    </button>
+                </div>
+
+                <ul class="navbar-nav ms-auto d-none d-lg-flex">
+                    <li class="nav-item"><a class="nav-link active" href="admin-categories.html"><i
+                                class="bi bi-list me-1"></i>ប្រភេទ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin-applications.html"><i
+                                class="bi bi-inbox me-1"></i>ការស្នើសុំ</a></li>
+                </ul>
+                <div class="nav-auth d-none d-lg-flex">
+                    <div class="dropdown">
+                        <button class="btn border-0 p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://ui-avatars.com/api/?name=Admin+User&background=0B5ED7&color=fff"
+                                alt="Profile" width="32" height="32" class="rounded-circle">
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="profile.html"><i
+                                        class="bi bi-person me-2"></i>ប្រវត្តិរូប</a>
+                            </li>
+                            <li><a class="dropdown-item" href="settings.html"><i
+                                        class="bi bi-gear me-2"></i>ការកំណត់</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="../index-logged.html"><i
+                                        class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===================== ADMIN SIDEBAR & CONTENT ===================== -->
+    <div style="display: flex; margin-top: 20px;">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar mt-5 ">
+            <div class="px-1">
+                <h6
+                    style="font-weight: 700; color: var(--text-muted); text-transform: uppercase; font-size: 0.8rem; margin-bottom: 15px;margin-left:25px;">
+                    គ្រប់គ្រង</h6>
+                <nav class="nav flex-column">
+                    <a href="admin-categories.html" class="nav-link active">
+                        <i class="bi bi-list me-2"></i>គ្រប់គ្រងប្រភេទ
+                    </a>
+                    <a href="admin-applications.html" class="nav-link">
+                        <i class="bi bi-inbox me-2"></i>គ្រប់គ្រងការស្នើសុំ
+                    </a>
+                </nav>
+
+                <hr style="margin: 20px 0; border-color: var(--border-color);">
+
+                <h6
+                    style="font-weight: 700; color: var(--text-muted); text-transform: uppercase; font-size: 0.8rem; margin-bottom: 15px;margin-left:25px;">
+                    ផ្នែក</h6>
+                <nav class="nav flex-column">
+                    <a href="#" class="nav-link" onclick="filterCategory('course')">
+                        <i class="bi bi-book me-2"></i>វគ្គសិក្សា
+                    </a>
+                    <a href="#" class="nav-link" onclick="filterCategory('scholarship')">
+                        <i class="bi bi-award me-2"></i>អាហារូបករណ៍
+                    </a>
+                    <a href="#" class="nav-link" onclick="filterCategory('exchange')">
+                        <i class="bi bi-globe me-2"></i>ផ្លាស់ប្តូរ
+                    </a>
+                    <a href="#" class="nav-link" onclick="filterCategory('internship')">
+                        <i class="bi bi-briefcase me-2"></i>ហាត់ការ
+                    </a>
+                    <a href="#" class="nav-link" onclick="filterCategory('volunteer')">
+                        <i class="bi bi-heart me-2"></i>ស្ម័គ្រចិត្ត
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-content" style="flex: 1;">
+            <!-- Page Header -->
+            <div style="margin-bottom: 30px;">
+                <h1 class="page-title">គ្រប់គ្រងប្រភេទ</h1>
+                <p class="page-subtitle">ស្វាគមន៍មកកាន់បន្ទាប់ដ្ឋាននិងគ្រប់គ្រងប្រភេទលម្អិត</p>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="stats-bar">
+                <div class="stat-card">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">វគ្គសិក្សា</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">អាហារូបករណ៍</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">ផ្លាស់ប្តូរ</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">ហាត់ការ</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">ស្ម័គ្រចិត្ត</div>
+                </div>
+            </div>
+
+            <!-- Add Button & Filters -->
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
+                <button class="btn-add-category" onclick="openAddModal()">
+                    <i class="bi bi-plus-circle"></i>
+                    បន្ថែមប្រភេទថ្មី
+                </button>
+
+                <div class="filter-tabs">
+                    <button class="filter-btn active" onclick="filterAllCategories()">ទាំងអស់</button>
+                    <button class="filter-btn" onclick="filterCategory('course')">វគ្គសិក្សា</button>
+                    <button class="filter-btn" onclick="filterCategory('scholarship')">អាហារូបករណ៍</button>
+                    <button class="filter-btn" onclick="filterCategory('exchange')">ផ្លាស់ប្តូរ</button>
+                    <button class="filter-btn" onclick="filterCategory('internship')">ហាត់ការ</button>
+                    <button class="filter-btn" onclick="filterCategory('volunteer')">ស្ម័គ្រចិត្ត</button>
+                </div>
+            </div>
+
+            <!-- Categories List -->
+            <div id="categoriesContainer">
+                <!-- Course Example -->
+                <div class="category-card" data-category="course">
+                    <div class="category-header">
+                        <div>
+                            <span class="category-type">វគ្គសិក្សា</span>
+                            <div class="category-title">Web Development Bootcamp</div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn-action btn-edit" onclick="editCategory(this)" title="កែប្រែ">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button class="btn-action btn-delete" onclick="deleteCategory(this)" title="លុប">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="category-description">
+                        វគ្គសិក្សាពេញលេញក្នុងការអភិវឌ្ឍ Web ដែលគ្របដណ្តប់ HTML, CSS, JavaScript និង React
+                    </p>
+
+                    <div class="category-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">ថ្នាក់ដ៏ល្អបំផុត</span>
+                            <span class="meta-value">Intermediate</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">រយៈពេល</span>
+                            <span class="meta-value">৪ សប្ताហ៍</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">តម្លៃ</span>
+                            <span class="meta-value">$299</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">ឧបករណ៍</span>
+                            <span class="meta-value">25/50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scholarship Example -->
+                <div class="category-card" data-category="scholarship">
+                    <div class="category-header">
+                        <div>
+                            <span class="category-type" style="background: #4CAF50;">អាហារូបករណ៍</span>
+                            <div class="category-title">ឯកលេខ STEM Scholarship</div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn-action btn-edit" onclick="editCategory(this)" title="កែប្រែ">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button class="btn-action btn-delete" onclick="deleteCategory(this)" title="លុប">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="category-description">
+                        អាហារូបករណ៍សម្រាប់សិស្សដែលមាននូវគុណវិសេស STEM ដើម្បីប្រឡងចូលសាលៃប័ទ្ម
+                    </p>
+
+                    <div class="category-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">ថ្នាក់ដ៏ល្អបំផុត</span>
+                            <span class="meta-value">High School</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">ចំនួន</span>
+                            <span class="meta-value">$5,000</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">ចំនួនក្រុម</span>
+                            <span class="meta-value">10</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">ឧបករណ៍</span>
+                            <span class="meta-value">7/10</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exchange Example -->
+                <div class="category-card" data-category="exchange">
+                    <div class="category-header">
+                        <div>
+                            <span class="category-type" style="background: #FF9800;">ផ្លាស់ប្តូរ</span>
+                            <div class="category-title">ប្រែប្រួល USA Exchange Program</div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn-action btn-edit" onclick="editCategory(this)" title="កែប្រែ">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button class="btn-action btn-delete" onclick="deleteCategory(this)" title="លុប">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="category-description">
+                        របៀបរៀនក្នុងសាលៃប័ទ្មនិងក្នុងសម្រាក ដ៏ល្អបំផុតក្នុងសហរដ្ឋអាមេរិក
+                    </p>
+
+                    <div class="category-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">ប្រទេស</span>
+                            <span class="meta-value">United States</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">រយៈពេល</span>
+                            <span class="meta-value">១ឆ្នាំ</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">តម្លៃ</span>
+                            <span class="meta-value">ឥតគិតថ្លៃ</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">ឧបករណ៍</span>
+                            <span class="meta-value">15/20</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internship Example -->
+                <div class="category-card" data-category="internship">
+                    <div class="category-header">
+                        <div>
+                            <span class="category-type" style="background: #9C27B0;">ហាត់ការ</span>
+                            <div class="category-title">Frontend Developer Internship</div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn-action btn-edit" onclick="editCategory(this)" title="កែប្រែ">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button class="btn-action btn-delete" onclick="deleteCategory(this)" title="លុប">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="category-description">
+                        ឧស្សាហកម្មតាំងក្នុង Frontend Development ក្នុងក្រុមបច្ចេកវិទ្យា
+                    </p>
+
+                    <div class="category-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">ក្រុមហ៊ុន</span>
+                            <span class="meta-value">Tech Corp</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">រយៈពេល</span>
+                            <span class="meta-value">3 ខែ</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">ខែច្បាប់</span>
+                            <span class="meta-value">$500/ខែ</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">ឧបករណ៍</span>
+                            <span class="meta-value">3/5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Volunteer Example -->
+                <div class="category-card" data-category="volunteer">
+                    <div class="category-header">
+                        <div>
+                            <span class="category-type" style="background: #E91E63;">ស្ម័គ្រចិត្ត</span>
+                            <div class="category-title">Community Service Volunteer</div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn-action btn-edit" onclick="editCategory(this)" title="កែប្រែ">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button class="btn-action btn-delete" onclick="deleteCategory(this)" title="លុប">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="category-description">
+                        ឧបករណ៍ស្ម័គ្រចិត្តនៅក្នុងក្រុងសហគមន៍ដើម្បីជួយក្រុមអ្នកមិនមាន
+                    </p>
+
+                    <div class="category-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">ទីតាំង</span>
+                            <span class="meta-value">Phnom Penh</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">រយៈពេល</span>
+                            <span class="meta-value">កំប្លង</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">តម្លៃ</span>
+                            <span class="meta-value">ឥតគិតថ្លៃ</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">ឧបករណ៍</span>
+                            <span class="meta-value">12/Unlimited</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add/Edit Modal -->
+    <div class="modal fade" id="categoryModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background: var(--bg-card); border: 1px solid var(--border-color);">
+                <div class="modal-header" style="border-bottom: 1px solid var(--border-color);">
+                    <h5 class="modal-title">បន្ថែម/កែប្រែប្រភេទ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="categoryForm">
+                        <div class="mb-3">
+                            <label for="categoryTitle" class="form-label">ចំណងជើង</label>
+                            <input type="text" class="form-control" id="categoryTitle"
+                                placeholder="ឧទាហរណ៍៖ Web Development" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="categoryType" class="form-label">ប្រភេទ</label>
+                            <select class="form-control" id="categoryType" required>
+                                <option value="">-- ជ្រើសរើស --</option>
+                                <option value="course">វគ្គសិក្សា</option>
+                                <option value="scholarship">អាហារូបករណ៍</option>
+                                <option value="exchange">ផ្លាស់ប្តូរ</option>
+                                <option value="internship">ហាត់ការ</option>
+                                <option value="volunteer">ស្ម័គ្រចិត្ត</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="categoryDesc" class="form-label">ការពិពណ៌នា</label>
+                            <textarea class="form-control" id="categoryDesc" rows="4" placeholder="ពិពណ៌នាលម្អិត"
+                                required></textarea>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="categoryLevel" class="form-label">កម្រិត/ប្រភេទ</label>
+                                <input type="text" class="form-control" id="categoryLevel"
+                                    placeholder="ឧទាហរណ៍៖ Intermediate">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="categoryDuration" class="form-label">រយៈពេល</label>
+                                <input type="text" class="form-control" id="categoryDuration"
+                                    placeholder="ឧទាហរណ៍៖ 4 សប្ताហ៍">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="categoryPrice" class="form-label">តម្លៃ</label>
+                                <input type="text" class="form-control" id="categoryPrice" placeholder="$0 ឬ ឥតគិតថ្លៃ">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="categorySlots" class="form-label">ឧបករណ៍ដែលមាន</label>
+                                <input type="number" class="form-control" id="categorySlots" placeholder="ឧទាហរណ៍៖ 50">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer" style="border-top: 1px solid var(--border-color);">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">បិទ</button>
+                    <button type="button" class="btn" style="background: var(--primary-color); color: white;"
+                        onclick="saveCategory()">រក្សាទុក</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+
+    <script>
+        // Theme toggle
+        const themeToggle = document.querySelector('[data-theme-toggle]');
+        const html = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon();
+        });
+
+        function updateThemeIcon() {
+            const icon = document.getElementById('theme-icon');
+            const theme = html.getAttribute('data-theme');
+            icon.className = theme === 'light' ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeIcon();
+
+        // Filter functions
+        function filterAllCategories() {
+            const cards = document.querySelectorAll('.category-card');
+            cards.forEach(card => card.style.display = 'block');
+            updateFilterButtons('all');
+        }
+
+        function filterCategory(type) {
+            const cards = document.querySelectorAll('.category-card');
+            cards.forEach(card => {
+                if (card.dataset.category === type) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            updateFilterButtons(type);
+        }
+
+        function updateFilterButtons(activeType) {
+            // Remove active class from all filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Add active class to the matching filter button
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                if (btn.textContent.includes(activeType === 'all' ? 'ទាំងអស់' :
+                    activeType === 'course' ? 'វគ្គសិក្សា' :
+                        activeType === 'scholarship' ? 'អាហារូបករណ៍' :
+                            activeType === 'exchange' ? 'ផ្លាស់ប្តូរ' : '')) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        // Modal functions
+        function openAddModal() {
+            document.getElementById('categoryForm').reset();
+            const modal = new bootstrap.Modal(document.getElementById('categoryModal'));
+            modal.show();
+        }
+
+        function editCategory(button) {
+            const card = button.closest('.category-card');
+            const title = card.querySelector('.category-title').textContent;
+            const description = card.querySelector('.category-description').textContent;
+
+            document.getElementById('categoryTitle').value = title;
+            document.getElementById('categoryDesc').value = description;
+
+            const modal = new bootstrap.Modal(document.getElementById('categoryModal'));
+            modal.show();
+        }
+
+        function deleteCategory(button) {
+            if (confirm('តើលោកអ្នកប្រាកដថាលុបប្រភេទនេះ?')) {
+                const card = button.closest('.category-card');
+                card.style.opacity = '0';
+                setTimeout(() => card.remove(), 300);
+            }
+        }
+
+        function saveCategory() {
+            const form = document.getElementById('categoryForm');
+            if (form.checkValidity()) {
+                alert('ប្រភេទបានរក្សាទុកដោយជោគជ័យ!');
+                const modal = bootstrap.Modal.getInstance(document.getElementById('categoryModal'));
+                modal.hide();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
