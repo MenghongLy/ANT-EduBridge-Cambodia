@@ -238,7 +238,7 @@
               </div>
             </div>
 
-            <button class="btn-apply" onclick="applyNow()">
+            <button class="btn-apply" onclick="location.href='login.html'">
               <i class="bi bi-send-fill"></i> ដាក់ពាក្យឥឡូវ!
             </button>
             <button class="btn-save" id="save-btn" onclick="toggleSaveBtn()">
@@ -441,55 +441,6 @@
     }
 
     // ── APPLY ──
-    function applyNow() {
-      const modal = `
-      <div class="modal fade" id="applyModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content rounded-card">
-            <div class="modal-header border-0 pb-0">
-              <h5 class="modal-title strong"><i class="bi bi-send-fill me-2 icon-primary"></i>ដាក់ពាក្យ</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-              <div class="p-3 rounded-3 mb-3 highlight-panel-green">
-                <small class="highlight-green"><i class="bi bi-check-circle-fill me-1 icon-green"></i>EduKhmer Pre-Selection — FREE!</small>
-              </div>
-              <div class="mb-3">
-                <label class="label-strong">ឈ្មោះ *</label>
-                <input type="text" class="form-control input-inherit" placeholder="ឈ្មោះពេញ (Khmer + Latin)">
-              </div>
-              <div class="mb-3">
-                <label class="label-strong">Email *</label>
-                <input type="email" class="form-control" placeholder="example@gmail.com">
-              </div>
-              <div class="mb-3">
-                <label class="label-strong">Telegram *</label>
-                <input type="text" class="form-control" placeholder="@username">
-              </div>
-              <div class="mb-3">
-                <label class="label-strong">ស្ថាប័ន / University *</label>
-                <input type="text" class="form-control" placeholder="ឈ្មោះ University ឬ ស្ថាប័ន">
-              </div>
-              <div class="mb-3">
-                <label class="label-strong">ហេតុអ្វីចង់ចូលរួម? (Short Answer)</label>
-                <textarea class="form-control textarea-no-resize" rows="3" placeholder="ប្រាប់ EduKhmer ៣-៥ ប្រយោគ..."></textarea>
-              </div>
-            </div>
-            <div class="modal-footer border-0 pt-0">
-              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">បោះបង់</button>
-              <button type="button" class="btn btn-primary px-4 fw-bold" onclick="submitApplication()">
-                <i class="bi bi-send me-1"></i> ដាក់ Pre-Application
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>`;
-      document.body.insertAdjacentHTML('beforeend', modal);
-      const m = new bootstrap.Modal(document.getElementById('applyModal'));
-      m.show();
-      document.getElementById('applyModal').addEventListener('hidden.bs.modal', function () { this.remove(); });
-    }
-
     function submitApplication() {
       const modal = bootstrap.Modal.getInstance(document.getElementById('applyModal'));
       modal.hide();
