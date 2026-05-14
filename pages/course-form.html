@@ -145,9 +145,9 @@
                                 class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
                     <li class="nav-item"><a class="nav-link" href="exchange-logged.html"><i
                                 class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="internship-categories.html"><i
+                    <li class="nav-item"><a class="nav-link" href="internship-categories-logged.html"><i
                                 class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="volunteer-international.html"><i
+                    <li class="nav-item"><a class="nav-link" href="volunteer-international-logged.html"><i
                                 class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
                 </ul>
                 <div class="nav-auth d-none d-lg-flex align-items-center gap-2">
@@ -328,44 +328,54 @@
                                 <!-- Full name -->
                                 <div class="row g-3">
                                     <div class="col-12">
-                                        <label class="form-label">ឈ្មោះពេញលេញ</label>
-                                        <input type="text" class="form-control" id="name"
-                                            placeholder="First Name Last Name">
-                                        <div id="err-name" class="error-text"></div>
+                                        <div class="field-group">
+                                            <label class="field-label">ឈ្មោះពេញលេញ</label>
+                                            <input type="text" class="f-input" id="name"
+                                                placeholder="First Name Last Name">
+                                            <div id="err-name" class="field-error"></div>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- Email + Phone -->
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <label class="form-label">អ៊ីម៉ែល</label>
-                                        <input type="email" class="form-control" id="email"
-                                            placeholder="your@email.com">
-                                        <div id="err-email" class="error-text"></div>
+                                        <div class="field-group">
+                                            <label class="field-label">អ៊ីម៉ែល</label>
+                                            <input type="email" class="f-input" id="email"
+                                                placeholder="your@email.com">
+                                            <div id="err-email" class="field-error"></div>
+                                        </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="form-label">លេខទូរស័ព្ទ</label>
-                                        <input type="tel" class="form-control" id="phone"
-                                            placeholder="+855 93 XXX XXX">
-                                        <div id="err-phone" class="error-text"></div>
+                                        <div class="field-group">
+                                            <label class="field-label">លេខទូរស័ព្ទ</label>
+                                            <input type="tel" class="f-input" id="phone"
+                                                placeholder="+855 93 XXX XXX">
+                                            <div id="err-phone" class="field-error"></div>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- Country + City -->
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <label class="form-label">ប្រទេស</label>
-                                        <select class="form-select" id="country">
-                                            <option value="">ជ្រើសរើស...</option>
-                                            <option value="កម្ពុជា">កម្ពុជា</option>
-                                            <option value="ថៃ">ថៃ</option>
-                                            <option value="វៀតណាម">វៀតណាម</option>
-                                            <option value="ឡាវ">ឡាវ</option>
-                                        </select>
+                                        <div class="field-group">
+                                            <label class="field-label">ប្រទេស</label>
+                                            <select class="f-select" id="country">
+                                                <option value="">ជ្រើសរើស...</option>
+                                                <option value="កម្ពុជា">កម្ពុជា</option>
+                                                <option value="ថៃ">ថៃ</option>
+                                                <option value="វៀតណាម">វៀតណាម</option>
+                                                <option value="ឡាវ">ឡាវ</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="form-label">ក្រុង / ខេត្ត</label>
-                                        <input type="text" class="form-control" id="city" placeholder="City">
+                                        <div class="field-group">
+                                            <label class="field-label">ក្រុង / ខេត្ត</label>
+                                            <input type="text" class="f-input" id="city" placeholder="City">
+                                        </div>
                                     </div>
                                 </div>
 
@@ -387,8 +397,8 @@
 
                                 <!-- Experience level -->
                                 <div class="field-group">
-                                    <label class="form-label">កម្រិតបទពិសោធ</label>
-                                    <select class="form-select" id="experience">
+                                    <label class="field-label">កម្រិតបទពិសោធ</label>
+                                    <select class="f-select" id="experience">
                                         <option value="">ជ្រើសរើស...</option>
                                         <option value="ចាប់ផ្តើម">ចាប់ផ្តើម (Beginner)</option>
                                         <option value="មជ្ឈម">មជ្ឈម (Intermediate)</option>
@@ -398,14 +408,14 @@
 
                                 <!-- Learning objective -->
                                 <div class="field-group">
-                                    <label class="form-label">គោលដៅក្នុងការរៀន</label>
-                                    <textarea class="form-control" id="objective" rows="3"
+                                    <label class="field-label">គោលដៅក្នុងការរៀន</label>
+                                    <textarea class="f-textarea" id="objective" rows="3"
                                         placeholder="ពិពណ៌នាលម្អិតថាហេតុបណ្តាប់បណ្តល់ដោយលក្ខណៈនេះ..."></textarea>
                                 </div>
 
                                 <!-- Course format preference -->
                                 <div class="field-group">
-                                    <label class="form-label">ម៉ូដការលេខ</label>
+                                    <label class="field-label">ម៉ូដការលេខ</label>
                                     <div class="d-flex gap-3">
                                         <label class="chip-label">
                                             <input type="radio" name="format" value="Online" />
@@ -442,7 +452,7 @@
 
                                 <!-- Payment method -->
                                 <div class="field-group">
-                                    <label class="form-label">វិធីបង់ប្រាក់</label>
+                                    <label class="field-label">វិធីបង់ប្រាក់</label>
                                     <div class="d-flex gap-3 flex-wrap">
                                         <label class="chip-label">
                                             <input type="radio" name="payment-method" value="Credit Card" />
@@ -462,29 +472,33 @@
 
                                 <!-- Card details (if credit card selected) -->
                                 <div class="field-group">
-                                    <label class="form-label">លេខប័ណ្ណ</label>
-                                    <input type="text" class="form-control" id="card-number" placeholder="1234 5678 9012 3456"
+                                    <label class="field-label">លេខប័ណ្ណ</label>
+                                    <input type="text" class="f-input" id="card-number" placeholder="1234 5678 9012 3456"
                                         maxlength="19">
-                                    <div id="err-card" class="error-text"></div>
+                                    <div id="err-card" class="field-error"></div>
                                 </div>
 
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <label class="form-label">ថ្ងៃផុតកំណត់</label>
-                                        <input type="text" class="form-control" id="card-expiry"
-                                            placeholder="MM/YY" maxlength="5">
+                                        <div class="field-group">
+                                            <label class="field-label">ថ្ងៃផុតកំណត់</label>
+                                            <input type="text" class="f-input" id="card-expiry"
+                                                placeholder="MM/YY" maxlength="5">
+                                        </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="form-label">CVV</label>
-                                        <input type="text" class="form-control" id="card-cvv" placeholder="123"
-                                            maxlength="3">
+                                        <div class="field-group">
+                                            <label class="field-label">CVV</label>
+                                            <input type="text" class="f-input" id="card-cvv" placeholder="123"
+                                                maxlength="3">
+                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- Cardholder name -->
                                 <div class="field-group">
-                                    <label class="form-label">ឈ្មោះម្ចាស់ប័ណ្ណ</label>
-                                    <input type="text" class="form-control" id="card-name" placeholder="Full Name">
+                                    <label class="field-label">ឈ្មោះម្ចាស់ប័ណ្ណ</label>
+                                    <input type="text" class="f-input" id="card-name" placeholder="Full Name">
                                 </div>
 
                                 <div class="form-nav">
@@ -555,7 +569,7 @@
                                             ខ្ញុំយល់ព្រម និង ទទួលយក លក្ខខណ្ឌផ្សេងៗ និង នយោបាយលម្អិតលេខ EduKhmer
                                         </span>
                                     </label>
-                                    <div id="err-terms" class="error-text"></div>
+                                    <div id="err-terms" class="field-error"></div>
                                 </div>
 
                                 <div class="form-nav">
@@ -759,7 +773,7 @@
                             ជាវដើម្បីទទួលវគ្គសិក្សាថ្មីៗ
                         </p>
                         <div class="d-flex gap-2">
-                            <input type="email" class="form-control form-control-sm" placeholder="Email របស់អ្នក"
+                            <input type="email" class="f-input f-input-sm" placeholder="Email របស់អ្នក"
                                 style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff">
                             <button class="btn btn-primary btn-sm px-3" style="white-space:nowrap">ជាវ</button>
                         </div>

@@ -4602,6 +4602,15 @@ select.form-control-custom {
   gap: 0;
 }
 
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+  gap: 8px;
+}
 
 .step-item:not(:last-child)::after {
   content: '';
