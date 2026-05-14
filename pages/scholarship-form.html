@@ -150,9 +150,9 @@
                                 class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
                     <li class="nav-item"><a class="nav-link" href="exchange-logged.html"><i
                                 class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="internship-categories.html"><i
+                    <li class="nav-item"><a class="nav-link" href="internship-categories-logged.html"><i
                                 class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="volunteer-international.html"><i
+                    <li class="nav-item"><a class="nav-link" href="volunteer-international-logged.html"><i
                                 class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
                 </ul>
                 <div class="nav-auth d-none d-lg-flex align-items-center gap-2">
@@ -338,28 +338,28 @@
                                 <!-- Full name -->
                                 <div class="row g-3">
                                     <div class="col-12">
-                                        <label class="form-label">ឈ្មោះពេញលេញ (ខ្មែរ)</label>
-                                        <input type="text" class="form-control" id="name-km"
+                                        <label class="field-label">ឈ្មោះពេញលេញ (ខ្មែរ)</label>
+                                        <input type="text" class="f-input" id="name-km"
                                             placeholder="ឈ្មោះលេខ១ ឈ្មោះលេខ២">
-                                        <div id="err-name-km" class="error-text"></div>
+                                        <div id="err-name-km" class="field-error"></div>
                                     </div>
                                     <div class="col-12">
-                                        <label class="form-label">ឈ្មោះពេញលេញ (អង់គ្លេស)</label>
-                                        <input type="text" class="form-control" id="name-en" placeholder="Full Name">
-                                        <div id="err-name-en" class="error-text"></div>
+                                        <label class="field-label">ឈ្មោះពេញលេញ (អង់គ្លេស)</label>
+                                        <input type="text" class="f-input" id="name-en" placeholder="Full Name">
+                                        <div id="err-name-en" class="field-error"></div>
                                     </div>
                                 </div>
 
                                 <!-- DOB + Gender -->
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <label class="form-label">ថ្ងៃ ខែ ឆ្នាំកំណើត</label>
-                                        <input type="date" class="form-control" id="dob">
-                                        <div id="err-dob" class="error-text"></div>
+                                        <label class="field-label">ថ្ងៃ ខែ ឆ្នាំកំណើត</label>
+                                        <input type="date" class="f-input" id="dob">
+                                        <div id="err-dob" class="field-error"></div>
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="form-label">ភេទ</label>
-                                        <select class="form-select" id="gender">
+                                        <label class="field-label">ភេទ</label>
+                                        <select class="f-select" id="gender">
                                             <option value="">ជ្រើសរើស...</option>
                                             <option value="ប្រុស">ប្រុស</option>
                                             <option value="ស្រី">ស្រី</option>
@@ -371,13 +371,13 @@
                                 <!-- Nationality + ID -->
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <label class="form-label">សញ្ជាតិ</label>
-                                        <input type="text" class="form-control" value="ខ្មែរ" readonly>
+                                        <label class="field-label">សញ្ជាតិ</label>
+                                        <input type="text" class="f-input" value="ខ្មែរ" readonly>
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="form-label">លេខអត្តសញ្ញាណប័ណ្ណ</label>
-                                        <input type="text" class="form-control" id="passport" placeholder="១២៣៤៥៦៧">
-                                        <div id="err-passport" class="error-text"></div>
+                                        <label class="field-label">លេខអត្តសញ្ញាណប័ណ្ណ</label>
+                                        <input type="text" class="f-input" id="passport" placeholder="១២៣៤៥៦៧">
+                                        <div id="err-passport" class="field-error"></div>
                                     </div>
                                 </div>
 
@@ -386,27 +386,27 @@
                                 <!-- Email + Phone -->
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <label class="form-label">ប្រអប់សម្របសម្រួល ឈ្មោះ (Email)</label>
-                                        <input type="email" class="form-control" id="email"
+                                        <label class="field-label">ប្រអប់សម្របសម្រួល ឈ្មោះ (Email)</label>
+                                        <input type="email" class="f-input" id="email"
                                             placeholder="your@email.com">
-                                        <div id="err-email" class="error-text"></div>
+                                        <div id="err-email" class="field-error"></div>
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="form-label">លេខទូរស័ព្ទ</label>
-                                        <input type="tel" class="form-control" id="phone" placeholder="+855 93 XXX XXX">
-                                        <div id="err-phone" class="error-text"></div>
+                                        <label class="field-label">លេខទូរស័ព្ទ</label>
+                                        <input type="tel" class="f-input" id="phone" placeholder="+855 93 XXX XXX">
+                                        <div id="err-phone" class="field-error"></div>
                                     </div>
                                 </div>
 
                                 <!-- Telegram + Address -->
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <label class="form-label">Telegram (Optional)</label>
-                                        <input type="text" class="form-control" id="telegram" placeholder="@username">
+                                        <label class="field-label">Telegram (Optional)</label>
+                                        <input type="text" class="f-input" id="telegram" placeholder="@username">
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="form-label">ខេត្ត / ក្រុង</label>
-                                        <select class="form-select" id="province">
+                                        <label class="field-label">ខេត្ត / ក្រុង</label>
+                                        <select class="f-select" id="province">
                                             <option value="">ជ្រើសរើស...</option>
                                             <option value="ភ្នំពេញ">ភ្នំពេញ</option>
                                             <option value="បន្ទាយមានជ័យ">បន្ទាយមានជ័យ</option>
@@ -416,7 +416,8 @@
                                 </div>
 
                                 <div class="form-nav">
-                                    <button class="btn-next" onclick="goNext(1)">ជំហានបន្ទាប់ <i class="bi bi-arrow-right"></i></button>
+                                    <button class="btn-next" onclick="goNext(1)">ជំហានបន្ទាប់ <i
+                                            class="bi bi-arrow-right"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -432,8 +433,8 @@
 
                                 <!-- Current level -->
                                 <div class="field-group">
-                                    <label class="form-label">កម្រិតការសិក្សាបច្ចុប្បន្ន</label>
-                                    <select class="form-select" id="edu-level">
+                                    <label class="field-label">កម្រិតការសិក្សាបច្ចុប្បន្ន</label>
+                                    <select class="f-select" id="edu-level">
                                         <option value="">ជ្រើសរើស...</option>
                                         <option value="វិទ្យាល័យ">វិទ្យាល័យ</option>
                                         <option value="បរិញ្ញាបត្រ">បរិញ្ញាបត្រ (Undergrad)</option>
@@ -445,23 +446,23 @@
                                 <!-- University + Major -->
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <label class="form-label">ឈ្មោះមហាវិទ្យាល័យ</label>
-                                        <input type="text" class="form-control" id="university"
+                                        <label class="field-label">ឈ្មោះមហាវិទ្យាល័យ</label>
+                                        <input type="text" class="f-input" id="university"
                                             placeholder="University Name">
-                                        <div id="err-uni" class="error-text"></div>
+                                        <div id="err-uni" class="field-error"></div>
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="form-label">វិទ្យាស័ថ / មហាវិទ្យាស័ថ</label>
-                                        <input type="text" class="form-control" id="major"
+                                        <label class="field-label">វិទ្យាស័ថ / មហាវិទ្យាស័ថ</label>
+                                        <input type="text" class="f-input" id="major"
                                             placeholder="Major/Field of Study">
-                                        <div id="err-major" class="error-text"></div>
+                                        <div id="err-major" class="field-error"></div>
                                     </div>
                                 </div>
 
                                 <!-- GPA -->
                                 <div class="field-group">
-                                    <label class="form-label">GPA / ពិន្ទុធម្មតា</label>
-                                    <input type="number" class="form-control" id="gpa" placeholder="3.8" min="0" max="4"
+                                    <label class="field-label">GPA / ពិន្ទុធម្មតា</label>
+                                    <input type="number" class="f-input" id="gpa" placeholder="3.8" min="0" max="4"
                                         step="0.01">
                                 </div>
 
@@ -469,21 +470,23 @@
 
                                 <!-- Achievement -->
                                 <div class="field-group">
-                                    <label class="form-label">ឆ្នើតលទ្ធផល / រង្វាន់សិក្សា</label>
-                                    <textarea class="form-control" id="achievement" rows="3"
+                                    <label class="field-label">ឆ្នើតលទ្ធផល / រង្វាន់សិក្សា</label>
+                                    <textarea class="f-input" id="achievement" rows="3"
                                         placeholder="បង្រាយលម្អិតអំពីរង្វាន់ ឆ្នើត ឬលទ្ធផលលម្អិត"></textarea>
                                 </div>
 
                                 <!-- Year expected -->
                                 <div class="field-group">
-                                    <label class="form-label">ឆ្នាំបញ្ចប់ការសិក្សា</label>
-                                    <input type="number" class="form-control" id="grad-year" placeholder="2025"
+                                    <label class="field-label">ឆ្នាំបញ្ចប់ការសិក្សា</label>
+                                    <input type="number" class="f-input" id="grad-year" placeholder="2025"
                                         min="2025" max="2030">
                                 </div>
 
                                 <div class="form-nav">
-                                    <button class="btn-back" onclick="goBack(2)"><i class="bi bi-arrow-left"></i> ថយក្រោយ</button>
-                                    <button class="btn-next" onclick="goNext(2)">ជំហានបន្ទាប់ <i class="bi bi-arrow-right"></i></button>
+                                    <button class="btn-back" onclick="goBack(2)"><i class="bi bi-arrow-left"></i>
+                                        ថយក្រោយ</button>
+                                    <button class="btn-next" onclick="goNext(2)">ជំហានបន្ទាប់ <i
+                                            class="bi bi-arrow-right"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -499,8 +502,8 @@
 
                                 <!-- Financial situation -->
                                 <div class="field-group">
-                                    <label class="form-label">ស្ថានភាពហិរញ្ញវត្ថុ</label>
-                                    <select class="form-select" id="financial-status">
+                                    <label class="field-label">ស្ថានភាពហិរញ្ញវត្ថុ</label>
+                                    <select class="f-select" id="financial-status">
                                         <option value="">ជ្រើសរើស...</option>
                                         <option value="ក្រីក្រ">ក្រីក្រ (មិនមានលក្ខណៈថ្លៃថ្នូរ)</option>
                                         <option value="មិនលឹងក់">មិនលឹងក់ (ថ្លៃថ្នូរមាន)</option>
@@ -510,17 +513,17 @@
 
                                 <!-- Parent income -->
                                 <div class="field-group">
-                                    <label class="form-label">ប្រមាណលាក់កម្មលក្ខណៈឪពុកម្ដាយ (ប្រចាំឆ្នាំ)</label>
+                                    <label class="field-label">ប្រមាណលាក់កម្មលក្ខណៈឪពុកម្ដាយ (ប្រចាំឆ្នាំ)</label>
                                     <div class="input-group">
-                                        <input type="number" class="form-control" id="family-income" placeholder="0">
+                                        <input type="number" class="f-input" id="family-income" placeholder="0">
                                         <span class="input-group-text">$ USD</span>
                                     </div>
                                 </div>
 
                                 <!-- Number of dependents -->
                                 <div class="field-group">
-                                    <label class="form-label">ចំនួនសមាជិកក្រុមលេខ (រួមទាំងអ្នក)</label>
-                                    <input type="number" class="form-control" id="dependents" placeholder="4" min="1"
+                                    <label class="field-label">ចំនួនសមាជិកក្រុមលេខ (រួមទាំងអ្នក)</label>
+                                    <input type="number" class="f-input" id="dependents" placeholder="4" min="1"
                                         max="20">
                                 </div>
 
@@ -528,25 +531,25 @@
 
                                 <!-- Scholarship essay -->
                                 <div class="field-group">
-                                    <label class="form-label">
+                                    <label class="field-label">
                                         ហេតុផលដែលលាក់ក្លែង? <span style="color:var(--text-muted)">(ដាច់ដោយឡែក ១៥០-៣០០
                                             ពាក្យ)</span>
                                     </label>
-                                    <textarea class="form-control" id="essay" rows="5"
+                                    <textarea class="f-input" id="essay" rows="5"
                                         placeholder="ពន្យល់លម្អិតថាហេតុជាដូចម្ដេចដែលលាក់ក្លែងនេះ សមស្របទៅនឹងគោលដៅក្នុងការសិក្សា និងផ្នែកជំនាញរបស់អ្នក..."></textarea>
                                     <div class="text-muted" style="font-size:.85rem;margin-top:8px">
                                         <span id="essay-count">0 ពាក្យ</span>
                                     </div>
-                                    <div id="err-essay" class="error-text"></div>
+                                    <div id="err-essay" class="field-error"></div>
                                 </div>
 
                                 <!-- Supporting documents -->
                                 <div class="field-group">
-                                    <label class="form-label">
+                                    <label class="field-label">
                                         ឯកសារគាំទ្ន <span style="color:var(--red)">*</span>
                                     </label>
                                     <div class="file-drop" id="drop-docs">
-                                        <input type="file" class="form-control d-none" id="file-docs"
+                                        <input type="file" class="f-input d-none" id="file-docs"
                                             accept=".pdf,.doc,.docx"
                                             onchange="handleFile(this, 'drop-docs', 'docs-name')">
                                         <div style="text-align:center;padding:40px 20px;cursor:pointer"
@@ -560,12 +563,14 @@
                                                 style="margin-top:12px;font-size:.9rem;color:var(--primary)"></div>
                                         </div>
                                     </div>
-                                    <div id="err-docs" class="error-text"></div>
+                                    <div id="err-docs" class="field-error"></div>
                                 </div>
 
                                 <div class="form-nav">
-                                    <button class="btn-back" onclick="goBack(3)"><i class="bi bi-arrow-left"></i> ថយក្រោយ</button>
-                                    <button class="btn-next" onclick="goNext(3)">ពិនិត្យលម្អិត <i class="bi bi-arrow-right"></i></button>
+                                    <button class="btn-back" onclick="goBack(3)"><i class="bi bi-arrow-left"></i>
+                                        ថយក្រោយ</button>
+                                    <button class="btn-next" onclick="goNext(3)">ពិនិត្យលម្អិត <i
+                                            class="bi bi-arrow-right"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -640,11 +645,12 @@
                                             ខ្ញុំយល់ថា ឯកសារមិនពិតប្រាកដ អាចនឹងនាំឱ្យ ការបដិសេធដាក់ពាក្យ ។
                                         </span>
                                     </label>
-                                    <div id="err-declare" class="error-text"></div>
+                                    <div id="err-declare" class="field-error"></div>
                                 </div>
 
                                 <div class="form-nav">
-                                    <button class="btn-back" onclick="goBack(4)"><i class="bi bi-arrow-left"></i> ថយក្រោយ</button>
+                                    <button class="btn-back" onclick="goBack(4)"><i class="bi bi-arrow-left"></i>
+                                        ថយក្រោយ</button>
                                     <button class="btn-submit-main" onclick="submitForm()">
                                         <i class="bi bi-send-fill"></i> ដាក់ពាក្យ
                                     </button>
@@ -833,7 +839,7 @@
                             ជាវដើម្បីទទួលឱកាármaz្ឞថ្មីៗ
                         </p>
                         <div class="d-flex gap-2">
-                            <input type="email" class="form-control form-control-sm" placeholder="Email របស់អ្នក"
+                            <input type="email" class="f-input f-input-sm" placeholder="Email របស់អ្នក"
                                 style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff">
                             <button class="btn btn-primary btn-sm px-3" style="white-space:nowrap">ជាវ</button>
                         </div>
