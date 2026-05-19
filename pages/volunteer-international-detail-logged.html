@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="km" data-theme="light">
 
 <head>
@@ -29,7 +29,8 @@
     <link rel="stylesheet" href="../assets/css/chhay.css">
 </head>
 
-<body>
+<body class="detail2-body">
+    <a class="skip-link visually-hidden-focusable" href="#main-content">Skip to main content</a>
 
 <!-- ===================== HEADER ===================== -->
 <header class="fixed-top shadow-sm">
@@ -64,7 +65,7 @@
       <a class="navbar-brand" href="../index-logged.html">
         <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
         <div>
-          <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ</div>
+          <div class="brand-subtitle"> វេទិកាអប់រំ</div>
           EduKhmer
         </div>
       </a>
@@ -74,11 +75,11 @@
         <div class="dropdown">
           <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
             <span class="position-relative d-inline-flex">
-              <i class="bi bi-bell fs-5" style="color:var(--text-black)"></i>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:.6rem">3</span>
+              <i class="bi bi-bell fs-5 icon-text-black"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger badge-sm">3</span>
             </span>
           </button>
-          <ul class="dropdown-menu dropdown-menu-end" style="min-width: 310px;">
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-wide">
             <li class="px-3 pt-2 pb-1">
               <h3 class="fs-6 mb-0">ការជូនដំណឹង</h3>
             </li>
@@ -130,7 +131,7 @@
           </ul>
         </div>
         <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-          <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
+          <i class="fa-solid fa-bars fs-5 icon-text-black"></i>
         </button>
       </div>
 
@@ -151,11 +152,11 @@
         <div class="dropdown">
           <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown" aria-label="ការជូនដំណឹង" title="ការជូនដំណឹង">
             <span class="position-relative d-inline-flex">
-              <i class="bi bi-bell fs-5" style="color:var(--text-black)"></i>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:.6rem">3</span>
+              <i class="bi bi-bell fs-5 icon-text-black"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger badge-sm">3</span>
             </span>
           </button>
-          <ul class="dropdown-menu dropdown-menu-end" style="min-width: 320px;">
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-wide dropdown-menu-wide-lg">
             <li class="px-3 pt-2 pb-1">
               <h3 class="fs-6 mb-0">ការជូនដំណឹង</h3>
             </li>
@@ -245,7 +246,16 @@
 
 
     <!-- ===================== MAIN CONTENT ===================== -->
-    <main class="container page-main-padding">
+    <main id="main-content" class="container page-main-padding">
+
+        <!-- BREADCRUMB -->
+        <nav aria-label="Breadcrumb" class="mt-3 mb-4">
+            <ol class="breadcrumb bg-transparent p-0 m-0 breadcrumb-sm">
+                <li class="breadcrumb-item"><a href="../index-logged.html">ទំព័រដើម</a></li>
+                <li class="breadcrumb-item"><a href="volunteer-international-logged.html">ស្ម័គ្រចិត្ត</a></li>
+                <li class="breadcrumb-item active" aria-current="page">World Vision — ជួយបង្រៀនកុមារ</li>
+            </ol>
+        </nav>
 
         <!-- HERO SECTION -->
         <div class="volunteer-hero" data-aos="fade-up">
@@ -313,23 +323,25 @@
             <div class="detail-main">
 
                 <!-- DESCRIPTION SECTION -->
-                <section data-aos="fade-up">
-                    <h2 class="section-title">
+                <div class="detail-section" data-aos="fade-up">
+                    <h2 class="ds-title">
                         <i class="bi bi-info-circle"></i> ពិពណ៌នា
                     </h2>
-                    <p class="description-text">
-                        World Vision Cambodia ផ្តល់ឱកាសសម្រាប់អ្នកស្ម័គ្រចិត្តជួយការអប់រំកុមារនៅតំបន់ជនបទ ដោយផ្តោតលើការបង្រៀន មេរៀនគាំទ្រ និងសកម្មភាពសហគមន៍។
+                    <p class="section-intro">
+                        កម្មវិធីនេះផ្តល់ឱកាសឱ្យអ្នកចូលទៅធ្វើការនៅបរិយាកាសពិតប្រាកដ
+                        រួមជាមួយក្រុមសហគមន៍ដែលផ្តោតលើការជួយផ្នែកអប់រំ និងការលើកស្ទាក់ក្រុមនៅមូលដ្ឋាន។
                     </p>
                     <p class="description-text">
-                        កម្មវិធីនេះសមស្របសម្រាប់អ្នកដែលចង់មានបទពិសោធន៍ជាក់ស្តែងក្នុងសេវាសហគមន៍ និងចូលរួមបង្កើនឱកាសសិក្សាសម្រាប់កុមារក្នុងមូលដ្ឋាន។
+                        World Vision Cambodia ផ្តល់ឱកាសម្រាប់អ្នកស្ម័គ្រចិត្តជួយការអប់រំកុមារនៅតំបន់ជនបទ ដោយផ្តោតលើការបង្រៀន មេរៀនគាំទ្រ និងសកម្មភាពសហគមន៍។
                     </p>
-                </section>
+                    <p class="description-text">
+                        កម្មវិធីនេះសមស្របសម្រាប់អ្នកដែលចង់មានបទពិសោធន៍ជាក់ស្តែងក្នុងសេវាសហគមន៍ និងចូលរួមបង្កើនឱកាStorbritannien សម្រាប់កុមារក្នុងមូលដ្ឋាន។
+                    </p>
+                </div>
 
                 <!-- REQUIREMENTS SECTION -->
-                <section data-aos="fade-up">
-                    <h2 class="section-title">
-                        <i class="bi bi-checklist"></i> តម្រូវការ
-                    </h2>
+                <div class="detail-section" data-aos="fade-up">
+                    <h2 class="ds-title"><i class="bi bi-checklist"></i> តម្រូវការ</h2>
 
                     <div class="requirement-item">
                         <div class="requirement-check">✓</div>
@@ -370,52 +382,48 @@
                             <small>អាចធ្វើការជាមួយគ្រូ និងសហគមន៍ក្នុងគោលបំណងរួម</small>
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <!-- APPLICATION PROCESS SECTION -->
-                <section data-aos="fade-up">
-                    <h2 class="section-title">
-                        <i class="bi bi-diagram-3"></i> ដំណើរការដាក់ពាក្យ
-                    </h2>
+                <div class="detail-section" data-aos="fade-up">
+                    <h2 class="ds-title"><i class="bi bi-diagram-3"></i> ដំណើរការដាក់ពាក្យ</h2>
 
-                    <div class="step-item">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h4>បំពេញទម្រង់ចុះឈ្មោះ</h4>
-                            <p>បំពេញព័ត៌មានផ្ទាល់ខ្លួន និងជ្រើសរើសមុខតំណែងដែលអ្នកចង់ជួយនៅតំបន់កុមារជនបទ។</p>
+                    <div class="req-item">
+                        <div class="req-check">✓</div>
+                        <div class="req-text">
+                            <strong>បំពេញទម្រង់ចុះឈ្មោះ</strong>
+                            <small>បំពេញព័ត៌មានផ្ទាល់ខ្លួន និងជ្រើសរើសមុខតំណែង ដែលអ្នកចង់ជួយនៅតំបន់កុមារជនបទ។</small>
                         </div>
                     </div>
 
-                    <div class="step-item">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h4>ពិនិត្យសមស្រប</h4>
-                            <p>ក្រុមគម្រោងនឹងពិនិត្យភាពសមស្រប អ្នកចង់ធ្វើការជាមួយកុមារ និងកាលវិភាគរបស់អ្នក។</p>
+                    <div class="req-item">
+                        <div class="req-check">✓</div>
+                        <div class="req-text">
+                            <strong>ពិនិត្យសមស្របភាព</strong>
+                            <small>ក្រុមគម្រោងវាយតម្លៃសមស្របភាព អ្នកចង់ធ្វើការជាមួយកុមារ និងកាលវិភាគរបស់អ្នក។</small>
                         </div>
                     </div>
 
-                    <div class="step-item">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h4>សម្របសម្រួលខ្លី</h4>
-                            <p>បេក្ខជនដែលជាប់ជម្រើសនឹងត្រូវបានអញ្ជើញសម្រាប់សម្របសម្រួលខ្លី ឬសម្ភាសន៍តាមទូរស័ព្ទ។</p>
+                    <div class="req-item">
+                        <div class="req-check">✓</div>
+                        <div class="req-text">
+                            <strong>សម្របសម្រួលខ្លី</strong>
+                            <small>ការសម្របសម្រួលបឋម ឬសម្ភាសន៍តាមទូរស័ព្ទ សម្រាប់វាយតម្លៃលក្ខណៈ នឹងលទ្ធភាព។</small>
                         </div>
                     </div>
 
-                    <div class="step-item">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <h4>ទទួលការណែនាំ</h4>
-                            <p>បេក្ខជនដែលត្រូវបានជ្រើសរើសនឹងទទួលពេលវេលាចាប់ផ្ដើម និងការណែនាំអំពីតំបន់បេសកកម្ម។</p>
+                    <div class="req-item">
+                        <div class="req-check">✓</div>
+                        <div class="req-text">
+                            <strong>ទទួលលទ្ធផល</strong>
+                            <small>ទទួលលទ្ធផល និងព័ត៌មានលម្អិត វិធានការចូលរួម ក្រុមការងារ និងពេលវេលាចាប់ផ្ដើម។</small>
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <!-- BENEFITS SECTION -->
-                <section data-aos="fade-up">
-                    <h2 class="section-title">
-                        <i class="bi bi-gift"></i> អត្ថប្រយោជន៍
-                    </h2>
+                <div class="detail-section" data-aos="fade-up">
+                    <h2 class="ds-title"><i class="bi bi-gift"></i> អត្ថប្រយោជន៍</h2>
 
                     <div class="requirement-item">
                         <div class="requirement-check">✓</div>
@@ -448,13 +456,11 @@
                             <small>អាចធ្វើការជិតស្និទ្ធជាមួយសហគមន៍ និងកុមារនៅមូលដ្ឋាន</small>
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <!-- FAQ SECTION -->
-                <section data-aos="fade-up">
-                    <h2 class="section-title">
-                        <i class="bi bi-question-circle"></i> សំណួរ និង ចម្លើយ
-                    </h2>
+                <div class="detail-section" data-aos="fade-up">
+                    <h2 class="ds-title"><i class="bi bi-question-circle"></i> សំណួរ និង ចម្លើយ</h2>
 
                     <div class="accordion" id="faqAccordion">
                         <div class="accordion-item border-0 mb-3">
@@ -499,7 +505,7 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
 
             </div>
 

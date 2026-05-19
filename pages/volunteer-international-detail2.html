@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="km" data-theme="light">
 
 <head>
@@ -30,6 +30,7 @@
 </head>
 
 <body class="detail2-body">
+    <a class="skip-link visually-hidden-focusable" href="#main-content">Skip to main content</a>
 
     <!-- ===================== HEADER ===================== -->
     <header class="fixed-top shadow-sm">
@@ -151,7 +152,16 @@
 
 
     <!-- ===================== MAIN CONTENT ===================== -->
-    <main class="container page-main-padding">
+    <main id="main-content" class="container page-main-padding">
+
+        <!-- BREADCRUMB -->
+        <nav aria-label="Breadcrumb" class="mt-3 mb-4">
+            <ol class="breadcrumb bg-transparent p-0 m-0 breadcrumb-sm">
+                <li class="breadcrumb-item"><a href="../index.html">ទំព័រដើម</a></li>
+                <li class="breadcrumb-item"><a href="volunteer-international.html">ស្ម័គ្រចិត្ត</a></li>
+                <li class="breadcrumb-item active" aria-current="page">JICA — បង្រៀនភាសាអង់គ្លេស</li>
+            </ol>
+        </nav>
 
         <!-- HERO SECTION -->
         <div class="volunteer-hero alt" data-aos="fade-up">
@@ -221,10 +231,8 @@
             <div class="detail-main">
 
                 <!-- DESCRIPTION SECTION -->
-                <section data-aos="fade-up">
-                    <h2 class="section-title">
-                        <i class="bi bi-info-circle"></i> ពិពណ៌នា
-                    </h2>
+                <div class="detail-section" data-aos="fade-up">
+                    <h2 class="ds-title"><i class="bi bi-info-circle"></i> ពិពណ៌នា</h2>
                     <p class="section-intro">
                         កម្មវិធីនេះផ្តល់ឱកាសឱ្យអ្នកចូលទៅធ្វើការនៅបរិយាកាសពិតប្រាកដ
                         រួមជាមួយក្រុមអន្តរជាតិដែលផ្តោតលើការជួយសង្គ្រោះជីវិត និងការថែទាំសុខភាពមូលដ្ឋាន។
@@ -237,13 +245,11 @@
                         គម្រោងនេះផ្តោតលើការបង្រៀន ការរៀបចំសកម្មភាពយុវជន
                         និងការជួយបង្កើនជំនាញភាសាអង់គ្លេសសម្រាប់អ្នកចូលរួមនៅមូលដ្ឋាន។
                     </p>
-                </section>
+                </div>
 
                 <!-- REQUIREMENTS SECTION -->
-                <section data-aos="fade-up">
-                    <h2 class="section-title">
-                        <i class="bi bi-checklist"></i> តម្រូវការ
-                    </h2>
+                <div class="detail-section" data-aos="fade-up">
+                    <h2 class="ds-title"><i class="bi bi-checklist"></i> តម្រូវការ</h2>
 
                     <div class="requirement-item">
                         <div class="requirement-check">✓</div>
@@ -284,54 +290,48 @@
                             <small>អាចធ្វើការជាមួយបុគ្គលិកមូលដ្ឋាន និងអ្នកស្ម័គ្រចិត្តផ្សេងៗ</small>
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <!-- APPLICATION PROCESS SECTION -->
-                <section data-aos="fade-up">
-                    <h2 class="section-title">
-                        <i class="bi bi-diagram-3"></i> ដំណើរការដាក់ពាក្យ
-                    </h2>
+                <div class="detail-section" data-aos="fade-up">
+                    <h2 class="ds-title"><i class="bi bi-diagram-3"></i> ដំណើរការដាក់ពាក្យ</h2>
 
-                    <div class="step-item">
-                        <div class="step-number alt">1</div>
-                        <div class="step-content">
-                            <h4>បំពេញពាក្យអនឡាញ</h4>
-                            <p>បំពេញទម្រង់ពាក្យរបស់ JICA ហើយភ្ជាប់ CV និងលិខិតបង្ហាញចំណាប់អារម្មណ៍។</p>
+                    <div class="req-item">
+                        <div class="req-check">✓</div>
+                        <div class="req-text">
+                            <strong>បំពេញពាក្យអនឡាញ</strong>
+                            <small>បំពេញទម្រង់ពាក្យរបស់ JICA ហើយភ្ជាប់ CV និងលិខិតបង្ហាញចំណាប់អារម្មណ៍។</small>
                         </div>
                     </div>
 
-                    <div class="step-item">
-                        <div class="step-number alt">2</div>
-                        <div class="step-content">
-                            <h4>ពិនិត្យឯកសារ</h4>
-                            <p>ក្រុមជ្រើសរើសនឹងពិនិត្យជំនាញភាសា ភាពសមស្រប និងបទពិសោធន៍បង្រៀនរបស់អ្នក។</p>
+                    <div class="req-item">
+                        <div class="req-check">✓</div>
+                        <div class="req-text">
+                            <strong>ពិនិត្យឯកសារ</strong>
+                            <small>ក្រុមជ្រើសរើសនឹងពិនិត្យជំនាញភាសា ភាពសមស្រប និងបទពិសោធន៍បង្រៀនរបស់អ្នក។</small>
                         </div>
                     </div>
 
-                    <div class="step-item">
-                        <div class="step-number alt">3</div>
-                        <div class="step-content">
-                            <h4>សម្ភាសន៍</h4>
-                            <p>បេក្ខជនដែលជាប់ជម្រើសនឹងត្រូវបានអញ្ជើញសម្ភាសន៍តាមអនឡាញ ដើម្បីវាយតម្លៃការបង្រៀន
-                                និងការត្រៀមខ្លួន។</p>
+                    <div class="req-item">
+                        <div class="req-check">✓</div>
+                        <div class="req-text">
+                            <strong>សម្ភាសន៍</strong>
+                            <small>បេក្ខជនដែលជាប់ជម្រើសនឹងត្រូវបានអញ្ជើញសម្ភាសន៍តាមអនឡាញ ដើម្បីវាយតម្លៃការបង្រៀន។</small>
                         </div>
                     </div>
 
-                    <div class="step-item">
-                        <div class="step-number alt">4</div>
-                        <div class="step-content">
-                            <h4>ទទួលលទ្ធផល</h4>
-                            <p>បេក្ខជនដែលត្រូវបានជ្រើសរើសនឹងទទួលសេចក្តីជូនដំណឹង និងព័ត៌មានអំពីការរៀបចំមុនចេញទៅ Tokyo។
-                            </p>
+                    <div class="req-item">
+                        <div class="req-check">✓</div>
+                        <div class="req-text">
+                            <strong>ទទួលលទ្ធផល</strong>
+                            <small>បេក្ខជនដែលត្រូវបានជ្រើសរើសនឹងទទួលសេចក្តីជូនដំណឹង និងព័ត៌មាននៅ Tokyo។</small>
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <!-- BENEFITS SECTION -->
-                <section data-aos="fade-up">
-                    <h2 class="section-title">
-                        <i class="bi bi-gift"></i> អត្ថប្រយោជន៍
-                    </h2>
+                <div class="detail-section" data-aos="fade-up">
+                    <h2 class="ds-title"><i class="bi bi-gift"></i> អត្ថប្រយោជន៍</h2>
 
                     <div class="requirement-item">
                         <div class="requirement-check">✓</div>
@@ -364,13 +364,11 @@
                             <small>អាចធ្វើការជាមួយក្រុមក្នុងប្រទេសជប៉ុន និងរៀនវប្បធម៌ថ្មីៗ</small>
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <!-- FAQ SECTION -->
-                <section data-aos="fade-up">
-                    <h2 class="section-title">
-                        <i class="bi bi-question-circle"></i> សំណួរ និង ចម្លើយ
-                    </h2>
+                <div class="detail-section" data-aos="fade-up">
+                    <h2 class="ds-title"><i class="bi bi-question-circle"></i> សំណួរ និង ចម្លើយ</h2>
 
                     <div class="accordion" id="faqAccordion">
                         <div class="accordion-item border-0 mb-3">
@@ -416,7 +414,24 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+
+                <div class="detail-section" data-aos="fade-up">
+                    <h2 class="ds-title"><i class="bi bi-lightbulb"></i> ត្រៀមខ្លួនមុនដាក់ពាក្យ</h2>
+                    <div class="sidebar-card">
+                        <ul class="list-unstyled m-0">
+                            <li class="muted-list-item">
+                                <strong class="label-strong">💡 ទីមួយ៖</strong> រៀបចំ CV និង Motivation Letter ឱ្យច្បាស់ពីបទពិសោធន៍បង្រៀន
+                            </li>
+                            <li class="muted-list-item">
+                                <strong class="label-strong">💡 ទីពីរ៖</strong> រៀបចំគំរូមេរៀន ឬសកម្មភាពដែលអ្នកធ្លាប់ធ្វើ
+                            </li>
+                            <li class="muted-text">
+                                <strong class="label-strong">💡 ទីបី៖</strong> ត្រៀមខ្លួនសម្រាប់សម្ភាសន៍អនឡាញ និងទំនាក់ទំនងអន្តរវប្បធម៌
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
             </div>
 
@@ -428,7 +443,7 @@
                     <!-- Countdown -->
                     <div class="deadline-box alt">
                         <div class="deadline-label"> ចុងក្រោយ / Application Deadline</div>
-                        <div class="deadline-date">៣០ ឧសភា ២០២៥</div>
+                        <div class="deadline-date">៣០ មិថុនា ២០២៦</div>
                         <div class="countdown-chips">
                             <div class="cc-chip">
                                 <div class="cc-num" id="cnt-d">22</div>
@@ -455,13 +470,13 @@
                     <!-- Share -->
                     <div class="share-label"><i class="bi bi-share me-1"></i>ចែករំលែកឱ្យមិត្ត</div>
                     <div class="share-row">
-                        <button class="share-btn" title="Facebook" onclick="shareTo('facebook')"><i
+                        <button class="share-btn" title="Facebook" aria-label="Share on Facebook" onclick="shareTo('facebook')"><i
                                 class="bi bi-facebook"></i></button>
-                        <button class="share-btn" title="Telegram" onclick="shareTo('telegram')"><i
+                        <button class="share-btn" title="Telegram" aria-label="Share on Telegram" onclick="shareTo('telegram')"><i
                                 class="bi bi-telegram"></i></button>
-                        <button class="share-btn" title="Twitter/X" onclick="shareTo('twitter')"><i
-                                class="bi bi-twitter-x"></i></button>
-                        <button class="share-btn" title="Copy Link" onclick="copyLink()"><i
+                        <button class="share-btn" title="Twitter" aria-label="Share on Twitter" onclick="shareTo('twitter')"><i
+                                class="bi bi-twitter"></i></button>
+                        <button class="share-btn" title="Copy Link" aria-label="Copy link to clipboard" onclick="copyLink()"><i
                                 class="bi bi-link-45deg"></i></button>
                     </div>
                 </div>
@@ -555,15 +570,6 @@
                 </div>
 
             </div><!-- /sidebar -->
-            <li class="muted-list-item">
-                <strong class="label-strong">💡 ទីពីរ៖</strong> រៀបចំគំរូមេរៀន ឬសកម្មភាពដែលអ្នកធ្លាប់ធ្វើ
-            </li>
-            <li class="muted-text">
-                <strong class="label-strong">💡 ទីបី៖</strong> ត្រៀមខ្លួនសម្រាប់សម្ភាសន៍អនឡាញ និងទំនាក់ទំនងអន្តរវប្បធម៌
-            </li>
-            </ul>
-        </div>
-        </div>
         </div>
 
     </main>
@@ -624,16 +630,14 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="mt-4 p-3 rounded-3"
-                        style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">
-                        <p style="color:rgba(255,255,255,.6);font-size:.83rem;margin-bottom:10px">
-                            <i class="bi bi-bell me-1" style="color:var(--secondary-color)"></i>
+                    <div class="mt-4 p-3 rounded-3 newsletter-box">
+                        <p class="newsletter-subtitle">
+                            <i class="bi bi-bell me-1 icon-secondary"></i>
                             ជាវដើម្បីទទួលឱកាសសិក្សាថ្មីៗ
                         </p>
                         <div class="d-flex gap-2">
-                            <input type="email" class="form-control form-control-sm" placeholder="Email របស់អ្នក"
-                                style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff">
-                            <button class="btn btn-primary btn-sm px-3" style="white-space:nowrap">ជាវ</button>
+                            <input type="email" aria-label="Email address for newsletter" class="form-control form-control-sm newsletter-input" placeholder="Email របស់អ្នក" required>
+                            <button class="btn btn-primary btn-sm px-3 newsletter-btn" aria-label="Subscribe to newsletter">ជាវ</button>
                         </div>
                     </div>
                 </div>
@@ -671,7 +675,7 @@
 
         // ── COUNTDOWN ──
         function updateCountdown() {
-            const deadline = new Date('2025-05-30T23:59:59');
+            const deadline = new Date('2026-06-30T23:59:59');
             const now = new Date();
             const diff = deadline - now;
             if (diff <= 0) {
