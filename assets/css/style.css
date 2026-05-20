@@ -5419,6 +5419,95 @@ select.form-control-custom {
   margin: 0 auto 28px;
 }
 
+/* ======= UTILITY CLASSES FOR REMOVED INLINE STYLES ======= */
+
+/* Skip link styling */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Breadcrumb utilities */
+.breadcrumb-sm {
+  font-size: 0.9rem;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.breadcrumb-item.active {
+  color: var(--text-muted);
+}
+
+/* Icon utilities */
+.icon-text-black {
+  color: var(--text-black);
+}
+
+.icon-secondary {
+  color: var(--secondary-color);
+}
+
+/* Newsletter box styling */
+.newsletter-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.newsletter-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.83rem;
+  margin-bottom: 10px;
+}
+
+.newsletter-input {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.newsletter-btn {
+  white-space: nowrap;
+}
+
+/* Badge sizing */
+.badge-sm {
+  font-size: 0.6rem;
+}
+
+/* Dropdown menu widths */
+.dropdown-menu-wide {
+  min-width: 310px;
+}
+
+.dropdown-menu-wide-lg {
+  min-width: 320px;
+}
+
+/* Brand subtitle styling */
+.brand-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  line-height: 1;
+}
+}
+
 .ref-code {
   display: inline-block;
   background: var(--bg-subtle);
