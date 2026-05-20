@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="km" data-theme="light">
 
 <head>
@@ -29,7 +29,8 @@
     <link rel="stylesheet" href="../assets/css/chhay.css">
 </head>
 
-<body>
+<body class="detail2-body">
+    <a class="skip-link visually-hidden-focusable" href="#main-content">Skip to main content</a>
 
     <!-- ===================== HEADER ===================== -->
     <header class="fixed-top shadow-sm">
@@ -152,7 +153,16 @@
 
 
     <!-- ===================== MAIN CONTENT ===================== -->
-    <main class="container page-main-padding">
+    <main id="main-content" class="container page-main-padding">
+
+        <!-- BREADCRUMB -->
+        <nav aria-label="Breadcrumb" class="mt-3 mb-4">
+            <ol class="breadcrumb bg-transparent p-0 m-0 breadcrumb-sm">
+                <li class="breadcrumb-item"><a href="../index.html">ទំព័រដើម</a></li>
+                <li class="breadcrumb-item"><a href="volunteer-international.html">ស្ម័គ្រចិត្ត</a></li>
+                <li class="breadcrumb-item active" aria-current="page">World Vision — ជួយបង្រៀនកុមារ</li>
+            </ol>
+        </nav>
 
         <!-- HERO SECTION -->
         <div class="volunteer-hero" data-aos="fade-up">
@@ -208,9 +218,9 @@
             </div>
 
             <!-- Volunteer Image -->
-            <div class="volunteer-hero-image">
+            <div class="volunteer-hero-image h-100">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXpaO0ki0YIXslimemSFDv2qUgS-bttYnHww&s"
-                    alt="World Vision Cambodia" class="hero-img-cover">
+                    alt="World Vision Cambodia" class="hero-img-cover w-100 h-100 object-fit-cover">
             </div>
         </div>
 
@@ -220,23 +230,23 @@
             <div class="detail-main">
 
                 <!-- DESCRIPTION SECTION -->
-                <section data-aos="fade-up">
-                    <h2 class="section-title">
+                <div class="detail-section" data-aos="fade-up">
+                    <h2 class="ds-title">
                         <i class="bi bi-info-circle"></i> ពិពណ៌នា
-                    </h2>
-                    <p class="description-text">
+                    </h2>                    <p class="section-intro">
+                        កម្មវិធីនេះផ្តល់ឱកាសឱ្យអ្នកចូលទៅធ្វើការនៅបរិយាកាសពិតប្រាកដ
+                        រួមជាមួយក្រុមសហគមន៍ដែលផ្តោតលើការជួយផ្នែកអប់រំ និងការលើកស្ទាក់ក្រុមនៅមូលដ្ឋាន។
+                    </p>                    <p class="description-text">
                         World Vision Cambodia ផ្តល់ឱកាសសម្រាប់អ្នកស្ម័គ្រចិត្តជួយការអប់រំកុមារនៅតំបន់ជនបទ ដោយផ្តោតលើការបង្រៀន មេរៀនគាំទ្រ និងសកម្មភាពសហគមន៍។
                     </p>
                     <p class="description-text">
                         កម្មវិធីនេះសមស្របសម្រាប់អ្នកដែលចង់មានបទពិសោធន៍ជាក់ស្តែងក្នុងសេវាសហគមន៍ និងចូលរួមបង្កើនឱកាសសិក្សាសម្រាប់កុមារក្នុងមូលដ្ឋាន។
                     </p>
-                </section>
+                </div>
 
                 <!-- REQUIREMENTS SECTION -->
-                <section data-aos="fade-up">
-                    <h2 class="section-title">
-                        <i class="bi bi-checklist"></i> តម្រូវការ
-                    </h2>
+                <div class="detail-section" data-aos="fade-up">
+                    <h2 class="ds-title"><i class="bi bi-checklist"></i> តម្រូវការ</h2>
 
                     <div class="requirement-item">
                         <div class="requirement-check">✓</div>
@@ -277,52 +287,48 @@
                             <small>អាចធ្វើការជាមួយគ្រូ និងសហគមន៍ក្នុងគោលបំណងរួម</small>
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <!-- APPLICATION PROCESS SECTION -->
-                <section data-aos="fade-up">
-                    <h2 class="section-title">
-                        <i class="bi bi-diagram-3"></i> ដំណើរការដាក់ពាក្យ
-                    </h2>
+                <div class="detail-section" data-aos="fade-up">
+                    <h2 class="ds-title"><i class="bi bi-diagram-3"></i> ដំណើរការដាក់ពាក្យ</h2>
 
-                    <div class="step-item">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h4>បំពេញទម្រង់ចុះឈ្មោះ</h4>
-                            <p>បំពេញព័ត៌មានផ្ទាល់ខ្លួន និងជ្រើសរើសមុខតំណែងដែលអ្នកចង់ជួយនៅតំបន់កុមារជនបទ។</p>
+                    <div class="req-item">
+                        <div class="req-check">✓</div>
+                        <div class="req-text">
+                            <strong>បំពេញទម្រង់ចុះឈ្មោះ</strong>
+                            <small>បំពេញព័ត៌មានផ្ទាល់ខ្លួន និងជ្រើសរើសមុខតំណែងដែលអ្នកចង់ជួយនៅតំបន់កុមារជនបទ។</small>
                         </div>
                     </div>
 
-                    <div class="step-item">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h4>ពិនិត្យសមស្រប</h4>
-                            <p>ក្រុមគម្រោងនឹងពិនិត្យភាពសមស្រប អ្នកចង់ធ្វើការជាមួយកុមារ និងកាលវិភាគរបស់អ្នក។</p>
+                    <div class="req-item">
+                        <div class="req-check">✓</div>
+                        <div class="req-text">
+                            <strong>ពិនិត្យសមស្របភាព</strong>
+                            <small>ក្រុមគម្រោងនឹងពិនិត្យភាពសមស្រប អ្នកចង់ធ្វើការជាមួយកុមារ និងកាលវិភាគរបស់អ្នក។</small>
                         </div>
                     </div>
 
-                    <div class="step-item">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h4>សម្របសម្រួលខ្លី</h4>
-                            <p>បេក្ខជនដែលជាប់ជម្រើសនឹងត្រូវបានអញ្ជើញសម្រាប់សម្របសម្រួលខ្លី ឬសម្ភាសន៍តាមទូរស័ព្ទ។</p>
+                    <div class="req-item">
+                        <div class="req-check">✓</div>
+                        <div class="req-text">
+                            <strong>សម្របសម្រួលខ្លី</strong>
+                            <small>បេក្ខជនដែលជាប់ជម្រើសនឹងត្រូវបានអញ្ជើញសម្រាប់សម្របសម្រួលខ្លី ឬសម្ភាសន៍តាមទូរស័ព្ទ។</small>
                         </div>
                     </div>
 
-                    <div class="step-item">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <h4>ទទួលការណែនាំ</h4>
-                            <p>បេក្ខជនដែលត្រូវបានជ្រើសរើសនឹងទទួលពេលវេលាចាប់ផ្ដើម និងការណែនាំអំពីតំបន់បេសកកម្ម។</p>
+                    <div class="req-item">
+                        <div class="req-check">✓</div>
+                        <div class="req-text">
+                            <strong>ទទួលការណែនាំ</strong>
+                            <small>បេក្ខជនដែលត្រូវបានជ្រើសរើសនឹងទទួលពេលវេលាចាប់ផ្ដើម និងការណែនាំអំពីតំបន់បេសកកម្ម។</small>
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <!-- BENEFITS SECTION -->
-                <section data-aos="fade-up">
-                    <h2 class="section-title">
-                        <i class="bi bi-gift"></i> អត្ថប្រយោជន៍
-                    </h2>
+                <div class="detail-section" data-aos="fade-up">
+                    <h2 class="ds-title"><i class="bi bi-gift"></i> អត្ថប្រយោជន៍</h2>
 
                     <div class="requirement-item">
                         <div class="requirement-check">✓</div>
@@ -355,13 +361,11 @@
                             <small>អាចធ្វើការជិតស្និទ្ធជាមួយសហគមន៍ និងកុមារនៅមូលដ្ឋាន</small>
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <!-- FAQ SECTION -->
-                <section data-aos="fade-up">
-                    <h2 class="section-title">
-                        <i class="bi bi-question-circle"></i> សំណួរ និង ចម្លើយ
-                    </h2>
+                <div class="detail-section" data-aos="fade-up">
+                    <h2 class="ds-title"><i class="bi bi-question-circle"></i> សំណួរ និង ចម្លើយ</h2>
 
                     <div class="accordion" id="faqAccordion">
                         <div class="accordion-item border-0 mb-3">
@@ -406,7 +410,24 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+
+                <div class="detail-section" data-aos="fade-up">
+                    <h2 class="ds-title"><i class="bi bi-lightbulb"></i> ត្រៀមល់មានអន឵ចំសំសច័ម្រ</h2>
+                    <div class="sidebar-card">
+                        <ul class="list-unstyled m-0">
+                            <li class="muted-list-item">
+                                <strong class="label-strong">💡 ទីមួយ៖</strong> រៀបចំ CV និង Motivation Letter ឱ្យច្បាស់ពីបទពិសោធន៍បង្រៀន
+                            </li>
+                            <li class="muted-list-item">
+                                <strong class="label-strong">💡 ទីពីរ៖</strong> រៀបចំគំរូមេរៀន ឬសកម្មភាពដែលអ្នកធ្លាប់ធ្វើ
+                            </li>
+                            <li class="muted-text">
+                                <strong class="label-strong">💡 ទីបី៖</strong> ត្រៀមខ្លួនសម្រាប់សម្ភាសន៍អនឡាញ និងទំនាក់ទំនងអន្តរវប្បធម៌
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
             </div>
 
@@ -531,15 +552,6 @@
                 </div>
 
             </div><!-- /sidebar -->
-                        <li class="muted-list-item">
-                            <strong class="label-strong">💡 ទីពីរ៖</strong> រៀបចំពេលវេលាដែលអ្នកអាចចូលរួមបាន
-                        </li>
-                        <li class="muted-text">
-                            <strong class="label-strong">💡 ទីបី៖</strong> ត្រៀមខ្លួនធ្វើការជាក្រុម និងជាមួយសហគមន៍
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
 
         

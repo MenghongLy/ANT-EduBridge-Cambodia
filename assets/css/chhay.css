@@ -547,35 +547,36 @@
 .volunteer-hero {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 30px;
-	padding: 40px;
+	gap: 20px;
+	padding: 25px;
 	background: linear-gradient(135deg, var(--bg-subtle) 0%, var(--bg-color) 100%);
 	border-radius: 16px;
-	margin-top: 30px;
-	margin-bottom: 40px;
+	margin-top: 15px;
+	margin-bottom: 25px;
 }
 
 .volunteer-hero-content {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
+	gap: 12px;
 }
 
 .volunteer-header {
 	display: flex;
 	align-items: flex-start;
-	gap: 20px;
-	margin-bottom: 20px
+	gap: 15px;
+	margin-bottom: 15px
 }
 
 .volunteer-logo {
-	width: 80px;
-	height: 80px;
+	width: 65px;
+	height: 65px;
 	border-radius: 12px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 2rem;
+	font-size: 1.8rem;
 	font-weight: 700;
 	color: white;
 	flex-shrink: 0;
@@ -583,9 +584,9 @@
 }
 
 .volunteer-title-box h1 {
-	font-size: 2rem;
+	font-size: 1.7rem;
 	font-weight: 700;
-	margin-bottom: 8px;
+	margin-bottom: 6px;
 	color: var(--text-black);
 }
 
@@ -597,7 +598,7 @@
 
 .volunteer-badges {
 	display: flex;
-	gap: 10px;
+	gap: 8px;
 	flex-wrap: wrap
 }
 
@@ -667,11 +668,11 @@
 .key-info-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 15px
+	gap: 12px
 }
 
 .key-info-item {
-	padding: 15px;
+	padding: 12px;
 	background: var(--bg-color);
 	border: 1px solid var(--border-color);
 	border-radius: 10px;
@@ -711,23 +712,49 @@
 
 .detail-layout {
 	display: grid;
-	grid-template-columns: 1fr 320px;
-	gap: 40px
+	grid-template-columns: 1fr 340px;
+	gap: 28px;
+	align-items: start;
+}
+
+@media (max-width: 991px) {
+	.detail-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.detail-sidebar {
+		order: -1;
+	}
 }
 
 .detail-main {
 	display: flex;
 	flex-direction: column;
-	gap: 45px
+	gap: 28px;
+}
+
+.detail-main section {
+	margin: 0;
+	padding: 0;
 }
 
 .detail-section {
-	padding-bottom: 30px;
-	border-bottom: 1px solid var(--border-color)
+	background: var(--bg-card);
+	border: 1px solid var(--border-color);
+	border-radius: 16px;
+	padding: 28px 32px;
+	box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+	margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+	.detail-section {
+		padding: 20px 18px;
+	}
 }
 
 .detail-section:last-child {
-	border-bottom: none
+	margin-bottom: 0;
 }
 
 .section-head {
@@ -743,36 +770,74 @@
 }
 
 .section-title {
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	font-weight: 700;
 	color: var(--text-black);
-	margin: 0
+	margin: 0 0 15px 0
+}
+
+.section-intro {
+	color: var(--text-descript);
+	line-height: 1.6;
+	margin: 0 0 10px 0;
+	font-size: .95rem
 }
 
 .detail-sidebar {
 	display: flex;
 	flex-direction: column;
-	gap: 20px
+	gap: 28px;
+}
+
+@media (max-width: 575px) {
+	.detail-sidebar {
+		padding: 0 18px;
+	}
 }
 
 .sidebar-card {
-	background: var(--bg-color);
+	background: var(--bg-card);
 	border: 1px solid var(--border-color);
-	border-radius: 12px;
-	padding: 20px;
-	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+	border-radius: 16px;
+	padding: 24px;
+	box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+	margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+	.sidebar-card {
+		padding: 18px;
+	}
 }
 
 .sidebar-card.sticky {
 	position: sticky;
-	top: 150px
+	top: 150px;
+}
+
+/* Section title styling */
+.ds-title {
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: var(--text-black);
+	margin-bottom: 18px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding-bottom: 14px;
+	border-bottom: 1px solid var(--border-color);
+}
+
+.ds-title i {
+	color: var(--primary-color);
+	font-size: 1.15rem;
 }
 
 .card-title {
-	font-size: 1rem;
+	font-size: 0.95rem;
 	font-weight: 700;
 	color: var(--text-black);
-	margin-bottom: 15px
+	margin-bottom: 12px
 }
 
 .apply-btn {
@@ -798,9 +863,9 @@
 }
 
 .related-section {
-	margin-top: 80px;
-	padding-top: 50px;
-	border-top: 2px solid var(--border-color)
+	margin-top: 40px;
+	padding-top: 30px;
+	border-top: 1px solid var(--border-color)
 }
 
 .related-title {
@@ -875,9 +940,9 @@
 
 .info-label {
 	color: var(--text-muted);
-	font-size: .85rem;
+	font-size: .8rem;
 	font-weight: 500;
-	margin-bottom: 8px;
+	margin-bottom: 6px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -885,15 +950,15 @@
 }
 
 .info-value {
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 	font-weight: 700;
 	color: var(--primary-color)
 }
 
 .info-subtext {
-	font-size: .8rem;
+	font-size: .75rem;
 	color: var(--text-muted);
-	margin-top: 4px
+	margin-top: 3px
 }
 
 .volunteer-hero-image {
@@ -910,7 +975,7 @@
 }
 
 .main-content section {
-	margin-bottom: 40px
+	margin-bottom: 25px
 }
 
 .section-title {
@@ -927,17 +992,17 @@
 
 .description-text {
 	color: var(--text-descript);
-	line-height: 1.8;
-	margin-bottom: 15px
+	line-height: 1.7;
+	margin-bottom: 12px
 }
 
 .requirement-item {
 	display: flex;
-	gap: 15px;
-	padding: 15px;
+	gap: 12px;
+	padding: 12px;
 	background: var(--bg-subtle);
 	border-radius: 10px;
-	margin-bottom: 12px;
+	margin-bottom: 10px;
 	border-left: 4px solid var(--primary-color)
 }
 
@@ -960,16 +1025,16 @@
 
 .step-item {
 	display: flex;
-	gap: 20px;
-	padding: 20px;
+	gap: 15px;
+	padding: 15px;
 	background: var(--bg-subtle);
 	border-radius: 10px;
-	margin-bottom: 15px
+	margin-bottom: 12px
 }
 
 .step-number {
-	width: 50px;
-	height: 50px;
+	width: 45px;
+	height: 45px;
 	background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
 	color: white;
 	border-radius: 50%;
@@ -977,7 +1042,7 @@
 	align-items: center;
 	justify-content: center;
 	font-weight: 700;
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 	flex-shrink: 0
 }
 
@@ -1188,7 +1253,7 @@
 
 /* Utility classes for inline styles used in markup */
 .page-main-padding {
-	padding: 40px 0
+	padding: 25px 0
 }
 
 .page-main-padding-lg {
