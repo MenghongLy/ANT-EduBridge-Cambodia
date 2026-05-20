@@ -11,6 +11,7 @@
   --secondary-color: #4DB8FF;
   --accent-gold: #F5A623;
   --accent-green: #00C2B2;
+  --accent-purple: #8250FF;
   --top-header: #0A1628;
   --navbar-bg: #FFFFFF;
   --text-black: #1A2340;
@@ -510,17 +511,17 @@ section {
   background: var(--bg-page);
 }
 
-.opportunity-card {
-  background: var(--bg-card);
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-card);
-  transition: .3s;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+    .opportunity-card {
+      background: var(--bg-card);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-card);
+      transition: .3s;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
 
 .opportunity-card:hover {
   transform: translateY(-6px);
@@ -2780,7 +2781,6 @@ select.form-control-custom {
 .opportunity-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: var(--card-radius);
   overflow: hidden;
   box-shadow: var(--shadow-card);
   transition: transform .3s, box-shadow .3s, border-color .3s;
@@ -4599,24 +4599,16 @@ select.form-control-custom {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0;
+  gap: 60px;
 }
 
-.step-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-  position: relative;
-  gap: 8px;
-}
+
 
 .step-item:not(:last-child)::after {
   content: '';
   position: absolute;
   top: 19px;
-  left: calc(50% + 22px);
+  left: calc(10% + 22px);
   right: calc(-50% + 22px);
   height: 2px;
   background: var(--border);
