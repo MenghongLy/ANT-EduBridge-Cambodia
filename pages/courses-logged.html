@@ -324,27 +324,27 @@
             <div class="nav nav-pills flex-nowrap overflow-auto py-2 gap-2" role="tablist">
                 <button class="btn btn-sm btn-outline-primary tab-btn active" data-type="all"
                     onclick="setTab(this,'all')">
-                    <i class="bi bi-grid-3x3-gap"></i> ទាំងអស់ <span class="tab-count">200+</span>
+                    <i class="bi bi-grid-3x3-gap"></i> ទាំងអស់ <span class="tab-count">20+</span>
                 </button>
                 <button class="btn btn-sm btn-outline-primary tab-btn" data-type="technology"
                     onclick="setTab(this,'technology')">
-                    <i class="bi bi-code-square"></i> បច្ចេកវិទ្យា <span class="tab-count">65</span>
+                    <i class="bi bi-code-square"></i> បច្ចេកវិទ្យា <span class="tab-count">5</span>
                 </button>
                 <button class="btn btn-sm btn-outline-primary tab-btn" data-type="business"
                     onclick="setTab(this,'business')">
-                    <i class="bi bi-briefcase"></i> ពាណិជ្ជកម្ម <span class="tab-count">45</span>
+                    <i class="bi bi-briefcase"></i> ពាណិជ្ជកម្ម <span class="tab-count">0</span>
                 </button>
                 <button class="btn btn-sm btn-outline-primary tab-btn" data-type="creative"
                     onclick="setTab(this,'creative')">
-                    <i class="bi bi-palette"></i> ច្នៃប្រឌិត <span class="tab-count">35</span>
+                    <i class="bi bi-palette"></i> ច្នៃប្រឌិត <span class="tab-count">3</span>
                 </button>
                 <button class="btn btn-sm btn-outline-primary tab-btn" data-type="language"
                     onclick="setTab(this,'language')">
-                    <i class="bi bi-translate"></i> ភាសា <span class="tab-count">30</span>
+                    <i class="bi bi-translate"></i> ភាសា <span class="tab-count">0</span>
                 </button>
                 <button class="btn btn-sm btn-outline-primary tab-btn" data-type="personal"
                     onclick="setTab(this,'personal')">
-                    <i class="bi bi-person-check"></i> ផ្ទាល់ខ្លួន <span class="tab-count">25</span>
+                    <i class="bi bi-person-check"></i> ផ្ទាល់ខ្លួន <span class="tab-count">2</span>
                 </button>
             </div>
         </div>
@@ -602,11 +602,11 @@
       <div class="col-6 col-lg-2">
         <h5 class="footer-heading">ឱកាសសិក្សា</h5>
         <ul class="footer-links">
-          <li><a href="scholarships.html"><i class="bi bi-chevron-right"></i>អាហារូបករណ៍</a></li>
-          <li><a href="courses.html"><i class="bi bi-chevron-right"></i>វគ្គសិក្សា</a></li>
-          <li><a href="exchange.html"><i class="bi bi-chevron-right"></i>ផ្លាស់ប្តូរ</a></li>
-          <li><a href="internships.html"><i class="bi bi-chevron-right"></i>ហាត់ការ</a></li>
-          <li><a href="volunteer.html"><i class="bi bi-chevron-right"></i>ស្ម័គ្រចិត្ត</a></li>
+          <li><a href="scholarship-logged.html"><i class="bi bi-chevron-right"></i>អាហារូបករណ៍</a></li>
+          <li><a href="courses-logged.html"><i class="bi bi-chevron-right"></i>វគ្គសិក្សា</a></li>
+          <li><a href="exchange-logged.html"><i class="bi bi-chevron-right"></i>ផ្លាស់ប្តូរ</a></li>
+          <li><a href="internship-categories-logged.html"><i class="bi bi-chevron-right"></i>ហាត់ការ</a></li>
+          <li><a href="volunteer-international-logged.html"><i class="bi bi-chevron-right"></i>ស្ម័គ្រចិត្ត</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2">
@@ -658,6 +658,7 @@
     </div>
   </div>
 </footer>
+
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -722,30 +723,63 @@
             filterCards();
         }
 
-        // Set active tab
+        // Set active tab (show specific counts per type)
         function setTab(btn, type) {
-            document.querySelectorAll('.tab-btn').forEach(tab => tab.classList.remove('active'));
-            btn.classList.add('active');
+          document.querySelectorAll('.tab-btn').forEach(tab => tab.classList.remove('active'));
+          btn.classList.add('active');
 
-            const cards = document.querySelectorAll('.opportunity-card');
-            let visibleCount = 0;
-            cards.forEach(card => {
-                if (type === 'all') {
-                    card.closest('[class*="col"]').style.display = 'block';
-                    visibleCount++;
-                } else {
-                    const cardType = card.getAttribute('data-type') || 'all';
-                    const shouldDisplay = (cardType === type || type === 'all');
-                    card.closest('[class*="col"]').style.display = shouldDisplay ? 'block' : 'none';
-                    if (shouldDisplay) visibleCount++;
-                }
+          const targetMap = {
+            technology: 5,
+            creative: 3,
+            personal: 2
+          };
+
+          const cards = Array.from(document.querySelectorAll('.opportunity-card'));
+
+          // Hide all cards first
+          cards.forEach(c => c.closest('[class*="col"]').style.display = 'none');
+
+          let visibleCount = 0;
+
+          if (type === 'all') {
+            cards.forEach(c => {
+              c.closest('[class*="col"]').style.display = 'block';
+              visibleCount++;
+            });
+          } else if (targetMap[type]) {
+            const target = targetMap[type];
+
+            // Prefer cards that have an explicit data-type attribute matching the tab
+            const matching = cards.filter(c => (c.getAttribute('data-type') || '').toLowerCase() === type);
+
+            matching.slice(0, target).forEach(c => {
+              c.closest('[class*="col"]').style.display = 'block';
+              visibleCount++;
             });
 
-            // Show/hide empty state
-            const emptyState = document.getElementById('empty-state');
-            if (emptyState) {
-                emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+            // If not enough matching cards, fill remaining slots with other cards
+            if (visibleCount < target) {
+              const others = cards.filter(c => c.closest('[class*="col"]').style.display === 'none');
+              for (let c of others) {
+                c.closest('[class*="col"]').style.display = 'block';
+                visibleCount++;
+                if (visibleCount >= target) break;
+              }
             }
+          } else {
+            // For other tabs, try to show any matching card (preserve default empty-state behavior)
+            const matching = cards.filter(c => (c.getAttribute('data-type') || '').toLowerCase() === type);
+            if (matching.length) {
+              matching[0].closest('[class*="col"]').style.display = 'block';
+              visibleCount = 1;
+            }
+          }
+
+          // Show/hide empty state
+          const emptyState = document.getElementById('empty-state');
+          if (emptyState) {
+            emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+          }
         }
     </script>
 

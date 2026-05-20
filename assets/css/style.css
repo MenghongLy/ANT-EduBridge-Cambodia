@@ -85,6 +85,8 @@
 }
 
 html {
+  /* increase root font-size so 1rem becomes 18px (2px larger than 16px default) */
+  font-size: 18px;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -4604,14 +4606,19 @@ select.form-control-custom {
 
 
 
+.step-item {
+  position: relative;
+}
+
 .step-item:not(:last-child)::after {
   content: '';
   position: absolute;
-  top: 19px;
-  left: calc(10% + 22px);
-  right: calc(-50% + 22px);
+  top: 50%;
+  left: 50%;
+  right: -50%;
   height: 2px;
   background: var(--border);
+  transform: translateY(-50%);
   transition: background .4s;
 }
 
