@@ -3280,22 +3280,6 @@ input[type="range"] {
 	font-weight: 500;
 }
 
-.btn-card-detail {
-	display: block;
-	width: 100%;
-	background: var(--bg-subtle);
-	color: var(--primary-color);
-	border: 2px solid var(--primary-color);
-	border-radius: 10px;
-	padding: 9px;
-	text-align: center;
-	font-weight: 600;
-	font-size: .88rem;
-	font-family: inherit;
-	cursor: pointer;
-	transition: .2s;
-	margin-top: auto;
-}
 
 .btn-card-detail:hover {
 	background: var(--primary-color);
