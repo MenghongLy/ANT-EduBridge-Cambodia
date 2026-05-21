@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>តំឡើងពាក្យសម្ងាត់ថ្មី | EduBridge Cambodia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Hanuman:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/chhay.css">
+
+</head>
+
+<body class="login-page-body">
+  <main class="login-page-wrapper">
+    <div class="login-page-bg-pattern"></div>
+
+    <div class="container py-4 py-lg-5" style="position:relative;z-index:1">
+      <div class="row g-4 align-items-stretch justify-content-center">
+
+        <!-- ── LEFT BRAND PANEL ── -->
+        <div class="col-lg-6 d-flex">
+          <section class="brand-panel w-100 d-flex flex-column justify-content-between p-4 p-lg-5">
+            <div>
+              <a href="../index.html"
+                class="d-inline-flex align-items-center text-decoration-none mb-4 mb-lg-5 brand-link">
+                <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img">
+                </div>
+                <span>
+                  <span class="d-block brand-title">EduBridge Cambodia</span>
+                  <span class="d-block brand-subtitle">Education Opportunities Platform</span>
+                </span>
+              </a>
+
+              <span class="badge rounded-pill px-3 py-2 login-chip mb-3">
+                <i class="bi bi-shield-lock me-1"></i>កំណត់ពាក្យសម្ងាត់ថ្មី
+              </span>
+
+              <h1 class="display-6 fw-bold text-white lh-sm mb-3">
+                កំណត់ពាក្យសម្ងាត់<br>
+                ឡើងវិញ<span class="text-gradient">ដោយសុវត្ថិភាព</span>
+              </h1>
+              <p class="lead login-intro mb-0">
+                បញ្ចូលអ៊ីមែលដែលអ្នកបានចុះឈ្មោះ ហើយយើងនឹងផ្ញើតំណភ្ជាប់
+                សម្រាប់កំណត់ពាក្យសម្ងាត់ថ្មីទៅកាន់អ្នក។
+              </p>
+            </div>
+
+            <div class="row g-3 mt-4">
+              <div class="col-sm-6">
+                <article class="stat-card p-3 h-100">
+                  <h3 class="h4 fw-bold mb-1 text-white">24/7</h3>
+                  <p class="mb-0 small">គាំទ្រការចូលប្រើគណនី</p>
+                </article>
+              </div>
+              <div class="col-sm-6">
+                <article class="stat-card p-3 h-100">
+                  <h3 class="h4 fw-bold mb-1 text-white">Secure</h3>
+                  <p class="mb-0 small">OTP និងអ៊ីមែលផ្ទៀងផ្ទាត់</p>
+                </article>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- ── RIGHT FORM PANEL ── -->
+        <div class="col-lg-6 d-flex">
+          <section class="login-panel w-100 p-4 p-md-5">
+
+            <!-- Step dots -->
+            <div class="step-dots mb-3">
+              <div class="step-dot done"></div>
+              <div class="step-dot done"></div>
+              <div class="step-dot active"></div>
+            </div>
+
+            <!-- ── FORM VIEW ── -->
+            <div id="form-view">
+              <div class="mb-4">
+                <p class="text-uppercase small fw-semibold mb-1 panel-label">Step 3 of 3 — New Password</p>
+                <h2 class="h3 fw-bold mb-1 panel-title">ពាក្យសម្ងាត់ថ្មី</h2>
+                <p class="mb-0 panel-subtitle">
+                  បញ្ចូល ពាក្យសម្ងាត់ ថ្មី ២ ដង ដើម្បី បញ្ជាក់ ។
+                </p>
+              </div>
+
+              <form id="reset-form" novalidate>
+
+                <!-- New Password -->
+                <div class="mb-1">
+                  <label for="newPwd" class="form-label fw-semibold" style="color:var(--text-main)">
+                    ពាក្យសម្ងាត់ថ្មី<span style="color:var(--red);margin-left:3px">*</span>
+                  </label>
+                  <div class="input-group input-group-lg login-input-group">
+                    <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                    <input type="password" class="form-control" id="newPwd"
+                      placeholder="ពាក្យសម្ងាត់ (Min 8 Characters)" autocomplete="new-password"
+                      oninput="checkStrength(this.value); checkMatch()">
+                    <button type="button" class="btn toggle-pw input-group-text"
+                      onclick="togglePwd('newPwd','icon-new')">
+                      <i class="bi bi-eye" id="icon-new"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="mb-3 mt-4">
+                  <label for="confirmPwd" class="form-label fw-semibold" style="color:var(--text-main)">
+                    បញ្ជាក់ ពាក្យសម្ងាត់<span style="color:var(--red);margin-left:3px">*</span>
+                  </label>
+                  <div class="input-group input-group-lg login-input-group">
+                    <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                    <input type="password" class="form-control" id="confirmPwd" placeholder="ដាក់ ពាក្យសម្ងាត់ ម្ដងទៀត"
+                      autocomplete="new-password" oninput="checkMatch()">
+                    <button type="button" class="btn toggle-pw input-group-text"
+                      onclick="togglePwd('confirmPwd','icon-conf')">
+                      <i class="bi bi-eye" id="icon-conf"></i>
+                    </button>
+                  </div>
+                  <!-- Match indicator -->
+                  <div class="mt-2 d-flex align-items-center gap-2" id="match-wrap" style="display:none!important">
+                    <span class="match-badge" id="match-badge"></span>
+                  </div>
+                </div>
+
+                <!-- Info / error msg -->
+                <div class="mb-3 ur-empty d-none" id="form-msg">
+                  <i class="bi bi-info-circle me-1"></i>
+                  <span id="form-msg-text"></span>
+                </div>
+
+                  <div class="d-flex justify-content-center mb-3">
+                    <button type="button" id="verify-btn"
+                      class="btn btn-primary fw-semibold login-submit-btn rest-submit-btn" onclick="window.location.href='../index-logged.html'">
+                      <i class="bi bi-key me-2"></i>រក្សាទុក ពាក្យសម្ងាត់ថ្មី
+                    </button>
+                  </div>
+              </form>
+            </div>
+
+            <hr class="my-4">
+            <p class="text-center mb-0 small">
+              ត្រឡប់ទៅ <a href="verify-otp.html" class="fw-semibold link-register">ផ្ទៀងផ្ទាត់ OTP</a>
+              &nbsp;·&nbsp;
+              <a href="login.html" class="fw-semibold link-register">ចូលគណនី</a>
+            </p>
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    /* ── EMAIL FROM URL PARAM ── */
+    const urlParams = new URLSearchParams(window.location.search);
+    const userEmail = urlParams.get('email') || 'user@example.com';
+    document.getElementById('success-email').textContent = userEmail;
+
+    /* ── TOGGLE PASSWORD VISIBILITY ── */
+    function togglePwd(inputId, iconId) {
+      const inp = document.getElementById(inputId);
+      const icon = document.getElementById(iconId);
+      if (inp.type === 'password') {
+        inp.type = 'text';
+        icon.className = 'bi bi-eye-slash';
+      } else {
+        inp.type = 'password';
+        icon.className = 'bi bi-eye';
+      }
+    }
+
+    /* ── REQUIREMENTS ── */
+    const rules = {
+      'req-len': v => v.length >= 8,
+      'req-upper': v => /[A-Z]/.test(v),
+      'req-lower': v => /[a-z]/.test(v),
+      'req-num': v => /[0-9]/.test(v),
+      'req-sym': v => /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(v),
+    };
+
+    function checkStrength(val) {
+      let score = 0;
+      const keys = Object.keys(rules);
+      keys.forEach(key => {
+        const el = document.getElementById(key);
+        const met = rules[key](val);
+        if (met) score++;
+        el.classList.toggle('met', met && val.length > 0);
+        el.classList.toggle('fail', !met && val.length > 0);
+        el.querySelector('i').className = met && val.length > 0 ? 'bi bi-check-circle-fill' : (val.length > 0 ? 'bi bi-x-circle-fill' : 'bi bi-circle');
+      });
+
+      // Segments
+      const segs = ['seg-1', 'seg-2', 'seg-3', 'seg-4'];
+      const cls = ['', 's1', 's2', 's3', 's4'];
+      const label = document.getElementById('strength-label');
+      const colors = ['var(--text-muted)', 'var(--red)', 'var(--accent-gold)', '#4CAF50', 'var(--accent-green)'];
+      const labels = ['ភាពខ្លាំង: —', 'ខ្សោយ', 'មធ្យម', 'ល្អ', 'ខ្លាំង'];
+
+      segs.forEach((id, i) => {
+        const seg = document.getElementById(id);
+        seg.className = 'strength-seg' + (val.length > 0 && i < score ? ` ${cls[score]}` : '');
+      });
+
+      if (val.length === 0) {
+        label.textContent = 'ភាពខ្លាំង: —';
+        label.style.color = 'var(--text-muted)';
+      } else {
+        label.textContent = 'ភាពខ្លាំង: ' + labels[score];
+        label.style.color = colors[score];
+      }
+
+      checkSubmit();
+    }
+
+    /* ── MATCH CHECK ── */
+    function checkMatch() {
+      const pw1 = document.getElementById('newPwd').value;
+      const pw2 = document.getElementById('confirmPwd').value;
+      const wrap = document.getElementById('match-wrap');
+      const badge = document.getElementById('match-badge');
+      const cf = document.getElementById('confirmPwd');
+
+      if (pw2.length === 0) {
+        wrap.style.display = 'none';
+        cf.classList.remove('is-valid', 'is-invalid');
+        checkSubmit(); return;
+      }
+
+      wrap.style.removeProperty('display');
+      if (pw1 === pw2) {
+        badge.textContent = '✓ ពាក្យសម្ងាត់ ត្រូវគ្នា';
+        badge.className = 'match-badge ok';
+        cf.classList.remove('is-invalid'); cf.classList.add('is-valid');
+      } else {
+        badge.textContent = '✗ ពាក្យសម្ងាត់ មិនត្រូវគ្នា';
+        badge.className = 'match-badge bad';
+        cf.classList.remove('is-valid'); cf.classList.add('is-invalid');
+      }
+      checkSubmit();
+    }
+
+    /* ── ENABLE SUBMIT ── */
+    function checkSubmit() {
+      const pw1 = document.getElementById('newPwd').value;
+      const pw2 = document.getElementById('confirmPwd').value;
+      const allRules = Object.values(rules).every(fn => fn(pw1));
+      const match = pw1 === pw2 && pw2.length > 0;
+      document.getElementById('submit-btn').disabled = !(allRules && match);
+    }
+
+    /* ── FORM SUBMIT ── */
+    document.getElementById('reset-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>កំពុងរក្សាទុក...';
+
+      // Simulate API call
+      setTimeout(() => {
+        // Show success
+        document.getElementById('form-view').classList.add('d-none');
+        document.getElementById('success-view').classList.remove('d-none');
+        // Scroll to top of panel
+        document.querySelector('.login-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 1500);
+    });
+
+    /* ── FORM MSG ── */
+    function showMsg(txt, type = 'info') {
+      const box = document.getElementById('form-msg');
+      const span = document.getElementById('form-msg-text');
+      box.className = 'mb-3 ur-empty' + (type === 'danger' ? ' danger' : type === 'success' ? ' success' : type === 'warning' ? ' warning' : '');
+      span.textContent = txt;
+      box.classList.remove('d-none');
+    }
+  </script>
+</body>
+
+</html>

@@ -153,6 +153,13 @@
 	background: linear-gradient(135deg, #0066aa, #39a8ea);
 }
 
+.otp-submit-btn {
+	width: min(410px, 100%);
+	padding: 0.8rem 1.15rem;
+	font-size: 0.95rem;
+	border-radius: 0.9rem;
+}
+
 .separator-wrap {
 	color: var(--text-muted);
 }
@@ -207,6 +214,10 @@
 
 	.panel-title {
 		font-size: 1.35rem;
+	}
+
+	.otp-submit-btn {
+		width: 100%;
 	}
 }
 
@@ -3737,4 +3748,10 @@ footer {
 		flex-direction: row;
 		width: 100%;
 	}
+}
+.rest-submit-btn {
+	width: min(530px, 100%);
+	padding: 0.8rem 1.15rem;
+	font-size: 0.95rem;
+	border-radius: 0.9rem;
 }

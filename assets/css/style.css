@@ -5503,7 +5503,7 @@ select.form-control-custom {
   font-weight: 400;
   line-height: 1;
 }
-}
+
 
 .ref-code {
   display: inline-block;
@@ -6382,3 +6382,232 @@ select.form-control-custom {
     flex-wrap: wrap;
   }
 }
+
+
+    /* ── LEFT BRAND PANEL ── */
+    .brand-panel {
+      background: linear-gradient(150deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.02) 100%);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      color: #fff;
+    }
+    .brand-link { gap: 12px; }
+    .brand-icon {
+      width: 48px; height: 48px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; color: #fff; flex-shrink: 0;
+      overflow: hidden;
+    }
+    .brand-title    { font-size: 1.1rem; font-weight: 700; color: #fff; line-height: 1.2; }
+    .brand-subtitle { font-size: .72rem; color: var(--text-white-55); }
+
+    .login-chip {
+      background: rgba(77,184,255,.15);
+      border: 1px solid rgba(77,184,255,.3);
+      color: var(--secondary);
+      font-size: .78rem;
+    }
+
+    .text-gradient {
+      background: linear-gradient(90deg, var(--secondary), var(--accent-gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+    }
+
+    .login-intro { color: var(--text-white-75); font-size: .95rem; line-height: 1.9; }
+
+    .stat-card {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 14px;
+    }
+    .stat-card p { color: var(--text-white-55); }
+
+    /* ── RIGHT FORM PANEL ── */
+    .login-panel {
+      background: var(--panel-bg);
+      border-radius: 20px;
+      box-shadow: var(--shadow-panel);
+    }
+    .panel-label  { color: var(--primary); letter-spacing: .8px; font-size: .75rem; }
+    .panel-title  { color: var(--text-main); }
+    .panel-subtitle { color: var(--text-sub); font-size: .9rem; line-height: 1.8; }
+
+    /* ── OTP INPUT BOXES ── */
+    .otp-group {
+      display: flex; gap: 10px; justify-content: center;
+      margin: 28px 0;
+    }
+    .otp-input {
+      width: 56px; height: 64px;
+      text-align: center;
+      font-size: 1.6rem; font-weight: 700;
+      color: var(--text-main);
+      background: var(--input-bg);
+      border: 2px solid var(--border-color);
+      border-radius: 14px;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s, transform .15s;
+      font-family: 'Kantumruy Pro', 'Hanuman', sans-serif;
+      caret-color: var(--primary);
+    }
+    .otp-input:focus {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-input);
+      transform: translateY(-3px);
+    }
+    .otp-input.filled {
+      border-color: var(--primary);
+      background: rgba(0,122,204,.05);
+    }
+    .otp-input.error {
+      border-color: #e53e3e;
+      box-shadow: 0 0 0 3px rgba(229,62,62,.15);
+      animation: shake .4s ease;
+    }
+    @keyframes shake {
+      0%,100% { transform: translateX(0); }
+      20%,60%  { transform: translateX(-5px); }
+      40%,80%  { transform: translateX(5px); }
+    }
+
+    /* ── TIMER RING ── */
+    .timer-wrap {
+      display: flex; flex-direction: column; align-items: center;
+      margin-bottom: 22px; gap: 6px;
+    }
+    .timer-ring-wrap { position: relative; width: 72px; height: 72px; }
+    .timer-ring-wrap svg { transform: rotate(-90deg); }
+    .timer-ring-bg  { fill: none; stroke: var(--border-color); stroke-width: 4; }
+    .timer-ring-fg  {
+      fill: none; stroke: var(--primary); stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 188.5;
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 1s linear, stroke .3s;
+    }
+    .timer-ring-fg.warning { stroke: var(--accent-gold); }
+    .timer-ring-fg.expired { stroke: #e53e3e; }
+    .timer-num {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.05rem; font-weight: 700; color: var(--text-main);
+    }
+    .timer-label { font-size: .8rem; color: var(--text-muted); }
+
+    /* ── EMAIL BADGE ── */
+    .email-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(0,122,204,.08);
+      border: 1px solid rgba(0,122,204,.2);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: .85rem; color: var(--primary); font-weight: 600;
+    }
+
+    /* ── STEP DOTS ── */
+    .step-dots { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
+    .step-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--border-color); transition: .2s;
+    }
+    .step-dot.active { background: var(--primary); width: 22px; border-radius: 4px; }
+    .step-dot.done   { background: var(--accent-green); }
+
+    /* ── INPUT GROUP ── */
+    .login-input-group .input-group-text {
+      background: var(--input-bg); border-color: var(--border-color);
+      color: var(--text-muted);
+    }
+    .login-input-group .form-control {
+      background: var(--input-bg); border-color: var(--border-color);
+      color: var(--text-main); font-family: inherit;
+    }
+    .login-input-group .form-control:focus {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-input);
+      background: var(--input-bg);
+    }
+    .login-input-group .form-control::placeholder { color: var(--text-muted); font-size: .9rem; }
+
+    /* ── SUBMIT BUTTON ── */
+    .login-submit-btn {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border: none; border-radius: 12px;
+      padding: 14px;
+      font-weight: 700; font-size: 1rem;
+      font-family: inherit;
+      box-shadow: 0 8px 24px rgba(0,122,204,.35);
+      transition: .25s; color: #fff;
+    }
+    .login-submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(0,122,204,.45);
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: #fff;
+    }
+    .login-submit-btn:disabled {
+      opacity: .6; transform: none;
+      box-shadow: none; cursor: not-allowed;
+    }
+
+    /* ── INFO BOX ── */
+    .ur-empty {
+      background: rgba(0,122,204,.06);
+      border: 1px solid rgba(0,122,204,.15);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: .85rem; color: var(--text-sub); line-height: 1.7;
+    }
+    .ur-empty.danger {
+      background: rgba(229,62,62,.06);
+      border-color: rgba(229,62,62,.2);
+      color: #c53030;
+    }
+    .ur-empty.success {
+      background: rgba(0,194,178,.06);
+      border-color: rgba(0,194,178,.2);
+      color: #009e90;
+    }
+
+    /* ── LINK ── */
+    .link-register { color: var(--primary); }
+    .link-register:hover { color: var(--primary-dark); }
+
+    /* ── RESEND BTN ── */
+    .btn-resend {
+      background: transparent; border: none; cursor: pointer;
+      color: var(--primary); font-weight: 600; font-size: .88rem;
+      font-family: inherit; padding: 0; transition: color .2s;
+    }
+    .btn-resend:hover { color: var(--primary-dark); text-decoration: underline; }
+    .btn-resend:disabled { color: var(--text-muted); cursor: not-allowed; text-decoration: none; }
+
+    /* ── SUCCESS STATE ── */
+    .otp-success-icon {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-green), #009e90);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; color: #fff; margin: 0 auto 18px;
+      box-shadow: 0 10px 28px rgba(0,194,178,.35);
+      animation: pop-in .5s cubic-bezier(.34,1.56,.64,1) both;
+    }
+    @keyframes pop-in {
+      from { transform: scale(0); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .otp-input { width: 46px; height: 56px; font-size: 1.3rem; }
+      .otp-group { gap: 8px; }
+    }
+    @media (max-width: 400px) {
+      .otp-input { width: 38px; height: 48px; font-size: 1.1rem; border-radius: 10px; }
+      .otp-group { gap: 6px; }
+    }

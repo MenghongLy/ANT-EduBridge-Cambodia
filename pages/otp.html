@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>បញ្ជាក់លេខ OTP | EduBridge Cambodia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Hanuman:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/chhay.css">
+
+
+</head>
+
+<body class="login-page-body">
+  <main class="login-page-wrapper">
+    <div class="login-page-bg-pattern"></div>
+    <div class="container py-4 py-lg-5">
+      <div class="row g-4 align-items-stretch justify-content-center">
+
+        <!-- ── LEFT BRAND PANEL ── -->
+        <div class="col-lg-6 d-flex">
+          <section class="brand-panel w-100 d-flex flex-column justify-content-between p-4 p-lg-5">
+            <div>
+              <a href="../index.html"
+                class="d-inline-flex align-items-center text-decoration-none mb-4 mb-lg-5 brand-link">
+                <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img">
+                </div>
+                <span>
+                  <span class="d-block brand-title">EduBridge Cambodia</span>
+                  <span class="d-block brand-subtitle">Education Opportunities Platform</span>
+                </span>
+              </a>
+
+              <span class="badge rounded-pill px-3 py-2 login-chip mb-3">
+                <i class="bi bi-shield-lock me-1"></i>សុវត្ថិភាពគណនី
+              </span>
+
+              <h1 class="display-6 fw-bold text-white lh-sm mb-3">
+                កំណត់ពាក្យសម្ងាត់<br>
+                ឡើងវិញ<span class="text-gradient">ដោយសុវត្ថិភាព</span>
+              </h1>
+              <p class="lead login-intro mb-0">
+                បញ្ចូលអ៊ីមែលដែលអ្នកបានចុះឈ្មោះ ហើយយើងនឹងផ្ញើតំណភ្ជាប់
+                សម្រាប់កំណត់ពាក្យសម្ងាត់ថ្មីទៅកាន់អ្នក។
+              </p>
+            </div>
+
+            <div class="row g-3 mt-4">
+              <div class="col-sm-6">
+                <article class="stat-card p-3 h-100">
+                  <h3 class="h4 fw-bold mb-1 text-white">24/7</h3>
+                  <p class="mb-0 small">គាំទ្រការចូលប្រើគណនី</p>
+                </article>
+              </div>
+              <div class="col-sm-6">
+                <article class="stat-card p-3 h-100">
+                  <h3 class="h4 fw-bold mb-1 text-white">Secure</h3>
+                  <p class="mb-0 small">OTP និងអ៊ីមែលផ្ទៀងផ្ទាត់</p>
+                </article>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- ── RIGHT OTP PANEL ── -->
+        <div class="col-lg-6 d-flex">
+          <section class="login-panel w-100 p-4 p-md-5">
+
+            <!-- Step indicator -->
+            <div class="step-dots mb-3">
+              <div class="step-dot done"></div>
+              <div class="step-dot active"></div>
+              <div class="step-dot"></div>
+            </div>
+
+            <div class="mb-1">
+              <p class="text-uppercase small fw-semibold mb-1 panel-label">Step 2 of 3 — OTP Verification</p>
+              <h2 class="h3 fw-bold mb-1 panel-title">បញ្ចូល OTP</h2>
+              <p class="mb-3 panel-subtitle">
+                យើងបានផ្ញើ OTP ៦ ខ្ទង់ ទៅ Email:
+              </p>
+              <div class="text-center mb-2">
+                <span class="email-badge">
+                  <i class="bi bi-envelope-at-fill"></i>
+                  <span id="display-email">exam***@gmail.com</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- OTP Inputs -->
+            <div id="otp-form-section">
+              <div class="otp-group" id="otp-group">
+                <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]"
+                  autocomplete="off" data-index="0">
+                <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]"
+                  autocomplete="off" data-index="1">
+                <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]"
+                  autocomplete="off" data-index="2">
+                <div style="display:flex;align-items:center;color:var(--text-muted);font-size:1.2rem;padding:0 2px">—
+                </div>
+                <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]"
+                  autocomplete="off" data-index="3">
+                <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]"
+                  autocomplete="off" data-index="4">
+                <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]"
+                  autocomplete="off" data-index="5">
+              </div>
+
+              <!-- Status message -->
+              <div class="mb-3 ur-empty d-none" id="otp-msg">
+                <i class="bi bi-info-circle me-1"></i>
+                <span id="otp-msg-text"></span>
+              </div>
+
+              <!-- Verify button -->
+              <div class="d-flex justify-content-center mb-3">
+                <button type="submit" id="verify-btn" class="btn btn-primary fw-semibold login-submit-btn otp-submit-btn"onclick="location.href='resetpass.html'">
+                  <i class="bi bi-send me-2"></i>ផ្ទៀងផ្ទាត់ OTP
+                </button>
+              </div>
+
+              <!-- Resend -->
+              <div class="text-center mb-3">
+                <span class="small" style="color:var(--text-muted)">មិនទទួលបាន? </span>
+                <button class="btn-resend" id="resend-btn" >
+                  <i class="bi bi-arrow-clockwise me-1 "></i>ផ្ញើម្ដងទៀត
+                  <span id="resend-countdown"></span>
+                </button>
+              </div>
+            </div>
+
+            <hr class="my-4">
+            <p class="text-center mb-0 small">
+              ត្រឡប់ទៅ <a href="forgot-password.html" class="fw-semibold link-register">ព័ត៌មានអ៊ីមែល</a>
+              &nbsp;·&nbsp;
+              <a href="login.html" class="fw-semibold link-register">ចូលគណនី</a>
+            </p>
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
