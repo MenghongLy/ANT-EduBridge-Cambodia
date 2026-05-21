@@ -269,24 +269,6 @@
                         នឹង Review ហើយ ជូនដំណឹងអ្នក ក្នុង <strong style="color:var(--secondary)">៧ ថ្ងៃ</strong> ។
                     </p>
                 </div>
-                <div class="col-lg-6 d-none d-lg-flex justify-content-end gap-3 flex-wrap">
-                    <div class="prog-pill">
-                        <div class="pp-icon" style="background:rgba(75,192,192,.15)"><i class="bi bi-award"
-                                style="color:#4BC0C0"></i></div>
-                        <div>
-                            <div class="pp-label">អាហារូបករណ៍</div>
-                            <div class="pp-val">National Merit Scholarship · 2025</div>
-                        </div>
-                    </div>
-                    <div class="prog-pill">
-                        <div class="pp-icon" style="background:rgba(245,166,35,.15)"><i class="bi bi-clock"
-                                style="color:var(--gold)"></i></div>
-                        <div>
-                            <div class="pp-label">ថ្ងៃផុតកំណត់</div>
-                            <div class="pp-val">៩០ ឧសភា ២០២៥</div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -337,47 +319,64 @@
 
                                 <!-- Full name -->
                                 <div class="row g-3">
-                                    <div class="col-12">
-                                        <label class="field-label">ឈ្មោះពេញលេញ (ខ្មែរ)</label>
-                                        <input type="text" class="f-input" id="name-km"
-                                            placeholder="ឈ្មោះលេខ១ ឈ្មោះលេខ២">
-                                        <div id="err-name-km" class="field-error"></div>
+                                    <div class="col-sm-6">
+                                        <div class="field-group">
+                                            <label class="field-label">នាមខ្មែរ (ពេញ)<span class="req">*</span></label>
+                                            <input type="text" class="f-input" id="name-km" placeholder="ឧ. ហ៊ួ ចាន់ ណារ៉ា">
+                                            <div class="field-error" id="err-name-km">សូមបំពេញ នាមខ្មែរ</div>
+                                        </div>
                                     </div>
-                                    <div class="col-12">
-                                        <label class="field-label">ឈ្មោះពេញលេញ (អង់គ្លេស)</label>
-                                        <input type="text" class="f-input" id="name-en" placeholder="Full Name">
-                                        <div id="err-name-en" class="field-error"></div>
+                                    <div class="col-sm-6">
+                                        <div class="field-group">
+                                            <label class="field-label">ឈ្មោះ Latin (Passport)<span class="req">*</span></label>
+                                            <input type="text" class="f-input" id="name-en" placeholder="e.g. HOUN CHANNA NARA">
+                                            <div class="field-error" id="err-name-en">សូមបំពេញ ឈ្មោះ Latin</div>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- DOB + Gender -->
                                 <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label class="field-label">ថ្ងៃ ខែ ឆ្នាំកំណើត</label>
-                                        <input type="date" class="f-input" id="dob">
-                                        <div id="err-dob" class="field-error"></div>
+                                    <div class="col-sm-6">
+                                        <div class="field-group">
+                                            <label class="field-label">ថ្ងៃខែឆ្នាំកំណើត<span class="req">*</span></label>
+                                            <div class="input-icon-wrap">
+                                                <i class="bi bi-calendar3 iw-icon"></i>
+                                                <input type="date" class="f-input" id="dob">
+                                            </div>
+                                            <div class="field-error" id="err-dob">សូមជ្រើស ថ្ងៃខែឆ្នាំ</div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <label class="field-label">ភេទ</label>
-                                        <select class="f-select" id="gender">
-                                            <option value="">ជ្រើសរើស...</option>
-                                            <option value="ប្រុស">ប្រុស</option>
-                                            <option value="ស្រី">ស្រី</option>
-                                            <option value="ផ្សេងទៀត">ផ្សេងទៀត</option>
-                                        </select>
+                                    <div class="col-sm-6">
+                                        <div class="field-group">
+                                            <label class="field-label">យេនឌ័រ<span class="req">*</span></label>
+                                            <select class="f-select" id="gender">
+                                                <option value="" disabled selected>ជ្រើសរើស...</option>
+                                                <option value="male">ប្រុស</option>
+                                                <option value="female">ស្រី</option>
+                                                <option value="other">មិនចង់ប្រាប់</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- Nationality + ID -->
                                 <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label class="field-label">សញ្ជាតិ</label>
-                                        <input type="text" class="f-input" value="ខ្មែរ" readonly>
+                                    <div class="col-sm-6">
+                                        <div class="field-group">
+                                            <label class="field-label">សញ្ជាតិ<span class="req">*</span></label>
+                                            <select class="f-select" id="nationality">
+                                                <option value="khmer" selected>🇰🇭 ខ្មែរ / Cambodian</option>
+                                                <option value="other">ផ្សេង</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <label class="field-label">លេខអត្តសញ្ញាណប័ណ្ណ</label>
-                                        <input type="text" class="f-input" id="passport" placeholder="១២៣៤៥៦៧">
-                                        <div id="err-passport" class="field-error"></div>
+                                    <div class="col-sm-6">
+                                        <div class="field-group">
+                                            <label class="field-label">លេខ ID / Passport<span class="req">*</span></label>
+                                            <input type="text" class="f-input" id="passport" placeholder="ឧ. A1234567">
+                                            <div class="field-error" id="err-passport">សូមបំពេញ លេខ ID</div>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -385,39 +384,62 @@
 
                                 <!-- Email + Phone -->
                                 <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label class="field-label">ប្រអប់សម្របសម្រួល ឈ្មោះ (Email)</label>
-                                        <input type="email" class="f-input" id="email"
-                                            placeholder="your@email.com">
-                                        <div id="err-email" class="field-error"></div>
+                                    <div class="col-sm-6">
+                                        <div class="field-group">
+                                            <label class="field-label">Email<span class="req">*</span></label>
+                                            <div class="input-icon-wrap">
+                                                <i class="bi bi-envelope iw-icon"></i>
+                                                <input type="email" class="f-input" id="email" placeholder="your@email.com">
+                                            </div>
+                                            <div class="field-error" id="err-email">Email មិនត្រឹមត្រូវ</div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <label class="field-label">លេខទូរស័ព្ទ</label>
-                                        <input type="tel" class="f-input" id="phone" placeholder="+855 93 XXX XXX">
-                                        <div id="err-phone" class="field-error"></div>
+                                    <div class="col-sm-6">
+                                        <div class="field-group">
+                                            <label class="field-label">លេខទូរស័ព្ទ<span class="req">*</span></label>
+                                            <div class="input-icon-wrap">
+                                                <i class="bi bi-phone iw-icon"></i>
+                                                <input type="tel" class="f-input" id="phone" placeholder="0XX XXX XXX">
+                                            </div>
+                                            <div class="field-error" id="err-phone">សូមបំពេញ លេខទូរស័ព្ទ</div>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- Telegram + Address -->
                                 <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label class="field-label">Telegram (Optional)</label>
-                                        <input type="text" class="f-input" id="telegram" placeholder="@username">
+                                    <div class="col-sm-6">
+                                        <div class="field-group">
+                                            <label class="field-label">Telegram <span class="hint">(ស្រេចចិត្ត)</span></label>
+                                            <div class="input-icon-wrap">
+                                                <i class="bi bi-telegram iw-icon"></i>
+                                                <input type="text" class="f-input" id="telegram" placeholder="@username">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <label class="field-label">ខេត្ត / ក្រុង</label>
-                                        <select class="f-select" id="province">
-                                            <option value="">ជ្រើសរើស...</option>
-                                            <option value="ភ្នំពេញ">ភ្នំពេញ</option>
-                                            <option value="បន្ទាយមានជ័យ">បន្ទាយមានជ័យ</option>
-                                            <option value="ក្រុងព្រះសីហនុ">ក្រុងព្រះសីហនុ</option>
-                                        </select>
+                                    <div class="col-sm-6">
+                                        <div class="field-group">
+                                            <label class="field-label">ទីលំនៅបច្ចុប្បន្ន<span class="req">*</span></label>
+                                            <select class="f-select" id="province">
+                                                <option value="" disabled selected>ខេត្ត / រាជធានី...</option>
+                                                <option>ភ្នំពេញ</option><option> សៀមរាប</option><option>ព្រះសីហនុ</option>
+                                                <option>កំពត</option><option>កណ្ដាល</option><option>ត្បូងឃ្មុំ</option>
+                                                <option>ព្រះវិហារ</option><option>ក្រចេះ</option><option>ស្ទឹងត្រែង</option>
+                                                <option>រតនគិរី</option><option>មណ្ឌលគិរី</option><option>ឧត្ដរមានជ័យ</option>
+                                                <option>បន្ទាយមានជ័យ</option><option>បាត់ដំបង</option><option>ពោធ៍សាត់</option>
+                                                <option>កំពង់ចាម</option><option>កំពង់ឆ្នាំង</option><option>កំពង់ស្ពឺ</option>
+                                                <option>កំពង់ធំ</option><option>ស្វាយរៀង</option><option>ព្រៃវែង</option>
+                                                <option>តាកែវ</option><option>កែប</option><option>ប៉ៃលិន</option>
+                                                <option>ផ្សេង</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="form-nav">
-                                    <button class="btn-next" onclick="goNext(1)">ជំហានបន្ទាប់ <i
-                                            class="bi bi-arrow-right"></i></button>
+                                    <button type="button" class="btn-next" onclick="goNext(1)">
+                                        ជំហានបន្ទាប់ <i class="bi bi-arrow-right"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -433,60 +455,54 @@
 
                                 <!-- Current level -->
                                 <div class="field-group">
-                                    <label class="field-label">កម្រិតការសិក្សាបច្ចុប្បន្ន</label>
+                                    <label class="field-label">កម្រិតការសិក្សាបច្ចុប្បន្ន<span class="req">*</span></label>
                                     <select class="f-select" id="edu-level">
-                                        <option value="">ជ្រើសរើស...</option>
-                                        <option value="វិទ្យាល័យ">វិទ្យាល័យ</option>
-                                        <option value="បរិញ្ញាបត្រ">បរិញ្ញាបត្រ (Undergrad)</option>
-                                        <option value="មេរៀនខ្ពស់">មេរៀនខ្ពស់ (Master's)</option>
-                                        <option value="បណ្ឌិត">បណ្ឌិត (PhD)</option>
+                                        <option value="" disabled selected>ជ្រើសរើស...</option>
+                                        <option>ទុតិយភូមិ (High School)</option>
+                                        <option>បរិញ្ញាបត្រ ឆ្នាំ ១</option>
+                                        <option>បរិញ្ញាបត្រ ឆ្នាំ ២</option>
+                                        <option>បរិញ្ញាបត្រ ឆ្នាំ ៣</option>
+                                        <option>បរិញ្ញាបត្រ ឆ្នាំ ៤ / ៥</option>
+                                        <option>បរិញ្ញាបត្រជាន់ខ្ពស់</option>
+                                        <option>បណ្ឌិត</option>
+                                        <option>បញ្ចប់ការសិក្សា / ធ្វើការ</option>
                                     </select>
                                 </div>
 
                                 <!-- University + Major -->
                                 <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label class="field-label">ឈ្មោះមហាវិទ្យាល័យ</label>
-                                        <input type="text" class="f-input" id="university"
-                                            placeholder="University Name">
-                                        <div id="err-uni" class="field-error"></div>
+                                    <div class="col-sm-7">
+                                        <div class="field-group">
+                                            <label class="field-label">គ្រឹះស្ថានសិក្សា<span class="req">*</span></label>
+                                            <input type="text" class="f-input" id="university" placeholder="ឧ. Royal University of Phnom Penh">
+                                            <div class="field-error" id="err-uni">សូមបំពេញ ឈ្មោះសាកលវិទ្យាល័យ</div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <label class="field-label">វិទ្យាស័ថ / មហាវិទ្យាស័ថ</label>
-                                        <input type="text" class="f-input" id="major"
-                                            placeholder="Major/Field of Study">
-                                        <div id="err-major" class="field-error"></div>
+                                    <div class="col-sm-5">
+                                        <div class="field-group">
+                                            <label class="field-label">ជំនាញ / Major<span class="req">*</span></label>
+                                            <input type="text" class="f-input" id="major" placeholder="ឧ. Computer Science">
+                                            <div class="field-error" id="err-major">សូមបំពេញ ជំនាញ</div>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- GPA -->
                                 <div class="field-group">
-                                    <label class="field-label">GPA / ពិន្ទុធម្មតា</label>
-                                    <input type="number" class="f-input" id="gpa" placeholder="3.8" min="0" max="4"
-                                        step="0.01">
-                                </div>
-
-                                <div class="form-divider">លទ្ធផលសិក្សា</div>
-
-                                <!-- Achievement -->
-                                <div class="field-group">
-                                    <label class="field-label">ឆ្នើតលទ្ធផល / រង្វាន់សិក្សា</label>
-                                    <textarea class="f-input" id="achievement" rows="3"
-                                        placeholder="បង្រាយលម្អិតអំពីរង្វាន់ ឆ្នើត ឬលទ្ធផលលម្អិត"></textarea>
-                                </div>
-
-                                <!-- Year expected -->
-                                <div class="field-group">
-                                    <label class="field-label">ឆ្នាំបញ្ចប់ការសិក្សា</label>
-                                    <input type="number" class="f-input" id="grad-year" placeholder="2025"
-                                        min="2025" max="2030">
+                                    <label class="field-label">GPA / ពិន្ទុ CGPA <span class="hint">(ពី ០ — ៤)</span></label>
+                                    <div class="row g-2 align-items-center">
+                                        <div class="col-5 col-sm-3">
+                                            <input type="number" class="f-input" id="gpa" placeholder="ឧ. 3.5" min="0" max="4" step="0.01">
+                                        </div>
+                                        <div class="col-7 col-sm-9">
+                                            <div style="font-size:.82rem;color:var(--text-muted)">ប្រសិនបើ GPA ប្រើ Scale ផ្សេង — ចង្អុល Scale នៅ Notes</div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="form-nav">
-                                    <button class="btn-back" onclick="goBack(2)"><i class="bi bi-arrow-left"></i>
-                                        ថយក្រោយ</button>
-                                    <button class="btn-next" onclick="goNext(2)">ជំហានបន្ទាប់ <i
-                                            class="bi bi-arrow-right"></i></button>
+                                    <button type="button" class="btn-back" onclick="goBack(2)"><i class="bi bi-arrow-left"></i> ថយក្រោយ</button>
+                                    <button type="button" class="btn-next" onclick="goNext(2)">ជំហានបន្ទាប់ <i class="bi bi-arrow-right"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -494,83 +510,68 @@
                         <!-- ═══ STEP 3 — Financial & Essay ═══ -->
                         <div class="step-panel" id="panel-3">
                             <div class="form-card-header">
-                                <div class="fch-step"><i class="bi bi-cash-coin me-1"></i> ជំហានទី ៣ / ៤</div>
-                                <h2>ស្ថានភាពហិរញ្ញវត្ថុ &amp; សម្រង់ឈ្មោះ</h2>
-                                <p>ផ្ដល់ព័ត៌មានលម្អិតអំពីស្ថានភាពហិរញ្ញវត្ថុ និងលាក់កម្មហេតុផលដែលលាក់ក្លែង</p>
+                                <div class="fch-step"><i class="bi bi-file-earmark-text me-1"></i> ជំហានទី ៣ / ៤</div>
+                                <h2>សម្រង់ឈ្មោះ &amp; ឯកសារ</h2>
+                                <p>ប្រាប់យើងពីខ្លួនអ្នក — ហើយ Upload ឯកសារចាំបាច់</p>
                             </div>
                             <div class="form-card-body">
 
+                                <!-- Why this scholarship -->
+                                <div class="field-group">
+                                    <label class="field-label">
+                                        ហេតុអ្វីចង់ប្រាប់ឯកសារនេះ?<span class="req">*</span>
+                                        <span class="hint">(Min 150 ពាក្យ)</span>
+                                    </label>
+                                    <textarea class="f-textarea" id="motivation" style="min-height:140px"
+                                        placeholder="ចែករំលែក ចំណាប់អារម្មណ៍ គោលដៅ ហេតុអ្វីបានជាអ្នក ជ្រើសឯកសារនេះ..."></textarea>
+                                    <div style="display:flex;justify-content:space-between;margin-top:6px">
+                                        <div class="field-error" id="err-motivation">សូមសរសេរ សម្រង់ (Min 150 ពាក្យ)</div>
+                                        <div style="font-size:.76rem;color:var(--text-muted)" id="mot-count">0 ពាក្យ</div>
+                                    </div>
+                                </div>
+
                                 <!-- Financial situation -->
                                 <div class="field-group">
-                                    <label class="field-label">ស្ថានភាពហិរញ្ញវត្ថុ</label>
+                                    <label class="field-label">ស្ថានភាពហិរញ្ញវត្ថុ<span class="req">*</span></label>
                                     <select class="f-select" id="financial-status">
-                                        <option value="">ជ្រើសរើស...</option>
+                                        <option value="" disabled selected>ជ្រើសរើស...</option>
                                         <option value="ក្រីក្រ">ក្រីក្រ (មិនមានលក្ខណៈថ្លៃថ្នូរ)</option>
                                         <option value="មិនលឹងក់">មិនលឹងក់ (ថ្លៃថ្នូរមាន)</option>
                                         <option value="មានលក្ខណៈ">មានលក្ខណៈផ្លូវការ</option>
                                     </select>
                                 </div>
 
-                                <!-- Parent income -->
-                                <div class="field-group">
-                                    <label class="field-label">ប្រមាណលាក់កម្មលក្ខណៈឪពុកម្ដាយ (ប្រចាំឆ្នាំ)</label>
-                                    <div class="input-group">
-                                        <input type="number" class="f-input" id="family-income" placeholder="0">
-                                        <span class="input-group-text">$ USD</span>
-                                    </div>
-                                </div>
+                                <div class="form-divider">ឯកសារ Upload</div>
 
-                                <!-- Number of dependents -->
+                                <!-- CV -->
                                 <div class="field-group">
-                                    <label class="field-label">ចំនួនសមាជិកក្រុមលេខ (រួមទាំងអ្នក)</label>
-                                    <input type="number" class="f-input" id="dependents" placeholder="4" min="1"
-                                        max="20">
-                                </div>
-
-                                <div class="form-divider">សម្រង់ឈ្មោះឯកទស</div>
-
-                                <!-- Scholarship essay -->
-                                <div class="field-group">
-                                    <label class="field-label">
-                                        ហេតុផលដែលលាក់ក្លែង? <span style="color:var(--text-muted)">(ដាច់ដោយឡែក ១៥០-៣០០
-                                            ពាក្យ)</span>
+                                    <label class="field-label">CV / Resume (PDF)<span class="req">*</span></label>
+                                    <label class="file-drop" id="drop-cv" for="file-cv">
+                                        <input type="file" id="file-cv" accept=".pdf,.doc,.docx" onchange="handleFile(this,'drop-cv','cv-name')">
+                                        <div class="fd-icon"><i class="bi bi-file-earmark-person"></i></div>
+                                        <div class="fd-text" id="cv-name">ចុច ឬ ទាញ CV / Resume មកទីនេះ</div>
+                                        <div class="fd-hint">PDF, DOC, DOCX · Max 5MB</div>
                                     </label>
-                                    <textarea class="f-input" id="essay" rows="5"
-                                        placeholder="ពន្យល់លម្អិតថាហេតុជាដូចម្ដេចដែលលាក់ក្លែងនេះ សមស្របទៅនឹងគោលដៅក្នុងការសិក្សា និងផ្នែកជំនាញរបស់អ្នក..."></textarea>
-                                    <div class="text-muted" style="font-size:.85rem;margin-top:8px">
-                                        <span id="essay-count">0 ពាក្យ</span>
-                                    </div>
-                                    <div id="err-essay" class="field-error"></div>
+                                    <div class="field-error" id="err-cv">សូម Upload CV</div>
                                 </div>
 
                                 <!-- Supporting documents -->
                                 <div class="field-group">
                                     <label class="field-label">
-                                        ឯកសារគាំទ្ន <span style="color:var(--red)">*</span>
+                                        ឯកសារគាំទ្ន / ភ័ស្តុតាង <span class="hint">(ស្រេចចិត្ត)</span>
                                     </label>
-                                    <div class="file-drop" id="drop-docs">
-                                        <input type="file" class="f-input d-none" id="file-docs"
-                                            accept=".pdf,.doc,.docx"
-                                            onchange="handleFile(this, 'drop-docs', 'docs-name')">
-                                        <div style="text-align:center;padding:40px 20px;cursor:pointer"
-                                            onclick="document.getElementById('file-docs').click()">
-                                            <div style="font-size:2rem;margin-bottom:10px"><i
-                                                    class="bi bi-cloud-arrow-up"></i></div>
-                                            <div style="font-weight:600;margin-bottom:4px">ម៉ដទាក់ ឬបង្ហាញឯកសារ</div>
-                                            <div style="font-size:.85rem;color:var(--text-muted)">PDF, Word ដលលាក់ក្លែង
-                                            </div>
-                                            <div id="docs-name"
-                                                style="margin-top:12px;font-size:.9rem;color:var(--primary)"></div>
-                                        </div>
-                                    </div>
-                                    <div id="err-docs" class="field-error"></div>
+                                    <label class="file-drop" id="drop-docs" for="file-docs">
+                                        <input type="file" id="file-docs" accept=".pdf,.doc,.docx,.jpg,.png"
+                                            onchange="handleFile(this,'drop-docs','docs-name')">
+                                        <div class="fd-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+                                        <div class="fd-text" id="docs-name">ចុច ឬ ទាញឯកសារ</div>
+                                        <div class="fd-hint">PDF, Word, Image · Max 5MB</div>
+                                    </label>
                                 </div>
 
                                 <div class="form-nav">
-                                    <button class="btn-back" onclick="goBack(3)"><i class="bi bi-arrow-left"></i>
-                                        ថយក្រោយ</button>
-                                    <button class="btn-next" onclick="goNext(3)">ពិនិត្យលម្អិត <i
-                                            class="bi bi-arrow-right"></i></button>
+                                    <button type="button" class="btn-back" onclick="goBack(3)"><i class="bi bi-arrow-left"></i> ថយក្រោយ</button>
+                                    <button type="button" class="btn-next" onclick="goNext(3)">ពិនិត្យ &amp; បញ្ជាក់ <i class="bi bi-arrow-right"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -580,78 +581,68 @@
                             <div class="form-card-header">
                                 <div class="fch-step"><i class="bi bi-check-circle me-1"></i> ជំហានទី ៤ / ៤</div>
                                 <h2>ពិនិត្យ &amp; បញ្ជាក់</h2>
-                                <p>សូមពិនិត្យលម្អិត ឯកសាររបស់អ្នក មុនពេលដាក់ពាក្យ</p>
+                                <p>ពិនិត្យព័ត៌មានម្ដងទៀត មុននឹងដាក់ — ជ្រើស <strong>កែ</strong> ប្រសិនចង់ផ្លាស់ប្ដូរ</p>
                             </div>
                             <div class="form-card-body">
 
-                                <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:30px">
-                                    <div
-                                        style="background:rgba(0,194,178,.05);padding:15px;border-radius:8px;border-left:4px solid #00C2B2">
-                                        <div style="font-size:.85rem;color:var(--text-muted)">ឈ្មោះលេខ១</div>
-                                        <div id="rv-km" style="font-weight:700;color:var(--text-main);margin-top:4px">—
-                                        </div>
+                                <!-- Review: Personal -->
+                                <div class="review-section">
+                                    <div class="rs-title">
+                                        <i class="bi bi-person-fill"></i> ព័ត៌មានផ្ទាល់ខ្លួន
+                                        <span class="edit-link" onclick="goToStep(1)"><i class="bi bi-pencil me-1"></i>កែ</span>
                                     </div>
-                                    <div
-                                        style="background:rgba(0,194,178,.05);padding:15px;border-radius:8px;border-left:4px solid #00C2B2">
-                                        <div style="font-size:.85rem;color:var(--text-muted)">ឈ្មោះលេខ២</div>
-                                        <div id="rv-en" style="font-weight:700;color:var(--text-main);margin-top:4px">—
-                                        </div>
+                                    <div class="rs-row"><span class="rs-label">នាមខ្មែរ</span><span class="rs-val" id="rv-km">—</span></div>
+                                    <div class="rs-row"><span class="rs-label">ឈ្មោះ Latin</span><span class="rs-val" id="rv-en">—</span></div>
+                                    <div class="rs-row"><span class="rs-label">ថ្ងៃខែឆ្នាំ</span><span class="rs-val" id="rv-dob">—</span></div>
+                                    <div class="rs-row"><span class="rs-label">យេនឌ័រ</span><span class="rs-val" id="rv-gender">—</span></div>
+                                    <div class="rs-row"><span class="rs-label">Passport / ID</span><span class="rs-val" id="rv-pass">—</span></div>
+                                    <div class="rs-row"><span class="rs-label">Email</span><span class="rs-val" id="rv-email">—</span></div>
+                                    <div class="rs-row"><span class="rs-label">ទូរស័ព្ទ</span><span class="rs-val" id="rv-phone">—</span></div>
+                                    <div class="rs-row"><span class="rs-label">ខេត្ត</span><span class="rs-val" id="rv-prov">—</span></div>
+                                </div>
+
+                                <!-- Review: Education -->
+                                <div class="review-section">
+                                    <div class="rs-title">
+                                        <i class="bi bi-mortarboard-fill"></i> ការសិក្សា
+                                        <span class="edit-link" onclick="goToStep(2)"><i class="bi bi-pencil me-1"></i>កែ</span>
                                     </div>
-                                    <div
-                                        style="background:rgba(0,194,178,.05);padding:15px;border-radius:8px;border-left:4px solid #00C2B2">
-                                        <div style="font-size:.85rem;color:var(--text-muted)">ថ្ងៃ ខែ ឆ្នាំកំណើត</div>
-                                        <div id="rv-dob" style="font-weight:700;color:var(--text-main);margin-top:4px">—
-                                        </div>
+                                    <div class="rs-row"><span class="rs-label">កម្រិតការសិក្សា</span><span class="rs-val" id="rv-edu">—</span></div>
+                                    <div class="rs-row"><span class="rs-label">សាកលវិទ្យាល័យ</span><span class="rs-val" id="rv-uni">—</span></div>
+                                    <div class="rs-row"><span class="rs-label">ជំនាញ / Major</span><span class="rs-val" id="rv-maj">—</span></div>
+                                    <div class="rs-row"><span class="rs-label">GPA</span><span class="rs-val" id="rv-gpa">—</span></div>
+                                </div>
+
+                                <!-- Review: Essays -->
+                                <div class="review-section">
+                                    <div class="rs-title">
+                                        <i class="bi bi-file-text-fill"></i> សម្រង់ឈ្មោះ &amp; ឯកសារ
+                                        <span class="edit-link" onclick="goToStep(3)"><i class="bi bi-pencil me-1"></i>កែ</span>
                                     </div>
-                                    <div
-                                        style="background:rgba(0,194,178,.05);padding:15px;border-radius:8px;border-left:4px solid #00C2B2">
-                                        <div style="font-size:.85rem;color:var(--text-muted)">អ៊ីម៉ែល</div>
-                                        <div id="rv-email"
-                                            style="font-weight:700;color:var(--text-main);margin-top:4px">—</div>
-                                    </div>
-                                    <div
-                                        style="background:rgba(75,192,192,.05);padding:15px;border-radius:8px;border-left:4px solid #4BC0C0">
-                                        <div style="font-size:.85rem;color:var(--text-muted)">មហាវិទ្យាល័យ</div>
-                                        <div id="rv-uni" style="font-weight:700;color:var(--text-main);margin-top:4px">—
-                                        </div>
-                                    </div>
-                                    <div
-                                        style="background:rgba(75,192,192,.05);padding:15px;border-radius:8px;border-left:4px solid #4BC0C0">
-                                        <div style="font-size:.85rem;color:var(--text-muted)">វិទ្យាស័ថ</div>
-                                        <div id="rv-maj" style="font-weight:700;color:var(--text-main);margin-top:4px">—
-                                        </div>
-                                    </div>
-                                    <div
-                                        style="background:rgba(245,166,35,.05);padding:15px;border-radius:8px;border-left:4px solid var(--gold)">
-                                        <div style="font-size:.85rem;color:var(--text-muted)">ស្ថានភាពហិរញ្ញវត្ថុ</div>
-                                        <div id="rv-fin" style="font-weight:700;color:var(--text-main);margin-top:4px">—
-                                        </div>
-                                    </div>
-                                    <div
-                                        style="background:rgba(245,166,35,.05);padding:15px;border-radius:8px;border-left:4px solid var(--gold)">
-                                        <div style="font-size:.85rem;color:var(--text-muted)">ឯកសារ</div>
-                                        <div id="rv-docs" style="font-weight:700;color:var(--text-main);margin-top:4px">
-                                            —</div>
+                                    <div class="rs-row"><span class="rs-label">CV</span><span class="rs-val" id="rv-cv">—</span></div>
+                                    <div class="rs-row"><span class="rs-label">ស្ថានភាពហិរញ្ញវត្ថុ</span><span class="rs-val" id="rv-fin">—</span></div>
+                                    <div class="rs-row">
+                                        <span class="rs-label">សម្រង់</span>
+                                        <span class="rs-val" id="rv-mot" style="font-size:.8rem;font-weight:400;color:var(--text-sub);max-width:360px;line-height:1.7">—</span>
                                     </div>
                                 </div>
 
-                                <!-- Declaration -->
-                                <div
-                                    style="background:rgba(255,193,7,.08);border:1px solid rgba(255,193,7,.3);border-radius:8px;padding:20px;margin-bottom:20px">
-                                    <label class="chip-label" style="margin:0">
-                                        <input type="checkbox" id="declare" style="cursor:pointer">
-                                        <span style="margin-left:10px;cursor:pointer">
-                                            ខ្ញុំផ្តល់ឱ្យដឹងថា ព័ត៌មាននៅលើ ឯកសារនេះ ពិតប្រាកដ ដូចដែលបានផ្ដល់ឱ្យ ។
-                                            ខ្ញុំយល់ថា ឯកសារមិនពិតប្រាកដ អាចនឹងនាំឱ្យ ការបដិសេធដាក់ពាក្យ ។
+                                <!-- Declaration checkbox -->
+                                <div class="field-group mt-3">
+                                    <label style="display:flex;align-items:flex-start;gap:12px;cursor:pointer">
+                                        <input type="checkbox" id="declare" style="width:18px;height:18px;margin-top:2px;accent-color:var(--primary);flex-shrink:0">
+                                        <span style="font-size:.88rem;color:var(--text-sub);line-height:1.7">
+                                            ខ្ញុំបញ្ជាក់ថា ព័ត៌មានខាងលើ <strong style="color:var(--text-main)">ត្រឹមត្រូវ</strong> ១០០% ។
+                                            ខ្ញុំយល់ព្រមឱ្យ EduKhmer ប្រើព័ត៌មានដើម្បី ដំណើរការពាក្យ
+                                            ហើយ ជូនដំណឹងតាម Email / Telegram ។
                                         </span>
                                     </label>
-                                    <div id="err-declare" class="field-error"></div>
+                                    <div class="field-error" id="err-declare">សូមមើល ហើយ Check ប្រអប់ នេះ</div>
                                 </div>
 
                                 <div class="form-nav">
-                                    <button class="btn-back" onclick="goBack(4)"><i class="bi bi-arrow-left"></i>
-                                        ថយក្រោយ</button>
-                                    <button class="btn-submit-main" onclick="submitForm()">
+                                    <button type="button" class="btn-back" onclick="goBack(4)"><i class="bi bi-arrow-left"></i> ថយក្រោយ</button>
+                                    <button type="button" class="btn-submit-main" onclick="submitForm()">
                                         <i class="bi bi-send-fill"></i> ដាក់ពាក្យ
                                     </button>
                                 </div>
@@ -663,34 +654,31 @@
                             <div class="success-icon"><i class="bi bi-check-lg"></i></div>
                             <h2>ពាក្យបានដាក់ដោយជោគជ័យ! 🎉</h2>
                             <p>
-                                ថ្ងៃនេះ ក្រុមការងារ EduKhmer បានទទួលឯកសាររបស់អ្នក ។ ខ្ញុំនឹងសម្របសម្រួលលម្អិត ក្នុង
-                                <strong>៧ ថ្ងៃ</strong> ។
+                                សូមអរគុណ ក្រុមការងារ EduKhmer បានទទួល ពាក្យ របស់អ្នករួចហើយ ។<br>
+                                យើងនឹង Review ហើយ ជូនដំណឹង ក្នុង <strong>៧ ថ្ងៃ</strong> ។
                             </p>
                             <div class="ref-code" id="ref-code">Ref: EK-2025-XXXXX</div>
                             <div class="next-steps">
-                                <div class="ns-item">
-                                    <div class="ns-icon"><i class="bi bi-bell-fill"></i></div>
-                                    <div>
-                                        <div class="ns-title">ស្ថានភាពដាក់ពាក្យ</div>
-                                        <div class="ns-desc">ពិនិត្យលម្អិតនៅលើ ផ្ទាំងគ្រប់គ្រង <strong>Saved</strong>
-                                        </div>
-                                    </div>
+                                <div class="next-step-item">
+                                    <div class="ns-num">១</div>
+                                    <div class="ns-text"><strong>ពិនិត្យ Email</strong> — យើងបញ្ជូន Confirmation Letter ជូនអ្នក</div>
                                 </div>
-                                <div class="ns-item">
-                                    <div class="ns-icon"><i class="bi bi-envelope-fill"></i></div>
-                                    <div>
-                                        <div class="ns-title">ការជូនដំណឹង Email</div>
-                                        <div class="ns-desc">អ្នកនឹងទទួលប្រាប់នៅលើ គ្រឿងចាប់មូលដ្ឋាន</div>
-                                    </div>
+                                <div class="next-step-item">
+                                    <div class="ns-num">២</div>
+                                    <div class="ns-text"><strong>ចូលក្រុម Telegram</strong> — @EduKhmerScholar — សម្រាប់ ព័ត៌មានបន្ថែម</div>
+                                </div>
+                                <div class="next-step-item">
+                                    <div class="ns-num">៣</div>
+                                    <div class="ns-text"><strong>ត្រៀម Interview</strong> — ប្រសិនជ្រើស Review ឆ្លើយ យើងនឹងណាត់ Interview</div>
                                 </div>
                             </div>
                             <div class="d-flex gap-3 justify-content-center flex-wrap">
-                                <a href="scholarship-logged.html" class="btn btn-outline-primary">
-                                    <i class="bi bi-arrow-left me-1"></i> ត្រឡប់ទៅលម្អិត
-                                </a>
-                                <a href="../index-logged.html" class="btn btn-primary">
-                                    <i class="bi bi-house me-1"></i> ទៅលម្អិត
-                                </a>
+                                <button onclick="location.href='scholarship-detail-logged.html'" class="btn btn-outline-primary">
+                                    <i class="bi bi-arrow-left me-1"></i> ទំព័របងាក់ពាក្យ
+                                </button>
+                                <button onclick="location.href='scholarships-logged.html'" class="btn btn-primary">
+                                    <i class="bi bi-search me-1"></i> ស្វែងរក ឱកាស ផ្សេង
+                                </button>
                             </div>
                         </div>
 
@@ -702,8 +690,7 @@
 
                     <!-- Program card -->
                     <div class="sidebar-program-card">
-                        <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&q=80"
-                            class="spc-img" alt="Scholarship">
+                        <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&q=80" class="spc-img" alt="Scholarship">
                         <div class="spc-body">
                             <div class="spc-tag"><i class="bi bi-award"></i> អាហារូបករណ៍ · ២០២៥</div>
                             <div class="spc-title">National Merit Scholarship Program</div>
@@ -714,51 +701,48 @@
                             <hr class="spc-divider">
                             <div class="spc-benefit"><i class="bi bi-check-circle-fill"></i> សិក្សាឥតគិតថ្លៃ</div>
                             <div class="spc-benefit"><i class="bi bi-check-circle-fill"></i> ប្រាក់ឧបត្ថម្ភ</div>
-                            <div class="spc-benefit"><i class="bi bi-check-circle-fill"></i> ការផ្លាស់ប្តូរ / ហាត់ការ
-                            </div>
+                            <div class="spc-benefit"><i class="bi bi-check-circle-fill"></i> ការផ្លាស់ប្តូរ / ហាត់ការ</div>
                             <div class="spc-benefit"><i class="bi bi-check-circle-fill"></i> ដៃគូឧីក</div>
                             <div class="spc-benefit"><i class="bi bi-check-circle-fill"></i> វិញ្ញាបនបត្រ</div>
                             <hr class="spc-divider">
                             <div class="deadline-box">
-                                <div style="font-size:.85rem;color:var(--text-muted)">ថ្ងៃផុតកំណត់</div>
-                                <div style="font-size:1.2rem;font-weight:700;color:var(--secondary)">៩០ ឧសភា ២០២៥</div>
+                                <div class="db-icon">⏰</div>
+                                <div>
+                                    <div class="db-label">ថ្ងៃផុតកំណត់ (Deadline)</div>
+                                    <div class="db-date">៣០ ឧសភា ២០២៥</div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Tips -->
                     <div class="tips-card">
-                        <h5><i class="bi bi-lightbulb-fill me-2" style="color:var(--gold)"></i>គន្លឹះ ដើម្បីរៀបចំ</h5>
+                        <h5><i class="bi bi-lightbulb-fill me-2" style="color:var(--gold)"></i>គន្លឹះ ដើម្បីជ្រើសតាំង</h5>
                         <div class="tip-item">
                             <div class="tip-num">💡</div>
-                            <div class="tip-text"><strong style="color:#fff">ស្ថានភាពហិរញ្ញវត្ថុ</strong> —
-                                ត្រូវប្រាកដថា ឯកសារគាំទ្ន (ភ័ស្តុតាង)</div>
+                            <div class="tip-text"><strong style="color:#fff">Essay</strong> — ត្រូមមាន ច្បាស់ ពិតជាក់ស្ដែង — ចៀសវាង Generic</div>
                         </div>
                         <div class="tip-item">
-                            <div class="tip-num">📚</div>
-                            <div class="tip-text"><strong style="color:#fff">GPA</strong> — ផ្ដល់ឱ្យ GPA ច្បាស់លាស់
-                                ពីលិខិតផ្សេងទៀត</div>
+                            <div class="tip-num">📄</div>
+                            <div class="tip-text"><strong style="color:#fff">CV</strong> — ១ ទំព័រ ។ ដាក់ Award, Leadership ។ Design ស្អាត</div>
                         </div>
                         <div class="tip-item">
-                            <div class="tip-num">✍️</div>
-                            <div class="tip-text"><strong style="color:#fff">សម្រង់ឈ្មោះ</strong> — ដាច់ដោយឡែក ល្អៗ
-                                ២៥០-៣០០ ពាក្យ</div>
+                            <div class="tip-num">🎓</div>
+                            <div class="tip-text"><strong style="color:#fff">GPA</strong> — ត្រូវឱ្យច្បាស់ — ផ្ដល់សិច ឯកសារ Transcript</div>
                         </div>
                         <div class="tip-item">
                             <div class="tip-num">✅</div>
-                            <div class="tip-text"><strong style="color:#fff">ឯកសារ</strong> — ត្រូវ Scan ច្បាស់ PDF
-                                ខ្ពស់ដូច PNG</div>
+                            <div class="tip-text"><strong style="color:#fff">ឯកសារ</strong> — ត្រូវ Scan ច្បាស់ ។ PDF ល្អជាង រូបថតស្ក្រីន</div>
                         </div>
                     </div>
 
                     <!-- Help box -->
-                    <div
-                        style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-card);padding:20px;box-shadow:var(--shadow-sm)">
+                    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-card);padding:20px;box-shadow:var(--shadow-sm)">
                         <div style="font-size:.95rem;font-weight:700;color:var(--text-main);margin-bottom:10px">
                             <i class="bi bi-headset me-2" style="color:var(--primary)"></i>ត្រូវការជំនួយ?
                         </div>
                         <p style="font-size:.83rem;color:var(--text-sub);line-height:1.7;margin-bottom:14px">
-                            ក្រុមការងារ EduKhmer ត្រៀម ពិនិត្យលម្អិត សម្រង់ឈ្មោះ ឯកសារ ជូន — ឥតគិតថ្លៃ!
+                            ក្រុមការងារ EduKhmer ត្រៀម Review Essay &amp; CV ជូន — ឥតគិតថ្លៃ!
                         </p>
                         <a href="https://t.me/EduKhmer" target="_blank" class="btn btn-sm btn-primary w-100">
                             <i class="bi bi-telegram me-1"></i> ទំនាក់ Telegram
@@ -951,45 +935,8 @@
 
         /* ── Validation ── */
         function validateStep(step) {
-            let ok = true;
-
-            const require = (id, errId, check) => {
-                const el = document.getElementById(id);
-                const err = document.getElementById(errId);
-                const pass = check ? check(el) : (el && el.value.trim() !== '');
-                if (el) el.classList.toggle('error', !pass);
-                if (err) err.classList.toggle('show', !pass);
-                if (!pass) ok = false;
-            };
-
-            if (step === 1) {
-                require('name-km', 'err-name-km');
-                require('name-en', 'err-name-en');
-                require('dob', 'err-dob');
-                require('passport', 'err-passport');
-                require('email', 'err-email', el => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value));
-                require('phone', 'err-phone');
-            }
-            if (step === 2) {
-                require('university', 'err-uni');
-                require('major', 'err-major');
-            }
-            if (step === 3) {
-                require('essay', 'err-essay', el => el.value.trim().split(/\s+/).filter(Boolean).length >= 150);
-                require('financial-status', 'err-financial');
-                // file documents check
-                const docsOk = document.getElementById('file-docs').files.length > 0;
-                document.getElementById('drop-docs').style.borderColor = docsOk ? '' : 'var(--red)';
-                if (document.getElementById('err-docs')) document.getElementById('err-docs').classList.toggle('show', !docsOk);
-                if (!docsOk) ok = false;
-            }
-            if (step === 4) {
-                const dec = document.getElementById('declare');
-                const decOk = dec.checked;
-                document.getElementById('err-declare').classList.toggle('show', !decOk);
-                if (!decOk) ok = false;
-            }
-            return ok;
+            // Validation disabled - forms can be submitted without filling fields
+            return true;
         }
 
         /* ── Fill review ── */
@@ -1002,37 +949,97 @@
             document.getElementById('rv-uni').textContent = g('university');
             document.getElementById('rv-maj').textContent = g('major');
             document.getElementById('rv-fin').textContent = g('financial-status') || '—';
-            const docsFile = document.getElementById('file-docs').files[0];
-            document.getElementById('rv-docs').textContent = docsFile ? docsFile.name : '—';
+            
+            // CV file
+            const cvFile = document.getElementById('file-cv').files[0];
+            document.getElementById('rv-cv').textContent = cvFile ? cvFile.name : '—';
+            
+            // Motivation essay
+            const mot = document.getElementById('motivation').value.trim();
+            document.getElementById('rv-mot').textContent = mot ? (mot.slice(0, 120) + (mot.length > 120 ? '…' : '')) : '—';
         }
 
-        /* ── Navigation ── */
-        function goNext(from) {
-            if (!validateStep(from)) return;
-            if (from === 3) fillReview();
-            showPanel(from + 1);
-        }
-        function goBack(from) { showPanel(from - 1); }
+/* ── Navigation ── */
+function goNext(from) {
+  if (!validateStep(from)) return;
+  if (from === 3) fillReview();
+  showPanel(from + 1);
+}
+function goBack(from) { showPanel(from - 1); }
 
-        /* ── Submit ── */
-        function submitForm() {
-            if (!validateStep(4)) return;
-            // Generate ref code
-            const ref = 'EK-2025-' + Math.random().toString(36).substr(2, 5).toUpperCase();
-            document.getElementById('ref-code').textContent = 'Ref: ' + ref;
-            // Hide all panels, show success
-            document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
-            document.getElementById('success-screen').classList.add('show');
-            // Update stepper to done
-            for (let i = 1; i <= totalSteps; i++) {
-                const si = document.getElementById('si-' + i);
-                si.classList.remove('active'); si.classList.add('done');
-                si.querySelector('.step-circle').innerHTML = '<i class="bi bi-check-lg"></i>';
-            }
-            document.getElementById('progress-bar').style.width = '100%';
-            document.querySelector('.stepper-wrap').scrollIntoView({ behavior: 'smooth' });
-        }
+/* ── Submit ── */
+function submitForm() {
+  if (!validateStep(4)) return;
+  const ref = 'EK-2025-' + Math.random().toString(36).substr(2, 5).toUpperCase();
+  if (document.getElementById('ref-code')) {
+    document.getElementById('ref-code').textContent = 'Ref: ' + ref;
+  }
+  if (document.getElementById('popup-ref-code')) {
+    document.getElementById('popup-ref-code').textContent = 'Ref: ' + ref;
+    document.getElementById('success-popup').style.display = 'flex';
+  }
+  document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+  if (document.getElementById('success-screen')) {
+    document.getElementById('success-screen').classList.add('show');
+  }
+  for (let i = 1; i <= totalSteps; i++) {
+    const si = document.getElementById('si-' + i);
+    si.classList.remove('active'); si.classList.add('done');
+    si.querySelector('.step-circle').innerHTML = '<i class="bi bi-check-lg"></i>';
+  }
+  document.getElementById('progress-bar').style.width = '100%';
+  document.querySelector('.stepper-wrap').scrollIntoView({ behavior: 'smooth' });
+}
     </script>
-</body>
+
+    <!-- ═══ SUCCESS POPUP MODAL ═══ -->
+    <div id="success-popup" class="success-popup-overlay" style="display:none">
+        <div class="success-popup-modal">
+            <div class="popup-icon">🎉</div>
+            <h2>ពាក្យបានដាក់ដោយជោគជ័យ!</h2>
+            <p>សូមអរគុណ ក្រុមការងារ EduKhmer បានទទួល ពាក្យ របស់អ្នករួចហើយ ។</p>
+            <div class="popup-ref-code" id="popup-ref-code">Ref: EK-2025-XXXXX</div>
+            <button class="popup-btn" onclick="document.getElementById('success-popup').style.display='none'">យល់ព្រម</button>
+        </div>
+    </div>
+
+    <style>
+        .success-popup-overlay {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6); z-index: 9999;
+            display: flex; align-items: center; justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .success-popup-modal {
+            background: var(--bg-card); border-radius: 16px; padding: 40px;
+            text-align: center; max-width: 450px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            animation: scaleIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        @keyframes scaleIn { from { transform: scale(0.7); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        .popup-icon {
+            font-size: 60px; margin-bottom: 20px; animation: bounce 0.6s ease;
+        }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .success-popup-modal h2 {
+            font-size: 24px; font-weight: 700; color: var(--text-main); margin-bottom: 12px;
+        }
+        .success-popup-modal p {
+            font-size: 14px; color: var(--text-sub); margin-bottom: 20px; line-height: 1.6;
+        }
+        .popup-ref-code {
+            background: var(--bg-secondary); padding: 12px 16px; border-radius: 8px;
+            font-family: monospace; font-weight: 600; color: var(--primary); margin: 20px 0;
+            font-size: 14px; letter-spacing: 1px;
+        }
+        .popup-btn {
+            background: var(--primary); color: white; border: none; padding: 12px 32px;
+            border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .popup-btn:hover { background: var(--primary-hover); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    </style>
+
+    </body>
 
 </html>
