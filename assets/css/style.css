@@ -4606,8 +4606,12 @@ select.form-control-custom {
 
 
 
-.step-item {
+.stepper .step-item {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 
