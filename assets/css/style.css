@@ -4610,17 +4610,7 @@ select.form-control-custom {
   position: relative;
 }
 
-.step-item:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  right: -50%;
-  height: 2px;
-  background: var(--border);
-  transform: translateY(-50%);
-  transition: background .4s;
-}
+
 
 .step-item.done::after {
   background: var(--primary);
