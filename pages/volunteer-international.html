@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/chhay.css">
   <link rel="stylesheet" href="../assets/css/navbar.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body class="user-root-page">
@@ -211,19 +212,19 @@
         <i class="bi bi-grid-3x3-gap"></i> ទាំងអស់ <span class="tab-count">24+</span>
       </button>
       <button class="btn btn-sm btn-outline-primary tab-btn" data-type="local" onclick="setTab(this,'local')">
-        <i class="bi bi-geo-alt"></i> ក្នុងស្រុក <span class="tab-count">12</span>
+        <i class="bi bi-geo-alt"></i> ក្នុងស្រុក <span class="tab-count">2</span>
       </button>
       <button class="btn btn-sm btn-outline-primary tab-btn" data-type="international" onclick="setTab(this,'international')">
-        <i class="bi bi-globe"></i> អន្តរជាតិ <span class="tab-count">12</span>
+        <i class="bi bi-globe"></i> អន្តរជាតិ <span class="tab-count">5</span>
       </button>
       <button class="btn btn-sm btn-outline-primary tab-btn" data-type="education" onclick="setTab(this,'education')">
-        <i class="bi bi-book"></i> អប់រំ <span class="tab-count">8</span>
+        <i class="bi bi-book"></i> អប់រំ <span class="tab-count">0</span>
       </button>
       <button class="btn btn-sm btn-outline-primary tab-btn" data-type="environment" onclick="setTab(this,'environment')">
-        <i class="bi bi-tree"></i> បរិស្ថាន <span class="tab-count">5</span>
+        <i class="bi bi-tree"></i> បរិស្ថាន <span class="tab-count">3</span>
       </button>
       <button class="btn btn-sm btn-outline-primary tab-btn" data-type="health" onclick="setTab(this,'health')">
-        <i class="bi bi-heart-pulse"></i> សុខភាព <span class="tab-count">4</span>
+        <i class="bi bi-heart-pulse"></i> សុខភាព <span class="tab-count">2</span>
       </button>
     </div>
   </div>
@@ -238,9 +239,6 @@
 
         <!-- Results header -->
         <div class="results-header">
-          <div class="results-count">
-            បង្ហាញ <strong id="result-count">12</strong> ក្នុងចំណោម <strong>24+</strong> គម្រោង
-          </div>
           <div class="d-flex align-items-center gap-3 flex-wrap">
             <button class="mobile-filter-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterDrawer">
               <i class="bi bi-funnel"></i> ត្រង
@@ -619,7 +617,7 @@
             <div class="empty-icon">🔍</div>
             <div class="empty-title">រកមិនឃើញ !</div>
             <p class="empty-desc">សូមផ្លាស់ប្ដូរ keyword ឬ លុបការត្រង ហើយព្យាយាមម្ដងទៀត ។</p>
-            <button class="btn-card-detail btn-card-detail--inline" onclick="clearFilters()">
+            <button class="btn-card-detail-vlon" onclick="clearFilters()">
               <i class="bi bi-x-circle me-1"></i> លុបការត្រង
             </button>
           </div>
@@ -844,6 +842,7 @@
   // Map tab types to one or more card data-type values
   function typeMatches(itemType, active) {
     if (!itemType) return false;
+    if (itemType === active) return true;
     const map = {
       local: ['scholarship', 'internship', 'volunteer'],
       international: ['exchange', 'scholarship', 'course', 'volunteer'],
@@ -869,11 +868,20 @@
       const typeOk    = activeType === 'all' || typeMatches(type, activeType);
       const keywordOk = !keyword || text.includes(keyword);
       const visible   = typeOk && keywordOk;
-      item.style.display = visible ? '' : 'none';
+      if (visible) {
+        item.style.display = '';
+        item.classList.add('opp-item-animate');
+      } else {
+        item.style.display = 'none';
+        item.classList.remove('opp-item-animate');
+      }
       if (visible) shown++;
     });
 
-    document.getElementById('result-count').textContent = shown;
+    const resultCountEl = document.getElementById('result-count');
+    if (resultCountEl) {
+      resultCountEl.textContent = shown;
+    }
     const empty = document.getElementById('empty-state');
     if (empty) {
       if (shown === 0) {

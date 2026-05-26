@@ -3756,3 +3756,26 @@ footer {
 	font-size: 0.95rem;
 	border-radius: 0.9rem;
 }
+
+/* Fix duplicate border / double lines in card design on internship and volunteer categories */
+.opp-card .card-benefits {
+	border-top: none;
+	border-bottom: none;
+	padding: 0;
+}
+
+/* Smooth fade-in animation when cards show up via tab clicks */
+@keyframes cardShowUp {
+	from {
+		opacity: 0;
+		transform: translateY(12px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.opp-item-animate {
+	animation: cardShowUp 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
