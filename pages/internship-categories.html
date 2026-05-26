@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/chhay.css">
   <link rel="stylesheet" href="../assets/css/navbar.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body class="user-root-page">
@@ -170,7 +171,6 @@
           <option value="japan">🇯🇵 Japan</option>
           <option value="korea">🇰🇷 Korea</option>
           <option value="singapore">🇸🇬 Singapore</option>
-          <option value="thailand">🇹🇭 Thailand</option>
           <option value="online"> Online</option>
         </select>
       </div>
@@ -205,19 +205,19 @@
         <i class="bi bi-grid-3x3-gap"></i> ទាំងអស់ <span class="tab-count">24+</span>
       </button>
       <button class="btn btn-sm btn-outline-primary tab-btn" data-type="tech" onclick="setTab(this,'tech')">
-        <i class="bi bi-cpu"></i> Tech <span class="tab-count">7</span>
+        <i class="bi bi-cpu"></i> Tech <span class="tab-count">2</span>
       </button>
       <button class="btn btn-sm btn-outline-primary tab-btn" data-type="business" onclick="setTab(this,'business')">
-        <i class="bi bi-briefcase"></i> Business <span class="tab-count">5</span>
+        <i class="bi bi-briefcase"></i> Business <span class="tab-count">2</span>
       </button>
       <button class="btn btn-sm btn-outline-primary tab-btn" data-type="design" onclick="setTab(this,'design')">
-        <i class="bi bi-palette"></i> Design <span class="tab-count">4</span>
+        <i class="bi bi-palette"></i> Design <span class="tab-count">1</span>
       </button>
       <button class="btn btn-sm btn-outline-primary tab-btn" data-type="education" onclick="setTab(this,'education')">
-        <i class="bi bi-book"></i> Education <span class="tab-count">4</span>
+        <i class="bi bi-book"></i> Education <span class="tab-count">2</span>
       </button>
       <button class="btn btn-sm btn-outline-primary tab-btn" data-type="ngo" onclick="setTab(this,'ngo')">
-        <i class="bi bi-people"></i> NGO <span class="tab-count">4</span>
+        <i class="bi bi-people"></i> NGO <span class="tab-count">2</span>
       </button>
     </div>
   </div>
@@ -227,16 +227,10 @@
   <div class="container">
     <div class="row g-4">
       <div class="col-lg-12">
-
-        <div class="results-header">
-          <div class="results-count">
-            បង្ហាញ <strong id="result-count">12</strong> ក្នុងចំណោម <strong>24+</strong> ប្រភេទហាត់ការ
-          </div>
-        </div>
         <div id="grid-view">
           <div class="row g-4" id="cards-grid">
 
-            <div class="col-md-6 col-xl-4 opp-item" data-type="tech" data-aos="fade-up" data-aos-delay="0">
+            <div class="col-md-6 col-xl-4 opp-item" data-type="tech">
               <div class="opp-card">
                 <div class="card-img-wrap">
                   <img src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=500&q=80" alt="">
@@ -265,7 +259,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-xl-4 opp-item" data-type="business" data-aos="fade-up" data-aos-delay="60">
+            <div class="col-md-6 col-xl-4 opp-item" data-type="business">
               <div class="opp-card">
                 <div class="card-img-wrap">
                   <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&q=80" alt="">
@@ -294,7 +288,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-xl-4 opp-item" data-type="tech" data-aos="fade-up" data-aos-delay="120">
+            <div class="col-md-6 col-xl-4 opp-item" data-type="tech">
               <div class="opp-card">
                 <div class="card-img-wrap">
                   <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&q=80" alt="">
@@ -323,7 +317,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-xl-4 opp-item" data-type="business" data-aos="fade-up" data-aos-delay="180">
+            <div class="col-md-6 col-xl-4 opp-item" data-type="business">
               <div class="opp-card">
                 <div class="card-img-wrap">
                   <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=500&q=80" alt="">
@@ -352,7 +346,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-xl-4 opp-item" data-type="education" data-aos="fade-up" data-aos-delay="240">
+            <div class="col-md-6 col-xl-4 opp-item" data-type="education">
               <div class="opp-card">
                 <div class="card-img-wrap">
                   <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=500&q=80" alt="">
@@ -381,7 +375,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-xl-4 opp-item" data-type="ngo" data-aos="fade-up" data-aos-delay="300">
+            <div class="col-md-6 col-xl-4 opp-item" data-type="ngo">
               <div class="opp-card">
                 <div class="card-img-wrap">
                   <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=500&q=80" alt="">
@@ -410,7 +404,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-xl-4 opp-item" data-type="design" data-aos="fade-up" data-aos-delay="120">
+            <div class="col-md-6 col-xl-4 opp-item" data-type="design">
               <div class="opp-card">
                 <div class="card-img-wrap">
                   <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" alt="">
@@ -439,7 +433,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-xl-4 opp-item" data-type="education" data-aos="fade-up" data-aos-delay="0">
+            <div class="col-md-6 col-xl-4 opp-item" data-type="education">
               <div class="opp-card">
                 <div class="card-img-wrap">
                   <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500&q=80" alt="">
@@ -468,7 +462,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-xl-4 opp-item" data-type="ngo" data-aos="fade-up" data-aos-delay="60">
+            <div class="col-md-6 col-xl-4 opp-item" data-type="ngo">
               <div class="opp-card">
                 <div class="card-img-wrap">
                   <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=500&q=80" alt="">

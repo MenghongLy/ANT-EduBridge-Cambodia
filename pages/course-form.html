@@ -20,205 +20,185 @@
 </head>
 
 <body>
+<!-- ===================== HEADER ===================== -->
+<header class="fixed-top shadow-sm">
 
-    <!-- ===================== HEADER ===================== -->
-    <header class="fixed-top shadow-sm">
+  <!-- TOP BAR -->
+  <div class="top-header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <ul class="list-unstyled d-flex m-0">
+        <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
+        <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
+      </ul>
+      <div class="nav-action">
+        <div class="dropdown">
+          <button class="btn-lang dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-globe2"></i> ភាសាខ្មែរ
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-check-lg text-primary me-1"></i> ភាសាខ្មែរ</a></li>
+            <li><a class="dropdown-item" href="#">English</a></li>
+          </ul>
+        </div>
+        <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
+          <i class="bi bi-moon-fill" id="theme-icon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
 
-        <!-- TOP BAR -->
-        <div class="top-header">
-            <div class="container d-flex justify-content-between align-items-center">
-                <ul class="list-unstyled d-flex m-0">
-                    <li><a href="about.html" class="nav-link">អំពីយើង</a></li>
-                    <li><a href="contact.html" class="nav-link">ទំនាក់ទំនង</a></li>
-                </ul>
-                <div class="nav-action">
-                    <div class="dropdown">
-                        <button class="btn-lang dropdown-toggle border-0" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="bi bi-globe2"></i> ភាសាខ្មែរ
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-check-lg text-primary me-1"></i>
-                                    ភាសាខ្មែរ</a></li>
-                            <li><a class="dropdown-item" href="#">English</a></li>
-                        </ul>
-                    </div>
-                    <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
-                        <i class="bi bi-moon-fill" id="theme-icon"></i>
-                    </button>
-                </div>
-            </div>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="../index-logged.html">
+        <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo" class="brand-logo-img"></div>
+        <div>
+          <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ</div>
+          EduKhmer
+        </div>
+      </a>
+
+      <!-- Mobile toggles -->
+      <div class="d-flex d-lg-none align-items-center gap-2">
+        <div class="dropdown">
+          <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
+            <span class="position-relative d-inline-flex">
+              <i class="bi bi-bell fs-5" style="color:var(--text-black)"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:.6rem">3</span>
+            </span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" style="min-width: 310px;">
+            <li class="px-3 pt-2 pb-1">
+              <h3 class="fs-6 mb-0">ការជូនដំណឹង</h3>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-facebook text-primary mt-1"></i>
+                <span>
+                  Facebook <br>
+                  អ្នកបានភ្ជាប់គណនីជាមួយ Facebook <br>
+                  <span class="text-secondary">ឥឡូវនេះ</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-gear-fill text-secondary mt-1"></i>
+                <span>
+                  ការកំណត់ <br>
+                  អ្នកបានផ្លាស់ប្តូរពាក្យសម្ងាត់បានជោកជ័យ <br>
+                  <span class="text-secondary">៣០នាទីមុន</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-check-circle-fill text-success mt-1"></i>
+                <span>
+                  ការដាក់ពាក្យ <br>
+                  ការដាក់ពាក្យរបស់អ្នកបានជោគជ័យ <br>
+                  <span class="text-secondary">២ម៉ោងមុន</span>
+                </span>
+              </a>
+            </li>
+            <li class="my-2 text-center">
+              <a href="#" class="text-decoration-none">មើលការជូនដំណឹងទាំងអស់</a>
+            </li>
+          </ul>
         </div>
 
-        <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="../index-logged.html">
-                    <div class="brand-icon"><img src="../assets/images/logo.png" alt="EduKhmer logo"
-                            class="brand-logo-img"></div>
-                    <div>
-                        <div style="font-size:.75rem;color:var(--text-muted);font-weight:400;line-height:1"> វេទិកាអប់រំ</div>
-                        EduKhmer
-                    </div>
-                </a>
+        <div class="dropdown">
+          <button class="btn border-0 p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://ui-avatars.com/api/?name=Edu+User&background=0B5ED7&color=fff" alt="Profile" width="32" height="32" class="rounded-circle">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>ប្រវត្តិរូប</a></li>
+            <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>ការកំណត់</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="../index-logged.html"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a></li>
+          </ul>
+        </div>
+        <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+          <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
+        </button>
+      </div>
 
-                <!-- Mobile toggles -->
-                <div class="d-flex d-lg-none align-items-center gap-2">
-                    <div class="dropdown">
-                        <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown">
-                            <span class="position-relative d-inline-flex">
-                                <i class="bi bi-bell fs-5" style="color:var(--text-black)"></i>
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                                    style="font-size:.6rem">3</span>
-                            </span>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end" style="min-width: 310px;">
-                            <li class="px-3 pt-2 pb-1">
-                                <h3 class="fs-6 mb-0">ការជូនដំណឹង</h3>
-                            </li>
-                            <li>
-                                <a class="dropdown-item d-flex align-items-start gap-2" href="#">
-                                    <div style="font-size:1.5rem">📌</div>
-                                    <div>
-                                        <div style="font-weight:700;color:var(--text-main)">វគ្គសិក្សាថ្មីបង្ហាញ</div>
-                                        <div style="font-size:.8rem;color:var(--text-muted)">Web Development Bootcamp
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item d-flex align-items-start gap-2" href="#">
-                                    <div style="font-size:1.5rem">✅</div>
-                                    <div>
-                                        <div style="font-weight:700;color:var(--text-main)">ការចុះឈ្មោះបានទទួល</div>
-                                        <div style="font-size:.8rem;color:var(--text-muted)">សូមស្វាគមន៍</div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item d-flex align-items-start gap-2" href="#">
-                                    <div style="font-size:1.5rem">🎓</div>
-                                    <div>
-                                        <div style="font-weight:700;color:var(--text-main)">វគ្គសិក្សាលេចធ្លាក់</div>
-                                        <div style="font-size:.8rem;color:var(--text-muted)">វគ្គសិក្សាថ្មីលេចធ្លាក់</div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="my-2 text-center">
-                                <a href="#" class="text-decoration-none">មើលការជូនដំណឹងទាំងអស់</a>
-                            </li>
-                        </ul>
-                    </div>
+      <!-- Desktop nav -->
+      <ul class="navbar-nav mx-auto d-none d-lg-flex">
+        <li class="nav-item"><a class="nav-link" href="../index-logged.html">ទំព័រដើម</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="scholarship-logged.html">
+            <i class="bi bi-award me-1"></i>អាហារូបករណ៍
+          </a>
+        </li>
+        <li class="nav-item"><a class="nav-link active " href="courses-logged.html"><i class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
+        <li class="nav-item"><a class="nav-link" href="exchange-logged.html"><i class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
+        <li class="nav-item"><a class="nav-link" href="internship-categories-logged.html"><i class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
+        <li class="nav-item"><a class="nav-link" href="volunteer-international-logged.html"><i class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
+      </ul>
+      <div class="nav-auth d-none d-lg-flex align-items-center gap-2">
+        <div class="dropdown">
+          <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown" aria-label="ការជូនដំណឹង" title="ការជូនដំណឹង">
+            <span class="position-relative d-inline-flex">
+              <i class="bi bi-bell fs-5" style="color:var(--text-black)"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:.6rem">3</span>
+            </span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" style="min-width: 320px;">
+            <li class="px-3 pt-2 pb-1">
+              <h3 class="fs-6 mb-0">ការជូនដំណឹង</h3>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-facebook text-primary mt-1"></i>
+                <span>
+                  Facebook <br>
+                  អ្នកបានភ្ជាប់គណនីជាមួយ Facebook <br>
+                  <span class="text-secondary">ឥឡូវនេះ</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-gear-fill text-secondary mt-1"></i>
+                <span>
+                  ការកំណត់ <br>
+                  អ្នកបានផ្លាស់ប្តូរពាក្យសម្ងាត់បានជោកជ័យ <br>
+                  <span class="text-secondary">៣០នាទីមុន</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-start gap-2" href="#">
+                <i class="bi bi-check-circle-fill text-success mt-1"></i>
+                <span>
+                  ការដាក់ពាក្យ <br>
+                  ការដាក់ពាក្យរបស់អ្នកបានជោគជ័យ <br>
+                  <span class="text-secondary">២ម៉ោងមុន</span>
+                </span>
+              </a>
+            </li>
+            <li class="my-2 text-center">
+              <a href="#" class="text-decoration-none">មើលការជូនដំណឹងទាំងអស់</a>
+            </li>
+          </ul>
+        </div>
 
-                    <div class="dropdown">
-                        <button class="btn border-0 p-1" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <img src="https://ui-avatars.com/api/?name=Edu+User&background=0B5ED7&color=fff" alt="Profile"
-                                width="32" height="32" class="rounded-circle">
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>ប្រវត្តិរូប</a>
-                            </li>
-                            <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>ការកំណត់</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item text-danger" href="../index-logged.html"><i
-                                        class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a></li>
-                        </ul>
-                    </div>
-                    <button class="btn border-0 p-2" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#mobileMenu">
-                        <i class="fa-solid fa-bars fs-5" style="color:var(--text-black)"></i>
-                    </button>
-                </div>
-
-                <!-- Desktop nav -->
-                <ul class="navbar-nav mx-auto d-none d-lg-flex">
-                    <li class="nav-item"><a class="nav-link" href="../index-logged.html">ទំព័រដើម</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="scholarship-logged.html">
-                            <i class="bi bi-award me-1"></i>អាហារូបករណ៍
-                        </a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link active" href="courses-logged.html"><i
-                                class="bi bi-book me-1"></i>វគ្គសិក្សា</a></li>
-                    <li class="nav-item"><a class="nav-link" href="exchange-logged.html"><i
-                                class="bi bi-globe me-1"></i>ផ្លាស់ប្តូរ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="internship-categories-logged.html"><i
-                                class="bi bi-briefcase me-1"></i>ហាត់ការ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="volunteer-international-logged.html"><i
-                                class="bi bi-heart me-1"></i>ស្ម័គ្រចិត្ត</a></li>
-                </ul>
-                <div class="nav-auth d-none d-lg-flex align-items-center gap-2">
-                    <div class="dropdown">
-                        <button class="btn border-0 p-2" type="button" data-bs-toggle="dropdown"
-                            aria-label="ការជូនដំណឹង" title="ការជូនដំណឹង">
-                            <span class="position-relative d-inline-flex">
-                                <i class="bi bi-bell fs-5" style="color:var(--text-black)"></i>
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                                    style="font-size:.6rem">3</span>
-                            </span>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end" style="min-width: 320px;">
-                            <li class="px-3 pt-2 pb-1">
-                                <h3 class="fs-6 mb-0">ការជូនដំណឹង</h3>
-                            </li>
-                            <li>
-                                <a class="dropdown-item d-flex align-items-start gap-2" href="#">
-                                    <div style="font-size:1.5rem">📌</div>
-                                    <div>
-                                        <div style="font-weight:700;color:var(--text-main)">វគ្គសិក្សាថ្មីបង្ហាញ</div>
-                                        <div style="font-size:.8rem;color:var(--text-muted)">Web Development Bootcamp
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item d-flex align-items-start gap-2" href="#">
-                                    <div style="font-size:1.5rem">✅</div>
-                                    <div>
-                                        <div style="font-weight:700;color:var(--text-main)">ការចុះឈ្មោះបានទទួល</div>
-                                        <div style="font-size:.8rem;color:var(--text-muted)">សូមស្វាគមន៍</div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item d-flex align-items-start gap-2" href="#">
-                                    <div style="font-size:1.5rem">🎓</div>
-                                    <div>
-                                        <div style="font-weight:700;color:var(--text-main)">វគ្គសិក្សាលេចធ្លាក់</div>
-                                        <div style="font-size:.8rem;color:var(--text-muted)">វគ្គសិក្សាថ្មីលេចធ្លាក់</div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="my-2 text-center">
-                                <a href="#" class="text-decoration-none">មើលការជូនដំណឹងទាំងអស់</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="dropdown">
-                        <button class="btn border-0 p-1" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" aria-label="ប្រវត្តិរូប" title="ប្រវត្តិរូប">
-                            <img src="https://ui-avatars.com/api/?name=Edu+User&background=0B5ED7&color=fff" alt="Profile"
-                                width="34" height="34" class="rounded-circle">
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>ប្រវត្តិរូប</a>
-                            </li>
-                            <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>ការកំណត់</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item text-danger" href="login.html"><i
-                                        class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+        <div class="dropdown">
+          <button class="btn border-0 p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="ប្រវត្តិរូប" title="ប្រវត្តិរូប">
+            <img src="https://ui-avatars.com/api/?name=Edu+User&background=0B5ED7&color=fff" alt="Profile" width="34" height="34" class="rounded-circle">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>ប្រវត្តិរូប</a></li>
+            <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>ការកំណត់</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="login.html"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
 
     <!-- Mobile offcanvas -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
@@ -365,7 +345,6 @@
                                             <select class="f-select" id="country">
                                                 <option value="">ជ្រើសរើស...</option>
                                                 <option value="កម្ពុជា">កម្ពុជា</option>
-                                                <option value="ថៃ">ថៃ</option>
                                                 <option value="វៀតណាម">វៀតណាម</option>
                                                 <option value="ឡាវ">ឡាវ</option>
                                             </select>
@@ -590,7 +569,7 @@
                                 សូមអរគុណ សម្រាប់ការចុះឈ្មោះ ។ អ្នកនឹងទទួលបានលេខកូដលម្អិត
                                 នៅលើសារឯកសារលេខ របស់អ្នក ។
                             </p>
-                            <div class="ref-code" id="ref-code">Ref: EK-COURSE-XXXXX</div>
+                            <!-- reference code removed -->
                             <div class="next-steps">
                                 <div class="ns-item">
                                     <div class="ns-icon"><i class="bi bi-envelope-fill"></i></div>
@@ -665,22 +644,22 @@
                         </h5>
                         <div class="tip-item">
                             <div class="tip-num">💻</div>
-                            <div class="tip-text"><strong style="color:#fff">តម្រូវការ</strong> — កុំព្យូទ័រប្រព័ន្ធ
+                            <div class="tip-text"><strong>តម្រូវការ</strong> — កុំព្យូទ័រប្រព័ន្ធ
                                 និង សិទ្ធិលម្អិត</div>
                         </div>
                         <div class="tip-item">
                             <div class="tip-num">⏰</div>
-                            <div class="tip-text"><strong style="color:#fff">ពេលវេលា</strong> — ចំណាយពេល ២៣ ម៉ោង/សប្ដាហ៍
+                            <div class="tip-text"><strong>ពេលវេលា</strong> — ចំណាយពេល ២៣ ម៉ោង/សប្ដាហ៍
                             </div>
                         </div>
                         <div class="tip-item">
                             <div class="tip-num">🤝</div>
-                            <div class="tip-text"><strong style="color:#fff">ក្រុម</strong> — ការងារក្នុងក្រុម និង
+                            <div class="tip-text"><strong>ក្រុម</strong> — ការងារក្នុងក្រុម និង
                                 Project ជាក់ស្តែង</div>
                         </div>
                         <div class="tip-item">
                             <div class="tip-num">✅</div>
-                            <div class="tip-text"><strong style="color:#fff">ការ Support</strong> — ជ្រើស ១ ឆ្នាំ
+                            <div class="tip-text"><strong>ការ Support</strong> — ជ្រើស ១ ឆ្នាំ
                                 Access</div>
                         </div>
                     </div>
@@ -871,12 +850,7 @@
         /* ── Submit ── */
         function submitForm() {
             if (!validateStep(4)) return;
-            const ref = 'EK-COURSE-' + Math.random().toString(36).substr(2, 5).toUpperCase();
-            document.getElementById('ref-code').textContent = 'Ref: ' + ref;
-            if (document.getElementById('popup-ref-code')) {
-                document.getElementById('popup-ref-code').textContent = 'Ref: ' + ref;
-                document.getElementById('success-popup').style.display = 'flex';
-            }
+            // Submit: show success (no reference code produced)
             document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
             document.getElementById('success-screen').classList.add('show');
             for (let i = 1; i <= totalSteps; i++) {
@@ -900,7 +874,7 @@
             <div class="popup-icon">🎉</div>
             <h2>ពាក្យបានដាក់ដោយជោគជ័យ!</h2>
             <p>សូមអរគុណ ក្រុមការងារ EduKhmer បានទទួល ពាក្យ របស់អ្នករួចហើយ ។</p>
-            <div class="popup-ref-code" id="popup-ref-code">Ref: EK-2025-XXXXX</div>
+            <!-- popup reference code removed -->
             <button class="popup-btn" onclick="document.getElementById('success-popup').style.display='none'">យល់ព្រម</button>
         </div>
     </div>

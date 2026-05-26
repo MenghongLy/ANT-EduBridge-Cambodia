@@ -695,7 +695,7 @@
               សូមអរគុណ ក្រុមការងារ EduKhmer បានទទួល ពាក្យ របស់អ្នករួចហើយ ។<br>
               យើងនឹង Review ហើយ ជូនដំណឹង ក្នុង <strong>៧២ ម៉ោង</strong> ។
             </p>
-            <div class="ref-code" id="ref-code">Ref: EK-2025-XXXXX</div>
+            <!-- reference code removed -->
             <div class="next-steps">
               <div class="next-step-item">
                 <div class="ns-num">១</div>
@@ -714,7 +714,7 @@
               <button onclick="location.href='exchange-logged.html'" class="btn btn-outline-primary">
                 <i class="bi bi-arrow-left me-1"></i> ទំព័រ ផ្លាស់ប្តូរ
               </button>
-              <button onclick="location.href='index-logged.html'" class="btn btn-primary">
+              <button onclick="location.href='../index-logged.html'" class="btn btn-primary">
                 <i class="bi bi-search me-1"></i> ស្វែងរក ឱកាស ផ្សេង
               </button>
             </div>
@@ -758,19 +758,19 @@
           <h5><i class="bi bi-lightbulb-fill me-2" style="color:var(--gold)"></i>គន្លឹះ ដើម្បីជ្រើសតាំង</h5>
           <div class="tip-item">
             <div class="tip-num">💡</div>
-            <div class="tip-text"><strong style="color:#fff">Motivation Letter</strong> — ត្រូវវែង ច្បាស់ ពិតជាក់ស្ដែង — ចៀសវាង Generic</div>
+            <div class="tip-text"><strong>Motivation Letter</strong> — ត្រូវវែង ច្បាស់ ពិតជាក់ស្ដែង — ចៀសវាង Generic</div>
           </div>
           <div class="tip-item">
             <div class="tip-num">📄</div>
-            <div class="tip-text"><strong style="color:#fff">CV</strong> — ១ ទំព័រ ។ ដាក់ Volunteer, Award, Leadership ។ Design ស្អាត</div>
+            <div class="tip-text"><strong>CV</strong> — ១ ទំព័រ ។ ដាក់ Volunteer, Award, Leadership ។ Design ស្អាត</div>
           </div>
-          <div class="tip-item">
+            <div class="tip-item">
             <div class="tip-num">🏆</div>
-            <div class="tip-text"><strong style="color:#fff">បទពិសោធ Community</strong> — ដាក់ ការចូលរួម Club, Event, NGO ឲ្យច្រើន</div>
+            <div class="tip-text"><strong>បទពិសោធ Community</strong> — ដាក់ ការចូលរួម Club, Event, NGO ឲ្យច្រើន</div>
           </div>
           <div class="tip-item">
             <div class="tip-num">✅</div>
-            <div class="tip-text"><strong style="color:#fff">ឯកសារ</strong> — ត្រូវ Scan ច្បាស់ ។ PDF ល្អជាង រូបថតស្ក្រីន</div>
+            <div class="tip-text"><strong>ឯកសារ</strong> — ត្រូវ Scan ច្បាស់ ។ PDF ល្អជាង រូបថតស្ក្រីន</div>
           </div>
         </div>
 
@@ -1008,14 +1008,7 @@ function goBack(from) { showPanel(from - 1); }
 /* ── Submit ── */
 function submitForm() {
   if (!validateStep(4)) return;
-  // Generate ref code
-  const ref = 'EK-2025-' + Math.random().toString(36).substr(2,5).toUpperCase();
-  document.getElementById('ref-code').textContent = 'Ref: ' + ref;
-  if (document.getElementById('popup-ref-code')) {
-    document.getElementById('popup-ref-code').textContent = 'Ref: ' + ref;
-    document.getElementById('success-popup').style.display = 'flex';
-  }
-  // Hide all panels, show success
+  // Submit: show success (no reference code produced)
   document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
   document.getElementById('success-screen').classList.add('show');
   // Update stepper to done
@@ -1035,7 +1028,7 @@ function submitForm() {
     <div class="popup-icon">🎉</div>
     <h2>ពាក្យបានដាក់ដោយជោគជ័យ!</h2>
     <p>សូមអរគុណ ក្រុមការងារ EduKhmer បានទទួល ពាក្យ របស់អ្នករួចហើយ។</p>
-    <div class="popup-ref-code" id="popup-ref-code">Ref: EK-2025-XXXXX</div>
+    <!-- popup reference code removed -->
     <button class="popup-btn" onclick="document.getElementById('success-popup').style.display='none'">យល់ព្រម</button>
   </div>
 </div>

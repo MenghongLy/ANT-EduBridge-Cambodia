@@ -673,7 +673,7 @@
               <h2>ពាក្យ ស្ម័គ្រចិត្ត បានដាក់ ✅</h2>
               <p>អរគុណ! ក្រុមការងារ EduKhmer ទទួលបានពាក្យរបស់អ្នករួចហើយ ។ យើងនឹង ជូនដំណឹង ក្នុង <strong>៤៨ ម៉ោង</strong>
                 ។</p>
-              <div class="ref-code" id="ref-code">Ref: VOL-2025-XXXXX</div>
+              <!-- reference code removed -->
               <div class="next-steps">
                 <div class="next-step-item">
                   <div class="ns-num">១</div>
@@ -859,7 +859,7 @@
     function fillReview() { const g = id => (document.getElementById(id)?.value || '—'); document.getElementById('rv-km').textContent = g('name-km'); document.getElementById('rv-en').textContent = g('name-en'); document.getElementById('rv-email').textContent = g('email'); document.getElementById('rv-phone').textContent = g('phone'); document.getElementById('rv-prov').textContent = g('province') || '—'; document.getElementById('rv-org').textContent = g('org'); document.getElementById('rv-maj').textContent = g('major'); document.getElementById('rv-time').textContent = g('time-slot') || '—'; document.getElementById('rv-dur').textContent = g('duration') || '—'; const mot = document.getElementById('motivation').value.trim(); document.getElementById('rv-mot').textContent = mot ? (mot.slice(0, 120) + (mot.length > 120 ? '…' : '')) : ' —' }
     function goNext(from) { if (!validateStep(from)) return; if (from === 3) fillReview(); showPanel(from + 1) }
     function goBack(from) { showPanel(from - 1) }
-    function submitForm() { if (!validateStep(4)) return; const ref = 'VOL-2025-' + Math.random().toString(36).substr(2, 5).toUpperCase(); document.getElementById('ref-code').textContent = 'Ref: ' + ref; if (document.getElementById('popup-ref-code')) { document.getElementById('popup-ref-code').textContent = 'Ref: ' + ref; document.getElementById('success-popup').style.display = 'flex'; } document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active')); document.getElementById('success-screen').classList.add('show'); for (let i = 1; i <= 4; i++) { const si = document.getElementById('si-' + i); si.classList.remove('active'); si.classList.add('done'); si.querySelector('.step-circle').innerHTML = '<i class="bi bi-check-lg"></i>'; } document.getElementById('progress-bar').style.width = '100%'; document.querySelector('.stepper-wrap').scrollIntoView({ behavior: 'smooth' }); }
+    function submitForm() { if (!validateStep(4)) return; /* Submit: show success (no reference code produced) */ document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active')); document.getElementById('success-screen').classList.add('show'); for (let i = 1; i <= 4; i++) { const si = document.getElementById('si-' + i); si.classList.remove('active'); si.classList.add('done'); si.querySelector('.step-circle').innerHTML = '<i class="bi bi-check-lg"></i>'; } document.getElementById('progress-bar').style.width = '100%'; document.querySelector('.stepper-wrap').scrollIntoView({ behavior: 'smooth' }); }
   </script>
     <!-- ═══ SUCCESS POPUP MODAL ═══ -->
     <div id="success-popup" class="success-popup-overlay" style="display:none">
@@ -867,7 +867,7 @@
             <div class="popup-icon">🎉</div>
             <h2>ពាក្យបានដាក់ដោយជោគជ័យ!</h2>
             <p>សូមអរគុណ ក្រុមការងារ EduKhmer បានទទួល ពាក្យ របស់អ្នករួចហើយ ។</p>
-            <div class="popup-ref-code" id="popup-ref-code">Ref: EK-2025-XXXXX</div>
+            <!-- popup reference code removed -->
             <button class="popup-btn" onclick="document.getElementById('success-popup').style.display='none'">យល់ព្រម</button>
         </div>
     </div>
